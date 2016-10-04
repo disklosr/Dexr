@@ -42,6 +42,7 @@
     <Compile Include="DataAccess\IDataSource.cs" />
     <Compile Include="Entities\Move.cs" />
     <Compile Include="Entities\Pokemon.cs" />
+    <Compile Include="Entities\PokemonStat.cs" />
     <Compile Include="Entities\Type.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\IMoveRespository.cs" />

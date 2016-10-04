@@ -2,6 +2,7 @@
 {
     public enum Type
     {
+        Unknown = 0,
         Normal,
         Fire,
         Fighting,
