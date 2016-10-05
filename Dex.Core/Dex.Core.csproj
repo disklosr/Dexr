@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess\IDataSource.cs" />
+    <Compile Include="Entities\MissingNo.cs" />
     <Compile Include="Entities\Move.cs" />
     <Compile Include="Entities\Pokemon.cs" />
     <Compile Include="Entities\PokemonStat.cs" />
