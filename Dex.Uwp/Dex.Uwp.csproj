@@ -89,12 +89,16 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Data\pokemons.db.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataAccess\LocalFileDataSource.cs" />
     <Compile Include="Infrastructure\PageBase.cs" />
     <Compile Include="Infrastructure\RelayCommand.cs" />
     <Compile Include="Infrastructure\ViewModelBase.cs" />
@@ -102,6 +106,7 @@
       <DependentUpon>PokedexPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IJsonService.cs" />
     <Compile Include="ViewModels\PokedexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

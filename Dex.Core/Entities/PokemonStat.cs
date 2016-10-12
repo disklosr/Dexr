@@ -1,31 +1,31 @@
 ﻿namespace Dex.Core.Entities
 {
-    public class Attack : PokemonStat
+    public class Attack : CombatStat
     {
-        public Attack(ushort value)
+        public Attack(ushort attack)
         {
-            Value = value;
+            Value = attack;
         }
     }
 
-    public class Defense : PokemonStat
-    {
-        public Defense(ushort value)
-        {
-            Value = value;
-        }
-    }
-
-    public abstract class PokemonStat
+    public abstract class CombatStat
     {
         public ushort Value { get; protected set; }
     }
 
-    public class Stamina : PokemonStat
+    public class Defense : CombatStat
     {
-        public Stamina(ushort value)
+        public Defense(ushort defense)
         {
-            Value = value;
+            Value = defense;
+        }
+    }
+
+    public class Stamina : CombatStat
+    {
+        public Stamina(ushort stamina)
+        {
+            Value = stamina;
         }
     }
 }

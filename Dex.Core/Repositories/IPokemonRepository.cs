@@ -34,7 +34,7 @@ namespace Dex.Core.Repositories
         {
             await EnsureCacheIsValid();
             return allPokemonsCache
-                .Where(pokemon => pokemon.Id == pokemonId)
+                .Where(pokemon => pokemon.DexNumber == pokemonId)
                 .DefaultIfEmpty(new MissingNo()).First();
         }
 
