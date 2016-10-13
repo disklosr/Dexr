@@ -41,7 +41,7 @@ namespace Dex.Core.Repositories
         private async Task EnsureCacheIsValid()
         {
             if (allPokemonsCache == null)
-                await dataSource.LoadAllPokemonsAsync();
+                allPokemonsCache = await dataSource.LoadAllPokemonsAsync();
         }
     }
 }

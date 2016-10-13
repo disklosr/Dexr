@@ -1,4 +1,5 @@
-﻿using Dex.Uwp.Pages;
+﻿using Dex.Uwp.IoC;
+using Dex.Uwp.Pages;
 using Dex.Uwp.Services;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
@@ -40,7 +41,7 @@ namespace Dex
                     // configuring the new page by passing required information as a navigation
                     // parameter
 
-                    //rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                    navigationService.NavigateToPokedexPage();
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();
@@ -51,6 +52,7 @@ namespace Dex
         {
             rootShell = new Shell();
             navigationService = new NavigationService(rootShell.Frame);
+            var ioc = new IocBootstrapper();
 
             if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
             {

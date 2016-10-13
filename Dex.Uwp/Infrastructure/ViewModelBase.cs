@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using Windows.UI.Xaml.Navigation;
 
 namespace Dex.Uwp.Infrastructure
@@ -9,8 +10,9 @@ namespace Dex.Uwp.Infrastructure
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public virtual void OnNavigatedTo(NavigationEventArgs e)
+        public virtual Task OnNavigatedTo(NavigationEventArgs e)
         {
+            return Task.CompletedTask;
         }
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

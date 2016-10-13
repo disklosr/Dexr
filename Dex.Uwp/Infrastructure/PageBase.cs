@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Practices.ServiceLocation;
+using System;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
@@ -8,7 +9,7 @@ namespace Dex.Uwp.Infrastructure
     {
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            var viewModel = ResolveViewModelForPage();
+            var viewModel = ResolveViewModelForPage(e);
             viewModel.OnNavigatedTo(e);
 
             DataContext = viewModel;
@@ -16,13 +17,11 @@ namespace Dex.Uwp.Infrastructure
             base.OnNavigatedTo(e);
         }
 
-        private ViewModelBase ResolveViewModelForPage()
+        private ViewModelBase ResolveViewModelForPage(NavigationEventArgs e)
         {
-            throw new NotImplementedException();
-
-            //string fullName = $"{e.SourcePageType.Namespace}.ViewModels.{e.SourcePageType.Name.Replace("Page", "ViewModel")}";
-            //Type viewModelType = Type.GetType(fullName);
-            //ViewModelBase viewModel = (ViewModelBase)ServiceLocator.Current.GetInstance(viewModelType);
+            var fullName = $"{e.SourcePageType.Namespace.Replace(".Pages", "")}.ViewModels.{e.SourcePageType.Name.Replace("Page", "ViewModel")}";
+            Type viewModelType = Type.GetType(fullName);
+            return (ViewModelBase)ServiceLocator.Current.GetInstance(viewModelType);
         }
     }
 }

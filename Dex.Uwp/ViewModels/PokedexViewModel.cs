@@ -2,6 +2,7 @@
 using Dex.Core.Repositories;
 using Dex.Uwp.Infrastructure;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Windows.UI.Xaml.Navigation;
 
 namespace Dex.Uwp.ViewModels
@@ -23,9 +24,10 @@ namespace Dex.Uwp.ViewModels
             private set { Set(ref allPokemons, value); }
         }
 
-        public override void OnNavigatedTo(NavigationEventArgs e)
+        public async override Task OnNavigatedTo(NavigationEventArgs e)
         {
-            pokemonsRepository.GetAllPokemons();
+            var pokes = await pokemonsRepository.GetAllPokemons();
+            AllPokemons = pokes;
         }
     }
 }

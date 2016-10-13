@@ -7,14 +7,14 @@ using Type = Dex.Core.Entities.Type;
 
 namespace Dex.Core.Repositories
 {
-    public interface IMoveRespository
+    public interface IMoveRepository
     {
         Task<IEnumerable<Move>> GetAllMoves();
 
         Task<IEnumerable<Move>> GetAllMovesByType(Type moveType);
     }
 
-    public class MoveRepository : IMoveRespository
+    public class MoveRepository : IMoveRepository
     {
         private readonly IMovesDataSource dataSource;
 

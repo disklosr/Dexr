@@ -13,14 +13,16 @@
         </Grid.RowDefinitions>
 
         <Border BorderThickness="0,0,0,1">
+            <Border.BorderBrush>
+                <SolidColorBrush Color="{ThemeResource SystemChromeHighColor}" />
+            </Border.BorderBrush>
             <Border.Background>
                 <SolidColorBrush Color="{ThemeResource SystemChromeMediumColor}" />
             </Border.Background>
-            <Grid Grid.Row="0" Margin="8">
+            <Grid Grid.Row="0" Margin="12">
                 <TextBlock VerticalAlignment="Center" Text="Hello World!" />
             </Grid>
         </Border>
-
-        <Frame Name="MainFrame" Grid.Row="1" />
+        <Frame x:Name="MainFrame" Grid.Row="1" />
     </Grid>
 </Page>
