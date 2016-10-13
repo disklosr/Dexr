@@ -39,7 +39,8 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataAccess\IDataSource.cs" />
+    <Compile Include="DataAccess\IMovesDataSource.cs" />
+    <Compile Include="DataAccess\IPokemonsDataSource.cs" />
     <Compile Include="Entities\MissingNo.cs" />
     <Compile Include="Entities\Move.cs" />
     <Compile Include="Entities\Pokemon.cs" />

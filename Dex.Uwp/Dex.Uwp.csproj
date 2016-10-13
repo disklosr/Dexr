@@ -93,6 +93,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="project.json" />
+    <PRIResource Include="Strings\en\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -105,8 +106,12 @@
     <Compile Include="Pages\PokedexPage.xaml.cs">
       <DependentUpon>PokedexPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Shell.xaml.cs">
+      <DependentUpon>Shell.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IJsonService.cs" />
+    <Compile Include="Services\INavigationService.cs" />
     <Compile Include="ViewModels\PokedexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +136,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Pages\PokedexPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Shell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
