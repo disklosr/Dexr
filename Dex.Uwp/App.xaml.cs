@@ -1,8 +1,12 @@
 ﻿using Dex.Uwp.IoC;
 using Dex.Uwp.Pages;
 using Dex.Uwp.Services;
+using Microsoft.Practices.ServiceLocation;
+using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.ApplicationModel.Core;
+using Windows.UI;
 using Windows.UI.Xaml;
 
 namespace Dex
@@ -26,7 +30,9 @@ namespace Dex
                 this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
+
             rootShell = Window.Current.Content as Shell;
+            InitAppWindow();
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
@@ -41,6 +47,7 @@ namespace Dex
                     // configuring the new page by passing required information as a navigation
                     // parameter
 
+                    navigationService = ServiceLocator.Current.GetInstance<INavigationService>();
                     navigationService.NavigateToPokedexPage();
                 }
                 // Ensure the current window is active
@@ -48,10 +55,21 @@ namespace Dex
             }
         }
 
+        private void InitAppWindow()
+        {
+            var titleBar = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().TitleBar;
+            titleBar.BackgroundColor = (Color)Resources["SystemAccentColorDark1"];
+
+            titleBar.InactiveBackgroundColor = (Color)Resources["SystemAccentColor"];
+            titleBar.ButtonBackgroundColor = (Color)Resources["SystemAccentColorDark1"];
+            titleBar.ButtonHoverBackgroundColor = (Color)Resources["SystemAccentColorDark2"];
+            titleBar.ButtonPressedBackgroundColor = (Color)Resources["SystemAccentColorDark3"];
+            titleBar.ButtonInactiveBackgroundColor = (Color)Resources["SystemAccentColor"];
+        }
+
         private void InitializeShell(LaunchActivatedEventArgs e)
         {
             rootShell = new Shell();
-            navigationService = new NavigationService(rootShell.Frame);
             var ioc = new IocBootstrapper();
 
             if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)

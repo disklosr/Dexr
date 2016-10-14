@@ -11,13 +11,13 @@
     <ContentControl.Template>
         <ControlTemplate>
             <Grid>
-                <Border BorderThickness="0,0,0,2" CornerRadius="2">
+                <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0,0,0,4">
                     <Border.Background>
                         <SolidColorBrush Color="{ThemeResource SystemListLowColor}" />
                     </Border.Background>
-                    <Border.BorderBrush>
+                    <!--<Border.BorderBrush>
                         <SolidColorBrush Color="{ThemeResource SystemChromeHighColor}" />
-                    </Border.BorderBrush>
+                    </Border.BorderBrush>-->
                     <ContentPresenter />
                 </Border>
             </Grid>

@@ -6,10 +6,12 @@
                 xmlns:infra="using:Dex.Uwp.Infrastructure"
                 xmlns:local="using:Dex.Uwp.Pages"
                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                xmlns:model="using:Dex.Core.Entities"
                 xmlns:vc="using:Dex.Uwp.ValueConverters"
                 xmlns:vm="using:Dex.Uwp.ViewModels"
                 d:DataContext="{d:DesignInstance Type=vm:PokedexViewModel,
                                                  IsDesignTimeCreatable=False}"
+                NavigationCacheMode="Enabled"
                 mc:Ignorable="d">
 
     <infra:PageBase.Resources>
@@ -17,59 +19,30 @@
     </infra:PageBase.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView ItemsSource="{Binding AllPokemons}" Padding="24,12,24,0">
-            <ListView.ItemContainerTransitions>
-                <TransitionCollection>
-                    <EntranceThemeTransition />
-                </TransitionCollection>
-            </ListView.ItemContainerTransitions>
-            <ListView.ItemContainerStyle>
-                <Style TargetType="ListViewItem">
-                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-                    <Setter Property="Margin" Value="0,0,0,12" />
-                    <Setter Property="Padding" Value="0" />
-                    <!--<Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="ListViewItem">
-                                <ListViewItemPresenter HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                                       VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                                                       CheckBoxBrush="{ThemeResource SystemControlForegroundBaseMediumHighBrush}"
-                                                       CheckBrush="{ThemeResource SystemControlForegroundBaseMediumHighBrush}"
-                                                       CheckMode="Inline"
-                                                       ContentMargin="{TemplateBinding Padding}"
-                                                       ContentTransitions="{TemplateBinding ContentTransitions}"
-                                                       DisabledOpacity="{ThemeResource ListViewItemDisabledThemeOpacity}"
-                                                       DragBackground="{ThemeResource ListViewItemDragBackgroundThemeBrush}"
-                                                       DragForeground="{ThemeResource ListViewItemDragForegroundThemeBrush}"
-                                                       DragOpacity="{ThemeResource ListViewItemDragThemeOpacity}"
-                                                       FocusBorderBrush="{ThemeResource SystemControlForegroundAltHighBrush}"
-                                                       FocusSecondaryBorderBrush="{ThemeResource SystemControlForegroundBaseHighBrush}"
-                                                       PlaceholderBackground="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}"
-                                                       PointerOverBackground="{ThemeResource SystemControlHighlightListLowBrush}"
-                                                       PointerOverForeground="{ThemeResource SystemControlHighlightAltBaseHighBrush}"
-                                                       PressedBackground="{ThemeResource SystemControlHighlightListMediumBrush}"
-                                                       ReorderHintOffset="{ThemeResource ListViewItemReorderHintThemeOffset}"
-                                                       SelectedBackground="{ThemeResource SystemControlHighlightListAccentLowBrush}"
-                                                       SelectedForeground="{ThemeResource SystemControlHighlightAltBaseHighBrush}"
-                                                       SelectedPointerOverBackground="{ThemeResource SystemControlHighlightListAccentMediumBrush}"
-                                                       SelectedPressedBackground="{ThemeResource SystemControlHighlightListAccentHighBrush}"
-                                                       SelectionCheckMarkVisualEnabled="True" />
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>-->
-                </Style>
-            </ListView.ItemContainerStyle>
+        <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
+                  ItemsSource="{Binding AllPokemons}"
+                  SelectedItem="{Binding SelectedPokemon,
+                                         Mode=TwoWay}"
+                  Style="{StaticResource CardBasedListStyle}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <controls:Card MinHeight="48">
+                    <!--    -->
+                    <controls:Card Height="84" BorderBrush="{Binding Type1, Converter={StaticResource PokemonTypeToColorConverter}}">
                         <RelativePanel Padding="12,4">
+                            <Image Name="PokemonPicture"
+                                   Margin="0,12,12,12"
+                                   RelativePanel.AlignLeftWithPanel="True"
+                                   RelativePanel.AlignVerticalCenterWithPanel="True"
+                                   Source="{Binding DexNumber,
+                                                    Converter={StaticResource PokemonDexNumberToPictureConverter}}" />
                             <TextBlock x:Name="PokemonName"
                                        VerticalAlignment="Top"
                                        RelativePanel.AlignHorizontalCenterWithPanel="True"
-                                       RelativePanel.AlignLeftWithPanel="True"
                                        RelativePanel.AlignTopWithPanel="True"
+                                       RelativePanel.RightOf="PokemonPicture"
                                        Text="{Binding Name}" />
                             <TextBlock VerticalAlignment="Bottom"
+                                       RelativePanel.AlignLeftWith="PokemonName"
                                        RelativePanel.Below="PokemonName"
                                        Style="{StaticResource CaptionTextBlockStyle}">
                                 <TextBlock.Foreground>

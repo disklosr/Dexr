@@ -17,10 +17,14 @@
                 <SolidColorBrush Color="{ThemeResource SystemChromeHighColor}" />
             </Border.BorderBrush>
             <Border.Background>
-                <SolidColorBrush Color="{ThemeResource SystemChromeMediumColor}" />
+                <SolidColorBrush Color="{ThemeResource SystemAccentColor}" />
             </Border.Background>
             <Grid Grid.Row="0" Margin="12">
-                <TextBlock VerticalAlignment="Center" Text="Hello World!" />
+                <TextBlock VerticalAlignment="Center" Text="Pokédex">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
+                    </TextBlock.Foreground>
+                </TextBlock>
             </Grid>
         </Border>
         <Frame x:Name="MainFrame" Grid.Row="1" />

@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
+using System.Diagnostics;
 
 namespace Dex.Core.Entities
 {
+    [DebuggerDisplay("{Name}")]
     public class Pokemon
     {
         #region General

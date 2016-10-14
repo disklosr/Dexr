@@ -1,0 +1,50 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="using:Dex.Uwp.Theme">
+
+    <Style x:Name="CardBasedListStyle" TargetType="ListView">
+        <Setter Property="Padding" Value="24,12,24,0" />
+        <Setter Property="ItemContainerTransitions">
+            <Setter.Value>
+                <TransitionCollection>
+                    <EntranceThemeTransition />
+                </TransitionCollection>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Name="CardBasedListItemStyle" TargetType="ListViewItem">
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="Margin" Value="0,0,0,12" />
+        <Setter Property="Padding" Value="0" />
+        <!--<Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListViewItem">
+                                <ListViewItemPresenter HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                       VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                       CheckBoxBrush="{ThemeResource SystemControlForegroundBaseMediumHighBrush}"
+                                                       CheckBrush="{ThemeResource SystemControlForegroundBaseMediumHighBrush}"
+                                                       CheckMode="Inline"
+                                                       ContentMargin="{TemplateBinding Padding}"
+                                                       ContentTransitions="{TemplateBinding ContentTransitions}"
+                                                       DisabledOpacity="{ThemeResource ListViewItemDisabledThemeOpacity}"
+                                                       DragBackground="{ThemeResource ListViewItemDragBackgroundThemeBrush}"
+                                                       DragForeground="{ThemeResource ListViewItemDragForegroundThemeBrush}"
+                                                       DragOpacity="{ThemeResource ListViewItemDragThemeOpacity}"
+                                                       FocusBorderBrush="{ThemeResource SystemControlForegroundAltHighBrush}"
+                                                       FocusSecondaryBorderBrush="{ThemeResource SystemControlForegroundBaseHighBrush}"
+                                                       PlaceholderBackground="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}"
+                                                       PointerOverBackground="{ThemeResource SystemControlHighlightListLowBrush}"
+                                                       PointerOverForeground="{ThemeResource SystemControlHighlightAltBaseHighBrush}"
+                                                       PressedBackground="{ThemeResource SystemControlHighlightListMediumBrush}"
+                                                       ReorderHintOffset="{ThemeResource ListViewItemReorderHintThemeOffset}"
+                                                       SelectedBackground="{ThemeResource SystemControlHighlightListAccentLowBrush}"
+                                                       SelectedForeground="{ThemeResource SystemControlHighlightAltBaseHighBrush}"
+                                                       SelectedPointerOverBackground="{ThemeResource SystemControlHighlightListAccentMediumBrush}"
+                                                       SelectedPressedBackground="{ThemeResource SystemControlHighlightListAccentHighBrush}"
+                                                       SelectionCheckMarkVisualEnabled="True" />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>-->
+    </Style>
+</ResourceDictionary>

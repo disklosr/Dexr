@@ -1,8 +1,32 @@
-﻿<Application
-    x:Class="Dex.App"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Dex"
-    RequestedTheme="Light">
+﻿<Application x:Class="Dex.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:Dex"
+             xmlns:vc="using:Dex.Uwp.ValueConverters"
+             RequestedTheme="Light">
 
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Theme/Base.xaml" />
+                <ResourceDictionary Source="/Theme/Brushes.xaml" />
+                <ResourceDictionary Source="/Theme/Fonts.xaml" />
+                <ResourceDictionary Source="/Theme/Styles.xaml" />
+                <ResourceDictionary Source="/Theme/Templates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <Color x:Key="SystemAccentColor">#E53935</Color>
+                    <Color x:Key="SystemAccentColorDark1">#D32F2F</Color>
+                    <Color x:Key="SystemAccentColorDark2">#C62828</Color>
+                    <Color x:Key="SystemAccentColorDark3">#B71C1C</Color>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+
+            <vc:PokemonTypeToColorConverter x:Key="PokemonTypeToColorConverter" />
+            <vc:PokemonDexNumberToPictureConverter x:Key="PokemonDexNumberToPictureConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>

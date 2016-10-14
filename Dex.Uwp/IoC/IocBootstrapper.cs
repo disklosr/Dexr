@@ -5,7 +5,6 @@ using Dex.Uwp.Services;
 using Dex.Uwp.ViewModels;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
-using System;
 
 namespace Dex.Uwp.IoC
 {
@@ -41,6 +40,8 @@ namespace Dex.Uwp.IoC
         private void RegisterServices()
         {
             Container.RegisterType<IJsonService, JsonService>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<INavigationService, NavigationService>(new ContainerControlledLifetimeManager());
+
             Container.RegisterType<LocalFileDataSource>(new ContainerControlledLifetimeManager())
                 .RegisterType<IPokemonsDataSource, LocalFileDataSource>()
                 .RegisterType<IMovesDataSource, LocalFileDataSource>();
@@ -48,7 +49,8 @@ namespace Dex.Uwp.IoC
 
         private void RegisterViewModels()
         {
-            Container.RegisterType<PokedexViewModel>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<PokedexViewModel>(new TransientLifetimeManager());
+            Container.RegisterType<PokemonDetailViewModel>(new TransientLifetimeManager());
         }
     }
 }

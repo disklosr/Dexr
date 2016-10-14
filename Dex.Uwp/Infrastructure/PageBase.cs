@@ -7,9 +7,11 @@ namespace Dex.Uwp.Infrastructure
 {
     public class PageBase : Page
     {
+        private ViewModelBase viewModel;
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            var viewModel = ResolveViewModelForPage(e);
+            viewModel = viewModel ?? ResolveViewModelForPage(e);
             viewModel.OnNavigatedTo(e);
 
             DataContext = viewModel;
