@@ -1,6 +1,7 @@
 ﻿<infra:PageBase x:Class="Dex.Uwp.Pages.PokedexPage"
                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:controls="using:Dex.Uwp.Cards"
                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                 xmlns:infra="using:Dex.Uwp.Infrastructure"
                 xmlns:local="using:Dex.Uwp.Pages"
@@ -60,37 +61,33 @@
             </ListView.ItemContainerStyle>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
-                        <Border Height="48"
-                                BorderThickness="0,0,0,2"
-                                CornerRadius="2">
-                            <Border.BorderBrush>
-                                <SolidColorBrush Color="{ThemeResource SystemChromeHighColor}" />
-                            </Border.BorderBrush>
-                            <RelativePanel Padding="12,4">
-                                <RelativePanel.Background>
-                                    <SolidColorBrush Color="{ThemeResource SystemListLowColor}" />
-                                </RelativePanel.Background>
-                                <TextBlock x:Name="PokemonName"
-                                           VerticalAlignment="Top"
-                                           RelativePanel.AlignHorizontalCenterWithPanel="True"
-                                           RelativePanel.AlignTopWithPanel="True"
-                                           Text="{Binding Name}" RelativePanel.AlignLeftWithPanel="True" />
-                                <TextBlock VerticalAlignment="Bottom"
-                                           RelativePanel.Below="PokemonName"
-                                           Style="{StaticResource CaptionTextBlockStyle}">
-                                    <TextBlock.Foreground>
-                                        <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                                    </TextBlock.Foreground>
-                                    <Run Text="{Binding Type1}" />
-                                    <Run Text="{Binding Type2, Converter={StaticResource PokemonType2TextFormatter}}" />
-                                </TextBlock>
-                                <TextBlock
-                                           RelativePanel.AlignVerticalCenterWithPanel="True"
-                                           Text="{Binding DexNumber}" RelativePanel.AlignRightWithPanel="True" />
-                            </RelativePanel>
-                        </Border>
-                    </Grid>
+                    <controls:Card MinHeight="48">
+                        <RelativePanel Padding="12,4">
+                            <TextBlock x:Name="PokemonName"
+                                       VerticalAlignment="Top"
+                                       RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                       RelativePanel.AlignLeftWithPanel="True"
+                                       RelativePanel.AlignTopWithPanel="True"
+                                       Text="{Binding Name}" />
+                            <TextBlock VerticalAlignment="Bottom"
+                                       RelativePanel.Below="PokemonName"
+                                       Style="{StaticResource CaptionTextBlockStyle}">
+                                <TextBlock.Foreground>
+                                    <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
+                                </TextBlock.Foreground>
+                                <Run Text="{Binding Type1}" />
+                                <Run Text="{Binding Type2, Converter={StaticResource PokemonType2TextFormatter}}" />
+                            </TextBlock>
+                            <TextBlock RelativePanel.AlignRightWithPanel="True"
+                                       RelativePanel.AlignVerticalCenterWithPanel="True"
+                                       Style="{StaticResource CaptionTextBlockStyle}"
+                                       Text="{Binding DexNumber}">
+                                <TextBlock.Foreground>
+                                    <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                        </RelativePanel>
+                    </controls:Card>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
