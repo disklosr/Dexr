@@ -17,6 +17,11 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ListView ItemsSource="{Binding AllPokemons}" Padding="24,12,24,0">
+            <ListView.ItemContainerTransitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition />
+                </TransitionCollection>
+            </ListView.ItemContainerTransitions>
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -55,28 +60,37 @@
             </ListView.ItemContainerStyle>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Border BorderThickness="0,0,0,2">
-                        <Border.BorderBrush>
-                            <SolidColorBrush Color="{ThemeResource SystemChromeHighColor}" />
-                        </Border.BorderBrush>
-                        <RelativePanel>
-                            <RelativePanel.Background>
-                                <SolidColorBrush Color="{ThemeResource SystemListLowColor}" />
-                            </RelativePanel.Background>
-                            <TextBlock x:Name="PokemonName"
-                                       RelativePanel.AlignHorizontalCenterWithPanel="True"
-                                       Text="{Binding Name}" />
-                            <TextBlock RelativePanel.AlignHorizontalCenterWith="PokemonName"
-                                       RelativePanel.Below="PokemonName"
-                                       Style="{StaticResource CaptionTextBlockStyle}">
-                                <TextBlock.Foreground>
-                                    <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                                </TextBlock.Foreground>
-                                <Run Text="{Binding Type1}" />
-                                <Run Text="{Binding Type2, Converter={StaticResource PokemonType2TextFormatter}}" />
-                            </TextBlock>
-                        </RelativePanel>
-                    </Border>
+                    <Grid>
+                        <Border Height="48"
+                                BorderThickness="0,0,0,2"
+                                CornerRadius="2">
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="{ThemeResource SystemChromeHighColor}" />
+                            </Border.BorderBrush>
+                            <RelativePanel Padding="12,4">
+                                <RelativePanel.Background>
+                                    <SolidColorBrush Color="{ThemeResource SystemListLowColor}" />
+                                </RelativePanel.Background>
+                                <TextBlock x:Name="PokemonName"
+                                           VerticalAlignment="Top"
+                                           RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                           RelativePanel.AlignTopWithPanel="True"
+                                           Text="{Binding Name}" RelativePanel.AlignLeftWithPanel="True" />
+                                <TextBlock VerticalAlignment="Bottom"
+                                           RelativePanel.Below="PokemonName"
+                                           Style="{StaticResource CaptionTextBlockStyle}">
+                                    <TextBlock.Foreground>
+                                        <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
+                                    </TextBlock.Foreground>
+                                    <Run Text="{Binding Type1}" />
+                                    <Run Text="{Binding Type2, Converter={StaticResource PokemonType2TextFormatter}}" />
+                                </TextBlock>
+                                <TextBlock
+                                           RelativePanel.AlignVerticalCenterWithPanel="True"
+                                           Text="{Binding DexNumber}" RelativePanel.AlignRightWithPanel="True" />
+                            </RelativePanel>
+                        </Border>
+                    </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
