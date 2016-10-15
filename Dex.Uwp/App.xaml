@@ -25,8 +25,8 @@
 
                     <Color x:Key="AppGreyColor">#E0E0E0</Color>
                     <Color x:Key="AppGreyColorLighter1">#F5F5F5</Color>
-                    <Color x:Key="AppGreyColorLighter3">#FAFAFA</Color>
-                    <Color x:Key="AppGreyColorLighter4">#FFFFFF</Color>
+                    <Color x:Key="AppGreyColorLighter2">#FAFAFA</Color>
+                    <Color x:Key="AppGreyColorLighter3">#FFFFFF</Color>
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
 
