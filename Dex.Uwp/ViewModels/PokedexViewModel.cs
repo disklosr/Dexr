@@ -42,7 +42,8 @@ namespace Dex.Uwp.ViewModels
         {
             var pokes = await pokemonsRepository.GetAllPokemons();
             AllPokemons = pokes;
-            SelectedPokemon = null;
+            selectedPokemon = null;
+            OnPropertyChanged(nameof(SelectedPokemon));
         }
     }
 }

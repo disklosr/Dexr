@@ -11,7 +11,7 @@
             <SolidColorBrush Color="{ThemeResource AppGreyColorLighter3}" />
         </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60" />
+            <RowDefinition Height="56" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
@@ -22,8 +22,27 @@
             <Border.Background>
                 <SolidColorBrush Color="{ThemeResource SystemAccentColor}" />
             </Border.Background>
-            <Grid Grid.Row="0" Margin="12">
-                <TextBlock VerticalAlignment="Center" Text="Pokédex">
+            <Grid Grid.Row="0">
+                <Border Width="56"
+                        Height="56"
+                        HorizontalAlignment="Left"
+                        Padding="0">
+
+                    <TextBlock HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               FontFamily="{StaticResource SymbolThemeFontFamily}"
+                               FontSize="18"
+                               Text="&#xE700;">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                </Border>
+                <TextBlock Margin="56,0,0,0"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Center"
+                           Style="{StaticResource SubtitleTextBlockStyle}"
+                           Text="Pokédex">
                     <TextBlock.Foreground>
                         <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
                     </TextBlock.Foreground>
