@@ -8,7 +8,7 @@
 
     <Grid>
         <Grid.Background>
-            <SolidColorBrush Color="{ThemeResource AppGreyColorLighter3}" />
+            <SolidColorBrush Color="{ThemeResource AppGreyColorLighter1}" />
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="56" />
