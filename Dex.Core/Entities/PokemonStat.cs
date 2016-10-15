@@ -2,9 +2,9 @@
 {
     public class Attack : CombatStat
     {
-        public Attack(ushort attack)
+        public Attack(ushort value)
         {
-            Value = attack;
+            Value = value;
         }
     }
 
@@ -15,17 +15,17 @@
 
     public class Defense : CombatStat
     {
-        public Defense(ushort defense)
+        public Defense(ushort value)
         {
-            Value = defense;
+            Value = value;
         }
     }
 
     public class Stamina : CombatStat
     {
-        public Stamina(ushort stamina)
+        public Stamina(ushort value)
         {
-            Value = stamina;
+            Value = value;
         }
     }
 }
