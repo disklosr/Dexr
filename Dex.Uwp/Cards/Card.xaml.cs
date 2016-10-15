@@ -10,7 +10,7 @@ namespace Dex.Uwp.Cards
     {
         public Card()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         protected override void OnApplyTemplate()

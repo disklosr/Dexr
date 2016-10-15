@@ -26,7 +26,10 @@
                   Style="{StaticResource CardBasedListStyle}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <controls:Card Height="84" BorderBrush="{Binding Type1, Converter={StaticResource PokemonTypeToColorConverter}}">
+                    <controls:Card Height="84"
+                                   BorderBrush="{Binding Type1,
+                                                         Converter={StaticResource PokemonTypeToColorConverter}}"
+                                   BorderThickness="0,0,0,2">
                         <RelativePanel Padding="12,4">
                             <Image Name="PokemonPicture"
                                    Margin="0,12,12,12"

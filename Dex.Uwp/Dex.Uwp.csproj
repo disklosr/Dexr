@@ -253,6 +253,9 @@
     <Compile Include="Cards\Card.xaml.cs">
       <DependentUpon>Card.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Cards\PokemonCard.xaml.cs">
+      <DependentUpon>PokemonCard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DataAccess\LocalFileDataSource.cs" />
     <Compile Include="Infrastructure\PageBase.cs" />
     <Compile Include="Infrastructure\RelayCommand.cs" />
@@ -300,6 +303,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Cards\Card.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cards\PokemonCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
