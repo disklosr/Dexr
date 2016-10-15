@@ -2,6 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="using:Dex.Uwp.Theme">
 
+    <local:DropShadowStyle x:Key="DropShadowStyle" />
+
     <Style x:Name="CardBasedListStyle" TargetType="ListView">
         <Setter Property="Padding" Value="24,12,24,0" />
         <Setter Property="ItemContainerTransitions">
@@ -17,6 +19,7 @@
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         <Setter Property="Margin" Value="0,0,0,12" />
         <Setter Property="Padding" Value="0" />
+        <!--#region MightNeedThisLater-->
         <!--<Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="ListViewItem">
@@ -46,5 +49,6 @@
                             </ControlTemplate>
                         </Setter.Value>
                     </Setter>-->
+        <!--#endregion-->
     </Style>
 </ResourceDictionary>

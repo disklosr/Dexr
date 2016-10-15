@@ -271,6 +271,7 @@
     <Compile Include="Services\IJsonService.cs" />
     <Compile Include="Services\INavigationService.cs" />
     <Compile Include="Services\NavigationServiceException.cs" />
+    <Compile Include="Theme\DropShadowStyle.cs" />
     <Compile Include="ValueConverters\PokemonDexNumberToPictureConverter.cs" />
     <Compile Include="ValueConverters\PokemonType2TextFormatter.cs" />
     <Compile Include="ValueConverters\PokemonTypeToColorConverter.cs" />

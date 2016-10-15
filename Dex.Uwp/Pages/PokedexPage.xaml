@@ -18,7 +18,7 @@
         <vc:PokemonType2TextFormatter x:Key="PokemonType2TextFormatter" />
     </infra:PageBase.Resources>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
         <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
                   ItemsSource="{Binding AllPokemons}"
                   SelectedItem="{Binding SelectedPokemon,
@@ -26,7 +26,6 @@
                   Style="{StaticResource CardBasedListStyle}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <!--    -->
                     <controls:Card Height="84" BorderBrush="{Binding Type1, Converter={StaticResource PokemonTypeToColorConverter}}">
                         <RelativePanel Padding="12,4">
                             <Image Name="PokemonPicture"

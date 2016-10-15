@@ -10,14 +10,12 @@
 
     <ContentControl.Template>
         <ControlTemplate>
-            <Grid>
+            <Grid Name="CardRoot">
+                <Canvas Name="ShadowHost" />
                 <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0,0,0,4">
                     <Border.Background>
-                        <SolidColorBrush Color="{ThemeResource SystemListLowColor}" />
+                        <SolidColorBrush Color="{ThemeResource AppGreyColorLighter4}" />
                     </Border.Background>
-                    <!--<Border.BorderBrush>
-                        <SolidColorBrush Color="{ThemeResource SystemChromeHighColor}" />
-                    </Border.BorderBrush>-->
                     <ContentPresenter />
                 </Border>
             </Grid>
