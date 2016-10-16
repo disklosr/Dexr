@@ -7,23 +7,20 @@
              xmlns:vm="using:Dex.Uwp.ViewModels"
              d:DataContext="{d:DesignInstance Type=vm:PokemonDetailViewModel,
                                               IsDesignTimeCreatable=False}"
-             d:DesignHeight="120"
+             d:DesignHeight="240"
              d:DesignWidth="400"
              mc:Ignorable="d">
 
     <local:Card Padding="12">
         <StackPanel Orientation="Vertical">
-            <local:RectangularGauge Height="24"
-                                    DataContext="{Binding AttackStats}"
+            <local:RectangularGauge DataContext="{Binding AttackStats}"
                                     Foreground="{StaticResource AppAttackBrush}"
                                     Tag="ATK" />
-            <local:RectangularGauge Height="24"
-                                    Margin="0,12,0,0"
+            <local:RectangularGauge Margin="0,12,0,0"
                                     DataContext="{Binding DefenseStats}"
                                     Foreground="{StaticResource AppDefenseBrush}"
                                     Tag="DEF" />
-            <local:RectangularGauge Height="24"
-                                    Margin="0,12,0,0"
+            <local:RectangularGauge Margin="0,12,0,0"
                                     DataContext="{Binding StaminaStats}"
                                     Foreground="{StaticResource AppStaminaBrush}"
                                     Tag="STM" />

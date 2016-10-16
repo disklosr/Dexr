@@ -10,7 +10,7 @@
              Name="CurrentControl"
              d:DataContext="{d:DesignInstance Type=vm:CombatStatDataViewModel,
                                               IsDesignTimeCreatable=False}"
-             d:DesignHeight="24"
+             d:DesignHeight="48"
              d:DesignWidth="400"
              mc:Ignorable="d">
 
@@ -19,27 +19,17 @@
     </UserControl.Resources>
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24" />
+            <RowDefinition Height="24" />
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="{Binding ElementName=CurrentControl, Path=DataContext, Converter={StaticResource PokemonStatToPercentageValueConverter}, ConverterParameter='0'}" />
             <ColumnDefinition Width="{Binding ElementName=CurrentControl, Path=DataContext, Converter={StaticResource PokemonStatToPercentageValueConverter}, ConverterParameter='1'}" />
         </Grid.ColumnDefinitions>
 
-        <Rectangle Grid.Column="0" Grid.ColumnSpan="2">
-            <Rectangle.Style>
-                <Style TargetType="Rectangle">
-                    <Setter Property="Fill" Value="{StaticResource AppGreyColorLighter1}" />
-                </Style>
-            </Rectangle.Style>
-        </Rectangle>
-
-        <Rectangle Name="ValueRectangle"
+        <TextBlock Grid.Row="0"
                    Grid.Column="0"
-                   Fill="{Binding ElementName=CurrentControl,
-                                  Path=Foreground}" />
-
-        <TextBlock Grid.Column="0"
-                   Grid.ColumnSpan="2"
-                   Margin="12,0,0,0"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center">
             <TextBlock.Foreground>
@@ -49,9 +39,8 @@
             <Run Text="{Binding StatValue}" />
         </TextBlock>
 
-        <TextBlock Grid.Column="0"
-                   Grid.ColumnSpan="2"
-                   Margin="0,0,12,0"
+        <TextBlock Grid.Row="0"
+                   Grid.Column="1"
                    HorizontalAlignment="Right"
                    VerticalAlignment="Center"
                    Text="{Binding MaxStatValue}">
@@ -59,5 +48,21 @@
                 <SolidColorBrush Color="{ThemeResource SystemBaseHighColor}" />
             </TextBlock.Foreground>
         </TextBlock>
+
+        <Rectangle Grid.Row="1"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2">
+            <Rectangle.Style>
+                <Style TargetType="Rectangle">
+                    <Setter Property="Fill" Value="{StaticResource AppGreyColorLighter1}" />
+                </Style>
+            </Rectangle.Style>
+        </Rectangle>
+
+        <Rectangle Name="ValueRectangle"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   Fill="{Binding ElementName=CurrentControl,
+                                  Path=Foreground}" />
     </Grid>
 </UserControl>
