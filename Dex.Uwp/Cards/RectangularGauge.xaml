@@ -33,7 +33,7 @@
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center">
             <TextBlock.Foreground>
-                <SolidColorBrush Color="{ThemeResource SystemBaseHighColor}" />
+                <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
             </TextBlock.Foreground>
             <Run Text="{Binding ElementName=CurrentControl, Path=Tag}" />
             <Run Text="{Binding StatValue}" />
@@ -45,7 +45,7 @@
                    VerticalAlignment="Center"
                    Text="{Binding MaxStatValue}">
             <TextBlock.Foreground>
-                <SolidColorBrush Color="{ThemeResource SystemBaseHighColor}" />
+                <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
             </TextBlock.Foreground>
         </TextBlock>
 
@@ -64,5 +64,19 @@
                    Grid.Column="0"
                    Fill="{Binding ElementName=CurrentControl,
                                   Path=Foreground}" />
+
+        <TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   Margin="0,0,4,0"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"
+                   Style="{StaticResource BodyTextBlockStyle}"
+                   Text="{Binding Percentage,
+                                  Converter={StaticResource StringAppenderFormatter},
+                                  ConverterParameter='%'}">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
+            </TextBlock.Foreground>
+        </TextBlock>
     </Grid>
 </UserControl>

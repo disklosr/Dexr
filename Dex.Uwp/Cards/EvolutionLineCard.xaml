@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="Dex.Uwp.Cards.EvolutionLineCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="using:Dex.Uwp.Cards"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vc="using:Dex.Uwp.ValueConverters"
+             xmlns:vm="using:Dex.Uwp.ViewModels"
+             d:DataContext="{d:DesignInstance Type=vm:PokemonDetailViewModel,
+                                              IsDesignTimeCreatable=False}"
+             d:DesignHeight="300"
+             d:DesignWidth="400"
+             mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <vc:EvolutionLineToGridLengthConverter x:Key="EvolutionLineToGridLengthConverter" />
+    </UserControl.Resources>
+
+    <local:Card Padding="12">
+        <Grid Name="RootGrid">
+            <TextBlock x:Uid="MessageNoEvolutionFound"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Visibility="{Binding Evolutions,
+                                            Converter={StaticResource NullOrEmptyToVisibilityConverter},
+                                            ConverterParameter='Reverse'}">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Grid Visibility="{Binding Evolutions, Converter={StaticResource NullOrEmptyToVisibilityConverter}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="{Binding NumberOfEvolutions, Converter={StaticResource EvolutionLineToGridLengthConverter}, ConverterParameter='0'}" />
+                    <ColumnDefinition Width="{Binding NumberOfEvolutions, Converter={StaticResource EvolutionLineToGridLengthConverter}, ConverterParameter='1'}" />
+                    <ColumnDefinition Width="{Binding NumberOfEvolutions, Converter={StaticResource EvolutionLineToGridLengthConverter}, ConverterParameter='2'}" />
+                    <ColumnDefinition Width="{Binding NumberOfEvolutions, Converter={StaticResource EvolutionLineToGridLengthConverter}, ConverterParameter='3'}" />
+                    <ColumnDefinition Width="{Binding NumberOfEvolutions, Converter={StaticResource EvolutionLineToGridLengthConverter}, ConverterParameter='4'}" />
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0"
+                       Width="72"
+                       Height="72"
+                       VerticalAlignment="Center"
+                       Source="{Binding Evolutions[0].DexNumber,
+                                        Converter={StaticResource PokemonDexNumberToPictureConverter}}" HorizontalAlignment="Center" />
+                <TextBlock Grid.Column="1"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontFamily="Segoe MDL2 Assets"
+                           Text="&#xE0E3;" />
+                <Image Grid.Column="2"
+                       Width="72"
+                       Height="72"
+                       Source="{Binding Evolutions[1].DexNumber,
+                                        Converter={StaticResource PokemonDexNumberToPictureConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock Grid.Column="3"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontFamily="Segoe MDL2 Assets"
+                           Text="&#xE0E3;" />
+                <Image Grid.Column="4"
+                       Width="72"
+                       Height="72"
+                       Source="{Binding Evolutions[2].DexNumber,
+                                        Converter={StaticResource PokemonDexNumberToPictureConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+        </Grid>
+    </local:Card>
+</UserControl>

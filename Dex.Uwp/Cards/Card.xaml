@@ -10,7 +10,7 @@
 
     <ContentControl.Template>
         <ControlTemplate>
-            <Grid Name="CardRoot">
+            <Grid Name="CardRoot" MinHeight="48">
                 <Canvas Name="ShadowHost" />
                 <Border BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"

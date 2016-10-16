@@ -42,7 +42,8 @@
                                        RelativePanel.AlignHorizontalCenterWithPanel="True"
                                        RelativePanel.AlignTopWithPanel="True"
                                        RelativePanel.RightOf="PokemonPicture"
-                                       Text="{Binding Name}" />
+                                       Text="{Binding Name,
+                                                      Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
                             <TextBlock VerticalAlignment="Bottom"
                                        RelativePanel.AlignLeftWith="PokemonName"
                                        RelativePanel.Below="PokemonName"

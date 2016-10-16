@@ -33,9 +33,6 @@
                     <Brush x:Key="AppStaminaBrush">#ff7473</Brush>
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
-
-            <vc:PokemonTypeToColorConverter x:Key="PokemonTypeToColorConverter" />
-            <vc:PokemonDexNumberToPictureConverter x:Key="PokemonDexNumberToPictureConverter" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

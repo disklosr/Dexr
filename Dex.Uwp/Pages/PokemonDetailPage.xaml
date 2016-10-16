@@ -16,6 +16,7 @@
             <ListView.Items>
                 <controls:PokemonCard DataContext="{Binding SelectedPokemon}" />
                 <controls:StatsCard DataContext="{Binding}" />
+                <controls:EvolutionLineCard DataContext="{Binding EvolutionLine}" />
             </ListView.Items>
         </ListView>
     </Grid>

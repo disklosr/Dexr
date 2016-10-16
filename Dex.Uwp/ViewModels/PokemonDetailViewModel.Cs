@@ -1,6 +1,7 @@
 ﻿using Dex.Core.Entities;
 using Dex.Core.Repositories;
 using Dex.Uwp.Infrastructure;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Navigation;
 
@@ -12,6 +13,7 @@ namespace Dex.Uwp.ViewModels
 
         private CombatStatDataViewModel attackStats;
         private CombatStatDataViewModel defenseStats;
+        private EvolutionLineDataViewModel evolutionLine;
         private Pokemon selectedPokemon;
         private CombatStatDataViewModel staminaStats;
 
@@ -32,6 +34,12 @@ namespace Dex.Uwp.ViewModels
             private set { Set(ref defenseStats, value); }
         }
 
+        public EvolutionLineDataViewModel EvolutionLine
+        {
+            get { return evolutionLine; }
+            private set { Set(ref evolutionLine, value); }
+        }
+
         public Pokemon SelectedPokemon
         {
             get { return selectedPokemon; }
@@ -48,6 +56,7 @@ namespace Dex.Uwp.ViewModels
         {
             var dexId = (ushort)e.Parameter;
             SelectedPokemon = await pokemonRepository.GetPokemonById(dexId);
+            EvolutionLine = new EvolutionLineDataViewModel(await pokemonRepository.GetEvolutionLineFor(selectedPokemon));
             await InitCombatStats();
         }
 

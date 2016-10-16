@@ -1,5 +1,6 @@
 ﻿using Dex.Core.DataAccess;
 using Dex.Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,6 +10,8 @@ namespace Dex.Core.Repositories
     public interface IPokemonRepository
     {
         Task<IEnumerable<Pokemon>> GetAllPokemons();
+
+        Task<IEnumerable<Pokemon>> GetEvolutionLineFor(Pokemon pokemon);
 
         Task<ushort> GetMaxAttack();
 
@@ -40,6 +43,29 @@ namespace Dex.Core.Repositories
             return allPokemonsCache;
         }
 
+        public async Task<IEnumerable<Pokemon>> GetEvolutionLineFor(Pokemon pokemon)
+        {
+            if (!HasEvolutions(pokemon))
+                return Enumerable.Empty<Pokemon>();
+
+            HashSet<Pokemon> evolutions = new HashSet<Pokemon>();
+
+            var level1Search = await GetEvolutions(pokemon);
+
+            foreach (var poke in level1Search)
+            {
+                evolutions.Add(poke);
+                var level2Search = await GetEvolutions(poke);
+                foreach (var p in level2Search)
+                {
+                    evolutions.Add(p);
+                }
+            }
+
+            evolutions.Add(pokemon);
+            return evolutions.OrderBy(poke => poke.DexNumber);
+        }
+
         public async Task<ushort> GetMaxAttack()
         {
             await EnsureCacheIsValid();
@@ -66,13 +92,34 @@ namespace Dex.Core.Repositories
             await EnsureCacheIsValid();
             return allPokemonsCache
                 .Where(pokemon => pokemon.DexNumber == pokemonId)
-                .DefaultIfEmpty(new MissingNo()).First();
+                .FirstOrDefault();
+        }
+
+        public async Task<Pokemon> GetPokemonByName(string pokemonName)
+        {
+            await EnsureCacheIsValid();
+            return allPokemonsCache
+                .Where(pokemon => pokemon.Name == pokemonName)
+                .FirstOrDefault();
         }
 
         private async Task EnsureCacheIsValid()
         {
             if (allPokemonsCache == null)
                 allPokemonsCache = await dataSource.LoadAllPokemonsAsync();
+        }
+
+        private async Task<IEnumerable<Pokemon>> GetEvolutions(Pokemon pokemon)
+        {
+            var to = await GetPokemonByName(pokemon.EvolvesTo);
+            var from = await GetPokemonByName(pokemon.EvolvesFrom);
+
+            return new Pokemon[] { to, from }.Where(poke => poke != null);
+        }
+
+        private bool HasEvolutions(Pokemon pokemon)
+        {
+            return pokemon.EvolvesFrom != null || pokemon.EvolvesTo != null;
         }
     }
 }

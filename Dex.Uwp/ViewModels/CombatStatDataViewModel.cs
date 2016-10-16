@@ -8,10 +8,11 @@ namespace Dex.Uwp.ViewModels
         {
             MaxStatValue = maxStatValue;
             StatValue = statValue;
+            Percentage = (ushort)Math.Round((double)(100 * StatValue) / MaxStatValue);
         }
 
         public ushort MaxStatValue { get; }
-        public ushort Percentage => (ushort)Math.Round((double)(100 * StatValue) / MaxStatValue);
+        public ushort Percentage { get; }
         public ushort StatValue { get; }
     }
 }
