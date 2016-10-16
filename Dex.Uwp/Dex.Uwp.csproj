@@ -256,6 +256,12 @@
     <Compile Include="Cards\PokemonCard.xaml.cs">
       <DependentUpon>PokemonCard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Cards\RectangularGauge.xaml.cs">
+      <DependentUpon>RectangularGauge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cards\StatsCard.xaml.cs">
+      <DependentUpon>StatsCard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DataAccess\LocalFileDataSource.cs" />
     <Compile Include="Infrastructure\PageBase.cs" />
     <Compile Include="Infrastructure\RelayCommand.cs" />
@@ -276,8 +282,10 @@
     <Compile Include="Services\NavigationServiceException.cs" />
     <Compile Include="Theme\DropShadowStyle.cs" />
     <Compile Include="ValueConverters\PokemonDexNumberToPictureConverter.cs" />
+    <Compile Include="ValueConverters\PokemonStatToPercentageValueConverter.cs" />
     <Compile Include="ValueConverters\PokemonType2TextFormatter.cs" />
     <Compile Include="ValueConverters\PokemonTypeToColorConverter.cs" />
+    <Compile Include="ViewModels\CombatStatDataViewModel.cs" />
     <Compile Include="ViewModels\PokedexViewModel.cs" />
     <Compile Include="ViewModels\PokemonDetailViewModel.cs" />
   </ItemGroup>
@@ -307,6 +315,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Cards\PokemonCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cards\RectangularGauge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cards\StatsCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

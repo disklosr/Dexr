@@ -32,7 +32,7 @@ namespace Dex.Uwp.Cards
             // Create a drop shadow
             var dropShadow = compositor.CreateDropShadow();
 
-            var shadowStyle = (DropShadowStyle)Application.Current.Resources["DropShadowStyle"];
+            var shadowStyle = new DropShadowStyle();
             dropShadow.Color = shadowStyle.Color;
             dropShadow.BlurRadius = shadowStyle.BlurRadius;
             dropShadow.Offset = shadowStyle.Offset;

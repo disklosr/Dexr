@@ -11,7 +11,12 @@
                                                  IsDesignTimeCreatable=False}"
                 mc:Ignorable="d">
 
-    <Grid VerticalAlignment="Top" Padding="24,12,24,0">
-        <controls:PokemonCard DataContext="{Binding SelectedPokemon}" />
+    <Grid VerticalAlignment="Top">
+        <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}" Style="{StaticResource CardBasedListStyle}">
+            <ListView.Items>
+                <controls:PokemonCard DataContext="{Binding SelectedPokemon}" />
+                <controls:StatsCard DataContext="{Binding}" />
+            </ListView.Items>
+        </ListView>
     </Grid>
 </infra:PageBase>

@@ -27,6 +27,10 @@
                     <Color x:Key="AppGreyColorLighter1">#F5F5F5</Color>
                     <Color x:Key="AppGreyColorLighter2">#FAFAFA</Color>
                     <Color x:Key="AppGreyColorLighter3">#FFFFFF</Color>
+
+                    <Brush x:Key="AppAttackBrush">#807E57C2</Brush>
+                    <Brush x:Key="AppDefenseBrush">#8029B6F6</Brush>
+                    <Brush x:Key="AppStaminaBrush">#8066BB6A</Brush>
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
 

@@ -10,11 +10,26 @@ namespace Dex.Uwp.ViewModels
     {
         private readonly IPokemonRepository pokemonRepository;
 
+        private CombatStatDataViewModel attackStats;
+        private CombatStatDataViewModel defenseStats;
         private Pokemon selectedPokemon;
+        private CombatStatDataViewModel staminaStats;
 
         public PokemonDetailViewModel(IPokemonRepository pokemonRepository)
         {
             this.pokemonRepository = pokemonRepository;
+        }
+
+        public CombatStatDataViewModel AttackStats
+        {
+            get { return attackStats; }
+            private set { Set(ref attackStats, value); }
+        }
+
+        public CombatStatDataViewModel DefenseStats
+        {
+            get { return defenseStats; }
+            private set { Set(ref defenseStats, value); }
         }
 
         public Pokemon SelectedPokemon
@@ -23,10 +38,29 @@ namespace Dex.Uwp.ViewModels
             private set { Set(ref selectedPokemon, value); }
         }
 
+        public CombatStatDataViewModel StaminaStats
+        {
+            get { return staminaStats; }
+            private set { Set(ref staminaStats, value); }
+        }
+
         public async override Task OnNavigatedTo(NavigationEventArgs e)
         {
             var dexId = (ushort)e.Parameter;
             SelectedPokemon = await pokemonRepository.GetPokemonById(dexId);
+            await InitCombatStats();
+        }
+
+        private async Task InitCombatStats()
+        {
+            var maxAtk = pokemonRepository.GetMaxAttack();
+            var maxDef = pokemonRepository.GetMaxDefense();
+            var maxStm = pokemonRepository.GetMaxStamina();
+            await Task.WhenAll(new Task[] { maxAtk, maxDef, maxStm });
+
+            AttackStats = new CombatStatDataViewModel(SelectedPokemon.Attack.Value, maxAtk.Result);
+            DefenseStats = new CombatStatDataViewModel(SelectedPokemon.Defense.Value, maxDef.Result);
+            StaminaStats = new CombatStatDataViewModel(SelectedPokemon.Stamina.Value, maxStm.Result);
         }
     }
 }

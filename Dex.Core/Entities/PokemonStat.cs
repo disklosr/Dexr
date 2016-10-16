@@ -1,4 +1,6 @@
-﻿namespace Dex.Core.Entities
+﻿using System;
+
+namespace Dex.Core.Entities
 {
     public class Attack : CombatStat
     {
@@ -8,9 +10,14 @@
         }
     }
 
-    public abstract class CombatStat
+    public abstract class CombatStat : IComparable<CombatStat>
     {
         public ushort Value { get; protected set; }
+
+        public int CompareTo(CombatStat that)
+        {
+            return this.Value.CompareTo(that.Value);
+        }
     }
 
     public class Defense : CombatStat

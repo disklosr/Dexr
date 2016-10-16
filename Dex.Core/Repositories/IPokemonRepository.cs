@@ -10,6 +10,12 @@ namespace Dex.Core.Repositories
     {
         Task<IEnumerable<Pokemon>> GetAllPokemons();
 
+        Task<ushort> GetMaxAttack();
+
+        Task<ushort> GetMaxDefense();
+
+        Task<ushort> GetMaxStamina();
+
         Task<Pokemon> GetPokemonById(ushort pokemonId);
     }
 
@@ -18,6 +24,10 @@ namespace Dex.Core.Repositories
         private readonly IPokemonsDataSource dataSource;
 
         private IEnumerable<Pokemon> allPokemonsCache;
+
+        private Attack maxAttack;
+        private Defense maxDefense;
+        private Stamina maxStamina;
 
         public PokemonRepository(IPokemonsDataSource dataSource)
         {
@@ -28,6 +38,27 @@ namespace Dex.Core.Repositories
         {
             await EnsureCacheIsValid();
             return allPokemonsCache;
+        }
+
+        public async Task<ushort> GetMaxAttack()
+        {
+            await EnsureCacheIsValid();
+            maxAttack = maxAttack ?? allPokemonsCache.Max(poke => poke.Attack);
+            return maxAttack.Value;
+        }
+
+        public async Task<ushort> GetMaxDefense()
+        {
+            await EnsureCacheIsValid();
+            maxDefense = maxDefense ?? allPokemonsCache.Max(poke => poke.Defense);
+            return maxDefense.Value;
+        }
+
+        public async Task<ushort> GetMaxStamina()
+        {
+            await EnsureCacheIsValid();
+            maxStamina = maxStamina ?? allPokemonsCache.Max(poke => poke.Stamina);
+            return maxStamina.Value;
         }
 
         public async Task<Pokemon> GetPokemonById(ushort pokemonId)
