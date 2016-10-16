@@ -1,3 +1,5 @@
+using System;
+
 namespace Dex.Uwp.ViewModels
 {
     public class CombatStatDataViewModel
@@ -9,6 +11,7 @@ namespace Dex.Uwp.ViewModels
         }
 
         public ushort MaxStatValue { get; }
+        public ushort Percentage => (ushort)Math.Round((double)(100 * StatValue) / MaxStatValue);
         public ushort StatValue { get; }
     }
 }

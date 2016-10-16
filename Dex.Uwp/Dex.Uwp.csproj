@@ -282,7 +282,7 @@
     <Compile Include="Services\NavigationServiceException.cs" />
     <Compile Include="Theme\DropShadowStyle.cs" />
     <Compile Include="ValueConverters\PokemonDexNumberToPictureConverter.cs" />
-    <Compile Include="ValueConverters\PokemonStatToPercentageValueConverter.cs" />
+    <Compile Include="ValueConverters\PokemonPercentToGridLenghtConverter.cs" />
     <Compile Include="ValueConverters\PokemonType2TextFormatter.cs" />
     <Compile Include="ValueConverters\PokemonTypeToColorConverter.cs" />
     <Compile Include="ViewModels\CombatStatDataViewModel.cs" />
