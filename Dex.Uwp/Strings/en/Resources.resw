@@ -118,6 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="MessageNoEvolutionFound.Text" xml:space="preserve">
-    <value>No evolutions found for this pokemon</value>
+    <value>This pokemon does not have any evolutions</value>
   </data>
 </root>

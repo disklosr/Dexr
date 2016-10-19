@@ -13,11 +13,11 @@ namespace Dex.Scaper
 
         public void MergeWith(List<Pokemon> pokemons)
         {
-            pokemons.ForEach(pokemon =>
-            {
-                pokemon.EvolvesFrom = Corrections.Where(tuple => tuple.Item1 == pokemon.DexNumber.ToString()).First().Item2;
-                pokemon.EvolvesTo = Corrections.Where(tuple => tuple.Item1 == pokemon.DexNumber.ToString()).First().Item3;
-            });
+            //pokemons.ForEach(pokemon =>
+            //{
+            //    pokemon.EvolvesFrom = Corrections.Where(tuple => tuple.Item1 == pokemon.DexNumber.ToString()).First().Item2;
+            //    pokemon.EvolvesTo = Corrections.Where(tuple => tuple.Item1 == pokemon.DexNumber.ToString()).First().Item3;
+            //});
         }
 
         public void Parse(string input)

@@ -16,7 +16,8 @@ namespace Dex.Scaper
         private static void Main()
         {
             ParseDataFromUrl();
-            ParseDataFromFile();
+            //ParseDataFromFile();
+            ParseDataFromJsonFile();
             WriteModelToFile(Pokemons);
         }
 
@@ -24,6 +25,14 @@ namespace Dex.Scaper
         {
             var str = File.ReadAllText("in.txt");
             var parser = new EvolutionsParser();
+            parser.Parse(str);
+            parser.MergeWith(Pokemons);
+        }
+
+        private static void ParseDataFromJsonFile()
+        {
+            var str = File.ReadAllText("types.json");
+            var parser = new JsonEvolutionParser();
             parser.Parse(str);
             parser.MergeWith(Pokemons);
         }

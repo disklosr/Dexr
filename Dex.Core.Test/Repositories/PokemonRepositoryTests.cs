@@ -17,10 +17,10 @@ namespace Dex.Core.Test.Repositories
         [Test]
         public async Task Given1EvolutionsPokemonShouldReturnNothing()
         {
-            var pokemon1 = new Pokemon() { Name = "poke1", DexNumber = 1, EvolvesFrom = null, EvolvesTo = null };
-            var pokemon2 = new Pokemon() { Name = "poke2", DexNumber = 2, EvolvesFrom = null, EvolvesTo = null };
-            var pokemon3 = new Pokemon() { Name = "poke3", DexNumber = 3, EvolvesFrom = null, EvolvesTo = null };
-            var pokemon4 = new Pokemon() { Name = "poke4", DexNumber = 4, EvolvesFrom = null, EvolvesTo = null };
+            var pokemon1 = new Pokemon() { DexNumber = 1, EvolvesFrom = 0, EvolvesTo = 0 };
+            var pokemon2 = new Pokemon() { DexNumber = 2, EvolvesFrom = 0, EvolvesTo = 0 };
+            var pokemon3 = new Pokemon() { DexNumber = 3, EvolvesFrom = 0, EvolvesTo = 0 };
+            var pokemon4 = new Pokemon() { DexNumber = 4, EvolvesFrom = 0, EvolvesTo = 0 };
 
             SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2, pokemon3, pokemon4 });
 
@@ -33,10 +33,10 @@ namespace Dex.Core.Test.Repositories
         [Test]
         public async Task Given2EvolutionsPokemonShouldReturn2PokemonsInCorrectOrder()
         {
-            var pokemon1 = new Pokemon() { Name = "poke1", DexNumber = 1, EvolvesFrom = null, EvolvesTo = "poke2" };
-            var pokemon2 = new Pokemon() { Name = "poke2", DexNumber = 2, EvolvesFrom = "poke1", EvolvesTo = null };
-            var pokemon3 = new Pokemon() { Name = "poke3", DexNumber = 3, EvolvesFrom = null, EvolvesTo = null };
-            var pokemon4 = new Pokemon() { Name = "poke4", DexNumber = 4, EvolvesFrom = null, EvolvesTo = null };
+            var pokemon1 = new Pokemon() { DexNumber = 1, EvolvesFrom = 0, EvolvesTo = 1 };
+            var pokemon2 = new Pokemon() { DexNumber = 2, EvolvesFrom = 1, EvolvesTo = 0 };
+            var pokemon3 = new Pokemon() { DexNumber = 3, EvolvesFrom = 0, EvolvesTo = 0 };
+            var pokemon4 = new Pokemon() { DexNumber = 4, EvolvesFrom = 0, EvolvesTo = 0 };
 
             SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2, pokemon3, pokemon4 });
 
@@ -52,10 +52,10 @@ namespace Dex.Core.Test.Repositories
         [Test]
         public async Task Given3EvolutionsPokemonShouldReturn3PokemonsInCorrectOrder()
         {
-            var pokemon1 = new Pokemon() { Name = "poke1", DexNumber = 1, EvolvesFrom = null, EvolvesTo = "poke2" };
-            var pokemon2 = new Pokemon() { Name = "poke2", DexNumber = 2, EvolvesFrom = "poke1", EvolvesTo = "poke3" };
-            var pokemon3 = new Pokemon() { Name = "poke3", DexNumber = 3, EvolvesFrom = "poke2", EvolvesTo = null };
-            var pokemon4 = new Pokemon() { Name = "poke4", DexNumber = 4, EvolvesFrom = null, EvolvesTo = null };
+            var pokemon1 = new Pokemon() { DexNumber = 1, EvolvesFrom = 0, EvolvesTo = 2 };
+            var pokemon2 = new Pokemon() { DexNumber = 2, EvolvesFrom = 1, EvolvesTo = 3 };
+            var pokemon3 = new Pokemon() { DexNumber = 3, EvolvesFrom = 2, EvolvesTo = 0 };
+            var pokemon4 = new Pokemon() { DexNumber = 4, EvolvesFrom = 0, EvolvesTo = 0 };
 
             SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2, pokemon3, pokemon4 });
 

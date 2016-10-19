@@ -13,7 +13,11 @@
                                                  IsDesignTimeCreatable=False}"
                 NavigationCacheMode="Enabled"
                 mc:Ignorable="d">
-
+    <!--<Page.Transitions>
+        <TransitionCollection>
+            <ContentThemeTransition />
+        </TransitionCollection>
+    </Page.Transitions>-->
     <infra:PageBase.Resources>
         <vc:PokemonType2TextFormatter x:Key="PokemonType2TextFormatter" />
     </infra:PageBase.Resources>
@@ -24,6 +28,11 @@
                   SelectedItem="{Binding SelectedPokemon,
                                          Mode=TwoWay}"
                   Style="{StaticResource CardBasedListStyle}">
+            <ListView.ItemContainerTransitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition />
+                </TransitionCollection>
+            </ListView.ItemContainerTransitions>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <controls:Card Height="84"

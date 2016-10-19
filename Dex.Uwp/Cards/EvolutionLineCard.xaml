@@ -14,6 +14,12 @@
 
     <UserControl.Resources>
         <vc:EvolutionLineToGridLengthConverter x:Key="EvolutionLineToGridLengthConverter" />
+        <Style x:Key="TextBlockEvolutionPokemonNameStyle" TargetType="TextBlock">
+            <Setter Property="Style" Value="{StaticResource CaptionTextBlockStyle}" />
+            <Setter Property="TextAlignment" Value="Center" />
+            <Setter Property="Margin" Value="0,12,0,0" />
+            <Setter Property="Foreground" Value="{StaticResource SystemChromeDisabledLowColor}" />
+        </Style>
     </UserControl.Resources>
 
     <local:Card Padding="12">
@@ -36,32 +42,43 @@
                     <ColumnDefinition Width="{Binding NumberOfEvolutions, Converter={StaticResource EvolutionLineToGridLengthConverter}, ConverterParameter='3'}" />
                     <ColumnDefinition Width="{Binding NumberOfEvolutions, Converter={StaticResource EvolutionLineToGridLengthConverter}, ConverterParameter='4'}" />
                 </Grid.ColumnDefinitions>
-                <Image Grid.Column="0"
-                       Width="72"
-                       Height="72"
-                       VerticalAlignment="Center"
-                       Source="{Binding Evolutions[0].DexNumber,
-                                        Converter={StaticResource PokemonDexNumberToPictureConverter}}" HorizontalAlignment="Center" />
+                <StackPanel Grid.Column="0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <Image Width="72"
+                           Height="72"
+                           Source="{Binding Evolutions[0].DexNumber,
+                                            Converter={StaticResource PokemonDexNumberToPictureConverter}}" />
+                    <TextBlock Style="{StaticResource TextBlockEvolutionPokemonNameStyle}" Text="{Binding Evolutions[0].Name, Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
+                </StackPanel>
                 <TextBlock Grid.Column="1"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
                            FontFamily="Segoe MDL2 Assets"
                            Text="&#xE0E3;" />
-                <Image Grid.Column="2"
-                       Width="72"
-                       Height="72"
-                       Source="{Binding Evolutions[1].DexNumber,
-                                        Converter={StaticResource PokemonDexNumberToPictureConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <StackPanel Grid.Column="2"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <Image Width="72"
+                           Height="72"
+                           Source="{Binding Evolutions[1].DexNumber,
+                                            Converter={StaticResource PokemonDexNumberToPictureConverter}}" />
+                    <TextBlock Style="{StaticResource TextBlockEvolutionPokemonNameStyle}" Text="{Binding Evolutions[1].Name, Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
+                </StackPanel>
                 <TextBlock Grid.Column="3"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
                            FontFamily="Segoe MDL2 Assets"
                            Text="&#xE0E3;" />
-                <Image Grid.Column="4"
-                       Width="72"
-                       Height="72"
-                       Source="{Binding Evolutions[2].DexNumber,
-                                        Converter={StaticResource PokemonDexNumberToPictureConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <StackPanel Grid.Column="4"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <Image Width="72"
+                           Height="72"
+                           Source="{Binding Evolutions[2].DexNumber,
+                                            Converter={StaticResource PokemonDexNumberToPictureConverter}}" />
+                    <TextBlock Style="{StaticResource TextBlockEvolutionPokemonNameStyle}" Text="{Binding Evolutions[2].Name, Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
+                </StackPanel>
             </Grid>
         </Grid>
     </local:Card>

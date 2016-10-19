@@ -7,7 +7,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              d:DataContext="{d:DesignInstance Type=data:Pokemon,
                                               IsDesignTimeCreatable=False}"
-             d:DesignHeight="350"
+             d:DesignHeight="500"
              d:DesignWidth="400"
              mc:Ignorable="d">
 
@@ -44,52 +44,106 @@
                     <ColumnDefinition Width="1" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Border />
-                <Border />
-                <StackPanel Grid.Column="0">
-                    <TextBlock Text="{Binding Attack.Value}" TextAlignment="Center" />
-                    <TextBlock FontSize="11"
-                               Text="ATK"
-                               TextAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="12" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Grid.Column="0">
+                    <TextBlock Text="{Binding FleeRate, Converter={StaticResource StringAppenderFormatter}, ConverterParameter='%'}" TextAlignment="Center">
                         <TextBlock.Foreground>
-                            <SolidColorBrush Color="{StaticResource SystemChromeDisabledLowColor}" />
+                            <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
                         </TextBlock.Foreground>
                     </TextBlock>
+                    <TextBlock FontSize="11"
+                               Text="Flee"
+                               TextAlignment="Center" />
                 </StackPanel>
 
-                <Border Grid.Column="1"
+                <Border Grid.Row="0"
+                        Grid.Column="1"
                         Margin="0,4"
                         BorderThickness="1,0,0,0">
                     <Border.BorderBrush>
                         <SolidColorBrush Color="{StaticResource SecondaryTextColor}" />
                     </Border.BorderBrush>
                 </Border>
-                <StackPanel Grid.Column="2">
-                    <TextBlock Text="{Binding Defense.Value}" TextAlignment="Center" />
-                    <TextBlock FontSize="11"
-                               Text="DEF"
-                               TextAlignment="Center">
+                <StackPanel Grid.Row="0" Grid.Column="2">
+                    <TextBlock Text="{Binding CandiesToEvolve}" TextAlignment="Center">
                         <TextBlock.Foreground>
-                            <SolidColorBrush Color="{StaticResource SystemChromeDisabledLowColor}" />
+                            <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
                         </TextBlock.Foreground>
                     </TextBlock>
+                    <TextBlock FontSize="11"
+                               Text="Evolve"
+                               TextAlignment="Center" />
                 </StackPanel>
-                <Border Grid.Column="3"
+                <Border Grid.Row="0"
+                        Grid.Column="3"
                         Margin="0,4"
                         BorderThickness="1,0,0,0">
                     <Border.BorderBrush>
                         <SolidColorBrush Color="{StaticResource SubtleBorderDividerColor}" />
                     </Border.BorderBrush>
                 </Border>
-                <StackPanel Grid.Column="4">
-                    <TextBlock Text="{Binding Stamina.Value}" TextAlignment="Center" />
-                    <TextBlock FontSize="11"
-                               Text="STM"
-                               TextAlignment="Center">
+                <StackPanel Grid.Row="0" Grid.Column="4">
+                    <TextBlock Text="{Binding MaxCP}" TextAlignment="Center">
                         <TextBlock.Foreground>
-                            <SolidColorBrush Color="{StaticResource SystemChromeDisabledLowColor}" />
+                            <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
                         </TextBlock.Foreground>
                     </TextBlock>
+                    <TextBlock FontSize="11"
+                               Text="Max CP"
+                               TextAlignment="Center" />
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Grid.Column="0">
+                    <TextBlock Text="{Binding Attack.Value}" TextAlignment="Center">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    <TextBlock FontSize="11"
+                               Text="ATK"
+                               TextAlignment="Center" />
+                </StackPanel>
+
+                <Border Grid.Row="2"
+                        Grid.Column="1"
+                        Margin="0,4"
+                        BorderThickness="1,0,0,0">
+                    <Border.BorderBrush>
+                        <SolidColorBrush Color="{StaticResource SecondaryTextColor}" />
+                    </Border.BorderBrush>
+                </Border>
+                <StackPanel Grid.Row="2" Grid.Column="2">
+                    <TextBlock Text="{Binding Defense.Value}" TextAlignment="Center">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    <TextBlock FontSize="11"
+                               Text="DEF"
+                               TextAlignment="Center" />
+                </StackPanel>
+                <Border Grid.Row="2"
+                        Grid.Column="3"
+                        Margin="0,4"
+                        BorderThickness="1,0,0,0">
+                    <Border.BorderBrush>
+                        <SolidColorBrush Color="{StaticResource SubtleBorderDividerColor}" />
+                    </Border.BorderBrush>
+                </Border>
+                <StackPanel Grid.Row="2" Grid.Column="4">
+                    <TextBlock Text="{Binding Stamina.Value}" TextAlignment="Center">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    <TextBlock FontSize="11"
+                               Text="STM"
+                               TextAlignment="Center" />
                 </StackPanel>
             </Grid>
         </RelativePanel>

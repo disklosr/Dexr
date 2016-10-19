@@ -40,7 +40,8 @@
         </TextBlock>
 
         <TextBlock Grid.Row="0"
-                   Grid.Column="1"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
                    HorizontalAlignment="Right"
                    VerticalAlignment="Center"
                    Text="{Binding MaxStatValue}">

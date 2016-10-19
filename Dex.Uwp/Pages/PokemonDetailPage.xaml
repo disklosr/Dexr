@@ -13,6 +13,11 @@
 
     <Grid VerticalAlignment="Top">
         <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}" Style="{StaticResource CardBasedListStyle}">
+            <ListView.ItemContainerTransitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition IsStaggeringEnabled="True" />
+                </TransitionCollection>
+            </ListView.ItemContainerTransitions>
             <ListView.Items>
                 <controls:PokemonCard DataContext="{Binding SelectedPokemon}" />
                 <controls:StatsCard DataContext="{Binding}" />

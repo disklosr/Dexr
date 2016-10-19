@@ -111,15 +111,15 @@ namespace Dex.Core.Repositories
 
         private async Task<IEnumerable<Pokemon>> GetEvolutions(Pokemon pokemon)
         {
-            var to = await GetPokemonByName(pokemon.EvolvesTo);
-            var from = await GetPokemonByName(pokemon.EvolvesFrom);
+            var to = await GetPokemonById(pokemon.EvolvesTo);
+            var from = await GetPokemonById(pokemon.EvolvesFrom);
 
             return new Pokemon[] { to, from }.Where(poke => poke != null);
         }
 
         private bool HasEvolutions(Pokemon pokemon)
         {
-            return pokemon.EvolvesFrom != null || pokemon.EvolvesTo != null;
+            return pokemon.EvolvesFrom != 0 || pokemon.EvolvesTo != 0;
         }
     }
 }
