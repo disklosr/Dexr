@@ -25,6 +25,7 @@
                    Source="{Binding DexNumber,
                                     Converter={StaticResource PokemonDexNumberToPictureConverter}}" />
             <TextBlock Name="PokemonName"
+                       Height="32"
                        Margin="0,12,0,0"
                        FontWeight="Bold"
                        RelativePanel.AlignHorizontalCenterWithPanel="True"
@@ -32,11 +33,42 @@
                        Style="{StaticResource TitleTextBlockStyle}"
                        Text="{Binding Name,
                                       Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
+
+            <StackPanel Name="PokemonTypes"
+                        Margin="0,12,0,0"
+                        Orientation="Horizontal"
+                        RelativePanel.AlignHorizontalCenterWithPanel="True"
+                        RelativePanel.Below="PokemonName">
+                <Border Background="{Binding Type1, Converter={StaticResource PokemonTypeToColorConverter}}" CornerRadius="1">
+                    <TextBlock Width="100"
+                               Height="24"
+                               Text="{Binding Type1}"
+                               TextAlignment="Center">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                </Border>
+                <Border Margin="12,0,0,0"
+                        Background="{Binding Type2,
+                                             Converter={StaticResource PokemonTypeToColorConverter}}"
+                        CornerRadius="1"
+                        Visibility="{Binding Type2,
+                                             Converter={StaticResource PokemonUnonwnTypeToVisibilityConverter}}">
+                    <TextBlock Width="100"
+                               Text="{Binding Type2}"
+                               TextAlignment="Center">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                </Border>
+            </StackPanel>
             <Grid Margin="0,12,0,0"
                   RelativePanel.AlignHorizontalCenterWithPanel="True"
                   RelativePanel.AlignLeftWithPanel="True"
                   RelativePanel.AlignRightWithPanel="True"
-                  RelativePanel.Below="PokemonName">
+                  RelativePanel.Below="PokemonTypes">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="1" />
