@@ -103,7 +103,7 @@ namespace Dex.Scaper
             poke.Attack = new Attack(ushort.Parse(row.SelectSingleNode("./td[5]//tr[2]//td[2]").InnerText));
             poke.Defense = new Defense(ushort.Parse(row.SelectSingleNode("./td[5]//tr[3]//td[2]").InnerText));
 
-            poke.MaxCP = ushort.Parse(row.SelectSingleNode("./td[5]//tr[4]//td[2]").InnerText);
+            //poke.MaxCP = ushort.Parse(row.SelectSingleNode("./td[5]//tr[4]//td[2]").InnerText);
             poke.CatchRate = ushort.Parse(row.SelectSingleNode("./td[5]//tr[5]//td[2]").InnerText.Replace("%", string.Empty));
             poke.FleeRate = ushort.Parse(row.SelectSingleNode("./td[5]//tr[6]//td[2]").InnerText.Replace("%", string.Empty));
         }
