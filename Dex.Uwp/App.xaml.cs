@@ -2,10 +2,8 @@
 using Dex.Uwp.Pages;
 using Dex.Uwp.Services;
 using Microsoft.Practices.ServiceLocation;
-using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.ApplicationModel.Core;
 using Windows.UI;
 using Windows.UI.Xaml;
 

@@ -1,7 +1,6 @@
 ﻿using Dex.Core.Entities;
 using Dex.Core.Repositories;
 using Dex.Uwp.Infrastructure;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Navigation;
 
