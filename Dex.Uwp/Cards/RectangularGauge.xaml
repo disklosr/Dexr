@@ -78,7 +78,7 @@
                                   Converter={StaticResource StringAppenderFormatter},
                                   ConverterParameter='%'}">
             <TextBlock.Foreground>
-                <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
+                <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
             </TextBlock.Foreground>
         </TextBlock>
     </Grid>
