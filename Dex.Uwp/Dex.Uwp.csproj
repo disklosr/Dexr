@@ -256,11 +256,23 @@
     <Compile Include="Cards\Card.xaml.cs">
       <DependentUpon>Card.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Cards\ChargeMoveDetailsControl.xaml.cs">
+      <DependentUpon>ChargeMoveDetailsControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Cards\EvolutionLineCard.xaml.cs">
       <DependentUpon>EvolutionLineCard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Cards\HoverBorder.xaml.cs">
+      <DependentUpon>HoverBorder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cards\MovesCard.xaml.cs">
+      <DependentUpon>MovesCard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Cards\PokemonCard.xaml.cs">
       <DependentUpon>PokemonCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cards\QuickMoveDetailsControl.xaml.cs">
+      <DependentUpon>QuickMoveDetailsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cards\RectangularGauge.xaml.cs">
       <DependentUpon>RectangularGauge.xaml</DependentUpon>
@@ -286,6 +298,7 @@
     <Compile Include="Services\IJsonService.cs" />
     <Compile Include="Services\INavigationService.cs" />
     <Compile Include="Services\NavigationServiceException.cs" />
+    <Compile Include="Theme\DexTemplateSelector.cs" />
     <Compile Include="Theme\DropShadowStyle.cs" />
     <Compile Include="ValueConverters\NullOrEmptyToVisibilityConverter.cs" />
     <Compile Include="ValueConverters\EvolutionLineToGridLengthConverter.cs" />
@@ -326,11 +339,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Cards\ChargeMoveDetailsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Cards\EvolutionLineCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Cards\HoverBorder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cards\MovesCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Cards\PokemonCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cards\QuickMoveDetailsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

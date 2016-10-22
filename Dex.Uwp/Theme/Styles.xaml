@@ -13,6 +13,10 @@
         </Setter>
     </Style>
 
+    <Style x:Key="StretchListItemStyle" TargetType="ContentPresenter">
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+    </Style>
+
     <Style x:Name="CardBasedListItemStyle" TargetType="ListViewItem">
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         <Setter Property="Margin" Value="0,0,0,12" />

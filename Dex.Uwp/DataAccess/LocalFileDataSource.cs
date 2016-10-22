@@ -22,7 +22,7 @@ namespace Dex.Uwp.DataAccess
 
         public async Task<PokemonMoves> LoadAllMovesAsync()
         {
-            var json = await ReadFileAsTextAsync(pokemonsDbFilePath);
+            var json = await ReadFileAsTextAsync(movesDbFilePath);
             return jsonService.Deserialize<PokemonMoves>(json);
         }
 

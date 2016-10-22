@@ -22,7 +22,7 @@
         </Style>
     </UserControl.Resources>
 
-    <local:Card Padding="12">
+    <local:Card VerticalAlignment="Top" Padding="12">
         <Grid Name="RootGrid">
             <TextBlock x:Uid="MessageNoEvolutionFound"
                        HorizontalAlignment="Center"

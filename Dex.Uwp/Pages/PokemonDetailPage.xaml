@@ -20,6 +20,7 @@
             </ListView.ItemContainerTransitions>
             <ListView.Items>
                 <controls:PokemonCard DataContext="{Binding SelectedPokemon}" />
+                <controls:MovesCard DataContext="{Binding Moves}" />
                 <controls:StatsCard DataContext="{Binding}" />
                 <controls:EvolutionLineCard DataContext="{Binding EvolutionLine}" />
             </ListView.Items>

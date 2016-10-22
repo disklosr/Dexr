@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="Dex.Uwp.Cards.MovesCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:data="using:Dex.Core.Entities"
+             xmlns:local="using:Dex.Uwp.Cards"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:Dex.Uwp.ViewModels"
+             d:DataContext="{d:DesignInstance Type=data:PokemonMoves,
+                                              IsDesignTimeCreatable=False}"
+             d:DesignHeight="1000"
+             d:DesignWidth="400"
+             mc:Ignorable="d">
+
+    <local:Card VerticalAlignment="Top" Padding="12">
+        <StackPanel>
+            <Border Margin="-12,-12,-12,0" Padding="12">
+                <Border.Background>
+                    <SolidColorBrush Color="{ThemeResource SystemListLowColor}" />
+                </Border.Background>
+                <TextBlock Text="Quick Moves">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
+                    </TextBlock.Foreground>
+                </TextBlock>
+            </Border>
+            <ItemsControl ItemContainerStyle="{StaticResource StretchListItemStyle}"
+                          ItemTemplateSelector="{StaticResource DexTemplateSelector}"
+                          ItemsSource="{Binding QuickMoves}" />
+
+            <Border Margin="-12,0" Padding="12">
+                <Border.Background>
+                    <SolidColorBrush Color="{ThemeResource SystemListLowColor}" />
+                </Border.Background>
+                <TextBlock Text="Charge Moves">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
+                    </TextBlock.Foreground>
+                </TextBlock>
+            </Border>
+            <ItemsControl ItemContainerStyle="{StaticResource StretchListItemStyle}"
+                          ItemTemplateSelector="{StaticResource DexTemplateSelector}"
+                          ItemsSource="{Binding ChargeMoves}" />
+        </StackPanel>
+    </local:Card>
+</UserControl>

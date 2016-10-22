@@ -11,7 +11,7 @@
              d:DesignWidth="400"
              mc:Ignorable="d">
 
-    <local:Card Padding="12">
+    <local:Card VerticalAlignment="Top" Padding="12">
         <StackPanel Orientation="Vertical">
             <local:RectangularGauge DataContext="{Binding AttackStats}"
                                     Foreground="{StaticResource AppAttackBrush}"

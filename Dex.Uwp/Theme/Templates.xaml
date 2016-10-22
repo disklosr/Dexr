@@ -1,3 +1,34 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:data="using:Dex.Core.Entities" />
+                    xmlns:controls="using:Dex.Uwp.Cards"
+                    xmlns:data="using:Dex.Core.Entities"
+                    xmlns:local="using:Dex.Uwp.Theme">
+
+    <local:DexTemplateSelector x:Key="DexTemplateSelector" />
+    <DataTemplate x:Key="QuickMoveDetailsDataTemplate">
+        <controls:QuickMoveDetailsControl />
+    </DataTemplate>
+
+    <DataTemplate x:Key="ChargeMoveDetailsDataTemplate">
+        <controls:ChargeMoveDetailsControl />
+    </DataTemplate>
+
+    <ControlTemplate x:Key="PokemonTypeTemplate">
+        <Border Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Background="{Binding Type,
+                                     Converter={StaticResource PokemonTypeToColorConverter}}"
+                CornerRadius="1">
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Style="{StaticResource CaptionTextBlockStyle}"
+                       Text="{Binding Type}">
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Border>
+    </ControlTemplate>
+</ResourceDictionary>

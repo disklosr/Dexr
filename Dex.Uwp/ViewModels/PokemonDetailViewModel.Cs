@@ -8,16 +8,19 @@ namespace Dex.Uwp.ViewModels
 {
     public class PokemonDetailViewModel : ViewModelBase
     {
+        private readonly IMoveRepository moveRepository;
         private readonly IPokemonRepository pokemonRepository;
 
         private CombatStatDataViewModel attackStats;
         private CombatStatDataViewModel defenseStats;
         private EvolutionLineDataViewModel evolutionLine;
+        private PokemonMoves moves;
         private Pokemon selectedPokemon;
         private CombatStatDataViewModel staminaStats;
 
-        public PokemonDetailViewModel(IPokemonRepository pokemonRepository)
+        public PokemonDetailViewModel(IPokemonRepository pokemonRepository, IMoveRepository moveRepository)
         {
+            this.moveRepository = moveRepository;
             this.pokemonRepository = pokemonRepository;
         }
 
@@ -39,6 +42,12 @@ namespace Dex.Uwp.ViewModels
             private set { Set(ref evolutionLine, value); }
         }
 
+        public PokemonMoves Moves
+        {
+            get { return moves; }
+            private set { Set(ref moves, value); }
+        }
+
         public Pokemon SelectedPokemon
         {
             get { return selectedPokemon; }
@@ -55,6 +64,7 @@ namespace Dex.Uwp.ViewModels
         {
             var dexId = (ushort)e.Parameter;
             SelectedPokemon = await pokemonRepository.GetPokemonById(dexId);
+            Moves = await moveRepository.GetMovesById(SelectedPokemon.Moves.QuickMovesIds, SelectedPokemon.Moves.ChargeMovesIds);
             EvolutionLine = new EvolutionLineDataViewModel(await pokemonRepository.GetEvolutionLineFor(selectedPokemon));
             await InitCombatStats();
         }
