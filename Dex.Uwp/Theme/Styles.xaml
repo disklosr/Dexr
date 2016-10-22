@@ -11,6 +11,13 @@
                 </TransitionCollection>
             </Setter.Value>
         </Setter>
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <ItemsStackPanel MaxWidth="720" />
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 
     <Style x:Key="StretchListItemStyle" TargetType="ContentPresenter">

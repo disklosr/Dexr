@@ -256,6 +256,9 @@
     <Compile Include="Cards\Card.xaml.cs">
       <DependentUpon>Card.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Cards\CardHeader.xaml.cs">
+      <DependentUpon>CardHeader.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Cards\ChargeMoveDetailsControl.xaml.cs">
       <DependentUpon>ChargeMoveDetailsControl.xaml</DependentUpon>
     </Compile>
@@ -336,6 +339,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Cards\Card.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cards\CardHeader.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

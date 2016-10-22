@@ -12,7 +12,9 @@
              mc:Ignorable="d">
 
     <local:Card VerticalAlignment="Top" Padding="12">
-        <StackPanel Orientation="Vertical">
+        <StackPanel>
+            <local:CardHeader Title="Base Stats" />
+
             <local:RectangularGauge DataContext="{Binding AttackStats}"
                                     Foreground="{StaticResource AppAttackBrush}"
                                     Tag="ATK" />

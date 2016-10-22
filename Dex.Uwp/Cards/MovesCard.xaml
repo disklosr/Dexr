@@ -14,30 +14,13 @@
 
     <local:Card VerticalAlignment="Top" Padding="12">
         <StackPanel>
-            <Border Margin="-12,-12,-12,0" Padding="12">
-                <Border.Background>
-                    <SolidColorBrush Color="{ThemeResource SystemListLowColor}" />
-                </Border.Background>
-                <TextBlock Text="Quick Moves">
-                    <TextBlock.Foreground>
-                        <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                    </TextBlock.Foreground>
-                </TextBlock>
-            </Border>
+            <local:CardHeader Title="Quick Moves" />
             <ItemsControl ItemContainerStyle="{StaticResource StretchListItemStyle}"
                           ItemTemplateSelector="{StaticResource DexTemplateSelector}"
                           ItemsSource="{Binding QuickMoves}" />
 
-            <Border Margin="-12,0" Padding="12">
-                <Border.Background>
-                    <SolidColorBrush Color="{ThemeResource SystemListLowColor}" />
-                </Border.Background>
-                <TextBlock Text="Charge Moves">
-                    <TextBlock.Foreground>
-                        <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                    </TextBlock.Foreground>
-                </TextBlock>
-            </Border>
+            <local:CardHeader Title="Charge Moves" Margin="0,12,0,0" />
+
             <ItemsControl ItemContainerStyle="{StaticResource StretchListItemStyle}"
                           ItemTemplateSelector="{StaticResource DexTemplateSelector}"
                           ItemsSource="{Binding ChargeMoves}" />

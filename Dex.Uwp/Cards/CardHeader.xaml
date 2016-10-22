@@ -1,0 +1,27 @@
+﻿<ContentControl x:Class="Dex.Uwp.Cards.CardHeader"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                xmlns:local="using:Dex.Uwp.Cards"
+                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                d:DesignHeight="300"
+                d:DesignWidth="400"
+                mc:Ignorable="d">
+
+    <ContentControl.Template>
+        <ControlTemplate>
+            <Border Margin="-12,-12,-12,0"
+                    VerticalAlignment="Top"
+                    Padding="12">
+                <Border.Background>
+                    <SolidColorBrush Color="{ThemeResource SystemListLowColor}" />
+                </Border.Background>
+                <TextBlock Text="{Binding Title, RelativeSource={RelativeSource TemplatedParent}}">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
+                    </TextBlock.Foreground>
+                </TextBlock>
+            </Border>
+        </ControlTemplate>
+    </ContentControl.Template>
+</ContentControl>
