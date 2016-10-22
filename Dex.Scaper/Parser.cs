@@ -2,7 +2,6 @@ using Dex.Core.Entities;
 using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace Dex.Scaper
@@ -33,9 +32,9 @@ namespace Dex.Scaper
 
                 GetTypes(rows[i], poke);
 
-                GetFastMoves(rows[i], poke);
+                //GetFastMoves(rows[i], poke);
 
-                GetSpecialMoves(rows[i], poke);
+                //GetSpecialMoves(rows[i], poke);
 
                 GetEggDistance(rows[i], poke);
 
@@ -64,15 +63,15 @@ namespace Dex.Scaper
 
         private void GetFastMoves(HtmlNode row, Pokemon poke)
         {
-            var moves = row.SelectNodes("./td[8]//u");
-            var fastMoves = new List<Move>();
+            //var moves = row.SelectNodes("./td[8]//u");
+            //var fastMoves = new List<string>();
 
-            for (int j = 1; j <= moves.Count; j++)
-            {
-                fastMoves.Add(new Move() { Name = moves[j - 1].InnerText.ToLowerInvariant() });
-            }
+            //for (int j = 1; j <= moves.Count; j++)
+            //{
+            //    fastMoves.Add(new QuickMove() { Name = moves[j - 1].InnerText.ToLowerInvariant() });
+            //}
 
-            poke.QuickMoves = fastMoves;
+            //poke.QuickMoves = fastMoves;
         }
 
         private void GetName(HtmlNode row, Pokemon poke)
@@ -87,14 +86,14 @@ namespace Dex.Scaper
 
         private void GetSpecialMoves(HtmlNode row, Pokemon poke)
         {
-            var moves = row.SelectNodes("./td[9]//u");
-            var specialMoves = new List<Move>();
-            for (int j = 1; j <= moves.Count; j++)
-            {
-                specialMoves.Add(new Move() { Name = moves[j - 1].InnerText.ToLowerInvariant() });
-            }
+            //var moves = row.SelectNodes("./td[9]//u");
+            //var specialMoves = new List<Move>();
+            //for (int j = 1; j <= moves.Count; j++)
+            //{
+            //    specialMoves.Add(new ChargeMove() { Name = moves[j - 1].InnerText.ToLowerInvariant() });
+            //}
 
-            poke.SpecialMoves = specialMoves;
+            //poke.SpecialMoves = specialMoves;
         }
 
         private void GetStats(HtmlNode row, Pokemon poke)

@@ -51,8 +51,7 @@ namespace Dex.Core.Entities
 
         #region Moves
 
-        public IEnumerable<Move> QuickMoves { get; set; }
-        public IEnumerable<Move> SpecialMoves { get; set; }
+        public PokemonMovesIds Moves { get; set; }
 
         #endregion Moves
 

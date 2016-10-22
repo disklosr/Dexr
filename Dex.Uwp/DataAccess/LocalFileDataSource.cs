@@ -11,7 +11,8 @@ namespace Dex.Uwp.DataAccess
     public class LocalFileDataSource : IPokemonsDataSource, IMovesDataSource
     {
         private const string contentPrefix = "ms-appx:///";
-        private const string pokemonsDbFilePAth = "Data/Pokemons.db.json";
+        private const string movesDbFilePath = "Data/moves.db.json";
+        private const string pokemonsDbFilePath = "Data/Pokemons.db.json";
         private readonly IJsonService jsonService;
 
         public LocalFileDataSource(IJsonService jsonService)
@@ -19,14 +20,15 @@ namespace Dex.Uwp.DataAccess
             this.jsonService = jsonService;
         }
 
-        public async Task<IEnumerable<Move>> LoadAllMovesAsync()
+        public async Task<PokemonMoves> LoadAllMovesAsync()
         {
-            throw new NotImplementedException();
+            var json = await ReadFileAsTextAsync(pokemonsDbFilePath);
+            return jsonService.Deserialize<PokemonMoves>(json);
         }
 
         public async Task<IEnumerable<Pokemon>> LoadAllPokemonsAsync()
         {
-            var json = await ReadFileAsTextAsync(pokemonsDbFilePAth);
+            var json = await ReadFileAsTextAsync(pokemonsDbFilePath);
             return jsonService.Deserialize<List<Pokemon>>(json);
         }
 

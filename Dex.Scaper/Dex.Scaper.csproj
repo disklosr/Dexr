@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\MoveDTO.cs" />
     <Compile Include="EvolutionsParser.cs" />
     <Compile Include="JsonEvolutionParser.cs" />
     <Compile Include="Parser.cs" />
@@ -63,6 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Content Include="Moves.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
     <Content Include="types.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

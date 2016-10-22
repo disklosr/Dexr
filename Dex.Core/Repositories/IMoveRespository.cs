@@ -9,33 +9,59 @@ namespace Dex.Core.Repositories
 {
     public interface IMoveRepository
     {
-        Task<IEnumerable<Move>> GetAllMoves();
+        Task<PokemonMoves> GetAllMoves();
 
-        Task<IEnumerable<Move>> GetAllMovesByType(Type moveType);
+        Task<PokemonMoves> GetAllMovesByType(Type moveType);
+
+        Task<Move> GetMoveById(string moveId);
+
+        Task<PokemonMoves> GetMovesById(IEnumerable<string> quickMovesIds, IEnumerable<string> chargeMovesIds);
     }
 
     public class MoveRepository : IMoveRepository
     {
         private readonly IMovesDataSource dataSource;
 
-        private IEnumerable<Move> movesCache;
+        private PokemonMoves movesCache;
 
         public MoveRepository(IMovesDataSource dataSource)
         {
             this.dataSource = dataSource;
         }
 
-        public async Task<IEnumerable<Move>> GetAllMoves()
+        public async Task<PokemonMoves> GetAllMoves()
         {
             await EnsureCacheIsValid();
-
             return movesCache;
         }
 
-        public async Task<IEnumerable<Move>> GetAllMovesByType(Type moveType)
+        public async Task<PokemonMoves> GetAllMovesByType(Type moveType)
         {
             await EnsureCacheIsValid();
-            return movesCache.Where(move => move.Type == moveType).ToList();
+            return new PokemonMoves()
+            {
+                ChargeMoves = movesCache.ChargeMoves.Where(move => move.Type == moveType).ToList(),
+                QuickMoves = movesCache.QuickMoves.Where(move => move.Type == moveType).ToList()
+            };
+        }
+
+        public async Task<Move> GetMoveById(string moveId)
+        {
+            await EnsureCacheIsValid();
+            Move foundQuickMove = movesCache.QuickMoves.Where(move => move.MoveId == moveId).SingleOrDefault();
+            Move foundChargeMove = movesCache.ChargeMoves.Where(move => move.MoveId == moveId).SingleOrDefault();
+
+            return foundChargeMove ?? foundQuickMove;
+        }
+
+        public async Task<PokemonMoves> GetMovesById(IEnumerable<string> quickMovesIds, IEnumerable<string> chargeMovesIds)
+        {
+            await EnsureCacheIsValid();
+            return new PokemonMoves()
+            {
+                QuickMoves = quickMovesIds.Select(id => GetMoveById(id)).Cast<QuickMove>(),
+                ChargeMoves = chargeMovesIds.Select(id => GetMoveById(id)).Cast<ChargeMove>()
+            };
         }
 
         private async Task EnsureCacheIsValid()

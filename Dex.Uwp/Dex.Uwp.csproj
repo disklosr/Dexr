@@ -243,6 +243,9 @@
     <Content Include="Data\pokemons.db.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Data\moves.db.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="project.json" />
     <PRIResource Include="Strings\en\Resources.resw" />
   </ItemGroup>

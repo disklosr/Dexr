@@ -16,40 +16,17 @@
     "CatchRate": 16,
     "FleeRate": 10,
     "MaxCP": 1071,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "tackle",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "vine whip",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "seed bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "power whip",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "power-whip",
+        "seed-bomb",
+        "sludge-bomb"
+      ],
+      "QuickMovesIds": [
+        "tackle",
+        "vine-whip"
+      ]
+    },
     "CandiesToEvolve": 25,
     "EggDistance": 2,
     "EvolvesFrom": 0,
@@ -72,40 +49,17 @@
     "CatchRate": 8,
     "FleeRate": 7,
     "MaxCP": 1632,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "razor leaf",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "vine whip",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "solar beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "power whip",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "power-whip",
+        "sludge-bomb",
+        "solar-beam"
+      ],
+      "QuickMovesIds": [
+        "vine-whip",
+        "razor-leaf"
+      ]
+    },
     "CandiesToEvolve": 100,
     "EggDistance": 0,
     "EvolvesFrom": 1,
@@ -128,40 +82,17 @@
     "CatchRate": 4,
     "FleeRate": 5,
     "MaxCP": 2580,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "razor leaf",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "vine whip",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "solar beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "petal blizzard",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "petal-blizzard",
+        "sludge-bomb",
+        "solar-beam"
+      ],
+      "QuickMovesIds": [
+        "vine-whip",
+        "razor-leaf"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 2,
@@ -184,40 +115,17 @@
     "CatchRate": 16,
     "FleeRate": 10,
     "MaxCP": 955,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "scratch",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ember",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flame burst",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flamethrower",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flame charge",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "flame-burst",
+        "flame-charge",
+        "flamethrower"
+      ],
+      "QuickMovesIds": [
+        "ember",
+        "scratch"
+      ]
+    },
     "CandiesToEvolve": 25,
     "EggDistance": 2,
     "EvolvesFrom": 0,
@@ -240,40 +148,17 @@
     "CatchRate": 8,
     "FleeRate": 7,
     "MaxCP": 1557,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "scratch",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ember",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flame burst",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flamethrower",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "fire punch",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "fire-punch",
+        "flame-burst",
+        "flamethrower"
+      ],
+      "QuickMovesIds": [
+        "ember",
+        "scratch"
+      ]
+    },
     "CandiesToEvolve": 100,
     "EggDistance": 0,
     "EvolvesFrom": 4,
@@ -296,40 +181,17 @@
     "CatchRate": 4,
     "FleeRate": 5,
     "MaxCP": 2602,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "wing attack",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ember",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dragon claw",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flamethrower",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "fire blast",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dragon-claw",
+        "fire-blast",
+        "flamethrower"
+      ],
+      "QuickMovesIds": [
+        "ember",
+        "wing-attack"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 5,
@@ -352,40 +214,17 @@
     "CatchRate": 16,
     "FleeRate": 10,
     "MaxCP": 1008,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "tackle",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bubble",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aqua jet",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aqua tail",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water pulse",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "aqua-jet",
+        "aqua-tail",
+        "water-pulse"
+      ],
+      "QuickMovesIds": [
+        "bubble",
+        "tackle"
+      ]
+    },
     "CandiesToEvolve": 25,
     "EggDistance": 2,
     "EvolvesFrom": 0,
@@ -408,40 +247,17 @@
     "CatchRate": 8,
     "FleeRate": 7,
     "MaxCP": 1582,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bite",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water gun",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aqua jet",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hydro pump",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ice beam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "aqua-jet",
+        "hydro-pump",
+        "ice-beam"
+      ],
+      "QuickMovesIds": [
+        "bite",
+        "water-gun"
+      ]
+    },
     "CandiesToEvolve": 100,
     "EggDistance": 0,
     "EvolvesFrom": 7,
@@ -464,40 +280,17 @@
     "CatchRate": 4,
     "FleeRate": 5,
     "MaxCP": 2542,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bite",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water gun",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ice beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hydro pump",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flash cannon",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "flash-cannon",
+        "hydro-pump",
+        "ice-beam"
+      ],
+      "QuickMovesIds": [
+        "bite",
+        "water-gun"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 8,
@@ -520,28 +313,15 @@
     "CatchRate": 40,
     "FleeRate": 20,
     "MaxCP": 443,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "tackle",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bug bite",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "struggle",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "struggle"
+      ],
+      "QuickMovesIds": [
+        "bug-bite",
+        "tackle"
+      ]
+    },
     "CandiesToEvolve": 12,
     "EggDistance": 2,
     "EvolvesFrom": 0,
@@ -564,28 +344,15 @@
     "CatchRate": 20,
     "FleeRate": 9,
     "MaxCP": 477,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "tackle",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bug bite",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "struggle",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "struggle"
+      ],
+      "QuickMovesIds": [
+        "bug-bite",
+        "tackle"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 0,
     "EvolvesFrom": 10,
@@ -608,40 +375,17 @@
     "CatchRate": 10,
     "FleeRate": 6,
     "MaxCP": 1454,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "confusion",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bug bite",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psychic",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bug buzz",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "signal beam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "bug-buzz",
+        "signal-beam",
+        "psychic"
+      ],
+      "QuickMovesIds": [
+        "bug-bite",
+        "confusion"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 11,
@@ -664,28 +408,15 @@
     "CatchRate": 40,
     "FleeRate": 20,
     "MaxCP": 449,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bug bite",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison sting",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "struggle",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "struggle"
+      ],
+      "QuickMovesIds": [
+        "bug-bite",
+        "poison-sting"
+      ]
+    },
     "CandiesToEvolve": 12,
     "EggDistance": 2,
     "EvolvesFrom": 0,
@@ -708,28 +439,15 @@
     "CatchRate": 20,
     "FleeRate": 9,
     "MaxCP": 485,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bug bite",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison sting",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "struggle",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "struggle"
+      ],
+      "QuickMovesIds": [
+        "bug-bite",
+        "poison-sting"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 0,
     "EvolvesFrom": 13,
@@ -752,40 +470,17 @@
     "CatchRate": 10,
     "FleeRate": 6,
     "MaxCP": 1439,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bug bite",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison jab",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aerial ace",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "x-scissor",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "aerial-ace",
+        "sludge-bomb",
+        "x-scissor"
+      ],
+      "QuickMovesIds": [
+        "bug-bite",
+        "poison-jab"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 14,
@@ -808,40 +503,17 @@
     "CatchRate": 40,
     "FleeRate": 20,
     "MaxCP": 679,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "tackle",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "quick attack",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "twister",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aerial ace",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "air cutter",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "aerial-ace",
+        "air-cutter",
+        "twister"
+      ],
+      "QuickMovesIds": [
+        "tackle",
+        "quick-attack"
+      ]
+    },
     "CandiesToEvolve": 12,
     "EggDistance": 2,
     "EvolvesFrom": 0,
@@ -864,40 +536,17 @@
     "CatchRate": 20,
     "FleeRate": 9,
     "MaxCP": 1223,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "wing attack",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "steel wing",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "twister",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aerial ace",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "air cutter",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "aerial-ace",
+        "air-cutter",
+        "twister"
+      ],
+      "QuickMovesIds": [
+        "steel-wing",
+        "wing-attack"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 0,
     "EvolvesFrom": 18,
@@ -920,40 +569,17 @@
     "CatchRate": 10,
     "FleeRate": 6,
     "MaxCP": 2091,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "wing attack",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "steel wing",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hurricane",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aerial ace",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "air cutter",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "aerial-ace",
+        "air-cutter",
+        "hurricane"
+      ],
+      "QuickMovesIds": [
+        "steel-wing",
+        "wing-attack"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 17,
@@ -976,40 +602,17 @@
     "CatchRate": 40,
     "FleeRate": 20,
     "MaxCP": 581,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "tackle",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "quick attack",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dig",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hyper fang",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "body slam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "body-slam",
+        "dig",
+        "hyper-fang"
+      ],
+      "QuickMovesIds": [
+        "tackle",
+        "quick-attack"
+      ]
+    },
     "CandiesToEvolve": 25,
     "EggDistance": 2,
     "EvolvesFrom": 0,
@@ -1032,40 +635,17 @@
     "CatchRate": 16,
     "FleeRate": 7,
     "MaxCP": 1444,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bite",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "quick attack",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dig",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hyper fang",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hyper beam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dig",
+        "hyper-beam",
+        "hyper-fang"
+      ],
+      "QuickMovesIds": [
+        "bite",
+        "quick-attack"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 19,
@@ -1088,40 +668,17 @@
     "CatchRate": 40,
     "FleeRate": 15,
     "MaxCP": 686,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "quick attack",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "peck",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aerial ace",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "twister",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "drill peck",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "aerial-ace",
+        "drill-peck",
+        "twister"
+      ],
+      "QuickMovesIds": [
+        "peck",
+        "quick-attack"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 2,
     "EvolvesFrom": 0,
@@ -1144,40 +701,17 @@
     "CatchRate": 16,
     "FleeRate": 7,
     "MaxCP": 1746,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "steel wing",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "peck",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aerial ace",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "twister",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "drill run",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "aerial-ace",
+        "drill-run",
+        "twister"
+      ],
+      "QuickMovesIds": [
+        "peck",
+        "steel-wing"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 21,
@@ -1200,40 +734,17 @@
     "CatchRate": 40,
     "FleeRate": 15,
     "MaxCP": 824,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "acid",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison sting",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "gunk shot",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "wrap",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "gunk-shot",
+        "sludge-bomb",
+        "wrap"
+      ],
+      "QuickMovesIds": [
+        "acid",
+        "poison-sting"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -1256,40 +767,17 @@
     "CatchRate": 16,
     "FleeRate": 7,
     "MaxCP": 1767,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "acid",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bite",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "gunk shot",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge wave",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dark pulse",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dark-pulse",
+        "gunk-shot",
+        "sludge-wave"
+      ],
+      "QuickMovesIds": [
+        "acid",
+        "bite"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 23,
@@ -1312,40 +800,17 @@
     "CatchRate": 16,
     "FleeRate": 10,
     "MaxCP": 887,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunder shock",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "quick attack",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunderbolt",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "discharge",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunder",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "discharge",
+        "thunder",
+        "thunderbolt"
+      ],
+      "QuickMovesIds": [
+        "thunder-shock",
+        "quick-attack"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 2,
     "EvolvesFrom": 0,
@@ -1368,40 +833,17 @@
     "CatchRate": 8,
     "FleeRate": 6,
     "MaxCP": 2028,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunder shock",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "spark",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "brick break",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunder punch",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunder",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "brick-break",
+        "thunder",
+        "thunder-punch"
+      ],
+      "QuickMovesIds": [
+        "spark",
+        "thunder-shock"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 25,
@@ -1424,40 +866,17 @@
     "CatchRate": 40,
     "FleeRate": 10,
     "MaxCP": 798,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "scratch",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud shot",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dig",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock slide",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock tomb",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dig",
+        "rock-slide",
+        "rock-tomb"
+      ],
+      "QuickMovesIds": [
+        "mud-shot",
+        "scratch"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -1480,40 +899,17 @@
     "CatchRate": 16,
     "FleeRate": 6,
     "MaxCP": 1810,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "metal claw",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud shot",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock tomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bulldoze",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "earthquake",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "bulldoze",
+        "earthquake",
+        "rock-tomb"
+      ],
+      "QuickMovesIds": [
+        "metal-claw",
+        "mud-shot"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 27,
@@ -1536,40 +932,17 @@
     "CatchRate": 40,
     "FleeRate": 15,
     "MaxCP": 876,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison sting",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bite",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison fang",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "body slam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "body-slam",
+        "poison-fang",
+        "sludge-bomb"
+      ],
+      "QuickMovesIds": [
+        "bite",
+        "poison-sting"
+      ]
+    },
     "CandiesToEvolve": 25,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -1592,40 +965,17 @@
     "CatchRate": 20,
     "FleeRate": 7,
     "MaxCP": 1404,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison sting",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bite",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison fang",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dig",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dig",
+        "poison-fang",
+        "sludge-bomb"
+      ],
+      "QuickMovesIds": [
+        "bite",
+        "poison-sting"
+      ]
+    },
     "CandiesToEvolve": 100,
     "EggDistance": 0,
     "EvolvesFrom": 29,
@@ -1648,40 +998,17 @@
     "CatchRate": 10,
     "FleeRate": 5,
     "MaxCP": 2485,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison jab",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bite",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "stone edge",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge wave",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "earthquake",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "earthquake",
+        "sludge-wave",
+        "stone-edge"
+      ],
+      "QuickMovesIds": [
+        "bite",
+        "poison-jab"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 30,
@@ -1704,40 +1031,17 @@
     "CatchRate": 40,
     "FleeRate": 15,
     "MaxCP": 843,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison sting",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "peck",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "horn attack",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "body slam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "body-slam",
+        "horn-attack",
+        "sludge-bomb"
+      ],
+      "QuickMovesIds": [
+        "peck",
+        "poison-sting"
+      ]
+    },
     "CandiesToEvolve": 25,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -1760,40 +1064,17 @@
     "CatchRate": 20,
     "FleeRate": 7,
     "MaxCP": 1372,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison jab",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bite",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "horn attack",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dig",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dig",
+        "horn-attack",
+        "sludge-bomb"
+      ],
+      "QuickMovesIds": [
+        "bite",
+        "poison-jab"
+      ]
+    },
     "CandiesToEvolve": 100,
     "EggDistance": 0,
     "EvolvesFrom": 32,
@@ -1816,40 +1097,17 @@
     "CatchRate": 10,
     "FleeRate": 5,
     "MaxCP": 2475,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison jab",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "fury cutter",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "megahorn",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "earthquake",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge wave",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "earthquake",
+        "megahorn",
+        "sludge-wave"
+      ],
+      "QuickMovesIds": [
+        "fury-cutter",
+        "poison-jab"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 33,
@@ -1872,40 +1130,17 @@
     "CatchRate": 24,
     "FleeRate": 10,
     "MaxCP": 1200,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "zen headbutt",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "pound",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "body slam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "disarming voice",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "moonblast",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "body-slam",
+        "disarming-voice",
+        "moonblast"
+      ],
+      "QuickMovesIds": [
+        "pound",
+        "zen-headbutt"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 2,
     "EvolvesFrom": 0,
@@ -1928,40 +1163,17 @@
     "CatchRate": 8,
     "FleeRate": 6,
     "MaxCP": 2397,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "zen headbutt",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "pound",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psychic",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dazzling gleam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "moonblast",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dazzling-gleam",
+        "moonblast",
+        "psychic"
+      ],
+      "QuickMovesIds": [
+        "pound",
+        "zen-headbutt"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 35,
@@ -1984,40 +1196,17 @@
     "CatchRate": 24,
     "FleeRate": 10,
     "MaxCP": 831,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "quick attack",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ember",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flamethrower",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "body slam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flame charge",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "body-slam",
+        "flame-charge",
+        "flamethrower"
+      ],
+      "QuickMovesIds": [
+        "ember",
+        "quick-attack"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -2040,40 +1229,17 @@
     "CatchRate": 8,
     "FleeRate": 6,
     "MaxCP": 2188,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "feint attack",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ember",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "heat wave",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "fire blast",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flamethrower",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "fire-blast",
+        "flamethrower",
+        "heat-wave"
+      ],
+      "QuickMovesIds": [
+        "ember",
+        "feint-attack"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 37,
@@ -2096,40 +1262,17 @@
     "CatchRate": 40,
     "FleeRate": 10,
     "MaxCP": 917,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "feint attack",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "pound",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "disarming voice",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "body slam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dazzling gleam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "body-slam",
+        "disarming-voice",
+        "play-rough"
+      ],
+      "QuickMovesIds": [
+        "feint-attack",
+        "pound"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 2,
     "EvolvesFrom": 0,
@@ -2152,40 +1295,17 @@
     "CatchRate": 16,
     "FleeRate": 6,
     "MaxCP": 2177,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "feint attack",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "pound",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dazzling gleam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hyper beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "play rough",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dazzling-gleam",
+        "hyper-beam",
+        "play-rough"
+      ],
+      "QuickMovesIds": [
+        "feint-attack",
+        "pound"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 39,
@@ -2208,40 +1328,17 @@
     "CatchRate": 40,
     "FleeRate": 20,
     "MaxCP": 642,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bite",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "quick attack",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison fang",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "air cutter",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "air-cutter",
+        "poison-fang",
+        "sludge-bomb"
+      ],
+      "QuickMovesIds": [
+        "bite",
+        "quick-attack"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 2,
     "EvolvesFrom": 0,
@@ -2264,40 +1361,17 @@
     "CatchRate": 16,
     "FleeRate": 7,
     "MaxCP": 1921,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bite",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "wing attack",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ominous wind",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison fang",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "air cutter",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "air-cutter",
+        "ominous-wind",
+        "poison-fang"
+      ],
+      "QuickMovesIds": [
+        "bite",
+        "wing-attack"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 41,
@@ -2320,40 +1394,17 @@
     "CatchRate": 48,
     "FleeRate": 15,
     "MaxCP": 1148,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "razor leaf",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "acid",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "moonblast",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "seed bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "moonblast",
+        "seed-bomb",
+        "sludge-bomb"
+      ],
+      "QuickMovesIds": [
+        "acid",
+        "razor-leaf"
+      ]
+    },
     "CandiesToEvolve": 25,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -2376,40 +1427,17 @@
     "CatchRate": 24,
     "FleeRate": 7,
     "MaxCP": 1689,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "razor leaf",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "acid",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "moonblast",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "petal blizzard",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "moonblast",
+        "petal-blizzard",
+        "sludge-bomb"
+      ],
+      "QuickMovesIds": [
+        "acid",
+        "razor-leaf"
+      ]
+    },
     "CandiesToEvolve": 100,
     "EggDistance": 0,
     "EvolvesFrom": 43,
@@ -2432,40 +1460,17 @@
     "CatchRate": 12,
     "FleeRate": 5,
     "MaxCP": 2492,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "razor leaf",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "acid",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "moonblast",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "petal blizzard",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "solar beam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "moonblast",
+        "petal-blizzard",
+        "solar-beam"
+      ],
+      "QuickMovesIds": [
+        "acid",
+        "razor-leaf"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 44,
@@ -2488,40 +1493,17 @@
     "CatchRate": 32,
     "FleeRate": 15,
     "MaxCP": 916,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bug bite",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "scratch",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "seed bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "x-scissor",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "cross poison",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "cross-poison",
+        "seed-bomb",
+        "x-scissor"
+      ],
+      "QuickMovesIds": [
+        "bug-bite",
+        "scratch"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -2544,40 +1526,17 @@
     "CatchRate": 16,
     "FleeRate": 7,
     "MaxCP": 1747,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bug bite",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "fury cutter",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "solar beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "x-scissor",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "cross poison",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "cross-poison",
+        "solar-beam",
+        "x-scissor"
+      ],
+      "QuickMovesIds": [
+        "bug-bite",
+        "fury-cutter"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 46,
@@ -2600,40 +1559,17 @@
     "CatchRate": 40,
     "FleeRate": 15,
     "MaxCP": 1029,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "confusion",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bug bite",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "signal beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison fang",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psybeam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "poison-fang",
+        "psybeam",
+        "signal-beam"
+      ],
+      "QuickMovesIds": [
+        "bug-bite",
+        "confusion"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -2656,40 +1592,17 @@
     "CatchRate": 16,
     "FleeRate": 7,
     "MaxCP": 1890,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "confusion",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bug bite",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bug buzz",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison fang",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psychic",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "bug-buzz",
+        "poison-fang",
+        "psychic"
+      ],
+      "QuickMovesIds": [
+        "bug-bite",
+        "confusion"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 48,
@@ -2712,40 +1625,17 @@
     "CatchRate": 40,
     "FleeRate": 10,
     "MaxCP": 456,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "scratch",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud slap",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock tomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dig",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud bomb",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dig",
+        "mud-bomb",
+        "rock-tomb"
+      ],
+      "QuickMovesIds": [
+        "mud-shot",
+        "scratch"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -2768,40 +1658,17 @@
     "CatchRate": 16,
     "FleeRate": 6,
     "MaxCP": 1168,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sucker punch",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud slap",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "stone edge",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "earthquake",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud bomb",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "earthquake",
+        "mud-bomb",
+        "stone-edge"
+      ],
+      "QuickMovesIds": [
+        "mud-shot",
+        "sucker-punch"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 50,
@@ -2824,40 +1691,17 @@
     "CatchRate": 40,
     "FleeRate": 15,
     "MaxCP": 756,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "scratch",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bite",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dark pulse",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "night slash",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "body slam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "body-slam",
+        "dark-pulse",
+        "night-slash"
+      ],
+      "QuickMovesIds": [
+        "bite",
+        "scratch"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -2880,40 +1724,17 @@
     "CatchRate": 16,
     "FleeRate": 7,
     "MaxCP": 1631,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "scratch",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "feint attack",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "play rough",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "power gem",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "night slash",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "night-slash",
+        "play-rough",
+        "power-gem"
+      ],
+      "QuickMovesIds": [
+        "feint-attack",
+        "scratch"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 52,
@@ -2936,40 +1757,17 @@
     "CatchRate": 40,
     "FleeRate": 10,
     "MaxCP": 1109,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "zen headbutt",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water gun",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aqua tail",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "cross chop",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psybeam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "aqua-tail",
+        "cross-chop",
+        "psybeam"
+      ],
+      "QuickMovesIds": [
+        "water-gun",
+        "zen-headbutt"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -2992,40 +1790,17 @@
     "CatchRate": 16,
     "FleeRate": 6,
     "MaxCP": 2386,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "confusion",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water gun",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hydro pump",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ice beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psychic",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "hydro-pump",
+        "ice-beam",
+        "psychic"
+      ],
+      "QuickMovesIds": [
+        "confusion",
+        "water-gun"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 54,
@@ -3047,41 +1822,18 @@
     },
     "CatchRate": 40,
     "FleeRate": 10,
-    "MaxCP": 878,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "karate chop",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "scratch",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "brick break",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "cross chop",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "low sweep",
-        "Type": 0
-      }
-    ],
+    "MaxCP": 814,
+    "Moves": {
+      "ChargeMovesIds": [
+        "brick-break",
+        "cross-chop",
+        "low-sweep"
+      ],
+      "QuickMovesIds": [
+        "karate-chop",
+        "scratch"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -3104,40 +1856,17 @@
     "CatchRate": 16,
     "FleeRate": 6,
     "MaxCP": 1864,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "karate chop",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "low kick",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "night slash",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "cross chop",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "low sweep",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "cross-chop",
+        "low-sweep",
+        "night-slash"
+      ],
+      "QuickMovesIds": [
+        "karate-chop",
+        "low-kick"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 56,
@@ -3160,40 +1889,17 @@
     "CatchRate": 24,
     "FleeRate": 10,
     "MaxCP": 1335,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ember",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bite",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flame wheel",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "body slam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flamethrower",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "body-slam",
+        "flame-wheel",
+        "flamethrower"
+      ],
+      "QuickMovesIds": [
+        "bite",
+        "ember"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -3216,40 +1922,17 @@
     "CatchRate": 8,
     "FleeRate": 6,
     "MaxCP": 2983,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "fire fang",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bite",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "fire blast",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bulldoze",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flamethrower",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "bulldoze",
+        "fire-blast",
+        "flamethrower"
+      ],
+      "QuickMovesIds": [
+        "bite",
+        "fire-fang"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 58,
@@ -3272,40 +1955,17 @@
     "CatchRate": 40,
     "FleeRate": 15,
     "MaxCP": 795,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bubble",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud shot",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "body slam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bubble beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud bomb",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "body-slam",
+        "bubble-beam",
+        "mud-bomb"
+      ],
+      "QuickMovesIds": [
+        "bubble",
+        "mud-shot"
+      ]
+    },
     "CandiesToEvolve": 25,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -3328,40 +1988,17 @@
     "CatchRate": 20,
     "FleeRate": 7,
     "MaxCP": 1340,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bubble",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud shot",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "scald",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bubble beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud bomb",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "bubble-beam",
+        "scald",
+        "mud-bomb"
+      ],
+      "QuickMovesIds": [
+        "bubble",
+        "mud-shot"
+      ]
+    },
     "CandiesToEvolve": 100,
     "EggDistance": 0,
     "EvolvesFrom": 60,
@@ -3384,40 +2021,17 @@
     "CatchRate": 10,
     "FleeRate": 5,
     "MaxCP": 2505,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bubble",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud shot",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ice punch",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hydro pump",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "submission",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "hydro-pump",
+        "ice-punch",
+        "submission"
+      ],
+      "QuickMovesIds": [
+        "bubble",
+        "mud-shot"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 61,
@@ -3440,34 +2054,16 @@
     "CatchRate": 40,
     "FleeRate": 99,
     "MaxCP": 600,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "zen headbutt",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "shadow ball",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "signal beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psyshock",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "psyshock",
+        "shadow-ball",
+        "signal-beam"
+      ],
+      "QuickMovesIds": [
+        "zen-headbutt"
+      ]
+    },
     "CandiesToEvolve": 25,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -3490,40 +2086,17 @@
     "CatchRate": 20,
     "FleeRate": 7,
     "MaxCP": 1131,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "confusion",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psycho cut",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "shadow ball",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dazzling gleam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psybeam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dazzling-gleam",
+        "psybeam",
+        "shadow-ball"
+      ],
+      "QuickMovesIds": [
+        "confusion",
+        "psycho-cut"
+      ]
+    },
     "CandiesToEvolve": 100,
     "EggDistance": 0,
     "EvolvesFrom": 63,
@@ -3546,40 +2119,17 @@
     "CatchRate": 10,
     "FleeRate": 5,
     "MaxCP": 1813,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "confusion",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psycho cut",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "shadow ball",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dazzling gleam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psychic",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dazzling-gleam",
+        "psychic",
+        "shadow-ball"
+      ],
+      "QuickMovesIds": [
+        "confusion",
+        "psycho-cut"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 64,
@@ -3602,40 +2152,17 @@
     "CatchRate": 40,
     "FleeRate": 10,
     "MaxCP": 1089,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "low kick",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "karate chop",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "brick break",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "cross chop",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "low sweep",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "brick-break",
+        "cross-chop",
+        "low-sweep"
+      ],
+      "QuickMovesIds": [
+        "karate-chop",
+        "low-kick"
+      ]
+    },
     "CandiesToEvolve": 25,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -3658,40 +2185,17 @@
     "CatchRate": 20,
     "FleeRate": 7,
     "MaxCP": 1760,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "low kick",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "karate chop",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "brick break",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "cross chop",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "submission",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "brick-break",
+        "cross-chop",
+        "submission"
+      ],
+      "QuickMovesIds": [
+        "karate-chop",
+        "low-kick"
+      ]
+    },
     "CandiesToEvolve": 100,
     "EggDistance": 0,
     "EvolvesFrom": 66,
@@ -3714,40 +2218,17 @@
     "CatchRate": 10,
     "FleeRate": 5,
     "MaxCP": 2594,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bullet punch",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "karate chop",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "stone edge",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "cross chop",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "submission",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "cross-chop",
+        "stone-edge",
+        "submission"
+      ],
+      "QuickMovesIds": [
+        "bullet-punch",
+        "karate-chop"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 67,
@@ -3770,40 +2251,17 @@
     "CatchRate": 40,
     "FleeRate": 15,
     "MaxCP": 1117,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "acid",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "vine whip",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "power whip",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "wrap",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "power-whip",
+        "sludge-bomb",
+        "wrap"
+      ],
+      "QuickMovesIds": [
+        "acid",
+        "vine-whip"
+      ]
+    },
     "CandiesToEvolve": 25,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -3826,40 +2284,17 @@
     "CatchRate": 20,
     "FleeRate": 7,
     "MaxCP": 1723,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "acid",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "razor leaf",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "power whip",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "seed bomb",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "power-whip",
+        "seed-bomb",
+        "sludge-bomb"
+      ],
+      "QuickMovesIds": [
+        "acid",
+        "razor-leaf"
+      ]
+    },
     "CandiesToEvolve": 100,
     "EggDistance": 0,
     "EvolvesFrom": 69,
@@ -3882,40 +2317,17 @@
     "CatchRate": 10,
     "FleeRate": 5,
     "MaxCP": 2530,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "acid",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "razor leaf",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "leaf blade",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "solar beam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "leaf-blade",
+        "sludge-bomb",
+        "solar-beam"
+      ],
+      "QuickMovesIds": [
+        "acid",
+        "razor-leaf"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 70,
@@ -3938,40 +2350,17 @@
     "CatchRate": 40,
     "FleeRate": 15,
     "MaxCP": 905,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bubble",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison sting",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bubble beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water pulse",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "wrap",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "bubble-beam",
+        "water-pulse",
+        "wrap"
+      ],
+      "QuickMovesIds": [
+        "bubble",
+        "poison-sting"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -3994,40 +2383,17 @@
     "CatchRate": 16,
     "FleeRate": 7,
     "MaxCP": 2220,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "acid",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison jab",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "blizzard",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hydro pump",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge wave",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "blizzard",
+        "hydro-pump",
+        "sludge-wave"
+      ],
+      "QuickMovesIds": [
+        "acid",
+        "poison-jab"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 72,
@@ -4050,40 +2416,17 @@
     "CatchRate": 40,
     "FleeRate": 10,
     "MaxCP": 849,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock throw",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "tackle",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock slide",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dig",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock tomb",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dig",
+        "rock-slide",
+        "rock-tomb"
+      ],
+      "QuickMovesIds": [
+        "rock-throw",
+        "tackle"
+      ]
+    },
     "CandiesToEvolve": 25,
     "EggDistance": 2,
     "EvolvesFrom": 0,
@@ -4106,40 +2449,17 @@
     "CatchRate": 20,
     "FleeRate": 7,
     "MaxCP": 1433,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock throw",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud slap",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock slide",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dig",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "stone edge",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dig",
+        "rock-slide",
+        "stone-edge"
+      ],
+      "QuickMovesIds": [
+        "mud-shot",
+        "rock-throw"
+      ]
+    },
     "CandiesToEvolve": 100,
     "EggDistance": 0,
     "EvolvesFrom": 74,
@@ -4162,40 +2482,17 @@
     "CatchRate": 10,
     "FleeRate": 5,
     "MaxCP": 2303,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock throw",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud slap",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ancient power",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "earthquake",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "stone edge",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "ancient-power",
+        "earthquake",
+        "stone-edge"
+      ],
+      "QuickMovesIds": [
+        "mud-slap",
+        "rock-throw"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 75,
@@ -4218,40 +2515,17 @@
     "CatchRate": 32,
     "FleeRate": 10,
     "MaxCP": 1516,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "tackle",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ember",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flame wheel",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "fire blast",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flame charge",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "fire-blast",
+        "flame-charge",
+        "flame-wheel"
+      ],
+      "QuickMovesIds": [
+        "ember",
+        "tackle"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -4274,40 +2548,17 @@
     "CatchRate": 12,
     "FleeRate": 6,
     "MaxCP": 2199,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "low kick",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ember",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "heat wave",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "fire blast",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "drill run",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "drill-run",
+        "fire-blast",
+        "heat-wave"
+      ],
+      "QuickMovesIds": [
+        "ember",
+        "low-kick"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 77,
@@ -4330,40 +2581,17 @@
     "CatchRate": 40,
     "FleeRate": 10,
     "MaxCP": 1218,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water gun",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "confusion",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psychic",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water pulse",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psyshock",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "water-pulse",
+        "psybeam",
+        "psychic"
+      ],
+      "QuickMovesIds": [
+        "confusion",
+        "water-gun"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -4386,40 +2614,17 @@
     "CatchRate": 16,
     "FleeRate": 6,
     "MaxCP": 2597,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water gun",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "confusion",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psychic",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water pulse",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ice beam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "ice-beam",
+        "psychic",
+        "water-pulse"
+      ],
+      "QuickMovesIds": [
+        "confusion",
+        "water-gun"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 79,
@@ -4442,40 +2647,17 @@
     "CatchRate": 40,
     "FleeRate": 10,
     "MaxCP": 890,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "spark",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunder shock",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "magnet bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "discharge",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunderbolt",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "discharge",
+        "magnet-bomb",
+        "thunderbolt"
+      ],
+      "QuickMovesIds": [
+        "spark",
+        "thunder-shock"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 82,
@@ -4498,40 +2680,17 @@
     "CatchRate": 16,
     "FleeRate": 6,
     "MaxCP": 1879,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "spark",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunder shock",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "magnet bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "discharge",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flash cannon",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "discharge",
+        "flash-cannon",
+        "magnet-bomb"
+      ],
+      "QuickMovesIds": [
+        "spark",
+        "thunder-shock"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 0,
@@ -4554,40 +2713,17 @@
     "CatchRate": 24,
     "FleeRate": 9,
     "MaxCP": 1263,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "fury cutter",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "cut",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "air cutter",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aerial ace",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "leaf blade",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "aerial-ace",
+        "air-cutter",
+        "leaf-blade"
+      ],
+      "QuickMovesIds": [
+        "cut",
+        "fury-cutter"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -4610,40 +2746,17 @@
     "CatchRate": 40,
     "FleeRate": 10,
     "MaxCP": 855,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "peck",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "quick attack",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "swift",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aerial ace",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "drill peck",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "aerial-ace",
+        "drill-peck",
+        "swift"
+      ],
+      "QuickMovesIds": [
+        "peck",
+        "quick-attack"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -4666,40 +2779,17 @@
     "CatchRate": 16,
     "FleeRate": 6,
     "MaxCP": 1836,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "steel wing",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "feint attack",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "drill peck",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aerial ace",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "air cutter",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "aerial-ace",
+        "air-cutter",
+        "drill-peck"
+      ],
+      "QuickMovesIds": [
+        "feint-attack",
+        "steel-wing"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 84,
@@ -4722,40 +2812,17 @@
     "CatchRate": 40,
     "FleeRate": 9,
     "MaxCP": 1107,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "lick",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ice shard",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aqua jet",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "icy wind",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aqua tail",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "aqua-jet",
+        "aqua-tail",
+        "icy-wind"
+      ],
+      "QuickMovesIds": [
+        "ice-shard",
+        "water-gun"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -4778,40 +2845,17 @@
     "CatchRate": 16,
     "FleeRate": 6,
     "MaxCP": 2145,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "frost breath",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ice shard",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aqua jet",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "icy wind",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "blizzard",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "aqua-jet",
+        "blizzard",
+        "icy-wind"
+      ],
+      "QuickMovesIds": [
+        "frost-breath",
+        "ice-shard"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 86,
@@ -4834,40 +2878,17 @@
     "CatchRate": 40,
     "FleeRate": 10,
     "MaxCP": 1284,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud slap",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "acid",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud bomb",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "sludge",
+        "sludge-bomb",
+        "sludge-wave"
+      ],
+      "QuickMovesIds": [
+        "acid",
+        "mud-slap"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -4890,40 +2911,17 @@
     "CatchRate": 16,
     "FleeRate": 6,
     "MaxCP": 2602,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison jab",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "lick",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge wave",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dark pulse",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dark-pulse",
+        "sludge",
+        "sludge-bomb"
+      ],
+      "QuickMovesIds": [
+        "acid",
+        "poison-jab"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 88,
@@ -4946,40 +2944,17 @@
     "CatchRate": 40,
     "FleeRate": 10,
     "MaxCP": 822,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ice shard",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "tackle",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "icy wind",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water pulse",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bubble beam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "bubble-beam",
+        "icy-wind",
+        "water-pulse"
+      ],
+      "QuickMovesIds": [
+        "ice-shard",
+        "tackle"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -5002,40 +2977,17 @@
     "CatchRate": 16,
     "FleeRate": 6,
     "MaxCP": 2052,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ice shard",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "frost breath",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "icy wind",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "blizzard",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hydro pump",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "blizzard",
+        "icy-wind",
+        "hydro-pump"
+      ],
+      "QuickMovesIds": [
+        "frost-breath",
+        "ice-shard"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 90,
@@ -5058,40 +3010,17 @@
     "CatchRate": 32,
     "FleeRate": 10,
     "MaxCP": 804,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "lick",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sucker punch",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dark pulse",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ominous wind",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dark-pulse",
+        "ominous-wind",
+        "sludge-bomb"
+      ],
+      "QuickMovesIds": [
+        "lick",
+        "sucker-punch"
+      ]
+    },
     "CandiesToEvolve": 25,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -5114,40 +3043,17 @@
     "CatchRate": 16,
     "FleeRate": 7,
     "MaxCP": 1380,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "lick",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "shadow claw",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dark pulse",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "shadow ball",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dark-pulse",
+        "shadow-ball",
+        "sludge-bomb"
+      ],
+      "QuickMovesIds": [
+        "lick",
+        "shadow-claw"
+      ]
+    },
     "CandiesToEvolve": 100,
     "EggDistance": 0,
     "EvolvesFrom": 92,
@@ -5170,40 +3076,17 @@
     "CatchRate": 8,
     "FleeRate": 5,
     "MaxCP": 2078,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "shadow claw",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sucker punch",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dark pulse",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "shadow ball",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dark-pulse",
+        "shadow-ball",
+        "sludge-wave"
+      ],
+      "QuickMovesIds": [
+        "shadow-claw",
+        "sucker-punch"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 93,
@@ -5226,40 +3109,17 @@
     "CatchRate": 16,
     "FleeRate": 9,
     "MaxCP": 857,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock throw",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "tackle",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock slide",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "stone edge",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "iron head",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "iron-head",
+        "rock-slide",
+        "stone-edge"
+      ],
+      "QuickMovesIds": [
+        "rock-throw",
+        "tackle"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 10,
     "EvolvesFrom": 0,
@@ -5282,40 +3142,17 @@
     "CatchRate": 40,
     "FleeRate": 10,
     "MaxCP": 1075,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "pound",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "confusion",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psychic",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psyshock",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psybeam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "psybeam",
+        "psychic",
+        "psyshock"
+      ],
+      "QuickMovesIds": [
+        "confusion",
+        "pound"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -5338,40 +3175,17 @@
     "CatchRate": 16,
     "FleeRate": 6,
     "MaxCP": 2184,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "zen headbutt",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "confusion",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psychic",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psyshock",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "shadow ball",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "psychic",
+        "psyshock",
+        "shadow-ball"
+      ],
+      "QuickMovesIds": [
+        "confusion",
+        "zen-headbutt"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 96,
@@ -5394,40 +3208,17 @@
     "CatchRate": 40,
     "FleeRate": 15,
     "MaxCP": 792,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bubble",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud shot",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "vice grip",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water pulse",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bubble beam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "bubble-beam",
+        "vice-grip",
+        "water-pulse"
+      ],
+      "QuickMovesIds": [
+        "bubble",
+        "mud-shot"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -5450,40 +3241,17 @@
     "CatchRate": 16,
     "FleeRate": 7,
     "MaxCP": 1823,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "metal claw",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud shot",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "vice grip",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water pulse",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "x-scissor",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "vice-grip",
+        "water-pulse",
+        "x-scissor"
+      ],
+      "QuickMovesIds": [
+        "metal-claw",
+        "mud-shot"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 98,
@@ -5506,40 +3274,17 @@
     "CatchRate": 40,
     "FleeRate": 10,
     "MaxCP": 839,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "tackle",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "spark",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunderbolt",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "discharge",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "signal beam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "discharge",
+        "signal-beam",
+        "thunderbolt"
+      ],
+      "QuickMovesIds": [
+        "spark",
+        "tackle"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -5562,40 +3307,17 @@
     "CatchRate": 16,
     "FleeRate": 6,
     "MaxCP": 1646,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "tackle",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "spark",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunderbolt",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "discharge",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hyper beam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "discharge",
+        "hyper-beam",
+        "thunderbolt"
+      ],
+      "QuickMovesIds": [
+        "spark",
+        "tackle"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 100,
@@ -5618,34 +3340,16 @@
     "CatchRate": 40,
     "FleeRate": 10,
     "MaxCP": 1099,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "confusion",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psychic",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "seed bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ancient power",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "ancient-power",
+        "psychic",
+        "seed-bomb"
+      ],
+      "QuickMovesIds": [
+        "confusion"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -5668,40 +3372,17 @@
     "CatchRate": 16,
     "FleeRate": 6,
     "MaxCP": 2955,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "confusion",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "zen headbutt",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psychic",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "seed bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "solar beam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "psychic",
+        "seed-bomb",
+        "solar-beam"
+      ],
+      "QuickMovesIds": [
+        "confusion",
+        "zen-headbutt"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 102,
@@ -5724,40 +3405,17 @@
     "CatchRate": 32,
     "FleeRate": 10,
     "MaxCP": 1006,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock smash",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud slap",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bone club",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dig",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bulldoze",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "bone-club",
+        "bulldoze",
+        "dig"
+      ],
+      "QuickMovesIds": [
+        "mud-slap",
+        "rock-smash"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -5780,40 +3438,17 @@
     "CatchRate": 12,
     "FleeRate": 6,
     "MaxCP": 1656,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock smash",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud slap",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bone club",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dig",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "earthquake",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "bone-club",
+        "dig",
+        "earthquake"
+      ],
+      "QuickMovesIds": [
+        "mud-slap",
+        "rock-smash"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 104,
@@ -5836,40 +3471,17 @@
     "CatchRate": 16,
     "FleeRate": 9,
     "MaxCP": 1492,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "low kick",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock smash",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "low sweep",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "stone edge",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "brick break",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "low-sweep",
+        "stomp",
+        "stone-edge"
+      ],
+      "QuickMovesIds": [
+        "low-kick",
+        "rock-smash"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 10,
     "EvolvesFrom": 0,
@@ -5892,46 +3504,18 @@
     "CatchRate": 16,
     "FleeRate": 9,
     "MaxCP": 1516,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bullet punch",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock smash",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "fire punch",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ice punch",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunder punch",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "brick break",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "brick-break",
+        "fire-punch",
+        "ice-punch",
+        "thunder-punch"
+      ],
+      "QuickMovesIds": [
+        "bullet-punch",
+        "rock-smash"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 10,
     "EvolvesFrom": 0,
@@ -5954,40 +3538,17 @@
     "CatchRate": 16,
     "FleeRate": 9,
     "MaxCP": 1626,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "lick",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "zen headbutt",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hyper beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "stomp",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "power whip",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "hyper-beam",
+        "power-whip",
+        "hyper-beam"
+      ],
+      "QuickMovesIds": [
+        "lick",
+        "zen-headbutt"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -6010,34 +3571,17 @@
     "CatchRate": 40,
     "FleeRate": 10,
     "MaxCP": 1151,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "tackle",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dark pulse",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dark-pulse",
+        "sludge",
+        "sludge-bomb"
+      ],
+      "QuickMovesIds": [
+        "acid",
+        "tackle"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -6060,34 +3604,17 @@
     "CatchRate": 16,
     "FleeRate": 6,
     "MaxCP": 2250,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "tackle",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dark pulse",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "shadow ball",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dark-pulse",
+        "shadow-ball",
+        "sludge-bomb"
+      ],
+      "QuickMovesIds": [
+        "acid",
+        "tackle"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 109,
@@ -6110,40 +3637,17 @@
     "CatchRate": 40,
     "FleeRate": 10,
     "MaxCP": 1182,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock smash",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud slap",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bulldoze",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "stomp",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "horn attack",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "bulldoze",
+        "horn-attack",
+        "stomp"
+      ],
+      "QuickMovesIds": [
+        "mud-slap",
+        "rock-smash"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -6165,41 +3669,18 @@
     },
     "CatchRate": 16,
     "FleeRate": 6,
-    "MaxCP": 2243,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock smash",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud slap",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "earthquake",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "stone edge",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "megahorn",
-        "Type": 0
-      }
-    ],
+    "MaxCP": 1623,
+    "Moves": {
+      "ChargeMovesIds": [
+        "earthquake",
+        "megahorn",
+        "stone-edge"
+      ],
+      "QuickMovesIds": [
+        "mud-slap",
+        "rock-smash"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 111,
@@ -6222,40 +3703,17 @@
     "CatchRate": 16,
     "FleeRate": 9,
     "MaxCP": 675,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "pound",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "zen headbutt",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dazzling gleam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hyper beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psychic",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dazzling-gleam",
+        "psybeam",
+        "psychic"
+      ],
+      "QuickMovesIds": [
+        "pound",
+        "zen-headbutt"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 10,
     "EvolvesFrom": 0,
@@ -6278,34 +3736,16 @@
     "CatchRate": 32,
     "FleeRate": 9,
     "MaxCP": 1739,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "vine whip",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "sludge bomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "solar beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "power whip",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "power-whip",
+        "sludge-bomb",
+        "solar-beam"
+      ],
+      "QuickMovesIds": [
+        "vine-whip"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -6328,40 +3768,17 @@
     "CatchRate": 16,
     "FleeRate": 9,
     "MaxCP": 2043,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "low kick",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud slap",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "earthquake",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "brick break",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "stomp",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "brick-break",
+        "earthquake",
+        "stomp"
+      ],
+      "QuickMovesIds": [
+        "low-kick",
+        "mud-slap"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -6384,40 +3801,17 @@
     "CatchRate": 40,
     "FleeRate": 10,
     "MaxCP": 794,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water gun",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bubble",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bubble beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dragon pulse",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flash cannon",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "bubble-beam",
+        "dragon-pulse",
+        "flash-cannon"
+      ],
+      "QuickMovesIds": [
+        "bubble",
+        "water-gun"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -6440,40 +3834,17 @@
     "CatchRate": 16,
     "FleeRate": 6,
     "MaxCP": 1713,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water gun",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dragon breath",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hydro pump",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dragon pulse",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "blizzard",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "blizzard",
+        "dragon-pulse",
+        "hydro-pump"
+      ],
+      "QuickMovesIds": [
+        "dragon-breath",
+        "water-gun"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 116,
@@ -6496,40 +3867,17 @@
     "CatchRate": 40,
     "FleeRate": 15,
     "MaxCP": 965,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud shot",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "peck",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aqua tail",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "horn attack",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water pulse",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "aqua-tail",
+        "horn-attack",
+        "water-pulse"
+      ],
+      "QuickMovesIds": [
+        "mud-shot",
+        "peck"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -6552,40 +3900,17 @@
     "CatchRate": 16,
     "FleeRate": 7,
     "MaxCP": 2043,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "poison jab",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "peck",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "drill run",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "megahorn",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "icy wind",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "drill-run",
+        "icy-wind",
+        "megahorn"
+      ],
+      "QuickMovesIds": [
+        "quick-attack",
+        "water-gun"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 118,
@@ -6608,40 +3933,18 @@
     "CatchRate": 40,
     "FleeRate": 15,
     "MaxCP": 937,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water gun",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "tackle",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bubble beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "power gem",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "swift",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "bubble-beam",
+        "power-gem",
+        "swift"
+      ],
+      "QuickMovesIds": [
+        "tackle",
+        "quick-attack",
+        "water-gun"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -6664,40 +3967,18 @@
     "CatchRate": 16,
     "FleeRate": 6,
     "MaxCP": 2182,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water gun",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "tackle",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hydro pump",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "power gem",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psychic",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "hydro-pump",
+        "power-gem",
+        "psybeam"
+      ],
+      "QuickMovesIds": [
+        "tackle",
+        "quick-attack",
+        "water-gun"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 120,
@@ -6720,40 +4001,17 @@
     "CatchRate": 24,
     "FleeRate": 9,
     "MaxCP": 1494,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "confusion",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "zen headbutt",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "shadow ball",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psybeam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psychic",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "psybeam",
+        "psychic",
+        "shadow-ball"
+      ],
+      "QuickMovesIds": [
+        "confusion",
+        "zen-headbutt"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 10,
     "EvolvesFrom": 0,
@@ -6776,40 +4034,17 @@
     "CatchRate": 24,
     "FleeRate": 9,
     "MaxCP": 2073,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "steel wing",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "fury cutter",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bug buzz",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "x-scissor",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "night slash",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "bug-buzz",
+        "night-slash",
+        "x-scissor"
+      ],
+      "QuickMovesIds": [
+        "fury-cutter",
+        "steel-wing"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 10,
     "EvolvesFrom": 0,
@@ -6832,40 +4067,17 @@
     "CatchRate": 24,
     "FleeRate": 9,
     "MaxCP": 1716,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "pound",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "frost breath",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psyshock",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ice punch",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "draining kiss",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "draining-kiss",
+        "psybeam",
+        "psyshock"
+      ],
+      "QuickMovesIds": [
+        "frost-breath",
+        "pound"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 10,
     "EvolvesFrom": 0,
@@ -6888,40 +4100,17 @@
     "CatchRate": 24,
     "FleeRate": 9,
     "MaxCP": 2119,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "low kick",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunder shock",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunderbolt",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunder",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunder punch",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "thunder",
+        "thunder-punch",
+        "thunderbolt"
+      ],
+      "QuickMovesIds": [
+        "low-kick",
+        "thunder-shock"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 10,
     "EvolvesFrom": 0,
@@ -6944,40 +4133,17 @@
     "CatchRate": 24,
     "FleeRate": 9,
     "MaxCP": 2265,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "karate chop",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ember",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "fire blast",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flamethrower",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "fire punch",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "fire-blast",
+        "fire-punch",
+        "flamethrower"
+      ],
+      "QuickMovesIds": [
+        "ember",
+        "karate-chop"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 10,
     "EvolvesFrom": 0,
@@ -7000,40 +4166,17 @@
     "CatchRate": 24,
     "FleeRate": 9,
     "MaxCP": 2121,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "fury cutter",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock smash",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "submission",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "vice grip",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "x-scissor",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "submission",
+        "vice-grip",
+        "x-scissor"
+      ],
+      "QuickMovesIds": [
+        "fury-cutter",
+        "rock-smash"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 10,
     "EvolvesFrom": 0,
@@ -7056,40 +4199,17 @@
     "CatchRate": 24,
     "FleeRate": 9,
     "MaxCP": 1844,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "tackle",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "zen headbutt",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "earthquake",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "iron head",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "horn attack",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "earthquake",
+        "horn-attack",
+        "iron-head"
+      ],
+      "QuickMovesIds": [
+        "tackle",
+        "zen-headbutt"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -7112,22 +4232,14 @@
     "CatchRate": 56,
     "FleeRate": 15,
     "MaxCP": 262,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "splash",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "struggle",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "struggle"
+      ],
+      "QuickMovesIds": [
+        "splash"
+      ]
+    },
     "CandiesToEvolve": 400,
     "EggDistance": 2,
     "EvolvesFrom": 0,
@@ -7150,34 +4262,17 @@
     "CatchRate": 8,
     "FleeRate": 7,
     "MaxCP": 2688,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bite",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "twister",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hydro pump",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dragon pulse",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dragon-pulse",
+        "hydro-pump",
+        "twister"
+      ],
+      "QuickMovesIds": [
+        "bite",
+        "dragon-breath"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 129,
@@ -7200,40 +4295,17 @@
     "CatchRate": 16,
     "FleeRate": 9,
     "MaxCP": 2980,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "frost breath",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ice shard",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ice beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dragon pulse",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "blizzard",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "blizzard",
+        "dragon-pulse",
+        "ice-beam"
+      ],
+      "QuickMovesIds": [
+        "frost-breath",
+        "ice-shard"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 10,
     "EvolvesFrom": 0,
@@ -7256,22 +4328,14 @@
     "CatchRate": 16,
     "FleeRate": 10,
     "MaxCP": 919,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "pound",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "struggle",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "struggle"
+      ],
+      "QuickMovesIds": [
+        "pound"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 0,
@@ -7294,40 +4358,17 @@
     "CatchRate": 32,
     "FleeRate": 10,
     "MaxCP": 1077,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "tackle",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "quick attack",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "body slam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dig",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "swift",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "body-slam",
+        "dig",
+        "swift"
+      ],
+      "QuickMovesIds": [
+        "quick-attack",
+        "tackle"
+      ]
+    },
     "CandiesToEvolve": 25,
     "EggDistance": 10,
     "EvolvesFrom": 0,
@@ -7350,34 +4391,16 @@
     "CatchRate": 12,
     "FleeRate": 6,
     "MaxCP": 2816,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water gun",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aqua tail",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water pulse",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hydro pump",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "aqua-tail",
+        "hydro-pump",
+        "water-pulse"
+      ],
+      "QuickMovesIds": [
+        "water-gun"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 133,
@@ -7400,34 +4423,16 @@
     "CatchRate": 12,
     "FleeRate": 6,
     "MaxCP": 2140,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunder shock",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunderbolt",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "discharge",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunder",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "discharge",
+        "thunder",
+        "thunderbolt"
+      ],
+      "QuickMovesIds": [
+        "thunder-shock"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 133,
@@ -7450,34 +4455,16 @@
     "CatchRate": 12,
     "FleeRate": 6,
     "MaxCP": 2643,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ember",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flamethrower",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "fire blast",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "heat wave",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "fire-blast",
+        "flamethrower",
+        "heat-wave"
+      ],
+      "QuickMovesIds": [
+        "ember"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 133,
@@ -7500,40 +4487,17 @@
     "CatchRate": 32,
     "FleeRate": 9,
     "MaxCP": 1691,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "tackle",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "zen headbutt",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "discharge",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psybeam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "signal beam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "discharge",
+        "signal-beam",
+        "psybeam"
+      ],
+      "QuickMovesIds": [
+        "quick-attack",
+        "tackle"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 5,
     "EvolvesFrom": 0,
@@ -7556,40 +4520,17 @@
     "CatchRate": 32,
     "FleeRate": 9,
     "MaxCP": 1119,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water gun",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud shot",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock tomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ancient power",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "brine",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "ancient-power",
+        "brine",
+        "rock-tomb"
+      ],
+      "QuickMovesIds": [
+        "mud-shot",
+        "water-gun"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 10,
     "EvolvesFrom": 0,
@@ -7612,40 +4553,17 @@
     "CatchRate": 12,
     "FleeRate": 5,
     "MaxCP": 2233,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water gun",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud shot",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock slide",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ancient power",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hydro pump",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "ancient-power",
+        "hydro-pump",
+        "rock-slide"
+      ],
+      "QuickMovesIds": [
+        "rock-throw",
+        "water-gun"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 138,
@@ -7668,40 +4586,17 @@
     "CatchRate": 32,
     "FleeRate": 9,
     "MaxCP": 1104,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "scratch",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud shot",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aqua jet",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "rock tomb",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ancient power",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "ancient-power",
+        "aqua-jet",
+        "rock-tomb"
+      ],
+      "QuickMovesIds": [
+        "mud-shot",
+        "scratch"
+      ]
+    },
     "CandiesToEvolve": 50,
     "EggDistance": 10,
     "EvolvesFrom": 0,
@@ -7724,40 +4619,17 @@
     "CatchRate": 12,
     "FleeRate": 5,
     "MaxCP": 2130,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "fury cutter",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "mud shot",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "water pulse",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "stone edge",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ancient power",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "ancient-power",
+        "stone-edge",
+        "water-pulse"
+      ],
+      "QuickMovesIds": [
+        "fury-cutter",
+        "mud-shot"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 140,
@@ -7780,40 +4652,17 @@
     "CatchRate": 16,
     "FleeRate": 9,
     "MaxCP": 2165,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "bite",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "steel wing",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "iron head",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hyper beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ancient power",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "ancient-power",
+        "hyper-beam",
+        "iron-head"
+      ],
+      "QuickMovesIds": [
+        "bite",
+        "steel-wing"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 10,
     "EvolvesFrom": 0,
@@ -7836,40 +4685,17 @@
     "CatchRate": 16,
     "FleeRate": 9,
     "MaxCP": 3112,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "lick",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "zen headbutt",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hyper beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "earthquake",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "body slam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "body-slam",
+        "earthquake",
+        "hyper-beam"
+      ],
+      "QuickMovesIds": [
+        "lick",
+        "zen-headbutt"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 10,
     "EvolvesFrom": 0,
@@ -7892,34 +4718,16 @@
     "CatchRate": 0,
     "FleeRate": 10,
     "MaxCP": 2978,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "frost breath",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ice beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "icy wind",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "blizzard",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "blizzard",
+        "ice-beam",
+        "icy-wind"
+      ],
+      "QuickMovesIds": [
+        "frost-breath"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 0,
@@ -7942,34 +4750,16 @@
     "CatchRate": 0,
     "FleeRate": 10,
     "MaxCP": 3114,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunder shock",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "discharge",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunderbolt",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunder",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "discharge",
+        "thunder",
+        "thunderbolt"
+      ],
+      "QuickMovesIds": [
+        "thunder-shock"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 0,
@@ -7992,34 +4782,16 @@
     "CatchRate": 0,
     "FleeRate": 10,
     "MaxCP": 3240,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "ember",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "fire blast",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "heat wave",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "flamethrower",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "fire-blast",
+        "flamethrower",
+        "heat-wave"
+      ],
+      "QuickMovesIds": [
+        "ember"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 0,
@@ -8042,34 +4814,16 @@
     "CatchRate": 32,
     "FleeRate": 9,
     "MaxCP": 983,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dragon breath",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "wrap",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aqua tail",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "twister",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "aqua-tail",
+        "twister",
+        "wrap"
+      ],
+      "QuickMovesIds": [
+        "dragon-breath"
+      ]
+    },
     "CandiesToEvolve": 25,
     "EggDistance": 10,
     "EvolvesFrom": 0,
@@ -8092,34 +4846,16 @@
     "CatchRate": 8,
     "FleeRate": 6,
     "MaxCP": 1747,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dragon breath",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "wrap",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "aqua tail",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dragon pulse",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "aqua-tail",
+        "dragon-pulse",
+        "wrap"
+      ],
+      "QuickMovesIds": [
+        "dragon-breath"
+      ]
+    },
     "CandiesToEvolve": 100,
     "EggDistance": 0,
     "EvolvesFrom": 147,
@@ -8142,40 +4878,17 @@
     "CatchRate": 4,
     "FleeRate": 5,
     "MaxCP": 3500,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dragon breath",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "steel wing",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hyper beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dragon claw",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dragon pulse",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dragon-claw",
+        "dragon-pulse",
+        "hyper-beam"
+      ],
+      "QuickMovesIds": [
+        "dragon-breath",
+        "steel-wing"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 148,
@@ -8198,40 +4911,17 @@
     "CatchRate": 0,
     "FleeRate": 10,
     "MaxCP": 4144,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "confusion",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psycho cut",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psychic",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "shadow ball",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hyper beam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "hyper-beam",
+        "psychic",
+        "shadow-ball"
+      ],
+      "QuickMovesIds": [
+        "confusion",
+        "psycho-cut"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 0,
@@ -8254,64 +4944,21 @@
     "CatchRate": 0,
     "FleeRate": 10,
     "MaxCP": 3299,
-    "QuickMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "pound",
-        "Type": 0
-      }
-    ],
-    "SpecialMoves": [
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "blizzard",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "earthquake",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "psychic",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "dragon pulse",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "thunder",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "fire blast",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "solar beam",
-        "Type": 0
-      },
-      {
-        "CoolDown": 0.0,
-        "DamagePerSecond": 0.0,
-        "Name": "hyper beam",
-        "Type": 0
-      }
-    ],
+    "Moves": {
+      "ChargeMovesIds": [
+        "dragon-pulse",
+        "earthquake",
+        "fire-blast",
+        "hurricane",
+        "hyper-beam",
+        "moonblast",
+        "psychic",
+        "solar-beam"
+      ],
+      "QuickMovesIds": [
+        "pound"
+      ]
+    },
     "CandiesToEvolve": 0,
     "EggDistance": 0,
     "EvolvesFrom": 0,

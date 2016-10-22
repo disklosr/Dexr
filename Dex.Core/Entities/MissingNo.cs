@@ -15,8 +15,11 @@ namespace Dex.Core.Entities
             Defense = new Defense(0);
             Stamina = new Stamina(0);
 
-            QuickMoves = Enumerable.Empty<Move>();
-            SpecialMoves = Enumerable.Empty<Move>();
+            Moves = new PokemonMovesIds()
+            {
+                QuickMovesIds = Enumerable.Empty<string>(),
+                ChargeMovesIds = Enumerable.Empty<string>()
+            };
         }
     }
 }

@@ -31,7 +31,8 @@
         <TextBlock Grid.Row="0"
                    Grid.Column="0"
                    HorizontalAlignment="Left"
-                   VerticalAlignment="Center">
+                   VerticalAlignment="Center"
+                   Style="{StaticResource CaptionTextBlockStyle}">
             <TextBlock.Foreground>
                 <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
             </TextBlock.Foreground>
@@ -44,6 +45,7 @@
                    Grid.ColumnSpan="2"
                    HorizontalAlignment="Right"
                    VerticalAlignment="Center"
+                   Style="{StaticResource CaptionTextBlockStyle}"
                    Text="{Binding MaxStatValue}">
             <TextBlock.Foreground>
                 <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
@@ -71,7 +73,7 @@
                    Margin="0,0,4,0"
                    HorizontalAlignment="Right"
                    VerticalAlignment="Center"
-                   Style="{StaticResource BodyTextBlockStyle}"
+                   Style="{StaticResource CaptionTextBlockStyle}"
                    Text="{Binding Percentage,
                                   Converter={StaticResource StringAppenderFormatter},
                                   ConverterParameter='%'}">
