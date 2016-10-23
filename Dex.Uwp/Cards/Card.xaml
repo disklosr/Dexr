@@ -12,14 +12,11 @@
         <ControlTemplate>
             <Grid Name="CardRoot" MinHeight="48">
                 <Canvas Name="ShadowHost" />
-                <Border BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        Padding="{TemplateBinding Padding}">
-                    <Border.Background>
+                <ContentPresenter Padding="{TemplateBinding Padding}">
+                    <ContentPresenter.Background>
                         <SolidColorBrush Color="{ThemeResource AppGreyColorLighter3}" />
-                    </Border.Background>
-                    <ContentPresenter />
-                </Border>
+                    </ContentPresenter.Background>
+                </ContentPresenter>
             </Grid>
         </ControlTemplate>
     </ContentControl.Template>

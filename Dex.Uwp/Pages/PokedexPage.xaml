@@ -36,48 +36,47 @@
             </ListView.ItemContainerTransitions>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <controls:Card Height="84"
-                                   BorderBrush="{Binding Type1,
-                                                         Converter={StaticResource PokemonTypeToColorConverter}}"
-                                   BorderThickness="0,0,0,2">
+                    <controls:Card Height="84">
                         <controls:HoverControl>
                             <controls:HoverControl.Background>
                                 <SolidColorBrush Color="{ThemeResource AppGreyColorLighter3}" />
                             </controls:HoverControl.Background>
-                            <RelativePanel Padding="12,4">
+                            <Border BorderBrush="{Binding Type1, Converter={StaticResource PokemonTypeToColorConverter}}" BorderThickness="0,0,0,2">
+                                <RelativePanel Padding="12,4">
 
-                                <Image Name="PokemonPicture"
-                                       Margin="0,12,12,12"
-                                       RelativePanel.AlignLeftWithPanel="True"
-                                       RelativePanel.AlignVerticalCenterWithPanel="True"
-                                       Source="{Binding DexNumber,
-                                                        Converter={StaticResource PokemonDexNumberToPictureConverter}}" />
-                                <TextBlock x:Name="PokemonName"
-                                           VerticalAlignment="Top"
-                                           RelativePanel.AlignHorizontalCenterWithPanel="True"
-                                           RelativePanel.AlignTopWithPanel="True"
-                                           RelativePanel.RightOf="PokemonPicture"
-                                           Text="{Binding Name,
-                                                          Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
-                                <TextBlock VerticalAlignment="Bottom"
-                                           RelativePanel.AlignLeftWith="PokemonName"
-                                           RelativePanel.Below="PokemonName"
-                                           Style="{StaticResource CaptionTextBlockStyle}">
-                                    <TextBlock.Foreground>
-                                        <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                                    </TextBlock.Foreground>
-                                    <Run Text="{Binding Type1}" />
-                                    <Run Text="{Binding Type2, Converter={StaticResource PokemonType2TextFormatter}}" />
-                                </TextBlock>
-                                <TextBlock RelativePanel.AlignRightWithPanel="True"
+                                    <Image Name="PokemonPicture"
+                                           Margin="0,12,12,12"
+                                           RelativePanel.AlignLeftWithPanel="True"
                                            RelativePanel.AlignVerticalCenterWithPanel="True"
-                                           Style="{StaticResource CaptionTextBlockStyle}"
-                                           Text="{Binding DexNumber}">
-                                    <TextBlock.Foreground>
-                                        <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                                    </TextBlock.Foreground>
-                                </TextBlock>
-                            </RelativePanel>
+                                           Source="{Binding DexNumber,
+                                                            Converter={StaticResource PokemonDexNumberToPictureConverter}}" />
+                                    <TextBlock x:Name="PokemonName"
+                                               VerticalAlignment="Top"
+                                               RelativePanel.AlignHorizontalCenterWithPanel="True"
+                                               RelativePanel.AlignTopWithPanel="True"
+                                               RelativePanel.RightOf="PokemonPicture"
+                                               Text="{Binding Name,
+                                                              Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
+                                    <TextBlock VerticalAlignment="Bottom"
+                                               RelativePanel.AlignLeftWith="PokemonName"
+                                               RelativePanel.Below="PokemonName"
+                                               Style="{StaticResource CaptionTextBlockStyle}">
+                                        <TextBlock.Foreground>
+                                            <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
+                                        </TextBlock.Foreground>
+                                        <Run Text="{Binding Type1}" />
+                                        <Run Text="{Binding Type2, Converter={StaticResource PokemonType2TextFormatter}}" />
+                                    </TextBlock>
+                                    <TextBlock RelativePanel.AlignRightWithPanel="True"
+                                               RelativePanel.AlignVerticalCenterWithPanel="True"
+                                               Style="{StaticResource CaptionTextBlockStyle}"
+                                               Text="{Binding DexNumber}">
+                                        <TextBlock.Foreground>
+                                            <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
+                                        </TextBlock.Foreground>
+                                    </TextBlock>
+                                </RelativePanel>
+                            </Border>
                         </controls:HoverControl>
                     </controls:Card>
                 </DataTemplate>
