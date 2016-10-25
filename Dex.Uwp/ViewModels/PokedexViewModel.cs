@@ -3,6 +3,7 @@ using Dex.Core.Repositories;
 using Dex.Uwp.Infrastructure;
 using Dex.Uwp.Services;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Navigation;
 
@@ -51,7 +52,8 @@ namespace Dex.Uwp.ViewModels
             var pokes = pokemonsRepository.GetAllPokemons();
             var moves = moveRepository.GetAllMoves();
             AllPokemons = await pokes;
-            AllMoves = (await moves).ChargeMoves;
+            var loadedMoves = await moves;
+            AllMoves = loadedMoves.ChargeMoves.Union<Move>(loadedMoves.QuickMoves);
             selectedPokemon = null;
             OnPropertyChanged(nameof(SelectedPokemon));
         }

@@ -29,12 +29,11 @@
                         </TextBlock>
                     </StackPanel>
 
-                    <TextBlock Foreground="{Binding Type,
-                                                    Converter={StaticResource PokemonTypeToColorConverter}}"
-                               RelativePanel.AlignRightWithPanel="True"
-                               RelativePanel.AlignVerticalCenterWithPanel="True"
-                               Style="{StaticResource CaptionTextBlockStyle}"
-                               Text="{Binding Type}" />
+                    <ContentControl Width="60"
+                                    Height="20"
+                                    RelativePanel.AlignRightWithPanel="True"
+                                    RelativePanel.AlignVerticalCenterWithPanel="True"
+                                    Template="{StaticResource PokemonTypeTemplate}" />
                 </RelativePanel>
             </Border>
         </local:HoverControl>

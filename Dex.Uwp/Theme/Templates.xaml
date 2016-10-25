@@ -23,7 +23,7 @@
                 CornerRadius="1">
             <TextBlock HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       Style="{StaticResource CaptionTextBlockStyle}"
+                       FontSize="10"
                        Text="{Binding Type}">
                 <TextBlock.Foreground>
                     <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
