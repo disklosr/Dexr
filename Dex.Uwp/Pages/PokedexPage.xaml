@@ -13,11 +13,11 @@
                                                  IsDesignTimeCreatable=False}"
                 NavigationCacheMode="Enabled"
                 mc:Ignorable="d">
-    <!--<Page.Transitions>
+    <Page.Transitions>
         <TransitionCollection>
-            <ContentThemeTransition />
+            <NavigationThemeTransition />
         </TransitionCollection>
-    </Page.Transitions>-->
+    </Page.Transitions>
     <infra:PageBase.Resources>
         <vc:PokemonType2TextFormatter x:Key="PokemonType2TextFormatter" />
     </infra:PageBase.Resources>
