@@ -15,18 +15,17 @@ namespace Dex.Uwp.Cards
 
         protected override void OnApplyTemplate()
         {
-            var source = (Grid)GetTemplateChild("CardRoot");
-            var target = (Canvas)GetTemplateChild("ShadowHost");
+            var shadowHost = (Canvas)GetTemplateChild("ShadowHost");
 
             if (!Windows.ApplicationModel.DesignMode.DesignModeEnabled)
-                InitializeDropShadow(source, target);
+                InitializeDropShadow(shadowHost);
 
             base.OnApplyTemplate();
         }
 
-        private void InitializeDropShadow(UIElement shadowShape, UIElement shadowHost)
+        private void InitializeDropShadow(UIElement shadowHost)
         {
-            Visual hostVisual = ElementCompositionPreview.GetElementVisual(shadowShape);
+            Visual hostVisual = ElementCompositionPreview.GetElementVisual(shadowHost);
             Compositor compositor = hostVisual.Compositor;
 
             // Create a drop shadow
@@ -36,6 +35,8 @@ namespace Dex.Uwp.Cards
             dropShadow.Color = shadowStyle.Color;
             dropShadow.BlurRadius = shadowStyle.BlurRadius;
             dropShadow.Offset = shadowStyle.Offset;
+
+            dropShadow.Mask = null;
 
             // Create a Visual to hold the shadow
             var shadowVisual = compositor.CreateSpriteVisual();
