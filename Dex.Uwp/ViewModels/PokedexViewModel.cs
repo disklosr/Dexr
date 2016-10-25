@@ -10,16 +10,24 @@ namespace Dex.Uwp.ViewModels
 {
     public class PokedexViewModel : ViewModelBase
     {
+        private readonly IMoveRepository moveRepository;
         private readonly INavigationService navigationService;
         private readonly IPokemonRepository pokemonsRepository;
-
+        private IEnumerable<Move> allMoves;
         private IEnumerable<Pokemon> allPokemons;
         private Pokemon selectedPokemon;
 
-        public PokedexViewModel(IPokemonRepository pokemonsRepository, INavigationService navigationService)
+        public PokedexViewModel(IPokemonRepository pokemonsRepository, IMoveRepository moveRepository, INavigationService navigationService)
         {
+            this.moveRepository = moveRepository;
             this.navigationService = navigationService;
             this.pokemonsRepository = pokemonsRepository;
+        }
+
+        public IEnumerable<Move> AllMoves
+        {
+            get { return allMoves; }
+            private set { Set(ref allMoves, value); }
         }
 
         public IEnumerable<Pokemon> AllPokemons
@@ -40,8 +48,10 @@ namespace Dex.Uwp.ViewModels
 
         public async override Task OnNavigatedTo(NavigationEventArgs e)
         {
-            var pokes = await pokemonsRepository.GetAllPokemons();
-            AllPokemons = pokes;
+            var pokes = pokemonsRepository.GetAllPokemons();
+            var moves = moveRepository.GetAllMoves();
+            AllPokemons = await pokes;
+            AllMoves = (await moves).ChargeMoves;
             selectedPokemon = null;
             OnPropertyChanged(nameof(SelectedPokemon));
         }

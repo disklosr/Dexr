@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="Dex.Uwp.Cards.PokemonListItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="using:Dex.Uwp.Cards"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:model="using:Dex.Core.Entities"
+             xmlns:vc="using:Dex.Uwp.ValueConverters"
+             d:DataContext="{d:DesignInstance Type=model:Pokemon,
+                                              IsDesignTimeCreatable=False}"
+             d:DesignHeight="84"
+             d:DesignWidth="400"
+             mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <vc:PokemonType2TextFormatter x:Key="PokemonType2TextFormatter" />
+    </UserControl.Resources>
+
+    <local:Card Height="84">
+        <local:HoverControl>
+            <local:HoverControl.Background>
+                <SolidColorBrush Color="{ThemeResource AppGreyColorLighter3}" />
+            </local:HoverControl.Background>
+            <Border BorderBrush="{Binding Type1, Converter={StaticResource PokemonTypeToColorConverter}}" BorderThickness="0,0,0,2">
+                <RelativePanel Padding="12,4">
+
+                    <Image Name="PokemonPicture"
+                           Margin="0,12,12,12"
+                           RelativePanel.AlignLeftWithPanel="True"
+                           RelativePanel.AlignVerticalCenterWithPanel="True"
+                           Source="{Binding DexNumber,
+                                            Converter={StaticResource PokemonDexNumberToPictureConverter}}" />
+                    <TextBlock x:Name="PokemonName"
+                               VerticalAlignment="Top"
+                               RelativePanel.AlignHorizontalCenterWithPanel="True"
+                               RelativePanel.AlignTopWithPanel="True"
+                               RelativePanel.RightOf="PokemonPicture"
+                               Text="{Binding Name,
+                                              Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
+                    <TextBlock VerticalAlignment="Bottom"
+                               RelativePanel.AlignLeftWith="PokemonName"
+                               RelativePanel.Below="PokemonName"
+                               Style="{StaticResource CaptionTextBlockStyle}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
+                        </TextBlock.Foreground>
+                        <Run Foreground="{Binding Type1, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Type1}" />
+                        <Run Foreground="{Binding Type1, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Type2, Converter={StaticResource PokemonType2TextFormatter}}" />
+                    </TextBlock>
+                    <TextBlock RelativePanel.AlignRightWithPanel="True"
+                               RelativePanel.AlignVerticalCenterWithPanel="True"
+                               Style="{StaticResource CaptionTextBlockStyle}"
+                               Text="{Binding DexNumber}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                </RelativePanel>
+            </Border>
+        </local:HoverControl>
+    </local:Card>
+</UserControl>

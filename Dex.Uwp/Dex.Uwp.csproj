@@ -268,11 +268,17 @@
     <Compile Include="Cards\HoverBorder.xaml.cs">
       <DependentUpon>HoverBorder.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Cards\MoveListItem.xaml.cs">
+      <DependentUpon>MoveListItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Cards\MovesCard.xaml.cs">
       <DependentUpon>MovesCard.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cards\PokemonCard.xaml.cs">
       <DependentUpon>PokemonCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cards\PokemonListItem.xaml.cs">
+      <DependentUpon>PokemonListItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cards\QuickMoveDetailsControl.xaml.cs">
       <DependentUpon>QuickMoveDetailsControl.xaml</DependentUpon>
@@ -358,11 +364,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Cards\MoveListItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Cards\MovesCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Cards\PokemonCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cards\PokemonListItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
