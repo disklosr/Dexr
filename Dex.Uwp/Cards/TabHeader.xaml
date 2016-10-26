@@ -9,13 +9,14 @@
              mc:Ignorable="d">
 
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        <FontIcon HorizontalAlignment="Center"
+        <!--<FontIcon HorizontalAlignment="Center"
                   FontSize="24"
-                  Glyph="{Binding Glyph}" />
-        <TextBlock Margin="2,4,2,0"
+                  Glyph="{Binding Glyph}" />-->
+        <TextBlock Margin="0,6,0,0"
                    HorizontalAlignment="Center"
                    FontFamily="Segoe UI"
-                   FontSize="10"
+                   FontSize="12"
+                   FontWeight="Bold"
                    IsTextScaleFactorEnabled="False"
                    LineHeight="14"
                    LineStackingStrategy="BlockLineHeight"

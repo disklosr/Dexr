@@ -41,7 +41,7 @@
             <PivotItem>
                 <PivotItem.Header>
                     <Border Width="96" Height="48">
-                        <controls:TabHeader Glyph="&#xE81D;" Label="Pokémons" />
+                        <controls:TabHeader Glyph="&#xE81D;" Label="POKEMONS" />
                     </Border>
                 </PivotItem.Header>
                 <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
@@ -59,7 +59,7 @@
             <PivotItem>
                 <PivotItem.Header>
                     <Border Width="96" Height="48">
-                        <controls:TabHeader Glyph="&#xE8F0;" Label="Moves" />
+                        <controls:TabHeader Glyph="&#xE8F0;" Label="MOVES" />
                     </Border>
                 </PivotItem.Header>
                 <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"

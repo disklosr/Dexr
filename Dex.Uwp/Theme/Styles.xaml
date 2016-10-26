@@ -458,9 +458,12 @@
 
                                         <!--  This border is used as a backplate for the header area  -->
                                         <Border Grid.ColumnSpan="3"
-                                                Background="{ThemeResource SystemControlPageBackgroundChromeMediumBrush}"
                                                 BorderBrush="{ThemeResource SystemControlForegroundChromeMediumBrush}"
-                                                BorderThickness="0,0,0,1" />
+                                                BorderThickness="0,0,0,2">
+                                            <Border.Background>
+                                                <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
+                                            </Border.Background>
+                                        </Border>
 
                                         <ContentPresenter x:Name="LeftHeaderPresenter"
                                                           HorizontalAlignment="Stretch"
