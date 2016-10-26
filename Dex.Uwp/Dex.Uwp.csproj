@@ -289,6 +289,9 @@
     <Compile Include="Cards\StatsCard.xaml.cs">
       <DependentUpon>StatsCard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Cards\TabHeader.xaml.cs">
+      <DependentUpon>TabHeader.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DataAccess\LocalFileDataSource.cs" />
     <Compile Include="Infrastructure\PageBase.cs" />
     <Compile Include="Infrastructure\RelayCommand.cs" />
@@ -389,6 +392,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Cards\StatsCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cards\TabHeader.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

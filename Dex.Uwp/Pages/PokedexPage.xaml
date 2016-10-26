@@ -19,8 +19,31 @@
     </Page.Transitions>
 
     <Grid>
-        <Pivot>
-            <PivotItem Header="Pokemons">
+        <Pivot Style="{StaticResource TabsStylePivotStyle}">
+            <Pivot.Resources>
+                <StaticResource x:Key="PivotHeaderItemBackgroundUnselected" ResourceKey="SystemControlTransparentBrush" />
+                <StaticResource x:Key="PivotHeaderItemBackgroundUnselectedPointerOver" ResourceKey="SystemControlHighlightTransparentBrush" />
+                <StaticResource x:Key="PivotHeaderItemBackgroundUnselectedPressed" ResourceKey="SystemControlHighlightTransparentBrush" />
+                <StaticResource x:Key="PivotHeaderItemBackgroundSelected" ResourceKey="SystemControlHighlightTransparentBrush" />
+                <StaticResource x:Key="PivotHeaderItemBackgroundSelectedPointerOver" ResourceKey="SystemControlHighlightTransparentBrush" />
+                <StaticResource x:Key="PivotHeaderItemBackgroundSelectedPressed" ResourceKey="SystemControlHighlightTransparentBrush" />
+                <StaticResource x:Key="PivotHeaderItemBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
+
+                <SolidColorBrush x:Key="PivotHeaderItemForegroundSelected" Color="Black" />
+                <SolidColorBrush x:Key="PivotHeaderItemForegroundUnselected" Color="{ThemeResource SystemChromeDisabledLowColor}" />
+                <SolidColorBrush x:Key="PivotHeaderItemForegroundUnselectedPointerOver" Color="Black" />
+                <StaticResource x:Key="PivotHeaderItemForegroundUnselectedPressed" ResourceKey="SystemControlHighlightAltBaseMediumHighBrush" />
+                <SolidColorBrush x:Key="PivotHeaderItemForegroundSelectedPointerOver" Color="{StaticResource SystemAccentColor}" />
+                <StaticResource x:Key="PivotHeaderItemForegroundSelectedPressed" ResourceKey="SystemControlHighlightAltBaseMediumHighBrush" />
+                <StaticResource x:Key="PivotHeaderItemForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+                <StaticResource x:Key="PivotHeaderItemFocusPipeFill" ResourceKey="SystemControlHighlightAltAccentBrush" />
+            </Pivot.Resources>
+            <PivotItem>
+                <PivotItem.Header>
+                    <Border Width="96" Height="48">
+                        <controls:TabHeader Glyph="&#xE81D;" Label="Pokémons" />
+                    </Border>
+                </PivotItem.Header>
                 <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
                           ItemsSource="{Binding AllPokemons}"
                           SelectedItem="{Binding SelectedPokemon,
@@ -33,7 +56,12 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </PivotItem>
-            <PivotItem Header="Moves">
+            <PivotItem>
+                <PivotItem.Header>
+                    <Border Width="96" Height="48">
+                        <controls:TabHeader Glyph="&#xE8F0;" Label="Moves" />
+                    </Border>
+                </PivotItem.Header>
                 <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
                           ItemsSource="{Binding AllMoves}"
                           Style="{StaticResource CardBasedListStyle}">
