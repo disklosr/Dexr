@@ -1,22 +1,19 @@
-﻿<ContentControl x:Class="Dex.Uwp.Cards.Card"
+﻿<ContentControl x:Class="Dex.Uwp.Cards.ShadowHost"
                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                 xmlns:local="using:Dex.Uwp.Cards"
                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                d:DesignHeight="200"
+                d:DesignHeight="300"
                 d:DesignWidth="400"
                 mc:Ignorable="d">
 
     <ContentControl.Template>
         <ControlTemplate>
-            <local:ShadowHost MinHeight="48">
-                <ContentPresenter Padding="{TemplateBinding Padding}">
-                    <ContentPresenter.Background>
-                        <SolidColorBrush Color="{ThemeResource AppGreyColorLighter3}" />
-                    </ContentPresenter.Background>
-                </ContentPresenter>
-            </local:ShadowHost>
+            <Grid>
+                <Canvas Name="ShadowCanvas" />
+                <ContentPresenter />
+            </Grid>
         </ControlTemplate>
     </ContentControl.Template>
 </ContentControl>
