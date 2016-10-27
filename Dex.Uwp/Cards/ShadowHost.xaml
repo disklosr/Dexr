@@ -12,7 +12,7 @@
         <ControlTemplate>
             <Grid>
                 <Canvas Name="ShadowCanvas" />
-                <ContentPresenter />
+                <ContentPresenter Background="{TemplateBinding Background}" />
             </Grid>
         </ControlTemplate>
     </ContentControl.Template>
