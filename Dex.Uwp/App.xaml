@@ -18,10 +18,18 @@
 
             <ResourceDictionary.ThemeDictionaries>
                 <ResourceDictionary x:Key="Default">
-                    <Color x:Key="SystemAccentColor">#E53935</Color>
+
+                    <!--  Red  -->
+                    <!--<Color x:Key="SystemAccentColor">#E53935</Color>
                     <Color x:Key="SystemAccentColorDark1">#D32F2F</Color>
                     <Color x:Key="SystemAccentColorDark2">#C62828</Color>
-                    <Color x:Key="SystemAccentColorDark3">#B71C1C</Color>
+                    <Color x:Key="SystemAccentColorDark3">#B71C1C</Color>-->
+
+                    <!--  Blue Grey  -->
+                    <Color x:Key="SystemAccentColor">#546E7A</Color>
+                    <Color x:Key="SystemAccentColorDark1">#455A64</Color>
+                    <Color x:Key="SystemAccentColorDark2">#37474F</Color>
+                    <Color x:Key="SystemAccentColorDark3">#263238</Color>
 
                     <Color x:Key="AppGreyColor">#E0E0E0</Color>
                     <Color x:Key="AppGreyColorLighter1">#F5F5F5</Color>
