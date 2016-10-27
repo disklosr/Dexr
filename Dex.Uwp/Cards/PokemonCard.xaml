@@ -23,7 +23,13 @@
                    Height="192"
                    RelativePanel.AlignHorizontalCenterWithPanel="True"
                    Source="{Binding DexNumber,
-                                    Converter={StaticResource PokemonDexNumberToPictureConverter}}" />
+                                    Converter={StaticResource PokemonDexNumberToPictureConverter}}">
+                <Image.Transitions>
+                    <TransitionCollection>
+                        <EntranceThemeTransition FromVerticalOffset="-24" />
+                    </TransitionCollection>
+                </Image.Transitions>
+            </Image>
             <TextBlock Name="PokemonName"
                        Height="32"
                        Margin="0,12,0,0"
