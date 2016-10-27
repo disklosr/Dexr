@@ -37,15 +37,24 @@
                                RelativePanel.RightOf="PokemonPicture"
                                Text="{Binding Name,
                                               Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
-                    <TextBlock VerticalAlignment="Bottom"
+                    <TextBlock Name="Type1Name"
+                               VerticalAlignment="Bottom"
+                               Foreground="{Binding Type1,
+                                                    Converter={StaticResource PokemonTypeToColorConverter}}"
                                RelativePanel.AlignLeftWith="PokemonName"
                                RelativePanel.Below="PokemonName"
-                               Style="{StaticResource CaptionTextBlockStyle}">
+                               Style="{StaticResource CaptionTextBlockStyle}"
+                               Text="{Binding Type1}" />
+                    <TextBlock RelativePanel.AlignBottomWith="Type1Name"
+                               RelativePanel.RightOf="Type1Name"
+                               Style="{StaticResource CaptionTextBlockStyle}"
+                               Visibility="{Binding Type2,
+                                                    Converter={StaticResource PokemonUnonwnTypeToVisibilityConverter}}">
                         <TextBlock.Foreground>
                             <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
                         </TextBlock.Foreground>
-                        <Run Foreground="{Binding Type1, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Type1}" />
-                        <Run Foreground="{Binding Type1, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Type2, Converter={StaticResource PokemonType2TextFormatter}}" />
+                        <Run Text=" -" />
+                        <Run Foreground="{Binding Type2, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Type2}" />
                     </TextBlock>
                     <TextBlock RelativePanel.AlignRightWithPanel="True"
                                RelativePanel.AlignVerticalCenterWithPanel="True"
