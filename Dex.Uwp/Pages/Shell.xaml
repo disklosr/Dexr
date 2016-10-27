@@ -11,11 +11,10 @@
             <SolidColorBrush Color="{ThemeResource AppGreyColorLighter1}" />
         </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="56" />
+            <RowDefinition Height="48" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-
-        <Border>
+        <Border Canvas.ZIndex="10">
             <Border.BorderBrush>
                 <SolidColorBrush Color="{ThemeResource SystemChromeHighColor}" />
             </Border.BorderBrush>
@@ -23,8 +22,8 @@
                 <SolidColorBrush Color="{ThemeResource SystemAccentColor}" />
             </Border.Background>
             <Grid Grid.Row="0">
-                <Border Width="56"
-                        Height="56"
+                <Border Width="48"
+                        Height="48"
                         HorizontalAlignment="Left"
                         Padding="0">
 
@@ -38,7 +37,7 @@
                         </TextBlock.Foreground>
                     </TextBlock>
                 </Border>
-                <TextBlock Margin="56,0,0,0"
+                <TextBlock Margin="48,0,0,0"
                            HorizontalAlignment="Left"
                            VerticalAlignment="Center"
                            Style="{StaticResource SubtitleTextBlockStyle}"
@@ -49,6 +48,7 @@
                 </TextBlock>
             </Grid>
         </Border>
+
         <Frame x:Name="MainFrame" Grid.Row="1" />
     </Grid>
 </Page>

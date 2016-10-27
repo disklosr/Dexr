@@ -11,6 +11,14 @@
                                                  IsDesignTimeCreatable=False}"
                 mc:Ignorable="d">
 
+    <!--<infra:PageBase.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <ContinuumNavigationTransitionInfo />
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </infra:PageBase.Transitions>-->
+
     <Grid VerticalAlignment="Top">
         <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}" Style="{StaticResource CardBasedListStyle}">
             <ListView.ItemContainerTransitions>

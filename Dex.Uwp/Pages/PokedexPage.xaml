@@ -12,11 +12,11 @@
                                                  IsDesignTimeCreatable=False}"
                 NavigationCacheMode="Enabled"
                 mc:Ignorable="d">
-    <Page.Transitions>
+    <!--<Page.Transitions>
         <TransitionCollection>
             <NavigationThemeTransition />
         </TransitionCollection>
-    </Page.Transitions>
+    </Page.Transitions>-->
 
     <Grid>
         <Pivot Style="{StaticResource TabsStylePivotStyle}">
@@ -38,6 +38,11 @@
                 <StaticResource x:Key="PivotHeaderItemForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
                 <StaticResource x:Key="PivotHeaderItemFocusPipeFill" ResourceKey="SystemControlHighlightAltAccentBrush" />
             </Pivot.Resources>
+            <Pivot.Transitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition FromVerticalOffset="-48" />
+                </TransitionCollection>
+            </Pivot.Transitions>
             <PivotItem>
                 <PivotItem.Header>
                     <Border Width="96" Height="48">
