@@ -43,19 +43,21 @@ namespace Dex.Uwp.ViewModels
             set
             {
                 Set(ref selectedPokemon, value);
-                navigationService.NavigateToPokemonDetailsPage(value.DexNumber);
+                if (value != null)
+                    navigationService.NavigateToPokemonDetailsPage(value.DexNumber);
             }
         }
 
         public async override Task OnNavigatedTo(NavigationEventArgs e)
         {
+            if (e.NavigationMode == NavigationMode.Back)
+                SelectedPokemon = null;
+
             var pokes = pokemonsRepository.GetAllPokemons();
             var moves = moveRepository.GetAllMoves();
             AllPokemons = await pokes;
             var loadedMoves = await moves;
             AllMoves = loadedMoves.ChargeMoves.Union<Move>(loadedMoves.QuickMoves);
-            selectedPokemon = null;
-            OnPropertyChanged(nameof(SelectedPokemon));
         }
     }
 }
