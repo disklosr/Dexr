@@ -507,7 +507,8 @@
         </Setter>
     </Style>
 
-    <!--#region ToggleButton resources-->
+    <!--#region AppBarToggleButton resources-->
+
     <StaticResource x:Key="AppBarToggleButtonBackground" ResourceKey="SystemControlTransparentBrush" />
     <StaticResource x:Key="AppBarToggleButtonBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
     <StaticResource x:Key="AppBarToggleButtonBackgroundChecked" ResourceKey="SystemControlTransparentBrush" />
@@ -529,5 +530,22 @@
     <SolidColorBrush x:Key="AppBarToggleButtonForegroundCheckedPressed" Color="{StaticResource SystemAltHighColor}" />
     <StaticResource x:Key="AppBarToggleButtonForegroundCheckedDisabled" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
 
-    <!--#endregion ToggleButton resources-->
+    <!--#endregion AppBarToggleButton resources-->
+
+    <!--#region AppBarButton resources-->
+
+    <StaticResource x:Key="AppBarButtonBackground" ResourceKey="SystemControlTransparentBrush" />
+    <StaticResource x:Key="AppBarButtonBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
+    <StaticResource x:Key="AppBarButtonBackgroundPressed" ResourceKey="SystemControlHighlightListMediumBrush" />
+    <StaticResource x:Key="AppBarButtonBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <SolidColorBrush x:Key="AppBarButtonForeground" Color="{StaticResource SystemAltHighColor}" />
+    <SolidColorBrush x:Key="AppBarButtonForegroundPointerOver" Color="{StaticResource SystemAltHighColor}" />
+    <SolidColorBrush x:Key="AppBarButtonForegroundPressed" Color="{StaticResource SystemAltHighColor}" />
+    <StaticResource x:Key="AppBarButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <StaticResource x:Key="AppBarButtonBorderBrush" ResourceKey="SystemControlTransparentBrush" />
+    <StaticResource x:Key="AppBarButtonBorderBrushPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <StaticResource x:Key="AppBarButtonBorderBrushPressed" ResourceKey="SystemControlTransparentBrush" />
+    <StaticResource x:Key="AppBarButtonBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
+
+    <!--#endregion AppBarButton resources-->
 </ResourceDictionary>

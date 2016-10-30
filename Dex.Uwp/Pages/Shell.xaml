@@ -24,19 +24,6 @@
                         Grid.Row="0"
                         Canvas.ZIndex="10">
                     <Border.Resources>
-                        <StaticResource x:Key="AppBarButtonBackground" ResourceKey="SystemControlTransparentBrush" />
-                        <StaticResource x:Key="AppBarButtonBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
-                        <StaticResource x:Key="AppBarButtonBackgroundPressed" ResourceKey="SystemControlHighlightListMediumBrush" />
-                        <StaticResource x:Key="AppBarButtonBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
-                        <SolidColorBrush x:Key="AppBarButtonForeground" Color="{StaticResource SystemAltHighColor}" />
-                        <SolidColorBrush x:Key="AppBarButtonForegroundPointerOver" Color="{StaticResource SystemAltHighColor}" />
-                        <SolidColorBrush x:Key="AppBarButtonForegroundPressed" Color="{StaticResource SystemAltHighColor}" />
-                        <StaticResource x:Key="AppBarButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-                        <StaticResource x:Key="AppBarButtonBorderBrush" ResourceKey="SystemControlTransparentBrush" />
-                        <StaticResource x:Key="AppBarButtonBorderBrushPointerOver" ResourceKey="SystemControlTransparentBrush" />
-                        <StaticResource x:Key="AppBarButtonBorderBrushPressed" ResourceKey="SystemControlTransparentBrush" />
-                        <StaticResource x:Key="AppBarButtonBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
-
                         <Style TargetType="AppBarButton">
                             <Setter Property="Width" Value="68" />
                             <Setter Property="Height" Value="48" />
