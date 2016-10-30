@@ -296,6 +296,7 @@
     <Compile Include="Cards\TabHeader.xaml.cs">
       <DependentUpon>TabHeader.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\PointerAppBarButton.cs" />
     <Compile Include="DataAccess\LocalFileDataSource.cs" />
     <Compile Include="Infrastructure\PageBase.cs" />
     <Compile Include="Infrastructure\RelayCommand.cs" />
