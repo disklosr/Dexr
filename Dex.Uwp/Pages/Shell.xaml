@@ -7,86 +7,84 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       mc:Ignorable="d">
 
-    <SplitView Name="RootSplitView">
-        <SplitView.Pane>
-            <Grid Width="320" />
-        </SplitView.Pane>
-        <SplitView.Content>
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="{ThemeResource AppGreyColorLighter1}" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Border Name="MainCommandBar"
+                Grid.Row="0"
+                Canvas.ZIndex="10">
+            <Border.Resources>
+                <Style TargetType="AppBarButton">
+                    <Setter Property="Width" Value="68" />
+                    <Setter Property="Height" Value="48" />
+                </Style>
+            </Border.Resources>
+            <Border.Background>
+                <SolidColorBrush Color="{ThemeResource SystemAccentColor}" />
+            </Border.Background>
             <Grid>
-                <Grid.Background>
-                    <SolidColorBrush Color="{ThemeResource AppGreyColorLighter1}" />
-                </Grid.Background>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="48" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Border Name="MainCommandBar"
-                        Grid.Row="0"
-                        Canvas.ZIndex="10">
-                    <Border.Resources>
-                        <Style TargetType="AppBarButton">
-                            <Setter Property="Width" Value="68" />
-                            <Setter Property="Height" Value="48" />
-                        </Style>
-                    </Border.Resources>
-                    <Border.Background>
-                        <SolidColorBrush Color="{ThemeResource SystemAccentColor}" />
-                    </Border.Background>
-                    <Grid>
 
-                        <!--#region Hamburger Menu-->
-                        <controls:PointerAppBarButton Width="48"
-                                                      Height="48"
-                                                      IsChecked="{Binding ElementName=RootSplitView,
-                                                                          Path=IsPaneOpen,
-                                                                          Mode=TwoWay}">
-                            <controls:PointerAppBarButton.Icon>
-                                <FontIcon Glyph="&#xE700;" />
-                            </controls:PointerAppBarButton.Icon>
-                        </controls:PointerAppBarButton>
-                        <!--#endregion Hamburger Menu-->
+                <!--#region Hamburger Menu-->
+                <controls:PointerAppBarButton Width="48"
+                                              Height="48"
+                                              IsChecked="{Binding ElementName=RootSplitView,
+                                                                  Path=IsPaneOpen,
+                                                                  Mode=TwoWay}">
+                    <controls:PointerAppBarButton.Icon>
+                        <FontIcon Glyph="&#xE700;" />
+                    </controls:PointerAppBarButton.Icon>
+                </controls:PointerAppBarButton>
+                <!--#endregion Hamburger Menu-->
 
-                        <!--#region Title-->
-                        <Border Height="48"
-                                Margin="48,0,0,0"
-                                VerticalAlignment="Top">
-                            <TextBlock Name="PageTitle"
-                                       HorizontalAlignment="Left"
-                                       VerticalAlignment="Center"
-                                       Style="{StaticResource SubtitleTextBlockStyle}">
-                                <TextBlock.Foreground>
-                                    <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
-                                </TextBlock.Foreground>
-                            </TextBlock>
-                        </Border>
-                        <!--#endregion Title-->
-
-                        <!--#region Commands Bar-->
-                        <ItemsControl Name="commandsBar"
-                                      HorizontalAlignment="Right"
-                                      DataContext="{Binding Content}">
-                            <ItemsControl.ItemContainerTransitions>
-                                <TransitionCollection>
-                                    <ContentThemeTransition />
-                                </TransitionCollection>
-                            </ItemsControl.ItemContainerTransitions>
-                            <ItemsControl.ItemsPanel>
-                                <ItemsPanelTemplate>
-                                    <StackPanel Orientation="Horizontal" />
-                                </ItemsPanelTemplate>
-                            </ItemsControl.ItemsPanel>
-                        </ItemsControl>
-                        <!--#endregion Commands Bar-->
-                    </Grid>
+                <!--#region Title-->
+                <Border Height="48"
+                        Margin="48,0,0,0"
+                        VerticalAlignment="Top">
+                    <TextBlock Name="PageTitle"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               Style="{StaticResource SubtitleTextBlockStyle}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
+                        </TextBlock.Foreground>
+                    </TextBlock>
                 </Border>
+                <!--#endregion Title-->
 
-                <!--#region Frame-->
+                <!--#region Commands Bar-->
+                <ItemsControl Name="commandsBar"
+                              HorizontalAlignment="Right"
+                              DataContext="{Binding Content}">
+                    <ItemsControl.ItemContainerTransitions>
+                        <TransitionCollection>
+                            <ContentThemeTransition />
+                        </TransitionCollection>
+                    </ItemsControl.ItemContainerTransitions>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+                <!--#endregion Commands Bar-->
+            </Grid>
+        </Border>
+
+        <SplitView Name="RootSplitView" Grid.Row="1">
+            <SplitView.Pane>
+                <Grid Width="320" Margin="0,48,0,0" />
+            </SplitView.Pane>
+            <SplitView.Content>
                 <Frame x:Name="MainFrame"
                        Grid.Row="1"
                        DataContext="{Binding Content,
                                              ElementName=MainFrame}" />
-                <!--#endregion Frame-->
-            </Grid>
-        </SplitView.Content>
-    </SplitView>
+            </SplitView.Content>
+        </SplitView>
+    </Grid>
 </Page>
