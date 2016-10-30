@@ -5,6 +5,7 @@ using Dex.Uwp.Services;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Windows.UI.Xaml.Navigation;
 
 namespace Dex.Uwp.ViewModels
@@ -15,7 +16,10 @@ namespace Dex.Uwp.ViewModels
         private readonly INavigationService navigationService;
         private readonly IPokemonRepository pokemonsRepository;
         private IEnumerable<Move> allMoves;
+        private IEnumerable<Move> allMovesCache;
         private IEnumerable<Pokemon> allPokemons;
+
+        private IEnumerable<Pokemon> allPokemonsCache;
         private Pokemon selectedPokemon;
 
         public PokedexViewModel(IPokemonRepository pokemonsRepository, IMoveRepository moveRepository, INavigationService navigationService)
@@ -23,6 +27,10 @@ namespace Dex.Uwp.ViewModels
             this.moveRepository = moveRepository;
             this.navigationService = navigationService;
             this.pokemonsRepository = pokemonsRepository;
+
+            SortByNameCommand = new RelayCommand(() => AllPokemons = allPokemonsCache.OrderBy(poke => poke.Name));
+            SortByDexNumberCommand = new RelayCommand(() => AllPokemons = allPokemonsCache.OrderBy(poke => poke.DexNumber));
+            SortByTypeCommand = new RelayCommand(() => AllPokemons = allPokemonsCache.OrderBy(poke => poke.Type1).ThenBy(poke => poke.Type2));
         }
 
         public IEnumerable<Move> AllMoves
@@ -48,6 +56,10 @@ namespace Dex.Uwp.ViewModels
             }
         }
 
+        public ICommand SortByDexNumberCommand { get; }
+        public ICommand SortByNameCommand { get; }
+        public ICommand SortByTypeCommand { get; }
+
         public async override Task OnNavigatedTo(NavigationEventArgs e)
         {
             if (e.NavigationMode == NavigationMode.Back)
@@ -55,9 +67,9 @@ namespace Dex.Uwp.ViewModels
 
             var pokes = pokemonsRepository.GetAllPokemons();
             var moves = moveRepository.GetAllMoves();
-            AllPokemons = await pokes;
+            AllPokemons = allPokemonsCache = await pokes;
             var loadedMoves = await moves;
-            AllMoves = loadedMoves.ChargeMoves.Union<Move>(loadedMoves.QuickMoves);
+            AllMoves = allMovesCache = loadedMoves.ChargeMoves.Union<Move>(loadedMoves.QuickMoves);
         }
     }
 }

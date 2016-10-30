@@ -22,6 +22,9 @@ namespace Dex.Uwp.ViewModels
         {
             this.moveRepository = moveRepository;
             this.pokemonRepository = pokemonRepository;
+
+            PreviousCommand = new RelayCommand(async () => await SetNewPokemon(await pokemonRepository.GetPreviousPokemon(SelectedPokemon.DexNumber)), () => pokemonRepository.HasPreviousPokemon(SelectedPokemon.DexNumber));
+            NextCommand = new RelayCommand(async () => await SetNewPokemon(await pokemonRepository.GetNextPokemon(SelectedPokemon.DexNumber)), () => pokemonRepository.HasNextPokemon(SelectedPokemon.DexNumber));
         }
 
         public CombatStatDataViewModel AttackStats
@@ -48,6 +51,10 @@ namespace Dex.Uwp.ViewModels
             private set { Set(ref moves, value); }
         }
 
+        public RelayCommand NextCommand { get; }
+
+        public RelayCommand PreviousCommand { get; }
+
         public Pokemon SelectedPokemon
         {
             get { return selectedPokemon; }
@@ -63,10 +70,7 @@ namespace Dex.Uwp.ViewModels
         public async override Task OnNavigatedTo(NavigationEventArgs e)
         {
             var dexId = (ushort)e.Parameter;
-            SelectedPokemon = await pokemonRepository.GetPokemonById(dexId);
-            Moves = await moveRepository.GetMovesById(SelectedPokemon.Moves.QuickMovesIds, SelectedPokemon.Moves.ChargeMovesIds);
-            EvolutionLine = new EvolutionLineDataViewModel(await pokemonRepository.GetEvolutionLineFor(selectedPokemon));
-            await InitCombatStats();
+            await SetNewPokemon(await pokemonRepository.GetPokemonById(dexId));
         }
 
         private async Task InitCombatStats()
@@ -79,6 +83,16 @@ namespace Dex.Uwp.ViewModels
             AttackStats = new CombatStatDataViewModel(SelectedPokemon.Attack.Value, maxAtk.Result);
             DefenseStats = new CombatStatDataViewModel(SelectedPokemon.Defense.Value, maxDef.Result);
             StaminaStats = new CombatStatDataViewModel(SelectedPokemon.Stamina.Value, maxStm.Result);
+        }
+
+        private async Task SetNewPokemon(Pokemon newPokemon)
+        {
+            SelectedPokemon = newPokemon;
+            Moves = await moveRepository.GetMovesById(SelectedPokemon.Moves.QuickMovesIds, SelectedPokemon.Moves.ChargeMovesIds);
+            EvolutionLine = new EvolutionLineDataViewModel(await pokemonRepository.GetEvolutionLineFor(selectedPokemon));
+            await InitCombatStats();
+            NextCommand.RaiseCanExecuteChanged();
+            PreviousCommand.RaiseCanExecuteChanged();
         }
     }
 }

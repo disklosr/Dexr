@@ -8,10 +8,26 @@
                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                 xmlns:model="using:Dex.Core.Entities"
                 xmlns:vm="using:Dex.Uwp.ViewModels"
+                Title="Pokédex"
                 d:DataContext="{d:DesignInstance Type=vm:PokedexViewModel,
                                                  IsDesignTimeCreatable=False}"
                 NavigationCacheMode="Enabled"
                 mc:Ignorable="d">
+
+    <infra:PageBase.Commands>
+        <infra:CommandsCollection>
+            <AppBarButton Icon="Sort">
+                <AppBarButton.Flyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Command="{Binding SortByNameCommand}" Text="By Name" />
+                        <MenuFlyoutItem Command="{Binding SortByTypeCommand}" Text="By Type" />
+                        <MenuFlyoutItem Command="{Binding SortByDexNumberCommand}" Text="By Dex Number" />
+                    </MenuFlyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+            <AppBarButton Icon="Find" />
+        </infra:CommandsCollection>
+    </infra:PageBase.Commands>
     <!--<Page.Transitions>
         <TransitionCollection>
             <NavigationThemeTransition />
@@ -54,6 +70,12 @@
                           SelectedItem="{Binding SelectedPokemon,
                                                  Mode=TwoWay}"
                           Style="{StaticResource CardBasedListStyle}">
+
+                    <ListView.ItemContainerTransitions>
+                        <TransitionCollection>
+                            <ContentThemeTransition />
+                        </TransitionCollection>
+                    </ListView.ItemContainerTransitions>
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <controls:PokemonListItem />

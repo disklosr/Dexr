@@ -18,7 +18,15 @@ namespace Dex.Core.Repositories
 
         Task<ushort> GetMaxStamina();
 
+        Task<Pokemon> GetNextPokemon(ushort PokemonId);
+
         Task<Pokemon> GetPokemonById(ushort pokemonId);
+
+        Task<Pokemon> GetPreviousPokemon(ushort PokemonId);
+
+        bool HasNextPokemon(ushort PokemonId);
+
+        bool HasPreviousPokemon(ushort PokemonId);
     }
 
     public class PokemonRepository : IPokemonRepository
@@ -29,7 +37,10 @@ namespace Dex.Core.Repositories
 
         private Attack maxAttack;
         private Defense maxDefense;
+        private ushort maxDexNumber;
         private Stamina maxStamina;
+
+        private ushort minDexNumber = 1;
 
         public PokemonRepository(IPokemonsDataSource dataSource)
         {
@@ -86,6 +97,12 @@ namespace Dex.Core.Repositories
             return maxStamina.Value;
         }
 
+        public async Task<Pokemon> GetNextPokemon(ushort PokemonId)
+        {
+            await EnsureCacheIsValid();
+            return await GetPokemonById((ushort)(PokemonId + 1));
+        }
+
         public async Task<Pokemon> GetPokemonById(ushort pokemonId)
         {
             await EnsureCacheIsValid();
@@ -102,10 +119,29 @@ namespace Dex.Core.Repositories
                 .FirstOrDefault();
         }
 
+        public async Task<Pokemon> GetPreviousPokemon(ushort PokemonId)
+        {
+            await EnsureCacheIsValid();
+            return await GetPokemonById((ushort)(PokemonId - 1));
+        }
+
+        public bool HasNextPokemon(ushort PokemonId)
+        {
+            return PokemonId < maxDexNumber;
+        }
+
+        public bool HasPreviousPokemon(ushort PokemonId)
+        {
+            return PokemonId > minDexNumber;
+        }
+
         private async Task EnsureCacheIsValid()
         {
             if (allPokemonsCache == null)
+            {
                 allPokemonsCache = await dataSource.LoadAllPokemonsAsync();
+                maxDexNumber = allPokemonsCache.Max(poke => poke.DexNumber);
+            }
         }
 
         private async Task<IEnumerable<Pokemon>> GetEvolutions(Pokemon pokemon)

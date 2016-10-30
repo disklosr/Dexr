@@ -14,41 +14,74 @@
             <RowDefinition Height="48" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Border Canvas.ZIndex="10">
-            <Border.BorderBrush>
-                <SolidColorBrush Color="{ThemeResource SystemChromeHighColor}" />
-            </Border.BorderBrush>
+        <Border Name="MainCommandBar"
+                Grid.Row="0"
+                Canvas.ZIndex="10">
+            <Border.Resources>
+                <StaticResource x:Key="AppBarButtonBackground" ResourceKey="SystemControlTransparentBrush" />
+                <StaticResource x:Key="AppBarButtonBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
+                <StaticResource x:Key="AppBarButtonBackgroundPressed" ResourceKey="SystemControlHighlightListMediumBrush" />
+                <StaticResource x:Key="AppBarButtonBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
+                <SolidColorBrush x:Key="AppBarButtonForeground" Color="{StaticResource SystemAltHighColor}" />
+                <SolidColorBrush x:Key="AppBarButtonForegroundPointerOver" Color="{StaticResource SystemAltHighColor}" />
+                <SolidColorBrush x:Key="AppBarButtonForegroundPressed" Color="{StaticResource SystemAltHighColor}" />
+                <StaticResource x:Key="AppBarButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+                <StaticResource x:Key="AppBarButtonBorderBrush" ResourceKey="SystemControlTransparentBrush" />
+                <SolidColorBrush x:Key="AppBarButtonBorderBrushPointerOver" Color="{StaticResource SystemAltHighColor}" />
+                <StaticResource x:Key="AppBarButtonBorderBrushPressed" ResourceKey="SystemControlTransparentBrush" />
+                <StaticResource x:Key="AppBarButtonBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
+
+                <Style TargetType="AppBarButton">
+                    <Setter Property="Foreground">
+                        <Setter.Value>
+                            <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Width" Value="68" />
+                    <Setter Property="Height" Value="48" />
+                </Style>
+            </Border.Resources>
             <Border.Background>
                 <SolidColorBrush Color="{ThemeResource SystemAccentColor}" />
             </Border.Background>
-            <Grid Grid.Row="0">
-                <Border Width="48"
-                        Height="48"
-                        HorizontalAlignment="Left"
-                        Padding="0">
-
-                    <TextBlock HorizontalAlignment="Center"
+            <Grid>
+                <AppBarButton Width="48" Height="48">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE700;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <Border Height="48"
+                        Margin="48,0,0,0"
+                        VerticalAlignment="Top">
+                    <TextBlock Name="PageTitle"
+                               HorizontalAlignment="Left"
                                VerticalAlignment="Center"
-                               FontFamily="{StaticResource SymbolThemeFontFamily}"
-                               FontSize="18"
-                               Text="&#xE700;">
+                               Style="{StaticResource SubtitleTextBlockStyle}">
                         <TextBlock.Foreground>
                             <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
                         </TextBlock.Foreground>
                     </TextBlock>
                 </Border>
-                <TextBlock Margin="48,0,0,0"
-                           HorizontalAlignment="Left"
-                           VerticalAlignment="Center"
-                           Style="{StaticResource SubtitleTextBlockStyle}"
-                           Text="Pokédex">
-                    <TextBlock.Foreground>
-                        <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
-                    </TextBlock.Foreground>
-                </TextBlock>
+                <ItemsControl Name="commandsBar"
+                              HorizontalAlignment="Right"
+                              DataContext="{Binding Content}">
+                    <ItemsControl.ItemContainerTransitions>
+                        <TransitionCollection>
+                            <ContentThemeTransition />
+                        </TransitionCollection>
+                    </ItemsControl.ItemContainerTransitions>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
             </Grid>
         </Border>
 
-        <Frame x:Name="MainFrame" Grid.Row="1" />
+        <Frame x:Name="MainFrame"
+               Grid.Row="1"
+               DataContext="{Binding Content,
+                                     ElementName=MainFrame}" />
     </Grid>
 </Page>

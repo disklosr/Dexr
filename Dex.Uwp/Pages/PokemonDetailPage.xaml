@@ -7,9 +7,27 @@
                 xmlns:local="using:Dex.Uwp.Pages"
                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                 xmlns:vm="using:Dex.Uwp.ViewModels"
+                Title="{Binding SelectedPokemon.Name,
+                                Converter={StaticResource StringCapitalizeFirstLetterConverter}}"
                 d:DataContext="{d:DesignInstance Type=vm:PokemonDetailViewModel,
                                                  IsDesignTimeCreatable=False}"
                 mc:Ignorable="d">
+
+    <infra:PageBase.Commands>
+        <infra:CommandsCollection>
+            <AppBarButton Command="{Binding PreviousCommand}" ToolTipService.ToolTip="Back">
+                <AppBarButton.Icon>
+                    <FontIcon Glyph="&#xE72B;" />
+                </AppBarButton.Icon>
+            </AppBarButton>
+
+            <AppBarButton Command="{Binding NextCommand}" ToolTipService.ToolTip="Forward">
+                <AppBarButton.Icon>
+                    <FontIcon Glyph="&#xE72A;" />
+                </AppBarButton.Icon>
+            </AppBarButton>
+        </infra:CommandsCollection>
+    </infra:PageBase.Commands>
 
     <!--<infra:PageBase.Transitions>
         <TransitionCollection>
