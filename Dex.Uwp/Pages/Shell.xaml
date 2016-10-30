@@ -7,94 +7,99 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       mc:Ignorable="d">
 
-    <Grid>
-        <Grid.Background>
-            <SolidColorBrush Color="{ThemeResource AppGreyColorLighter1}" />
-        </Grid.Background>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <Border Name="MainCommandBar"
-                Grid.Row="0"
-                Canvas.ZIndex="10">
-            <Border.Resources>
-                <StaticResource x:Key="AppBarButtonBackground" ResourceKey="SystemControlTransparentBrush" />
-                <StaticResource x:Key="AppBarButtonBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
-                <StaticResource x:Key="AppBarButtonBackgroundPressed" ResourceKey="SystemControlHighlightListMediumBrush" />
-                <StaticResource x:Key="AppBarButtonBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
-                <SolidColorBrush x:Key="AppBarButtonForeground" Color="{StaticResource SystemAltHighColor}" />
-                <SolidColorBrush x:Key="AppBarButtonForegroundPointerOver" Color="{StaticResource SystemAltHighColor}" />
-                <SolidColorBrush x:Key="AppBarButtonForegroundPressed" Color="{StaticResource SystemAltHighColor}" />
-                <StaticResource x:Key="AppBarButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-                <StaticResource x:Key="AppBarButtonBorderBrush" ResourceKey="SystemControlTransparentBrush" />
-                <StaticResource x:Key="AppBarButtonBorderBrushPointerOver" ResourceKey="SystemControlTransparentBrush" />
-                <StaticResource x:Key="AppBarButtonBorderBrushPressed" ResourceKey="SystemControlTransparentBrush" />
-                <StaticResource x:Key="AppBarButtonBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
-
-                <Style TargetType="AppBarButton">
-                    <Setter Property="Width" Value="68" />
-                    <Setter Property="Height" Value="48" />
-                </Style>
-            </Border.Resources>
-            <Border.Background>
-                <SolidColorBrush Color="{ThemeResource SystemAccentColor}" />
-            </Border.Background>
+    <SplitView Name="RootSplitView">
+        <SplitView.Pane>
+            <Grid Width="320" />
+        </SplitView.Pane>
+        <SplitView.Content>
             <Grid>
-
-                <!--#region Hamburger Menu-->
-                <controls:PointerAppBarButton Width="48" Height="48">
-                    <controls:PointerAppBarButton.Resources>
+                <Grid.Background>
+                    <SolidColorBrush Color="{ThemeResource AppGreyColorLighter1}" />
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="48" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Border Name="MainCommandBar"
+                        Grid.Row="0"
+                        Canvas.ZIndex="10">
+                    <Border.Resources>
                         <StaticResource x:Key="AppBarButtonBackground" ResourceKey="SystemControlTransparentBrush" />
-                        <StaticResource x:Key="AppBarButtonBackgroundPointerOver" ResourceKey="SystemControlTransparentBrush" />
-                        <StaticResource x:Key="AppBarButtonBackgroundPressed" ResourceKey="SystemControlTransparentBrush" />
+                        <StaticResource x:Key="AppBarButtonBackgroundPointerOver" ResourceKey="SystemControlHighlightListLowBrush" />
+                        <StaticResource x:Key="AppBarButtonBackgroundPressed" ResourceKey="SystemControlHighlightListMediumBrush" />
                         <StaticResource x:Key="AppBarButtonBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
-                    </controls:PointerAppBarButton.Resources>
-                    <controls:PointerAppBarButton.Icon>
-                        <FontIcon Glyph="&#xE700;" />
-                    </controls:PointerAppBarButton.Icon>
-                </controls:PointerAppBarButton>
-                <!--#endregion Hamburger Menu-->
+                        <SolidColorBrush x:Key="AppBarButtonForeground" Color="{StaticResource SystemAltHighColor}" />
+                        <SolidColorBrush x:Key="AppBarButtonForegroundPointerOver" Color="{StaticResource SystemAltHighColor}" />
+                        <SolidColorBrush x:Key="AppBarButtonForegroundPressed" Color="{StaticResource SystemAltHighColor}" />
+                        <StaticResource x:Key="AppBarButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+                        <StaticResource x:Key="AppBarButtonBorderBrush" ResourceKey="SystemControlTransparentBrush" />
+                        <StaticResource x:Key="AppBarButtonBorderBrushPointerOver" ResourceKey="SystemControlTransparentBrush" />
+                        <StaticResource x:Key="AppBarButtonBorderBrushPressed" ResourceKey="SystemControlTransparentBrush" />
+                        <StaticResource x:Key="AppBarButtonBorderBrushDisabled" ResourceKey="SystemControlTransparentBrush" />
 
-                <!--#region Title-->
-                <Border Height="48"
-                        Margin="48,0,0,0"
-                        VerticalAlignment="Top">
-                    <TextBlock Name="PageTitle"
-                               HorizontalAlignment="Left"
-                               VerticalAlignment="Center"
-                               Style="{StaticResource SubtitleTextBlockStyle}">
-                        <TextBlock.Foreground>
-                            <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
-                        </TextBlock.Foreground>
-                    </TextBlock>
+                        <Style TargetType="AppBarButton">
+                            <Setter Property="Width" Value="68" />
+                            <Setter Property="Height" Value="48" />
+                        </Style>
+                    </Border.Resources>
+                    <Border.Background>
+                        <SolidColorBrush Color="{ThemeResource SystemAccentColor}" />
+                    </Border.Background>
+                    <Grid>
+
+                        <!--#region Hamburger Menu-->
+                        <controls:PointerAppBarButton Width="48"
+                                                      Height="48"
+                                                      IsChecked="{Binding ElementName=RootSplitView,
+                                                                          Path=IsPaneOpen,
+                                                                          Mode=TwoWay}">
+                            <controls:PointerAppBarButton.Icon>
+                                <FontIcon Glyph="&#xE700;" />
+                            </controls:PointerAppBarButton.Icon>
+                        </controls:PointerAppBarButton>
+                        <!--#endregion Hamburger Menu-->
+
+                        <!--#region Title-->
+                        <Border Height="48"
+                                Margin="48,0,0,0"
+                                VerticalAlignment="Top">
+                            <TextBlock Name="PageTitle"
+                                       HorizontalAlignment="Left"
+                                       VerticalAlignment="Center"
+                                       Style="{StaticResource SubtitleTextBlockStyle}">
+                                <TextBlock.Foreground>
+                                    <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                        </Border>
+                        <!--#endregion Title-->
+
+                        <!--#region Commands Bar-->
+                        <ItemsControl Name="commandsBar"
+                                      HorizontalAlignment="Right"
+                                      DataContext="{Binding Content}">
+                            <ItemsControl.ItemContainerTransitions>
+                                <TransitionCollection>
+                                    <ContentThemeTransition />
+                                </TransitionCollection>
+                            </ItemsControl.ItemContainerTransitions>
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                        <!--#endregion Commands Bar-->
+                    </Grid>
                 </Border>
-                <!--#endregion Title-->
 
-                <!--#region Commands Bar-->
-                <ItemsControl Name="commandsBar"
-                              HorizontalAlignment="Right"
-                              DataContext="{Binding Content}">
-                    <ItemsControl.ItemContainerTransitions>
-                        <TransitionCollection>
-                            <ContentThemeTransition />
-                        </TransitionCollection>
-                    </ItemsControl.ItemContainerTransitions>
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <StackPanel Orientation="Horizontal" />
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                </ItemsControl>
-                <!--#endregion Commands Bar-->
+                <!--#region Frame-->
+                <Frame x:Name="MainFrame"
+                       Grid.Row="1"
+                       DataContext="{Binding Content,
+                                             ElementName=MainFrame}" />
+                <!--#endregion Frame-->
             </Grid>
-        </Border>
-
-        <!--#region Frame-->
-        <Frame x:Name="MainFrame"
-               Grid.Row="1"
-               DataContext="{Binding Content,
-                                     ElementName=MainFrame}" />
-        <!--#endregion Frame-->
-    </Grid>
+        </SplitView.Content>
+    </SplitView>
 </Page>

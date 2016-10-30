@@ -506,4 +506,28 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <!--#region ToggleButton resources-->
+    <StaticResource x:Key="AppBarToggleButtonBackground" ResourceKey="SystemControlTransparentBrush" />
+    <StaticResource x:Key="AppBarToggleButtonBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <StaticResource x:Key="AppBarToggleButtonBackgroundChecked" ResourceKey="SystemControlTransparentBrush" />
+    <StaticResource x:Key="AppBarToggleButtonBackgroundCheckedPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <StaticResource x:Key="AppBarToggleButtonBackgroundCheckedPressed" ResourceKey="SystemControlTransparentBrush" />
+    <StaticResource x:Key="AppBarToggleButtonBackgroundCheckedDisabled" ResourceKey="SystemControlTransparentBrush" />
+    <StaticResource x:Key="AppBarToggleButtonBackgroundHighLightOverlay" ResourceKey="SystemControlTransparentBrush" />
+    <StaticResource x:Key="AppBarToggleButtonBackgroundHighLightOverlayPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <StaticResource x:Key="AppBarToggleButtonBackgroundHighLightOverlayPressed" ResourceKey="SystemControlTransparentBrush" />
+    <StaticResource x:Key="AppBarToggleButtonBackgroundHighLightOverlayCheckedPointerOver" ResourceKey="SystemControlTransparentBrush" />
+    <StaticResource x:Key="AppBarToggleButtonBackgroundHighLightOverlayCheckedPressed" ResourceKey="SystemControlTransparentBrush" />
+
+    <SolidColorBrush x:Key="AppBarToggleButtonForeground" Color="{StaticResource SystemAltHighColor}" />
+    <SolidColorBrush x:Key="AppBarToggleButtonForegroundPointerOver" Color="{StaticResource SystemAltHighColor}" />
+    <SolidColorBrush x:Key="AppBarToggleButtonForegroundPressed" Color="{StaticResource SystemAltHighColor}" />
+    <StaticResource x:Key="AppBarToggleButtonForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
+    <SolidColorBrush x:Key="AppBarToggleButtonForegroundChecked" Color="{StaticResource SystemAltHighColor}" />
+    <SolidColorBrush x:Key="AppBarToggleButtonForegroundCheckedPointerOver" Color="{StaticResource SystemAltHighColor}" />
+    <SolidColorBrush x:Key="AppBarToggleButtonForegroundCheckedPressed" Color="{StaticResource SystemAltHighColor}" />
+    <StaticResource x:Key="AppBarToggleButtonForegroundCheckedDisabled" ResourceKey="SystemControlBackgroundBaseMediumLowBrush" />
+
+    <!--#endregion ToggleButton resources-->
 </ResourceDictionary>

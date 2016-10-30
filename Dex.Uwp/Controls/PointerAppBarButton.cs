@@ -4,7 +4,7 @@ using Windows.UI.Xaml.Controls;
 
 namespace Dex.Uwp.Controls
 {
-    public class PointerAppBarButton : AppBarButton
+    public class PointerAppBarButton : AppBarToggleButton
     {
         private static readonly CoreCursor arrowCursor = new CoreCursor(CoreCursorType.Arrow, 1);
         private static readonly CoreCursor handCursor = new CoreCursor(CoreCursorType.Hand, 1);
