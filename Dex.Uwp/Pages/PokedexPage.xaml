@@ -17,15 +17,9 @@
 
     <infra:PageBase.Commands>
         <infra:CommandsCollection>
-            <AppBarButton Icon="Sort">
-                <AppBarButton.Flyout>
-                    <MenuFlyout>
-                        <MenuFlyoutItem Command="{Binding SortByNameCommand}" Text="By Name" />
-                        <MenuFlyoutItem Command="{Binding SortByTypeCommand}" Text="By Type" />
-                        <MenuFlyoutItem Command="{Binding SortByDexNumberCommand}" Text="By Dex Number" />
-                    </MenuFlyout>
-                </AppBarButton.Flyout>
-            </AppBarButton>
+            <AppBarButton Command="{Binding ReverseOrderCommand}"
+                          Icon="Sort"
+                          ToolTipService.ToolTip="Rever sorting order" />
             <AppBarButton Icon="Find" />
         </infra:CommandsCollection>
     </infra:PageBase.Commands>
@@ -63,20 +57,15 @@
             <PivotItem>
                 <PivotItem.Header>
                     <Border Width="96" Height="48">
-                        <ctrl:TabHeader Label="POKEMONS" />
+                        <ctrl:TabHeader Label="BY #" />
                     </Border>
                 </PivotItem.Header>
                 <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
-                          ItemsSource="{Binding AllPokemons}"
+                          ItemsSource="{Binding AllPokemonsByDexNumber}"
                           SelectedItem="{Binding SelectedPokemon,
                                                  Mode=TwoWay}"
                           Style="{StaticResource CardBasedListStyle}">
 
-                    <ListView.ItemContainerTransitions>
-                        <TransitionCollection>
-                            <ContentThemeTransition />
-                        </TransitionCollection>
-                    </ListView.ItemContainerTransitions>
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <controls:PokemonListItem />
@@ -87,15 +76,54 @@
             <PivotItem>
                 <PivotItem.Header>
                     <Border Width="96" Height="48">
-                        <ctrl:TabHeader Label="MOVES" />
+                        <ctrl:TabHeader Label="BY NAME" />
                     </Border>
                 </PivotItem.Header>
                 <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
-                          ItemsSource="{Binding AllMoves}"
+                          ItemsSource="{Binding AllPokemonsByName}"
+                          SelectedItem="{Binding SelectedPokemon,
+                                                 Mode=TwoWay}"
                           Style="{StaticResource CardBasedListStyle}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <controls:MoveListItem />
+                            <controls:PokemonListItem />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </PivotItem>
+            <PivotItem>
+                <PivotItem.Header>
+                    <Border Width="96" Height="48">
+                        <ctrl:TabHeader Label="BY TYPE" />
+                    </Border>
+                </PivotItem.Header>
+                <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
+                          ItemsSource="{Binding AllPokemonsByType}"
+                          SelectedItem="{Binding SelectedPokemon,
+                                                 Mode=TwoWay}"
+                          Style="{StaticResource CardBasedListStyle}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <controls:PokemonListItem />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </PivotItem>
+
+            <PivotItem>
+                <PivotItem.Header>
+                    <Border Width="96" Height="48">
+                        <ctrl:TabHeader Label="BY CP" />
+                    </Border>
+                </PivotItem.Header>
+                <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
+                          ItemsSource="{Binding AllPokemonsByCp}"
+                          SelectedItem="{Binding SelectedPokemon,
+                                                 Mode=TwoWay}"
+                          Style="{StaticResource CardBasedListStyle}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <controls:PokemonListItem />
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>

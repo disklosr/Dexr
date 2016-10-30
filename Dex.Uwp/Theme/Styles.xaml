@@ -13,7 +13,7 @@
         <Setter Property="ItemContainerTransitions">
             <Setter.Value>
                 <TransitionCollection>
-                    <EntranceThemeTransition />
+                    <ContentThemeTransition />
                 </TransitionCollection>
             </Setter.Value>
         </Setter>
@@ -34,6 +34,7 @@
         <Setter Property="HorizontalContentAlignment" Value="Stretch" />
         <Setter Property="Margin" Value="0,0,0,12" />
         <Setter Property="Padding" Value="0" />
+
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ListViewItem">

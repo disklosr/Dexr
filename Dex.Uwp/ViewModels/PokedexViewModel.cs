@@ -12,38 +12,49 @@ namespace Dex.Uwp.ViewModels
 {
     public class PokedexViewModel : ViewModelBase
     {
-        private readonly IMoveRepository moveRepository;
         private readonly INavigationService navigationService;
         private readonly IPokemonRepository pokemonsRepository;
-        private IEnumerable<Move> allMoves;
-        private IEnumerable<Move> allMovesCache;
-        private IEnumerable<Pokemon> allPokemons;
 
+        private IEnumerable<Pokemon> allPokemonsByCp;
+        private IEnumerable<Pokemon> allPokemonsByDexNumber;
+        private IEnumerable<Pokemon> allPokemonsByName;
+        private IEnumerable<Pokemon> allPokemonsByType;
         private IEnumerable<Pokemon> allPokemonsCache;
         private Pokemon selectedPokemon;
 
-        public PokedexViewModel(IPokemonRepository pokemonsRepository, IMoveRepository moveRepository, INavigationService navigationService)
+        public PokedexViewModel(IPokemonRepository pokemonsRepository, INavigationService navigationService)
         {
-            this.moveRepository = moveRepository;
             this.navigationService = navigationService;
             this.pokemonsRepository = pokemonsRepository;
 
-            SortByNameCommand = new RelayCommand(() => AllPokemons = allPokemonsCache.OrderBy(poke => poke.Name));
-            SortByDexNumberCommand = new RelayCommand(() => AllPokemons = allPokemonsCache.OrderBy(poke => poke.DexNumber));
-            SortByTypeCommand = new RelayCommand(() => AllPokemons = allPokemonsCache.OrderBy(poke => poke.Type1).ThenBy(poke => poke.Type2));
+            ReverseOrderCommand = new RelayCommand(() => OnReverseOrder());
         }
 
-        public IEnumerable<Move> AllMoves
+        public IEnumerable<Pokemon> AllPokemonsByCp
         {
-            get { return allMoves; }
-            private set { Set(ref allMoves, value); }
+            get { return allPokemonsByCp; }
+            private set { Set(ref allPokemonsByCp, value); }
         }
 
-        public IEnumerable<Pokemon> AllPokemons
+        public IEnumerable<Pokemon> AllPokemonsByDexNumber
         {
-            get { return allPokemons; }
-            private set { Set(ref allPokemons, value); }
+            get { return allPokemonsByDexNumber; }
+            private set { Set(ref allPokemonsByDexNumber, value); }
         }
+
+        public IEnumerable<Pokemon> AllPokemonsByName
+        {
+            get { return allPokemonsByName; }
+            private set { Set(ref allPokemonsByName, value); }
+        }
+
+        public IEnumerable<Pokemon> AllPokemonsByType
+        {
+            get { return allPokemonsByType; }
+            private set { Set(ref allPokemonsByType, value); }
+        }
+
+        public ICommand ReverseOrderCommand { get; }
 
         public Pokemon SelectedPokemon
         {
@@ -56,20 +67,26 @@ namespace Dex.Uwp.ViewModels
             }
         }
 
-        public ICommand SortByDexNumberCommand { get; }
-        public ICommand SortByNameCommand { get; }
-        public ICommand SortByTypeCommand { get; }
-
         public async override Task OnNavigatedTo(NavigationEventArgs e)
         {
             if (e.NavigationMode == NavigationMode.Back)
                 SelectedPokemon = null;
 
             var pokes = pokemonsRepository.GetAllPokemons();
-            var moves = moveRepository.GetAllMoves();
-            AllPokemons = allPokemonsCache = await pokes;
-            var loadedMoves = await moves;
-            AllMoves = allMovesCache = loadedMoves.ChargeMoves.Union<Move>(loadedMoves.QuickMoves);
+            allPokemonsCache = await pokes;
+
+            AllPokemonsByDexNumber = allPokemonsCache;
+            AllPokemonsByCp = allPokemonsCache.OrderBy(poke => poke.MaxCP);
+            AllPokemonsByName = allPokemonsCache.OrderBy(poke => poke.Name);
+            AllPokemonsByType = allPokemonsCache.OrderBy(poke => poke.Type1).ThenBy(poke => poke.Type2);
+        }
+
+        private void OnReverseOrder()
+        {
+            AllPokemonsByCp = AllPokemonsByCp.Reverse();
+            AllPokemonsByDexNumber = AllPokemonsByDexNumber.Reverse();
+            AllPokemonsByName = AllPokemonsByName.Reverse();
+            AllPokemonsByType = AllPokemonsByType.Reverse();
         }
     }
 }
