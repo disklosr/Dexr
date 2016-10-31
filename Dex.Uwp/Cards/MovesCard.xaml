@@ -16,13 +16,13 @@
         <StackPanel>
             <local:CardHeader Title="Quick Moves" />
             <ItemsControl ItemContainerStyle="{StaticResource StretchListItemStyle}"
-                          ItemTemplateSelector="{StaticResource DexTemplateSelector}"
+                          ItemTemplateSelector="{StaticResource MovesTemplateSelector}"
                           ItemsSource="{Binding QuickMoves}" />
 
             <local:CardHeader Title="Charge Moves" Margin="0,12,0,0" />
 
             <ItemsControl ItemContainerStyle="{StaticResource StretchListItemStyle}"
-                          ItemTemplateSelector="{StaticResource DexTemplateSelector}"
+                          ItemTemplateSelector="{StaticResource MovesTemplateSelector}"
                           ItemsSource="{Binding ChargeMoves}" />
         </StackPanel>
     </local:Card>

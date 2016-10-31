@@ -77,7 +77,9 @@
 
         <SplitView Name="RootSplitView" Grid.Row="1">
             <SplitView.Pane>
-                <Grid Width="320" Margin="0,48,0,0" />
+                <Grid Width="320">
+                    <local:SidePane />
+                </Grid>
             </SplitView.Pane>
             <SplitView.Content>
                 <Frame x:Name="MainFrame"

@@ -4,7 +4,7 @@
                     xmlns:data="using:Dex.Core.Entities"
                     xmlns:local="using:Dex.Uwp.Theme">
 
-    <local:DexTemplateSelector x:Key="DexTemplateSelector" />
+    <local:MovesTemplateSelector x:Key="MovesTemplateSelector" />
     <DataTemplate x:Key="QuickMoveDetailsDataTemplate">
         <controls:QuickMoveDetailsControl />
     </DataTemplate>

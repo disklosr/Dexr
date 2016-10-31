@@ -9,6 +9,8 @@ namespace Dex.Uwp.Services
 {
     public interface INavigationService
     {
+        void Navigate(Type pageType, string parameter = null, bool serializeParam = true);
+
         void NavigateToPokedexPage();
 
         void NavigateToPokemonDetailsPage(ushort dexNumber);
@@ -26,6 +28,23 @@ namespace Dex.Uwp.Services
             mainFrame.NavigationFailed += MainFrame_NavigationFailed;
             mainFrame.Navigating += MainFrame_Navigating;
             mainFrame.Navigated += MainFrame_Navigated;
+        }
+
+        public void Navigate(Type pageType, string parameter = null, bool serializeParam = true)
+        {
+            EnsureNavigationFrameIsAvailable();
+
+            if (parameter == null)
+                mainFrame.Navigate(pageType);
+            else
+            {
+                if (serializeParam)
+                {
+                    //TODO: Serialize param
+                }
+
+                mainFrame.Navigate(pageType, parameter);
+            }
         }
 
         public void NavigateToPokedexPage()
@@ -88,23 +107,6 @@ namespace Dex.Uwp.Services
 
         private void MainFrame_NavigationFailed(object sender, NavigationFailedEventArgs e)
         {
-        }
-
-        private void Navigate(Type pageType, string parameter = null, bool serializeParam = true)
-        {
-            EnsureNavigationFrameIsAvailable();
-
-            if (parameter == null)
-                mainFrame.Navigate(pageType);
-            else
-            {
-                if (serializeParam)
-                {
-                    //TODO: Serialize param
-                }
-
-                mainFrame.Navigate(pageType, parameter);
-            }
         }
     }
 }

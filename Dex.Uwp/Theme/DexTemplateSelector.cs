@@ -5,11 +5,11 @@ using Windows.UI.Xaml.Controls;
 
 namespace Dex.Uwp.Theme
 {
-    public class DexTemplateSelector : DataTemplateSelector
+    public class MovesTemplateSelector : DataTemplateSelector
     {
         private Dictionary<System.Type, DataTemplate> TypeToTemplateMapper;
 
-        public DexTemplateSelector()
+        public MovesTemplateSelector()
         {
             TypeToTemplateMapper = new Dictionary<System.Type, DataTemplate>()
             {

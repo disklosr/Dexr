@@ -67,8 +67,8 @@ namespace Dex
 
         private void InitializeShell(LaunchActivatedEventArgs e)
         {
-            rootShell = new Shell();
             var ioc = new IocBootstrapper();
+            rootShell = new Shell();
 
             if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
             {

@@ -293,6 +293,9 @@
     <Compile Include="Cards\StatsCard.xaml.cs">
       <DependentUpon>StatsCard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\SidePane.xaml.cs">
+      <DependentUpon>SidePane.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TabHeader.xaml.cs">
       <DependentUpon>TabHeader.xaml</DependentUpon>
     </Compile>
@@ -302,6 +305,9 @@
     <Compile Include="Infrastructure\RelayCommand.cs" />
     <Compile Include="Infrastructure\ViewModelBase.cs" />
     <Compile Include="IoC\IocBootstrapper.cs" />
+    <Compile Include="Pages\MovedexPage.xaml.cs">
+      <DependentUpon>MovedexPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PokedexPage.xaml.cs">
       <DependentUpon>PokedexPage.xaml</DependentUpon>
     </Compile>
@@ -328,6 +334,7 @@
     <Compile Include="ValueConverters\StringCapitalizeFirstLetterConverter.cs" />
     <Compile Include="ViewModels\CombatStatDataViewModel.cs" />
     <Compile Include="ViewModels\EvolutionLineDataViewModel.cs" />
+    <Compile Include="ViewModels\MovedexViewModel.cs" />
     <Compile Include="ViewModels\PokedexViewModel.cs" />
     <Compile Include="ViewModels\PokemonDetailViewModel.cs" />
   </ItemGroup>
@@ -404,7 +411,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\SidePane.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\TabHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MovedexPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
