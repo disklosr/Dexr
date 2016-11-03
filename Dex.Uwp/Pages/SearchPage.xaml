@@ -45,6 +45,9 @@
                             FontSize="18"
                             PlaceholderText="Search Pokemons &amp; Moves"
                             QueryIcon="Accept"
+                            Text="{Binding SearchQuery,
+                                           UpdateSourceTrigger=PropertyChanged,
+                                           Mode=TwoWay}"
                             TextBoxStyle="{StaticResource CustomAutoSuggestBoxTextBoxStyle}" />
         </controls:ShadowHost>
     </Grid>

@@ -64,17 +64,11 @@
                     </Border>
                 </PivotItem.Header>
                 <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
+                          ItemTemplate="{StaticResource PokemonListItemTemplate}"
                           ItemsSource="{Binding AllPokemonsByDexNumber}"
                           SelectedItem="{Binding SelectedPokemon,
                                                  Mode=TwoWay}"
-                          Style="{StaticResource CardBasedListStyle}">
-
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <controls:PokemonListItem />
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                          Style="{StaticResource CardBasedListStyle}" />
             </PivotItem>
             <PivotItem>
                 <PivotItem.Header>
@@ -83,16 +77,11 @@
                     </Border>
                 </PivotItem.Header>
                 <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
+                          ItemTemplate="{StaticResource PokemonListItemTemplate}"
                           ItemsSource="{Binding AllPokemonsByName}"
                           SelectedItem="{Binding SelectedPokemon,
                                                  Mode=TwoWay}"
-                          Style="{StaticResource CardBasedListStyle}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <controls:PokemonListItem />
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                          Style="{StaticResource CardBasedListStyle}" />
             </PivotItem>
             <PivotItem>
                 <PivotItem.Header>
@@ -101,16 +90,11 @@
                     </Border>
                 </PivotItem.Header>
                 <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
+                          ItemTemplate="{StaticResource PokemonListItemTemplate}"
                           ItemsSource="{Binding AllPokemonsByType}"
                           SelectedItem="{Binding SelectedPokemon,
                                                  Mode=TwoWay}"
-                          Style="{StaticResource CardBasedListStyle}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <controls:PokemonListItem />
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                          Style="{StaticResource CardBasedListStyle}" />
             </PivotItem>
 
             <PivotItem>
@@ -120,16 +104,11 @@
                     </Border>
                 </PivotItem.Header>
                 <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
+                          ItemTemplate="{StaticResource PokemonListItemTemplate}"
                           ItemsSource="{Binding AllPokemonsByCp}"
                           SelectedItem="{Binding SelectedPokemon,
                                                  Mode=TwoWay}"
-                          Style="{StaticResource CardBasedListStyle}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <controls:PokemonListItem />
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                          Style="{StaticResource CardBasedListStyle}" />
             </PivotItem>
         </Pivot>
     </Grid>

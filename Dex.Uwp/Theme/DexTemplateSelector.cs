@@ -15,6 +15,7 @@ namespace Dex.Uwp.Theme
             {
                 [typeof(QuickMove)] = GetTemplateFromResourceKey("QuickMoveDetailsDataTemplate"),
                 [typeof(ChargeMove)] = GetTemplateFromResourceKey("ChargeMoveDetailsDataTemplate"),
+                [typeof(Pokemon)] = GetTemplateFromResourceKey("PokemonListItemTemplate")
             };
         }
 

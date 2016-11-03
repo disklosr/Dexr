@@ -13,6 +13,10 @@
         <controls:ChargeMoveDetailsControl />
     </DataTemplate>
 
+    <DataTemplate x:Key="PokemonListItemTemplate">
+        <controls:PokemonListItem />
+    </DataTemplate>
+
     <ControlTemplate x:Key="PokemonTypeTemplate">
         <Border Width="{TemplateBinding Width}"
                 Height="{TemplateBinding Height}"
