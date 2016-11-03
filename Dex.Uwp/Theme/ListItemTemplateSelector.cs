@@ -1,20 +1,20 @@
-﻿using Dex.Core.Entities;
+using Dex.Core.Entities;
 using System.Collections.Generic;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
 namespace Dex.Uwp.Theme
 {
-    public class MoveDetailTemplateSelector : DataTemplateSelector
+    public class ListItemTemplateSelector : DataTemplateSelector
     {
         private Dictionary<System.Type, DataTemplate> TypeToTemplateMapper;
 
-        public MoveDetailTemplateSelector()
+        public ListItemTemplateSelector()
         {
             TypeToTemplateMapper = new Dictionary<System.Type, DataTemplate>()
             {
-                [typeof(QuickMove)] = GetTemplateFromResourceKey("QuickMoveDetailsDataTemplate"),
-                [typeof(ChargeMove)] = GetTemplateFromResourceKey("ChargeMoveDetailsDataTemplate"),
+                [typeof(QuickMove)] = GetTemplateFromResourceKey("MoveListItemTemplate"),
+                [typeof(ChargeMove)] = GetTemplateFromResourceKey("MoveListItemTemplate"),
                 [typeof(Pokemon)] = GetTemplateFromResourceKey("PokemonListItemTemplate")
             };
         }

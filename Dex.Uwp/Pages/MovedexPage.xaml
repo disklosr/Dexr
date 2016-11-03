@@ -52,16 +52,10 @@
                 </Border>
             </PivotItem.Header>
             <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
+                      ItemTemplate="{StaticResource MoveListItemTemplate}"
                       ItemTemplateSelector="{StaticResource MovesTemplateSelector}"
                       ItemsSource="{Binding AllQuickMovesById}"
-                      Style="{StaticResource CardBasedListStyle}">
-
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <controls:MoveListItem />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                      Style="{StaticResource CardBasedListStyle}" />
         </PivotItem>
         <PivotItem>
             <PivotItem.Header>
@@ -70,17 +64,12 @@
                 </Border>
             </PivotItem.Header>
             <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
+                      ItemTemplate="{StaticResource MoveListItemTemplate}"
                       ItemTemplateSelector="{StaticResource MovesTemplateSelector}"
                       ItemsSource="{Binding AllChargeMovesById}"
                       SelectedItem="{Binding SelectedPokemon,
                                              Mode=TwoWay}"
-                      Style="{StaticResource CardBasedListStyle}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <controls:MoveListItem />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                      Style="{StaticResource CardBasedListStyle}" />
         </PivotItem>
     </Pivot>
 </infra:PageBase>

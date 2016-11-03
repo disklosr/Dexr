@@ -4,7 +4,6 @@
                     xmlns:data="using:Dex.Core.Entities"
                     xmlns:local="using:Dex.Uwp.Theme">
 
-    <local:MovesTemplateSelector x:Key="MovesTemplateSelector" />
     <DataTemplate x:Key="QuickMoveDetailsDataTemplate">
         <controls:QuickMoveDetailsControl />
     </DataTemplate>
@@ -16,6 +15,13 @@
     <DataTemplate x:Key="PokemonListItemTemplate">
         <controls:PokemonListItem />
     </DataTemplate>
+
+    <DataTemplate x:Key="MoveListItemTemplate">
+        <controls:MoveListItem />
+    </DataTemplate>
+
+    <local:MoveDetailTemplateSelector x:Key="MovesTemplateSelector" />
+    <local:ListItemTemplateSelector x:Key="ListItemTemplateSelector" />
 
     <ControlTemplate x:Key="PokemonTypeTemplate">
         <Border Width="{TemplateBinding Width}"

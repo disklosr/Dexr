@@ -327,6 +327,7 @@
     <Compile Include="Services\NavigationServiceException.cs" />
     <Compile Include="Theme\DexTemplateSelector.cs" />
     <Compile Include="Theme\DropShadowStyle.cs" />
+    <Compile Include="Theme\ListItemTemplateSelector.cs" />
     <Compile Include="ValueConverters\NullOrEmptyToVisibilityConverter.cs" />
     <Compile Include="ValueConverters\EvolutionLineToGridLengthConverter.cs" />
     <Compile Include="ValueConverters\PokemonDexNumberToPictureConverter.cs" />

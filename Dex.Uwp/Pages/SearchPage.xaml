@@ -26,7 +26,7 @@
             <RowDefinition Height="48" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <controls:ShadowHost Background="White">
+        <controls:ShadowHost Background="White" Canvas.ZIndex="10">
             <controls:ShadowHost.Transitions>
                 <TransitionCollection>
                     <EntranceThemeTransition FromVerticalOffset="-48" />
@@ -35,6 +35,7 @@
 
             <!--  QueryIcon is only set to "activate" its visibility. The actual used icon is hardcoded inside the style  -->
             <AutoSuggestBox Name="SearchBox"
+                            Grid.Row="0"
                             Height="48"
                             MaxWidth="720"
                             Margin="48,0"
@@ -50,5 +51,11 @@
                                            Mode=TwoWay}"
                             TextBoxStyle="{StaticResource CustomAutoSuggestBoxTextBoxStyle}" />
         </controls:ShadowHost>
+
+        <ListView Grid.Row="1"
+                  ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
+                  ItemTemplateSelector="{StaticResource ListItemTemplateSelector}"
+                  ItemsSource="{Binding SearchResult}"
+                  Style="{StaticResource CardBasedListStyle}" />
     </Grid>
 </infra:PageBase>
