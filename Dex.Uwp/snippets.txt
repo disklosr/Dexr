@@ -1,0 +1,9 @@
+﻿xmlns:model="using:Dex.Core.Entities"
+xmlns:vm="using:Dex.Uwp.ViewModels"
+xmlns:infra="using:Dex.Uwp.Infrastructure"
+xmlns:cards="using:Dex.Uwp.Cards"
+xmlns:ctrl="using:Dex.Uwp.Controls"
+
+
+
+ d:DataContext="{d:DesignInstance Type=vm:PokedexViewModel, IsDesignTimeCreatable=False}"
