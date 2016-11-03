@@ -288,7 +288,7 @@
     <Compile Include="Cards\RectangularGauge.xaml.cs">
       <DependentUpon>RectangularGauge.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Cards\ShadowHost.xaml.cs">
+    <Compile Include="Controls\ShadowHost.xaml.cs">
       <DependentUpon>ShadowHost.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cards\StatsCard.xaml.cs">
@@ -408,7 +408,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Cards\ShadowHost.xaml">
+    <Page Include="Controls\ShadowHost.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

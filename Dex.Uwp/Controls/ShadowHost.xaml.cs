@@ -4,7 +4,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Hosting;
 
-namespace Dex.Uwp.Cards
+namespace Dex.Uwp.Controls
 {
     public sealed partial class ShadowHost : ContentControl
     {
