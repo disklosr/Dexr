@@ -14,7 +14,10 @@ namespace Dex.Uwp.ViewModels
     public class MovedexViewModel : ViewModelBase
     {
         private readonly IMoveRepository moveRepository;
+        private IEnumerable<ChargeMove> allChargeMovesById;
         private PokemonMoves allMoves;
+
+        private IEnumerable<QuickMove> allQuickMovesById;
 
         public MovedexViewModel(IMoveRepository moveRepository)
         {
@@ -22,8 +25,18 @@ namespace Dex.Uwp.ViewModels
             ReverseOrderCommand = new RelayCommand(() => OnReverseOrder());
         }
 
-        public IEnumerable<ChargeMove> AllChargeMovesById { get; private set; }
-        public IEnumerable<QuickMove> AllQuickMovesById { get; private set; }
+        public IEnumerable<ChargeMove> AllChargeMovesById
+        {
+            get { return allChargeMovesById; }
+            private set { Set(ref allChargeMovesById, value); }
+        }
+
+        public IEnumerable<QuickMove> AllQuickMovesById
+        {
+            get { return allQuickMovesById; }
+            private set { Set(ref allQuickMovesById, value); }
+        }
+
         public ICommand ReverseOrderCommand { get; }
 
         public async override Task OnNavigatedTo(NavigationEventArgs e)

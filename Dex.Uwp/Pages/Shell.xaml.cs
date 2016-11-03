@@ -32,6 +32,16 @@ namespace Dex.Uwp.Pages
             currentPage.Loaded -= CurrentPage_Loaded;
         }
 
+        private void Grid_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
+        {
+            if (RootSplitView.DisplayMode == SplitViewDisplayMode.CompactInline || RootSplitView.DisplayMode == SplitViewDisplayMode.Inline)
+            {
+                return;
+            }
+
+            RootSplitView.IsPaneOpen = false;
+        }
+
         private void MainFrame_CurrentPageChanged(FrameworkElement sender, DataContextChangedEventArgs args)
         {
             currentPage = args.NewValue as PageBase;

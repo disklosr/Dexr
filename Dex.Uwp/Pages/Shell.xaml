@@ -77,7 +77,7 @@
 
         <SplitView Name="RootSplitView" Grid.Row="1">
             <SplitView.Pane>
-                <Grid Width="320">
+                <Grid Width="320" Tapped="Grid_Tapped">
                     <local:SidePane />
                 </Grid>
             </SplitView.Pane>
