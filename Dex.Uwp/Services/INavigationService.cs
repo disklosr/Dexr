@@ -9,6 +9,8 @@ namespace Dex.Uwp.Services
 {
     public interface INavigationService
     {
+        void GoBack();
+
         void Navigate(Type pageType, string parameter = null, bool serializeParam = true);
 
         void NavigateToPokedexPage();
@@ -30,6 +32,11 @@ namespace Dex.Uwp.Services
             mainFrame.NavigationFailed += MainFrame_NavigationFailed;
             mainFrame.Navigating += MainFrame_Navigating;
             mainFrame.Navigated += MainFrame_Navigated;
+        }
+
+        public void GoBack()
+        {
+            mainFrame.GoBack();
         }
 
         public void Navigate(Type pageType, string parameter = null, bool serializeParam = true)

@@ -39,6 +39,8 @@
                     <Brush x:Key="AppAttackBrush">#ffc952</Brush>
                     <Brush x:Key="AppDefenseBrush">#47b8e0</Brush>
                     <Brush x:Key="AppStaminaBrush">#ff7473</Brush>
+
+                    <SolidColorBrush x:Key="SystemChormeLowColorBrush" Color="{StaticResource SystemChromeLowColor}" />
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
         </ResourceDictionary>

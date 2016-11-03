@@ -17,10 +17,13 @@
 
     <infra:PageBase.Commands>
         <infra:CommandsCollection>
-            <AppBarButton Command="{Binding ReverseOrderCommand}"
+            <AppBarButton AccessKey="S"
+                          Command="{Binding ReverseOrderCommand}"
                           Icon="Sort"
                           ToolTipService.ToolTip="Rever sorting order" />
-            <AppBarButton Command="{Binding SearchCommand}" Icon="Find" />
+            <AppBarButton AccessKey="F"
+                          Command="{Binding SearchCommand}"
+                          Icon="Find" />
         </infra:CommandsCollection>
     </infra:PageBase.Commands>
     <!--<Page.Transitions>

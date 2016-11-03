@@ -1,6 +1,8 @@
 using Dex.Core.Repositories;
 using Dex.Uwp.Infrastructure;
 using Dex.Uwp.Services;
+using System.Threading.Tasks;
+using Windows.UI.Xaml.Navigation;
 
 namespace Dex.Uwp.ViewModels
 {
@@ -15,6 +17,11 @@ namespace Dex.Uwp.ViewModels
             this.navigationService = navigationService;
             this.moveRepository = moveRepository;
             this.pokemonsRepository = pokemonsRepository;
+        }
+
+        public override Task OnNavigatedTo(NavigationEventArgs e)
+        {
+            return base.OnNavigatedTo(e);
         }
     }
 }

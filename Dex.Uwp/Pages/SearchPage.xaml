@@ -1,7 +1,7 @@
 ﻿<infra:PageBase x:Class="Dex.Uwp.Pages.SearchPage"
                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                xmlns:ctrl="using:Dex.Uwp.Controls"
+                xmlns:controls="using:Dex.Uwp.Controls"
                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                 xmlns:infra="using:Dex.Uwp.Infrastructure"
                 xmlns:local="using:Dex.Uwp.Pages"
@@ -12,16 +12,40 @@
                 RequiresAppBar="False"
                 mc:Ignorable="d">
 
+    <infra:PageBase.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition />
+        </TransitionCollection>
+    </infra:PageBase.Transitions>
+
     <Grid>
+        <Grid.Resources>
+            <Thickness x:Key="TextControlBorderThemeThickness">0</Thickness>
+        </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="48" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Border Background="White">
-            <AutoSuggestBox Margin="48,0"
+        <controls:ShadowHost Background="White">
+            <controls:ShadowHost.Transitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition FromVerticalOffset="-48" />
+                </TransitionCollection>
+            </controls:ShadowHost.Transitions>
+
+            <!--  QueryIcon is only set to "activate" its visibility. The actual used icon is hardcoded inside the style  -->
+            <AutoSuggestBox Name="SearchBox"
+                            Height="48"
+                            MaxWidth="720"
+                            Margin="48,0"
                             HorizontalAlignment="Stretch"
                             VerticalAlignment="Center"
-                            QueryIcon="Find" />
-        </Border>
+                            BorderBrush="Red"
+                            BorderThickness="0"
+                            FontSize="18"
+                            PlaceholderText="Search Pokemons &amp; Moves"
+                            QueryIcon="Accept"
+                            TextBoxStyle="{StaticResource CustomAutoSuggestBoxTextBoxStyle}" />
+        </controls:ShadowHost>
     </Grid>
 </infra:PageBase>
