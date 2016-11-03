@@ -20,7 +20,7 @@
             <AppBarButton Command="{Binding ReverseOrderCommand}"
                           Icon="Sort"
                           ToolTipService.ToolTip="Rever sorting order" />
-            <AppBarButton Icon="Find" />
+            <AppBarButton Command="{Binding SearchCommand}" Icon="Find" />
         </infra:CommandsCollection>
     </infra:PageBase.Commands>
     <!--<Page.Transitions>

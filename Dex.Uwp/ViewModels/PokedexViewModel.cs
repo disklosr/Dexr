@@ -28,6 +28,7 @@ namespace Dex.Uwp.ViewModels
             this.pokemonsRepository = pokemonsRepository;
 
             ReverseOrderCommand = new RelayCommand(() => OnReverseOrder());
+            SearchCommand = new RelayCommand(() => navigationService.NavigateToSearchPage());
         }
 
         public IEnumerable<Pokemon> AllPokemonsByCp
@@ -55,6 +56,7 @@ namespace Dex.Uwp.ViewModels
         }
 
         public ICommand ReverseOrderCommand { get; }
+        public ICommand SearchCommand { get; }
 
         public Pokemon SelectedPokemon
         {

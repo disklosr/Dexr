@@ -21,9 +21,14 @@ namespace Dex.Uwp.Pages
             //Set Page Title
             PageTitle.Text = currentPage.Title;
 
+            //Set Appbar visibility
+            MainCommandBar.Visibility = currentPage.RequiresAppBar ?
+                Visibility.Visible : Visibility.Collapsed;
+
             //Set Application Bar Buttons
             commandsBar.Items.Clear();
-            foreach (var item in currentPage.Commands)
+            var commands = currentPage.Commands ?? new CommandsCollection();
+            foreach (var item in commands)
             {
                 commandsBar.Items.Add(item);
                 item.DataContext = currentPage.DataContext;

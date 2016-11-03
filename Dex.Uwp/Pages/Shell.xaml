@@ -12,7 +12,7 @@
             <SolidColorBrush Color="{ThemeResource AppGreyColorLighter1}" />
         </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Border Name="MainCommandBar"

@@ -14,6 +14,8 @@ namespace Dex.Uwp.Services
         void NavigateToPokedexPage();
 
         void NavigateToPokemonDetailsPage(ushort dexNumber);
+
+        void NavigateToSearchPage();
     }
 
     public class NavigationService : INavigationService
@@ -55,6 +57,11 @@ namespace Dex.Uwp.Services
         public void NavigateToPokemonDetailsPage(ushort dexNumber)
         {
             mainFrame.Navigate(typeof(PokemonDetailPage), dexNumber);
+        }
+
+        public void NavigateToSearchPage()
+        {
+            mainFrame.Navigate(typeof(SearchPage));
         }
 
         private void EnsureNavigationFrameIsAvailable()
