@@ -43,6 +43,11 @@ namespace Dex.Uwp.ViewModels
             set { Set(ref searchResult, value); }
         }
 
+        public void OnItemChosen(object SelectedItem)
+        {
+            navigationService.ResolveFromThenNavigate(SelectedItem);
+        }
+
         public async override Task OnNavigatedTo(NavigationEventArgs e)
         {
             var pokes = pokemonsRepository.GetAllPokemons();

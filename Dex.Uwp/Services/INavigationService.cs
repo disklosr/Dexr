@@ -1,9 +1,11 @@
-﻿using Dex.Uwp.Pages;
+﻿using Dex.Core.Entities;
+using Dex.Uwp.Pages;
 using System;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using Type = System.Type;
 
 namespace Dex.Uwp.Services
 {
@@ -13,11 +15,15 @@ namespace Dex.Uwp.Services
 
         void Navigate(Type pageType, string parameter = null, bool serializeParam = true);
 
+        void NavigateToMoveDetailsPage(string moveId);
+
         void NavigateToPokedexPage();
 
         void NavigateToPokemonDetailsPage(ushort dexNumber);
 
         void NavigateToSearchPage();
+
+        void ResolveFromThenNavigate(object paramObject);
     }
 
     public class NavigationService : INavigationService
@@ -56,6 +62,11 @@ namespace Dex.Uwp.Services
             }
         }
 
+        public void NavigateToMoveDetailsPage(string moveId)
+        {
+            throw new NotImplementedException();
+        }
+
         public void NavigateToPokedexPage()
         {
             mainFrame.Navigate(typeof(PokedexPage));
@@ -69,6 +80,15 @@ namespace Dex.Uwp.Services
         public void NavigateToSearchPage()
         {
             mainFrame.Navigate(typeof(SearchPage));
+        }
+
+        public void ResolveFromThenNavigate(object navigationParam)
+        {
+            if (navigationParam is Pokemon)
+                NavigateToPokemonDetailsPage((navigationParam as Pokemon).DexNumber);
+
+            if (navigationParam is Move)
+                NavigateToMoveDetailsPage((navigationParam as Move).MoveId);
         }
 
         private void EnsureNavigationFrameIsAvailable()

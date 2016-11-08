@@ -52,7 +52,9 @@
                             TextBoxStyle="{StaticResource CustomAutoSuggestBoxTextBoxStyle}" />
         </controls:ShadowHost>
 
-        <ListView Grid.Row="1"
+        <ListView Name="ResultsList"
+                  Grid.Row="1"
+                  IsItemClickEnabled="True"
                   ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
                   ItemTemplateSelector="{StaticResource ListItemTemplateSelector}"
                   ItemsSource="{Binding SearchResult}"
