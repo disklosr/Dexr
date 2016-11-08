@@ -63,11 +63,11 @@
                         <ctrl:TabHeader Label="BY #" />
                     </Border>
                 </PivotItem.Header>
-                <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
+                <ListView Name="AllPokemonsByDexNumberList"
+                          IsItemClickEnabled="True"
+                          ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
                           ItemTemplate="{StaticResource PokemonListItemTemplate}"
                           ItemsSource="{Binding AllPokemonsByDexNumber}"
-                          SelectedItem="{Binding SelectedPokemon,
-                                                 Mode=TwoWay}"
                           Style="{StaticResource CardBasedListStyle}" />
             </PivotItem>
             <PivotItem>
@@ -76,11 +76,11 @@
                         <ctrl:TabHeader Label="BY NAME" />
                     </Border>
                 </PivotItem.Header>
-                <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
+                <ListView Name="AllPokemonsByNameList"
+                          IsItemClickEnabled="True"
+                          ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
                           ItemTemplate="{StaticResource PokemonListItemTemplate}"
                           ItemsSource="{Binding AllPokemonsByName}"
-                          SelectedItem="{Binding SelectedPokemon,
-                                                 Mode=TwoWay}"
                           Style="{StaticResource CardBasedListStyle}" />
             </PivotItem>
             <PivotItem>
@@ -89,11 +89,11 @@
                         <ctrl:TabHeader Label="BY TYPE" />
                     </Border>
                 </PivotItem.Header>
-                <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
+                <ListView Name="AllPokemonsByTypeList"
+                          IsItemClickEnabled="True"
+                          ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
                           ItemTemplate="{StaticResource PokemonListItemTemplate}"
                           ItemsSource="{Binding AllPokemonsByType}"
-                          SelectedItem="{Binding SelectedPokemon,
-                                                 Mode=TwoWay}"
                           Style="{StaticResource CardBasedListStyle}" />
             </PivotItem>
 
@@ -103,11 +103,11 @@
                         <ctrl:TabHeader Label="BY CP" />
                     </Border>
                 </PivotItem.Header>
-                <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
+                <ListView Name="AllPokemonsByCpList"
+                          IsItemClickEnabled="True"
+                          ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
                           ItemTemplate="{StaticResource PokemonListItemTemplate}"
                           ItemsSource="{Binding AllPokemonsByCp}"
-                          SelectedItem="{Binding SelectedPokemon,
-                                                 Mode=TwoWay}"
                           Style="{StaticResource CardBasedListStyle}" />
             </PivotItem>
         </Pivot>

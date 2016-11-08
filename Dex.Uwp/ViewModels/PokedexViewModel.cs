@@ -58,22 +58,8 @@ namespace Dex.Uwp.ViewModels
         public ICommand ReverseOrderCommand { get; }
         public ICommand SearchCommand { get; }
 
-        public Pokemon SelectedPokemon
-        {
-            get { return selectedPokemon; }
-            set
-            {
-                Set(ref selectedPokemon, value);
-                if (value != null)
-                    navigationService.NavigateToPokemonDetailsPage(value.DexNumber);
-            }
-        }
-
         public async override Task OnNavigatedTo(NavigationEventArgs e)
         {
-            if (e.NavigationMode == NavigationMode.Back)
-                SelectedPokemon = null;
-
             var pokes = pokemonsRepository.GetAllPokemons();
             allPokemonsCache = await pokes;
 
@@ -81,6 +67,11 @@ namespace Dex.Uwp.ViewModels
             AllPokemonsByCp = allPokemonsCache.OrderBy(poke => poke.MaxCP);
             AllPokemonsByName = allPokemonsCache.OrderBy(poke => poke.Name);
             AllPokemonsByType = allPokemonsCache.OrderBy(poke => poke.Type1).ThenBy(poke => poke.Type2);
+        }
+
+        public void OnSelectNewItem(Pokemon selectedPoke)
+        {
+            navigationService.NavigateToPokemonDetailsPage(selectedPoke.DexNumber);
         }
 
         private void OnReverseOrder()
