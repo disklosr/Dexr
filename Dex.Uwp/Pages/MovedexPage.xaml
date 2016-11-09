@@ -51,7 +51,9 @@
                     <ctrl:TabHeader Label="QUICK MOVES" />
                 </Border>
             </PivotItem.Header>
-            <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
+            <ListView Name="QuickMovesList"
+                      IsItemClickEnabled="True"
+                      ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
                       ItemTemplate="{StaticResource MoveListItemTemplate}"
                       ItemTemplateSelector="{StaticResource MovesTemplateSelector}"
                       ItemsSource="{Binding AllQuickMovesById}"
@@ -63,12 +65,12 @@
                     <ctrl:TabHeader Label="CHARGE MOVES" />
                 </Border>
             </PivotItem.Header>
-            <ListView ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
+            <ListView Name="ChargeMovesList"
+                      IsItemClickEnabled="True"
+                      ItemContainerStyle="{StaticResource CardBasedListItemStyle}"
                       ItemTemplate="{StaticResource MoveListItemTemplate}"
                       ItemTemplateSelector="{StaticResource MovesTemplateSelector}"
                       ItemsSource="{Binding AllChargeMovesById}"
-                      SelectedItem="{Binding SelectedPokemon,
-                                             Mode=TwoWay}"
                       Style="{StaticResource CardBasedListStyle}" />
         </PivotItem>
     </Pivot>
