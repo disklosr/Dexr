@@ -50,7 +50,7 @@
                                RelativePanel.RightOf="Type1Name"
                                Style="{StaticResource CaptionTextBlockStyle}"
                                Visibility="{Binding Type2,
-                                                    Converter={StaticResource PokemonUnonwnTypeToVisibilityConverter}}">
+                                                    Converter={StaticResource PokemonUnknownTypeToVisibilityConverter}}">
                         <TextBlock.Foreground>
                             <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
                         </TextBlock.Foreground>

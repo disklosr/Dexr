@@ -61,7 +61,7 @@
                                              Converter={StaticResource PokemonTypeToColorConverter}}"
                         CornerRadius="1"
                         Visibility="{Binding Type2,
-                                             Converter={StaticResource PokemonUnonwnTypeToVisibilityConverter}}">
+                                             Converter={StaticResource PokemonUnknownTypeToVisibilityConverter}}">
                     <TextBlock Width="100"
                                Text="{Binding Type2}"
                                TextAlignment="Center">

@@ -6,5 +6,5 @@
     <vc:NullOrEmptyToVisibilityConverter x:Key="NullOrEmptyToVisibilityConverter" />
     <vc:PokemonTypeToColorConverter x:Key="PokemonTypeToColorConverter" />
     <vc:PokemonDexNumberToPictureConverter x:Key="PokemonDexNumberToPictureConverter" />
-    <vc:PokemonUnonwnTypeToVisibilityConverter x:Key="PokemonUnonwnTypeToVisibilityConverter" />
+    <vc:PokemonUnknownTypeToVisibilityConverter x:Key="PokemonUnknownTypeToVisibilityConverter" />
 </ResourceDictionary>
