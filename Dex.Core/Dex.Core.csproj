@@ -42,7 +42,6 @@
     <Compile Include="DataAccess\IMovesDataSource.cs" />
     <Compile Include="DataAccess\IPokemonsDataSource.cs" />
     <Compile Include="Entities\PokemonMoves.cs" />
-    <Compile Include="Entities\MissingNo.cs" />
     <Compile Include="Entities\Move.cs" />
     <Compile Include="Entities\Pokemon.cs" />
     <Compile Include="Entities\PokemonStat.cs" />
