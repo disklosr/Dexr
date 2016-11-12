@@ -15,34 +15,6 @@
                 <ResourceDictionary Source="/Theme/Styles.xaml" />
                 <ResourceDictionary Source="/Theme/Templates.xaml" />
             </ResourceDictionary.MergedDictionaries>
-
-            <ResourceDictionary.ThemeDictionaries>
-                <ResourceDictionary x:Key="Default">
-
-                    <!--  Red  -->
-                    <!--<Color x:Key="SystemAccentColor">#E53935</Color>
-                    <Color x:Key="SystemAccentColorDark1">#D32F2F</Color>
-                    <Color x:Key="SystemAccentColorDark2">#C62828</Color>
-                    <Color x:Key="SystemAccentColorDark3">#B71C1C</Color>-->
-
-                    <!--  Blue Grey  -->
-                    <Color x:Key="SystemAccentColor">#546E7A</Color>
-                    <Color x:Key="SystemAccentColorDark1">#455A64</Color>
-                    <Color x:Key="SystemAccentColorDark2">#37474F</Color>
-                    <Color x:Key="SystemAccentColorDark3">#263238</Color>
-
-                    <Color x:Key="AppGreyColor">#E0E0E0</Color>
-                    <Color x:Key="AppGreyColorLighter1">#F5F5F5</Color>
-                    <Color x:Key="AppGreyColorLighter2">#FAFAFA</Color>
-                    <Color x:Key="AppGreyColorLighter3">#FFFFFF</Color>
-
-                    <Brush x:Key="AppAttackBrush">#ffc952</Brush>
-                    <Brush x:Key="AppDefenseBrush">#47b8e0</Brush>
-                    <Brush x:Key="AppStaminaBrush">#ff7473</Brush>
-
-                    <SolidColorBrush x:Key="SystemChormeLowColorBrush" Color="{StaticResource SystemChromeLowColor}" />
-                </ResourceDictionary>
-            </ResourceDictionary.ThemeDictionaries>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
