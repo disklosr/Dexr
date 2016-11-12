@@ -19,12 +19,12 @@ namespace Dex
             Application.Current.UnhandledException += Current_UnhandledException;
         }
 
-        private async void Current_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        private void Current_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             e.Handled = true;
             MessageDialog messageDialog = new MessageDialog($"The application has encoutered a problem. ({e.Message})", "Execution error");
             messageDialog.Commands.Add(new Windows.UI.Popups.UICommand("Ok") { Id = 0 });
-            await messageDialog.ShowAsync();
+            messageDialog.ShowAsync();
         }
 
         private Shell rootShell;
