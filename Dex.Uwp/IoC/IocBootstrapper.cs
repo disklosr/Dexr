@@ -2,7 +2,6 @@
 using Dex.Core.Repositories;
 using Dex.Uwp.DataAccess;
 using Dex.Uwp.Services;
-using Dex.Uwp.ViewModels;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 
@@ -21,7 +20,6 @@ namespace Dex.Uwp.IoC
         {
             RegisterServices();
             RegisterRepositories();
-            RegisterViewModels();
         }
 
         private void Init()
@@ -45,12 +43,6 @@ namespace Dex.Uwp.IoC
             Container.RegisterType<LocalFileDataSource>(new ContainerControlledLifetimeManager())
                 .RegisterType<IPokemonsDataSource, LocalFileDataSource>()
                 .RegisterType<IMovesDataSource, LocalFileDataSource>();
-        }
-
-        private void RegisterViewModels()
-        {
-            Container.RegisterType<PokedexViewModel>(new TransientLifetimeManager());
-            Container.RegisterType<PokemonDetailViewModel>(new TransientLifetimeManager());
         }
     }
 }
