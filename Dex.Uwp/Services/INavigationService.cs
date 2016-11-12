@@ -1,6 +1,5 @@
 ﻿using Dex.Core.Entities;
 using Dex.Uwp.Pages;
-using System;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -64,7 +63,7 @@ namespace Dex.Uwp.Services
 
         public void NavigateToMoveDetailsPage(string moveId)
         {
-            throw new NotImplementedException();
+            mainFrame.Navigate(typeof(MoveDetailPage), moveId);
         }
 
         public void NavigateToPokedexPage()

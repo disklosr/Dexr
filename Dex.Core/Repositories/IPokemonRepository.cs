@@ -1,5 +1,6 @@
 ﻿using Dex.Core.DataAccess;
 using Dex.Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,6 +22,8 @@ namespace Dex.Core.Repositories
         Task<Pokemon> GetNextPokemon(ushort PokemonId);
 
         Task<Pokemon> GetPokemonById(ushort pokemonId);
+
+        Task<IEnumerable<Pokemon>> GetPokemonsWithMove(string moveId);
 
         Task<Pokemon> GetPreviousPokemon(ushort PokemonId);
 
@@ -117,6 +120,12 @@ namespace Dex.Core.Repositories
             return allPokemonsCache
                 .Where(pokemon => pokemon.Name == pokemonName)
                 .FirstOrDefault();
+        }
+
+        public async Task<IEnumerable<Pokemon>> GetPokemonsWithMove(string moveId)
+        {
+            await EnsureCacheIsValid();
+            return allPokemonsCache.Where(poke => poke.Moves.ChargeMovesIds.Contains(moveId) || poke.Moves.QuickMovesIds.Contains(moveId));
         }
 
         public async Task<Pokemon> GetPreviousPokemon(ushort PokemonId)

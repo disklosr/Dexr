@@ -264,11 +264,17 @@
     <Compile Include="Cards\ChargeMoveDetailsControl.xaml.cs">
       <DependentUpon>ChargeMoveDetailsControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Cards\MoveRelatedPokemons.xaml.cs">
+      <DependentUpon>MoveRelatedPokemons.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Cards\EvolutionLineCard.xaml.cs">
       <DependentUpon>EvolutionLineCard.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Cards\HoverBorder.xaml.cs">
-      <DependentUpon>HoverBorder.xaml</DependentUpon>
+    <Compile Include="Cards\HoverControl.xaml.cs">
+      <DependentUpon>HoverControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cards\MoveCard.xaml.cs">
+      <DependentUpon>MoveCard.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cards\MoveListItem.xaml.cs">
       <DependentUpon>MoveListItem.xaml</DependentUpon>
@@ -293,6 +299,9 @@
     </Compile>
     <Compile Include="Cards\StatsCard.xaml.cs">
       <DependentUpon>StatsCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MoveDetailPage.xaml.cs">
+      <DependentUpon>MoveDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\SearchPage.xaml.cs">
       <DependentUpon>SearchPage.xaml</DependentUpon>
@@ -341,6 +350,7 @@
     <Compile Include="ViewModels\EvolutionLineDataViewModel.cs" />
     <Compile Include="ViewModels\MovedexViewModel.cs" />
     <Compile Include="ViewModels\PokedexViewModel.cs" />
+    <Compile Include="ViewModels\MoveDetailViewModel.cs" />
     <Compile Include="ViewModels\PokemonDetailViewModel.cs" />
     <Compile Include="ViewModels\SearchViewModel.cs" />
   </ItemGroup>
@@ -377,11 +387,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Cards\MoveRelatedPokemons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Cards\EvolutionLineCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Cards\HoverBorder.xaml">
+    <Page Include="Cards\HoverControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cards\MoveCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -416,6 +434,10 @@
     <Page Include="Cards\StatsCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MoveDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\SearchPage.xaml">
       <SubType>Designer</SubType>

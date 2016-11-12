@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Dex.Uwp.Cards.MoveCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:data="using:Dex.Core.Entities"
+             xmlns:local="using:Dex.Uwp.Cards"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DataContext="{d:DesignInstance Type=data:Move,
+                                              IsDesignTimeCreatable=False}"
+             d:DesignHeight="500"
+             d:DesignWidth="400"
+             mc:Ignorable="d">
+
+    <local:Card VerticalAlignment="Top" Padding="12">
+        <RelativePanel>
+            <TextBlock Name="MoveName"
+                       RelativePanel.AlignHorizontalCenterWithPanel="True"
+                       Style="{StaticResource TitleTextBlockStyle}"
+                       Text="{Binding Name,
+                                      Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
+            <ContentControl Grid.RowSpan="4"
+                            Grid.Column="1"
+                            Width="80"
+                            Height="20"
+                            Margin="0,12,0,0"
+                            RelativePanel.AlignHorizontalCenterWith="MoveName"
+                            RelativePanel.Below="MoveName"
+                            Template="{StaticResource PokemonTypeTemplate}" />
+        </RelativePanel>
+    </local:Card>
+</UserControl>

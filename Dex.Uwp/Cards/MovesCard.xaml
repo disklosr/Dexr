@@ -15,13 +15,15 @@
     <local:Card VerticalAlignment="Top" Padding="12">
         <StackPanel>
             <local:CardHeader Title="Quick Moves" />
-            <ItemsControl ItemContainerStyle="{StaticResource StretchListItemStyle}"
+            <ItemsControl Name="QuickMovesList"
+                          ItemContainerStyle="{StaticResource StretchListItemStyle}"
                           ItemTemplateSelector="{StaticResource MovesTemplateSelector}"
                           ItemsSource="{Binding QuickMoves}" />
 
             <local:CardHeader Title="Charge Moves" Margin="0,12,0,0" />
 
-            <ItemsControl ItemContainerStyle="{StaticResource StretchListItemStyle}"
+            <ItemsControl Name="ChargeMovesList"
+                          ItemContainerStyle="{StaticResource StretchListItemStyle}"
                           ItemTemplateSelector="{StaticResource MovesTemplateSelector}"
                           ItemsSource="{Binding ChargeMoves}" />
         </StackPanel>

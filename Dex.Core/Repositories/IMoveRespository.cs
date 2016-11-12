@@ -1,5 +1,6 @@
 ﻿using Dex.Core.DataAccess;
 using Dex.Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ namespace Dex.Core.Repositories
         Task<PokemonMoves> GetAllMoves();
 
         Task<PokemonMoves> GetAllMovesByType(Type moveType);
+
+        Move GetMoveById(string Id);
 
         Task<PokemonMoves> GetMovesById(IEnumerable<string> quickMovesIds, IEnumerable<string> chargeMovesIds);
     }
