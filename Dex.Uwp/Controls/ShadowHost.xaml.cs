@@ -1,4 +1,6 @@
 ﻿using Dex.Uwp.Theme;
+using System.Numerics;
+using Windows.UI;
 using Windows.UI.Composition;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -8,6 +10,10 @@ namespace Dex.Uwp.Controls
 {
     public sealed partial class ShadowHost : ContentControl
     {
+        private const float blurRadius = 4.0f;
+        private readonly Color shadowColor = Color.FromArgb(96, 0, 0, 0);
+        private readonly Vector3 shadowOffset = new Vector3(0f, 2f, 2f);
+
         public ShadowHost()
         {
             this.InitializeComponent();
@@ -31,10 +37,10 @@ namespace Dex.Uwp.Controls
             // Create a drop shadow
             var dropShadow = compositor.CreateDropShadow();
 
-            var shadowStyle = new DropShadowStyle();
-            dropShadow.Color = shadowStyle.Color;
-            dropShadow.BlurRadius = shadowStyle.BlurRadius;
-            dropShadow.Offset = shadowStyle.Offset;
+            dropShadow.Color = shadowColor;
+            dropShadow.BlurRadius = blurRadius;
+            dropShadow.Offset = shadowOffset;
+
             // Create a Visual to hold the shadow
             var shadowVisual = compositor.CreateSpriteVisual();
             shadowVisual.Shadow = dropShadow;
