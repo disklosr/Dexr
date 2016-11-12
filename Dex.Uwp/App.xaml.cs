@@ -22,7 +22,11 @@ namespace Dex
         private void Current_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             e.Handled = true;
-            MessageDialog messageDialog = new MessageDialog($"The application has encoutered a problem. ({e.Message})", "Execution error");
+            MessageDialog messageDialog = new MessageDialog("Dex has encountered an application error. I'm sorry for the inconvenience.", "Well, This is embarrassing.");
+#if DEBUG
+            messageDialog.Content = $"The application has encoutered a problem. ({e.Message})";
+#endif
+
             messageDialog.Commands.Add(new Windows.UI.Popups.UICommand("Ok") { Id = 0 });
             messageDialog.ShowAsync();
         }
