@@ -1,20 +1,18 @@
-﻿<UserControl x:Class="Dex.Uwp.Cards.QuickMoveDetailsControl"
+﻿<UserControl x:Class="Dex.Uwp.Partials.ChargeMoveDetailsControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="using:Dex.Uwp.Controls"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:data="using:Dex.Core.Entities"
-             xmlns:controls="using:Dex.Uwp.Controls"
              xmlns:local="using:Dex.Uwp.Cards"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             d:DataContext="{d:DesignInstance Type=data:QuickMove,
+             d:DataContext="{d:DesignInstance Type=data:ChargeMove,
                                               IsDesignTimeCreatable=False}"
              d:DesignHeight="96"
              d:DesignWidth="400"
              mc:Ignorable="d">
 
-    <controls:HoverControl Margin="-12,0"
-                        VerticalAlignment="Top"
-                        Padding="12">
+    <controls:HoverControl Margin="-12,0" Padding="12">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -31,6 +29,7 @@
                             Width="60"
                             Height="20"
                             Template="{StaticResource PokemonTypeTemplate}" />
+
             <TextBlock Grid.Row="0"
                        Grid.Column="0"
                        VerticalAlignment="Center"
@@ -50,12 +49,12 @@
             <TextBlock Grid.Row="2"
                        Grid.Column="0"
                        Style="{StaticResource CaptionTextBlockStyle}">
-                <Run Text="Energy">
+                <Run Text="Dodge">
                     <Run.Foreground>
                         <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
                     </Run.Foreground>
                 </Run>
-                <Run Text="{Binding Energy}" />
+                <Run Text="{Binding Dodge}" />
             </TextBlock>
             <TextBlock Grid.Row="3"
                        Grid.Column="0"

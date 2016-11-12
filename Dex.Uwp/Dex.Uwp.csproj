@@ -261,7 +261,7 @@
     <Compile Include="Controls\CardHeader.xaml.cs">
       <DependentUpon>CardHeader.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Cards\ChargeMoveDetailsControl.xaml.cs">
+    <Compile Include="Partials\ChargeMoveDetailsControl.xaml.cs">
       <DependentUpon>ChargeMoveDetailsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cards\MoveRelatedPokemons.xaml.cs">
@@ -276,7 +276,7 @@
     <Compile Include="Cards\MoveCard.xaml.cs">
       <DependentUpon>MoveCard.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Cards\MoveListItem.xaml.cs">
+    <Compile Include="Partials\MoveListItem.xaml.cs">
       <DependentUpon>MoveListItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cards\MovesCard.xaml.cs">
@@ -285,10 +285,10 @@
     <Compile Include="Cards\PokemonCard.xaml.cs">
       <DependentUpon>PokemonCard.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Cards\PokemonListItem.xaml.cs">
+    <Compile Include="Partials\PokemonListItem.xaml.cs">
       <DependentUpon>PokemonListItem.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Cards\QuickMoveDetailsControl.xaml.cs">
+    <Compile Include="Partials\QuickMoveDetailsControl.xaml.cs">
       <DependentUpon>QuickMoveDetailsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\RectangularGauge.xaml.cs">
@@ -334,7 +334,7 @@
     <Compile Include="Services\IJsonService.cs" />
     <Compile Include="Services\INavigationService.cs" />
     <Compile Include="Services\NavigationServiceException.cs" />
-    <Compile Include="Theme\DexTemplateSelector.cs" />
+    <Compile Include="Theme\MoveDetailTemplateSelector.cs" />
     <Compile Include="Theme\ListItemTemplateSelector.cs" />
     <Compile Include="ValueConverters\NullOrEmptyToVisibilityConverter.cs" />
     <Compile Include="ValueConverters\EvolutionLineToGridLengthConverter.cs" />
@@ -382,7 +382,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Cards\ChargeMoveDetailsControl.xaml">
+    <Page Include="Partials\ChargeMoveDetailsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -402,7 +402,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Cards\MoveListItem.xaml">
+    <Page Include="Partials\MoveListItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -414,11 +414,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Cards\PokemonListItem.xaml">
+    <Page Include="Partials\PokemonListItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Cards\QuickMoveDetailsControl.xaml">
+    <Page Include="Partials\QuickMoveDetailsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -490,9 +490,7 @@
       <Name>Dex.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Cards\Partials\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

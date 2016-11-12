@@ -7,11 +7,11 @@ namespace Dex.Uwp.Theme
 {
     public class MoveDetailTemplateSelector : DataTemplateSelector
     {
-        private Dictionary<System.Type, DataTemplate> TypeToTemplateMapper;
+        private Dictionary<System.Type, object> TypeToTemplateMapper;
 
         public MoveDetailTemplateSelector()
         {
-            TypeToTemplateMapper = new Dictionary<System.Type, DataTemplate>()
+            TypeToTemplateMapper = new Dictionary<System.Type, object>()
             {
                 [typeof(QuickMove)] = GetTemplateFromResourceKey("QuickMoveDetailsDataTemplate"),
                 [typeof(ChargeMove)] = GetTemplateFromResourceKey("ChargeMoveDetailsDataTemplate"),
@@ -22,14 +22,14 @@ namespace Dex.Uwp.Theme
         protected override DataTemplate SelectTemplateCore(object item, DependencyObject container)
         {
             if (TypeToTemplateMapper.ContainsKey(item.GetType()))
-                return TypeToTemplateMapper[item.GetType()];
+                return (DataTemplate)TypeToTemplateMapper[item.GetType()];
 
             return base.SelectTemplateCore(item);
         }
 
-        private DataTemplate GetTemplateFromResourceKey(string resourceKey)
+        private object GetTemplateFromResourceKey(string resourceKey)
         {
-            return (DataTemplate)Application.Current.Resources[resourceKey];
+            return Application.Current.Resources[resourceKey];
         }
     }
 }

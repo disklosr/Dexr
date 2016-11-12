@@ -2,22 +2,23 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:controls="using:Dex.Uwp.Cards"
                     xmlns:data="using:Dex.Core.Entities"
-                    xmlns:local="using:Dex.Uwp.Theme">
+                    xmlns:local="using:Dex.Uwp.Theme"
+                    xmlns:partials="using:Dex.Uwp.Partials">
 
     <DataTemplate x:Key="QuickMoveDetailsDataTemplate">
-        <controls:QuickMoveDetailsControl />
+        <partials:QuickMoveDetailsControl />
     </DataTemplate>
 
     <DataTemplate x:Key="ChargeMoveDetailsDataTemplate">
-        <controls:ChargeMoveDetailsControl />
+        <partials:ChargeMoveDetailsControl />
     </DataTemplate>
 
     <DataTemplate x:Key="PokemonListItemTemplate">
-        <controls:PokemonListItem />
+        <partials:PokemonListItem />
     </DataTemplate>
 
     <DataTemplate x:Key="MoveListItemTemplate">
-        <controls:MoveListItem />
+        <partials:MoveListItem />
     </DataTemplate>
 
     <local:MoveDetailTemplateSelector x:Key="MovesTemplateSelector" />
