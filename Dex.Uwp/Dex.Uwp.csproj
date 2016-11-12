@@ -255,10 +255,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Cards\Card.xaml.cs">
+    <Compile Include="Controls\Card.xaml.cs">
       <DependentUpon>Card.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Cards\CardHeader.xaml.cs">
+    <Compile Include="Controls\CardHeader.xaml.cs">
       <DependentUpon>CardHeader.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cards\ChargeMoveDetailsControl.xaml.cs">
@@ -270,7 +270,7 @@
     <Compile Include="Cards\EvolutionLineCard.xaml.cs">
       <DependentUpon>EvolutionLineCard.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Cards\HoverControl.xaml.cs">
+    <Compile Include="Controls\HoverControl.xaml.cs">
       <DependentUpon>HoverControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cards\MoveCard.xaml.cs">
@@ -291,7 +291,7 @@
     <Compile Include="Cards\QuickMoveDetailsControl.xaml.cs">
       <DependentUpon>QuickMoveDetailsControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Cards\RectangularGauge.xaml.cs">
+    <Compile Include="Controls\RectangularGauge.xaml.cs">
       <DependentUpon>RectangularGauge.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\ShadowHost.xaml.cs">
@@ -375,11 +375,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Cards\Card.xaml">
+    <Page Include="Controls\Card.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Cards\CardHeader.xaml">
+    <Page Include="Controls\CardHeader.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -395,7 +395,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Cards\HoverControl.xaml">
+    <Page Include="Controls\HoverControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -423,7 +423,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Cards\RectangularGauge.xaml">
+    <Page Include="Controls\RectangularGauge.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -495,7 +495,9 @@
       <Name>Dex.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Cards\Partials\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

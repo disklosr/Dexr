@@ -1,6 +1,7 @@
 ﻿<UserControl x:Class="Dex.Uwp.Cards.MoveCard"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="using:Dex.Uwp.Controls"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:data="using:Dex.Core.Entities"
              xmlns:local="using:Dex.Uwp.Cards"
@@ -11,7 +12,7 @@
              d:DesignWidth="400"
              mc:Ignorable="d">
 
-    <local:Card VerticalAlignment="Top" Padding="12">
+    <controls:Card VerticalAlignment="Top" Padding="12">
         <RelativePanel>
             <TextBlock Name="MoveName"
                        RelativePanel.AlignHorizontalCenterWithPanel="True"
@@ -27,5 +28,5 @@
                             RelativePanel.Below="MoveName"
                             Template="{StaticResource PokemonTypeTemplate}" />
         </RelativePanel>
-    </local:Card>
+    </controls:Card>
 </UserControl>

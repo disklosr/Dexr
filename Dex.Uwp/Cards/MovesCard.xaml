@@ -4,6 +4,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:data="using:Dex.Core.Entities"
              xmlns:local="using:Dex.Uwp.Cards"
+             xmlns:controls="using:Dex.Uwp.Controls"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="using:Dex.Uwp.ViewModels"
              d:DataContext="{d:DesignInstance Type=data:PokemonMoves,
@@ -12,20 +13,20 @@
              d:DesignWidth="400"
              mc:Ignorable="d">
 
-    <local:Card VerticalAlignment="Top" Padding="12">
+    <controls:Card VerticalAlignment="Top" Padding="12">
         <StackPanel>
-            <local:CardHeader Title="Quick Moves" />
+            <controls:CardHeader Title="Quick Moves" />
             <ItemsControl Name="QuickMovesList"
                           ItemContainerStyle="{StaticResource StretchListItemStyle}"
                           ItemTemplateSelector="{StaticResource MovesTemplateSelector}"
                           ItemsSource="{Binding QuickMoves}" />
 
-            <local:CardHeader Title="Charge Moves" Margin="0,12,0,0" />
+            <controls:CardHeader Title="Charge Moves" Margin="0,12,0,0" />
 
             <ItemsControl Name="ChargeMovesList"
                           ItemContainerStyle="{StaticResource StretchListItemStyle}"
                           ItemTemplateSelector="{StaticResource MovesTemplateSelector}"
                           ItemsSource="{Binding ChargeMoves}" />
         </StackPanel>
-    </local:Card>
+    </controls:Card>
 </UserControl>

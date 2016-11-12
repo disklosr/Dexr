@@ -1,6 +1,7 @@
 ﻿<UserControl x:Class="Dex.Uwp.Cards.EvolutionLineCard"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="using:Dex.Uwp.Controls"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="using:Dex.Uwp.Cards"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -22,9 +23,9 @@
         </Style>
     </UserControl.Resources>
 
-    <local:Card VerticalAlignment="Top" Padding="12">
+    <controls:Card VerticalAlignment="Top" Padding="12">
         <StackPanel>
-            <local:CardHeader Title="Evolutions" />
+            <controls:CardHeader Title="Evolutions" />
             <Grid Name="RootGrid">
                 <TextBlock x:Uid="MessageNoEvolutionFound"
                            HorizontalAlignment="Center"
@@ -84,5 +85,5 @@
                 </Grid>
             </Grid>
         </StackPanel>
-    </local:Card>
+    </controls:Card>
 </UserControl>

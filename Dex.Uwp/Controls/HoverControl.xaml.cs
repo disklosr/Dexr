@@ -3,7 +3,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 
-namespace Dex.Uwp.Cards
+namespace Dex.Uwp.Controls
 {
     public sealed partial class HoverControl : ContentControl
     {

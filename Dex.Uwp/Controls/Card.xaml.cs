@@ -1,6 +1,6 @@
 ﻿using Windows.UI.Xaml.Controls;
 
-namespace Dex.Uwp.Cards
+namespace Dex.Uwp.Controls
 {
     public sealed partial class Card : ContentControl
     {

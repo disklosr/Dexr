@@ -9,9 +9,6 @@
              mc:Ignorable="d">
 
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        <!--<FontIcon HorizontalAlignment="Center"
-                  FontSize="24"
-                  Glyph="{Binding Glyph}" />-->
         <TextBlock Margin="0,6,0,0"
                    HorizontalAlignment="Center"
                    FontFamily="Segoe UI"

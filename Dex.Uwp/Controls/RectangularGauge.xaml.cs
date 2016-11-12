@@ -4,7 +4,7 @@ using Windows.UI.Xaml.Hosting;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace Dex.Uwp.Cards
+namespace Dex.Uwp.Controls
 {
     public sealed partial class RectangularGauge : UserControl
     {
