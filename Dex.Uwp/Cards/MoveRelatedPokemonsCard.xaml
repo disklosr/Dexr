@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:controls="using:Dex.Uwp.Controls"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="using:Dex.Uwp.Cards"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vc="using:Dex.Uwp.ValueConverters"
              xmlns:vm="using:Dex.Uwp.ViewModels"
@@ -16,25 +15,25 @@
     <controls:Card VerticalAlignment="Top" Padding="12">
         <StackPanel>
             <controls:CardHeader Title="Used by" />
-            <ItemsControl ItemContainerStyle="{StaticResource StretchListItemStyle}" ItemsSource="{Binding RelatedPokemons}">
-                <ItemsControl.ItemTemplate>
+            <ListView Margin="-12,0"
+                      ItemContainerStyle="{StaticResource FlatListItemStyle}"
+                      ItemsSource="{Binding RelatedPokemons}">
+                <ListView.ItemTemplate>
                     <DataTemplate>
-                        <controls:HoverControl Margin="-12,0">
-                            <Grid>
-                                <TextBlock Margin="12" Text="{Binding Name, Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
+                        <Grid Margin="-12,0">
+                            <TextBlock Margin="12" Text="{Binding Name, Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
 
-                                <Image Width="36"
-                                       Height="36"
-                                       Margin="0,0,4,0"
-                                       HorizontalAlignment="Right"
-                                       VerticalAlignment="Center"
-                                       Source="{Binding DexNumber,
-                                                        Converter={StaticResource PokemonDexNumberToPictureConverter}}" />
-                            </Grid>
-                        </controls:HoverControl>
+                            <Image Width="36"
+                                   Height="36"
+                                   Margin="0,0,12,0"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Center"
+                                   Source="{Binding DexNumber,
+                                                    Converter={StaticResource PokemonDexNumberToPictureConverter}}" />
+                        </Grid>
                     </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackPanel>
     </controls:Card>
 </UserControl>
