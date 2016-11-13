@@ -24,30 +24,34 @@
                            RelativePanel.AlignVerticalCenterWithPanel="True"
                            Source="{Binding DexNumber,
                                             Converter={StaticResource PokemonDexNumberToPictureConverter}}" />
-                    <TextBlock x:Name="PokemonName"
-                               VerticalAlignment="Top"
-                               RelativePanel.AlignHorizontalCenterWithPanel="True"
-                               RelativePanel.AlignTopWithPanel="True"
-                               RelativePanel.RightOf="PokemonPicture"
-                               Text="{Binding Name,
-                                              Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
-                    <TextBlock Name="Type1Name"
-                               VerticalAlignment="Bottom"
-                               Foreground="{Binding Type1,
-                                                    Converter={StaticResource PokemonTypeToColorConverter}}"
-                               RelativePanel.AlignLeftWith="PokemonName"
-                               RelativePanel.Below="PokemonName"
-                               Style="{StaticResource CaptionTextBlockStyle}"
-                               Text="{Binding Type1}" />
-                    <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
-                               RelativePanel.AlignBottomWith="Type1Name"
-                               RelativePanel.RightOf="Type1Name"
-                               Style="{StaticResource CaptionTextBlockStyle}"
-                               Visibility="{Binding Type2,
-                                                    Converter={StaticResource PokemonUnknownTypeToVisibilityConverter}}">
-                        <Run Text=" -" />
-                        <Run Foreground="{Binding Type2, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Type2}" />
-                    </TextBlock>
+                    <StackPanel VerticalAlignment="Center"
+                                Orientation="Vertical"
+                                RelativePanel.AlignVerticalCenterWithPanel="True"
+                                RelativePanel.RightOf="PokemonPicture">
+                        <TextBlock x:Name="PokemonName"
+                                   VerticalAlignment="Top"
+                                   Text="{Binding Name,
+                                                  Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock x:Name="Type1Name"
+                                       VerticalAlignment="Bottom"
+                                       Foreground="{Binding Type1,
+                                                            Converter={StaticResource PokemonTypeToColorConverter}}"
+                                       RelativePanel.AlignLeftWith="PokemonName"
+                                       RelativePanel.Below="PokemonName"
+                                       Style="{StaticResource CaptionTextBlockStyle}"
+                                       Text="{Binding Type1}" />
+
+                            <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
+                                       Style="{StaticResource CaptionTextBlockStyle}"
+                                       Visibility="{Binding Type2,
+                                                            Converter={StaticResource PokemonUnknownTypeToVisibilityConverter}}">
+                                <Run Text=" -" />
+                                <Run Foreground="{Binding Type2, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Type2}" />
+                            </TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+
                     <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
                                RelativePanel.AlignRightWithPanel="True"
                                RelativePanel.AlignVerticalCenterWithPanel="True"
