@@ -23,10 +23,10 @@
         </Style>
     </UserControl.Resources>
 
-    <controls:Card VerticalAlignment="Top" Padding="12">
+    <controls:Card VerticalAlignment="Top">
         <StackPanel>
             <controls:CardHeader Title="Evolutions" />
-            <Grid Name="RootGrid">
+            <Grid Name="RootGrid" Padding="12,0,12,12">
                 <TextBlock x:Uid="MessageNoEvolutionFound"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"

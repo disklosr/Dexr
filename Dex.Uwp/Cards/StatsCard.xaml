@@ -8,22 +8,23 @@
              xmlns:vm="using:Dex.Uwp.ViewModels"
              d:DataContext="{d:DesignInstance Type=vm:PokemonDetailViewModel,
                                               IsDesignTimeCreatable=False}"
-             d:DesignHeight="240"
+             d:DesignHeight="260"
              d:DesignWidth="400"
              mc:Ignorable="d">
 
-    <controls:Card VerticalAlignment="Top" Padding="12">
+    <controls:Card VerticalAlignment="Top">
         <StackPanel>
             <controls:CardHeader Title="Base Stats" />
 
-            <controls:RectangularGauge DataContext="{Binding AttackStats}"
+            <controls:RectangularGauge Margin="12"
+                                       DataContext="{Binding AttackStats}"
                                        Foreground="{StaticResource AppAttackBrush}"
                                        Tag="ATK" />
-            <controls:RectangularGauge Margin="0,12,0,0"
+            <controls:RectangularGauge Margin="12"
                                        DataContext="{Binding DefenseStats}"
                                        Foreground="{StaticResource AppDefenseBrush}"
                                        Tag="DEF" />
-            <controls:RectangularGauge Margin="0,12,0,0"
+            <controls:RectangularGauge Margin="12"
                                        DataContext="{Binding StaminaStats}"
                                        Foreground="{StaticResource AppStaminaBrush}"
                                        Tag="STM" />

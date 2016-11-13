@@ -6,6 +6,8 @@
              xmlns:data="using:Dex.Core.Entities"
              xmlns:local="using:Dex.Uwp.Cards"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DataContext="{d:DesignInstance Type=data:Move,
+                                              IsDesignTimeCreatable=False}"
              d:DesignHeight="500"
              d:DesignWidth="400"
              mc:Ignorable="d">
@@ -17,14 +19,16 @@
                        Style="{StaticResource TitleTextBlockStyle}"
                        Text="{Binding Name,
                                       Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
-            <ContentControl Grid.RowSpan="4"
+            <controls:Badge Grid.RowSpan="4"
                             Grid.Column="1"
                             Width="80"
                             Height="20"
                             Margin="0,12,0,0"
+                            Background="{Binding Type,
+                                                 Converter={StaticResource PokemonTypeToColorConverter}}"
                             RelativePanel.AlignHorizontalCenterWith="MoveName"
                             RelativePanel.Below="MoveName"
-                            Template="{StaticResource PokemonTypeTemplate}" />
+                            Text="{Binding Type}" />
         </RelativePanel>
     </controls:Card>
 </UserControl>

@@ -10,8 +10,7 @@
 
     <ContentControl.Template>
         <ControlTemplate>
-            <Border Margin="-12,-12,-12,0"
-                    VerticalAlignment="Top"
+            <Border VerticalAlignment="Top"
                     Background="{StaticResource SystemListLowColorBrush}"
                     Padding="12">
                 <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="{Binding Title, RelativeSource={RelativeSource TemplatedParent}}" />

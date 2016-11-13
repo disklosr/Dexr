@@ -12,51 +12,49 @@
              d:DesignWidth="400"
              mc:Ignorable="d">
 
-    <controls:HoverControl Margin="-12,0" Padding="12">
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
+    <Grid Padding="12">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
-            <controls:Badge Grid.RowSpan="4"
-                            Grid.Column="1"
-                            Width="60"
-                            Height="20"
-                            Background="{Binding Type,
-                                                 Converter={StaticResource PokemonTypeToColorConverter}}"
-                            Text="{Binding Type}" />
+        <controls:Badge Grid.RowSpan="4"
+                        Grid.Column="1"
+                        Width="60"
+                        Height="20"
+                        Background="{Binding Type,
+                                             Converter={StaticResource PokemonTypeToColorConverter}}"
+                        Text="{Binding Type}" />
 
-            <TextBlock Grid.Row="0"
-                       Grid.Column="0"
-                       VerticalAlignment="Center"
-                       FontSize="18"
-                       Text="{Binding Name}" />
-            <TextBlock Grid.Row="1"
-                       Grid.Column="0"
-                       Style="{StaticResource CaptionTextBlockStyle}">
-                <Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Attack}" />
-                <Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Type}" />
-                <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="damage" />
-            </TextBlock>
-            <TextBlock Grid.Row="2"
-                       Grid.Column="0"
-                       Style="{StaticResource CaptionTextBlockStyle}">
-                <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="Dodge" />
-                <Run Text="{Binding Dodge}" />
-            </TextBlock>
-            <TextBlock Grid.Row="3"
-                       Grid.Column="0"
-                       Style="{StaticResource CaptionTextBlockStyle}">
-                <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="Cooldown" />
-                <Run Text="{Binding CoolDown}" />
-            </TextBlock>
-        </Grid>
-    </controls:HoverControl>
+        <TextBlock Grid.Row="0"
+                   Grid.Column="0"
+                   VerticalAlignment="Center"
+                   FontSize="18"
+                   Text="{Binding Name}" />
+        <TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   Style="{StaticResource CaptionTextBlockStyle}">
+            <Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Attack}" />
+            <Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Type}" />
+            <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="damage" />
+        </TextBlock>
+        <TextBlock Grid.Row="2"
+                   Grid.Column="0"
+                   Style="{StaticResource CaptionTextBlockStyle}">
+            <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="Dodge" />
+            <Run Text="{Binding Dodge}" />
+        </TextBlock>
+        <TextBlock Grid.Row="3"
+                   Grid.Column="0"
+                   Style="{StaticResource CaptionTextBlockStyle}">
+            <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="Cooldown" />
+            <Run Text="{Binding CoolDown}" />
+        </TextBlock>
+    </Grid>
 </UserControl>

@@ -12,15 +12,13 @@
              d:DesignWidth="400"
              mc:Ignorable="d">
 
-    <controls:Card VerticalAlignment="Top" Padding="12">
+    <controls:Card VerticalAlignment="Top">
         <StackPanel>
             <controls:CardHeader Title="Used by" />
-            <ListView Margin="-12,0"
-                      ItemContainerStyle="{StaticResource FlatListItemStyle}"
-                      ItemsSource="{Binding RelatedPokemons}">
+            <ListView ItemContainerStyle="{StaticResource FlatListItemStyle}" ItemsSource="{Binding RelatedPokemons}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Grid Margin="-12,0">
+                        <Grid>
                             <TextBlock Margin="12" Text="{Binding Name, Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
 
                             <Image Width="36"
