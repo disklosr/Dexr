@@ -40,30 +40,18 @@
                        Style="{StaticResource CaptionTextBlockStyle}">
                 <Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Attack}" />
                 <Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Type}" />
-                <Run Text="damage">
-                    <Run.Foreground>
-                        <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                    </Run.Foreground>
-                </Run>
+                <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="damage" />
             </TextBlock>
             <TextBlock Grid.Row="2"
                        Grid.Column="0"
                        Style="{StaticResource CaptionTextBlockStyle}">
-                <Run Text="Dodge">
-                    <Run.Foreground>
-                        <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                    </Run.Foreground>
-                </Run>
+                <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="Dodge" />
                 <Run Text="{Binding Dodge}" />
             </TextBlock>
             <TextBlock Grid.Row="3"
                        Grid.Column="0"
                        Style="{StaticResource CaptionTextBlockStyle}">
-                <Run Text="Cooldown">
-                    <Run.Foreground>
-                        <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                    </Run.Foreground>
-                </Run>
+                <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="Cooldown" />
                 <Run Text="{Binding CoolDown}" />
             </TextBlock>
         </Grid>

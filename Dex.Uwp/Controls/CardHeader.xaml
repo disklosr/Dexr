@@ -12,15 +12,9 @@
         <ControlTemplate>
             <Border Margin="-12,-12,-12,0"
                     VerticalAlignment="Top"
+                    Background="{StaticResource SystemListLowColorBrush}"
                     Padding="12">
-                <Border.Background>
-                    <SolidColorBrush Color="{ThemeResource SystemListLowColor}" />
-                </Border.Background>
-                <TextBlock Text="{Binding Title, RelativeSource={RelativeSource TemplatedParent}}">
-                    <TextBlock.Foreground>
-                        <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                    </TextBlock.Foreground>
-                </TextBlock>
+                <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="{Binding Title, RelativeSource={RelativeSource TemplatedParent}}" />
             </Border>
         </ControlTemplate>
     </ContentControl.Template>

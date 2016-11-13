@@ -12,11 +12,7 @@
     <ContentControl.Template>
         <ControlTemplate>
             <controls:ShadowHost MinHeight="48">
-                <ContentPresenter Padding="{TemplateBinding Padding}">
-                    <ContentPresenter.Background>
-                        <SolidColorBrush Color="{ThemeResource AppGreyColorLighter3}" />
-                    </ContentPresenter.Background>
-                </ContentPresenter>
+                <ContentPresenter Background="{StaticResource AppGreyBrushLighter3}" Padding="{TemplateBinding Padding}" />
             </controls:ShadowHost>
         </ControlTemplate>
     </ContentControl.Template>

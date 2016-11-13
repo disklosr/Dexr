@@ -2,9 +2,9 @@
 
 namespace Dex.Uwp.Cards
 {
-    public sealed partial class MoveRelatedPokemons : UserControl
+    public sealed partial class MoveRelatedPokemonsCard : UserControl
     {
-        public MoveRelatedPokemons()
+        public MoveRelatedPokemonsCard()
         {
             this.InitializeComponent();
         }

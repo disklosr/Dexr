@@ -13,15 +13,8 @@
              d:DesignWidth="400"
              mc:Ignorable="d">
 
-    <UserControl.Resources>
-        <vc:PokemonType2TextFormatter x:Key="PokemonType2TextFormatter" />
-    </UserControl.Resources>
-
     <controls:Card Height="84">
-        <controls:HoverControl>
-            <controls:HoverControl.Background>
-                <SolidColorBrush Color="{ThemeResource AppGreyColorLighter3}" />
-            </controls:HoverControl.Background>
+        <controls:HoverControl Background="{StaticResource AppGreyBrushLighter3}">
             <Border BorderBrush="{Binding Type1, Converter={StaticResource PokemonTypeToColorConverter}}" BorderThickness="0,0,0,2">
                 <RelativePanel Padding="12,4">
 
@@ -46,25 +39,20 @@
                                RelativePanel.Below="PokemonName"
                                Style="{StaticResource CaptionTextBlockStyle}"
                                Text="{Binding Type1}" />
-                    <TextBlock RelativePanel.AlignBottomWith="Type1Name"
+                    <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
+                               RelativePanel.AlignBottomWith="Type1Name"
                                RelativePanel.RightOf="Type1Name"
                                Style="{StaticResource CaptionTextBlockStyle}"
                                Visibility="{Binding Type2,
                                                     Converter={StaticResource PokemonUnknownTypeToVisibilityConverter}}">
-                        <TextBlock.Foreground>
-                            <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                        </TextBlock.Foreground>
                         <Run Text=" -" />
                         <Run Foreground="{Binding Type2, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Type2}" />
                     </TextBlock>
-                    <TextBlock RelativePanel.AlignRightWithPanel="True"
+                    <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
+                               RelativePanel.AlignRightWithPanel="True"
                                RelativePanel.AlignVerticalCenterWithPanel="True"
                                Style="{StaticResource CaptionTextBlockStyle}"
-                               Text="{Binding DexNumber}">
-                        <TextBlock.Foreground>
-                            <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                        </TextBlock.Foreground>
-                    </TextBlock>
+                               Text="{Binding DexNumber}" />
                 </RelativePanel>
             </Border>
         </controls:HoverControl>

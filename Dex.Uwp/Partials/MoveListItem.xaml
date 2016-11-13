@@ -13,21 +13,15 @@
              mc:Ignorable="d">
 
     <controls:Card Height="84">
-        <controls:HoverControl>
-            <controls:HoverControl.Background>
-                <SolidColorBrush Color="{ThemeResource AppGreyColorLighter3}" />
-            </controls:HoverControl.Background>
+        <controls:HoverControl Background="{StaticResource AppGreyBrushLighter3}">
             <Border BorderBrush="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" BorderThickness="0,0,0,2">
                 <RelativePanel Padding="12,4">
 
                     <StackPanel RelativePanel.AlignVerticalCenterWithPanel="True">
                         <TextBlock Text="{Binding Name, Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
-                        <TextBlock Style="{StaticResource CaptionTextBlockStyle}">
-                            <TextBlock.Foreground>
-                                <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                            </TextBlock.Foreground>
-                            <Run Text="{Binding MoveType}" />
-                        </TextBlock>
+                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
+                                   Style="{StaticResource CaptionTextBlockStyle}"
+                                   Text="{Binding MoveType}" />
                     </StackPanel>
 
                     <ContentControl Width="60"

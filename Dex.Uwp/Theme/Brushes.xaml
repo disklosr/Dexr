@@ -26,4 +26,7 @@
     <Brush x:Key="AppStaminaBrush">#ff7473</Brush>
 
     <SolidColorBrush x:Key="SystemChormeLowColorBrush" Color="{StaticResource SystemChromeLowColor}" />
+    <SolidColorBrush x:Key="SystemChromeDisabledLowColorBrush" Color="{StaticResource SystemChromeDisabledLowColor}" />
+    <SolidColorBrush x:Key="SystemListLowColorBrush" Color="{StaticResource SystemListLowColor}" />
+    <SolidColorBrush x:Key="SystemAltHighColorBrush" Color="{StaticResource SystemAltHighColor}" />
 </ResourceDictionary>
