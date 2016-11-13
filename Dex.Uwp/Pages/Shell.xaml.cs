@@ -1,6 +1,7 @@
 ﻿using Dex.Uwp.Infrastructure;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Data;
 
 namespace Dex.Uwp.Pages
 {
@@ -18,12 +19,13 @@ namespace Dex.Uwp.Pages
 
         private void CurrentPage_Loaded(object sender, RoutedEventArgs e)
         {
-            //Set Page Title
-            PageTitle.Text = currentPage.Title;
-
             //Set Appbar visibility
             MainCommandBar.Visibility = currentPage.RequiresAppBar ?
                 Visibility.Visible : Visibility.Collapsed;
+
+            //Set title binding
+            var binding = new Binding() { Path = new PropertyPath("Title"), Source = currentPage };
+            PageTitle.SetBinding(TextBlock.TextProperty, binding);
 
             //Set Application Bar Buttons
             commandsBar.Items.Clear();
