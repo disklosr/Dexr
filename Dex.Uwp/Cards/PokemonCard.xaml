@@ -12,13 +12,9 @@
              d:DesignWidth="400"
              mc:Ignorable="d">
 
-    <UserControl.Resources>
-        <Color x:Key="SecondaryTextColor">#77000000</Color>
-        <Color x:Key="SubtleBorderDividerColor">#90000000</Color>
-    </UserControl.Resources>
-
     <controls:Card VerticalAlignment="Top" Padding="12">
         <RelativePanel>
+            <!--  Pokemon Picture  -->
             <Image Name="PokemonPicture"
                    Width="192"
                    Height="192"
@@ -31,6 +27,8 @@
                     </TransitionCollection>
                 </Image.Transitions>
             </Image>
+
+            <!--  Pokemon Name  -->
             <TextBlock Name="PokemonName"
                        Height="32"
                        Margin="0,12,0,0"
@@ -41,45 +39,37 @@
                        Text="{Binding Name,
                                       Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
 
+            <!--  Pokemon Types  -->
             <StackPanel Name="PokemonTypes"
                         Margin="0,12,0,0"
                         Orientation="Horizontal"
                         RelativePanel.AlignHorizontalCenterWithPanel="True"
                         RelativePanel.Below="PokemonName">
-                <Border Background="{Binding Type1, Converter={StaticResource PokemonTypeToColorConverter}}" CornerRadius="1">
-                    <TextBlock Width="100"
-                               Height="24"
-                               Text="{Binding Type1}"
-                               TextAlignment="Center">
-                        <TextBlock.Foreground>
-                            <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
-                        </TextBlock.Foreground>
-                    </TextBlock>
-                </Border>
-                <Border Margin="12,0,0,0"
-                        Background="{Binding Type2,
-                                             Converter={StaticResource PokemonTypeToColorConverter}}"
-                        CornerRadius="1"
-                        Visibility="{Binding Type2,
-                                             Converter={StaticResource PokemonUnknownTypeToVisibilityConverter}}">
-                    <TextBlock Width="100"
-                               Text="{Binding Type2}"
-                               TextAlignment="Center">
-                        <TextBlock.Foreground>
-                            <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
-                        </TextBlock.Foreground>
-                    </TextBlock>
-                </Border>
+
+                <controls:Badge Width="100"
+                                Height="24"
+                                Background="{Binding Type1,
+                                                     Converter={StaticResource PokemonTypeToColorConverter}}"
+                                Text="{Binding Type1}" />
+
+                <controls:Badge Width="100"
+                                Height="24"
+                                Margin="12,0,0,0"
+                                Background="{Binding Type2,
+                                                     Converter={StaticResource PokemonTypeToColorConverter}}"
+                                Text="{Binding Type2}"
+                                Visibility="{Binding Type2,
+                                                     Converter={StaticResource PokemonUnknownTypeToVisibilityConverter}}" />
             </StackPanel>
+
+            <!--  Pokemon Stats  -->
             <controls:HoverControl Margin="-12,24,-12,-12"
+                                   Background="{StaticResource SystemChormeLowColorBrush}"
                                    Padding="12"
                                    RelativePanel.AlignHorizontalCenterWithPanel="True"
                                    RelativePanel.AlignLeftWithPanel="True"
                                    RelativePanel.AlignRightWithPanel="True"
                                    RelativePanel.Below="PokemonTypes">
-                <controls:HoverControl.Background>
-                    <SolidColorBrush Color="{ThemeResource SystemChromeLowColor}" />
-                </controls:HoverControl.Background>
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
@@ -94,12 +84,13 @@
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
 
+                    <!--  Flee Stat  -->
                     <StackPanel Grid.Row="0" Grid.Column="0">
-                        <TextBlock Text="{Binding FleeRate, Converter={StaticResource StringAppenderFormatter}, ConverterParameter='%'}" TextAlignment="Center">
-                            <TextBlock.Foreground>
-                                <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                            </TextBlock.Foreground>
-                        </TextBlock>
+                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
+                                   Text="{Binding FleeRate,
+                                                  Converter={StaticResource StringAppenderFormatter},
+                                                  ConverterParameter='%'}"
+                                   TextAlignment="Center" />
                         <TextBlock FontSize="11"
                                    Text="Flee"
                                    TextAlignment="Center" />
@@ -108,17 +99,14 @@
                     <Border Grid.Row="0"
                             Grid.Column="1"
                             Margin="0,4"
-                            BorderThickness="1,0,0,0">
-                        <Border.BorderBrush>
-                            <SolidColorBrush Color="{StaticResource SecondaryTextColor}" />
-                        </Border.BorderBrush>
-                    </Border>
+                            BorderBrush="{StaticResource SubtleBorderDividerBrush}"
+                            BorderThickness="1,0,0,0" />
+
+                    <!--  Candies Stat  -->
                     <StackPanel Grid.Row="0" Grid.Column="2">
-                        <TextBlock Text="{Binding CandiesToEvolve}" TextAlignment="Center">
-                            <TextBlock.Foreground>
-                                <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                            </TextBlock.Foreground>
-                        </TextBlock>
+                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
+                                   Text="{Binding CandiesToEvolve}"
+                                   TextAlignment="Center" />
                         <TextBlock FontSize="11"
                                    Text="Evolve"
                                    TextAlignment="Center" />
@@ -126,28 +114,24 @@
                     <Border Grid.Row="0"
                             Grid.Column="3"
                             Margin="0,4"
-                            BorderThickness="1,0,0,0">
-                        <Border.BorderBrush>
-                            <SolidColorBrush Color="{StaticResource SubtleBorderDividerColor}" />
-                        </Border.BorderBrush>
-                    </Border>
+                            BorderBrush="{StaticResource SubtleBorderDividerBrush}"
+                            BorderThickness="1,0,0,0" />
+
+                    <!--  CP Stat  -->
                     <StackPanel Grid.Row="0" Grid.Column="4">
-                        <TextBlock Text="{Binding MaxCP}" TextAlignment="Center">
-                            <TextBlock.Foreground>
-                                <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                            </TextBlock.Foreground>
-                        </TextBlock>
+                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
+                                   Text="{Binding MaxCP}"
+                                   TextAlignment="Center" />
                         <TextBlock FontSize="11"
                                    Text="Max CP"
                                    TextAlignment="Center" />
                     </StackPanel>
 
+                    <!--  Attack Stat  -->
                     <StackPanel Grid.Row="2" Grid.Column="0">
-                        <TextBlock Text="{Binding Attack.Value}" TextAlignment="Center">
-                            <TextBlock.Foreground>
-                                <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                            </TextBlock.Foreground>
-                        </TextBlock>
+                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
+                                   Text="{Binding Attack.Value}"
+                                   TextAlignment="Center" />
                         <TextBlock FontSize="11"
                                    Text="ATK"
                                    TextAlignment="Center" />
@@ -156,17 +140,14 @@
                     <Border Grid.Row="2"
                             Grid.Column="1"
                             Margin="0,4"
-                            BorderThickness="1,0,0,0">
-                        <Border.BorderBrush>
-                            <SolidColorBrush Color="{StaticResource SecondaryTextColor}" />
-                        </Border.BorderBrush>
-                    </Border>
+                            BorderBrush="{StaticResource SubtleBorderDividerBrush}"
+                            BorderThickness="1,0,0,0" />
+
+                    <!--  Defense Stat  -->
                     <StackPanel Grid.Row="2" Grid.Column="2">
-                        <TextBlock Text="{Binding Defense.Value}" TextAlignment="Center">
-                            <TextBlock.Foreground>
-                                <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                            </TextBlock.Foreground>
-                        </TextBlock>
+                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
+                                   Text="{Binding Defense.Value}"
+                                   TextAlignment="Center" />
                         <TextBlock FontSize="11"
                                    Text="DEF"
                                    TextAlignment="Center" />
@@ -174,17 +155,14 @@
                     <Border Grid.Row="2"
                             Grid.Column="3"
                             Margin="0,4"
-                            BorderThickness="1,0,0,0">
-                        <Border.BorderBrush>
-                            <SolidColorBrush Color="{StaticResource SubtleBorderDividerColor}" />
-                        </Border.BorderBrush>
-                    </Border>
+                            BorderBrush="{StaticResource SubtleBorderDividerBrush}"
+                            BorderThickness="1,0,0,0" />
+
+                    <!--  Stamina Stat  -->
                     <StackPanel Grid.Row="2" Grid.Column="4">
-                        <TextBlock Text="{Binding Stamina.Value}" TextAlignment="Center">
-                            <TextBlock.Foreground>
-                                <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                            </TextBlock.Foreground>
-                        </TextBlock>
+                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
+                                   Text="{Binding Stamina.Value}"
+                                   TextAlignment="Center" />
                         <TextBlock FontSize="11"
                                    Text="STM"
                                    TextAlignment="Center" />

@@ -261,8 +261,8 @@
     <Compile Include="Controls\CardHeader.xaml.cs">
       <DependentUpon>CardHeader.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\PokemonTypeBadgeControl.xaml.cs">
-      <DependentUpon>PokemonTypeBadgeControl.xaml</DependentUpon>
+    <Compile Include="Controls\Badge.xaml.cs">
+      <DependentUpon>Badge.xaml</DependentUpon>
     </Compile>
     <Compile Include="Partials\ChargeMoveDetailsControl.xaml.cs">
       <DependentUpon>ChargeMoveDetailsControl.xaml</DependentUpon>
@@ -385,7 +385,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\PokemonTypeBadgeControl.xaml">
+    <Page Include="Controls\Badge.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
