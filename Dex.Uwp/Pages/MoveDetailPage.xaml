@@ -22,7 +22,7 @@
             </ListView.ItemContainerTransitions>
             <ListView.Items>
                 <controls:MoveCard DataContext="{Binding SelectedMove}" />
-                <controls:MoveRelatedPokemonsCard />
+                <controls:MoveRelatedPokemonsCard x:Name="UsedByCard" />
             </ListView.Items>
         </ListView>
     </Grid>

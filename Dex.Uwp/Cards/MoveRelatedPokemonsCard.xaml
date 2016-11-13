@@ -15,19 +15,51 @@
     <controls:Card VerticalAlignment="Top">
         <StackPanel>
             <controls:CardHeader Title="Used by" />
-            <ListView ItemContainerStyle="{StaticResource FlatListItemStyle}" ItemsSource="{Binding RelatedPokemons}">
+            <ListView Name="UsedByList"
+                      IsItemClickEnabled="True"
+                      ItemContainerStyle="{StaticResource FlatListItemStyle}"
+                      ItemsSource="{Binding RelatedPokemons}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Grid>
-                            <TextBlock Margin="12" Text="{Binding Name, Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
+                        <Grid Padding="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
 
-                            <Image Width="36"
-                                   Height="36"
-                                   Margin="0,0,12,0"
+                            <Image Grid.Column="0"
+                                   Width="40"
+                                   Height="40"
                                    HorizontalAlignment="Right"
                                    VerticalAlignment="Center"
                                    Source="{Binding DexNumber,
                                                     Converter={StaticResource PokemonDexNumberToPictureConverter}}" />
+                            <TextBlock Grid.Column="1"
+                                       Margin="12,0,0,0"
+                                       HorizontalAlignment="Left"
+                                       VerticalAlignment="Center"
+                                       Text="{Binding Name,
+                                                      Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
+
+                            <StackPanel Grid.Column="2"
+                                        VerticalAlignment="Center"
+                                        Orientation="Vertical">
+                                <controls:Badge Width="60"
+                                                Height="20"
+                                                Background="{Binding Type1,
+                                                                     Converter={StaticResource PokemonTypeToColorConverter}}"
+                                                Text="{Binding Type1}" />
+
+                                <controls:Badge Width="60"
+                                                Height="20"
+                                                Margin="0,4,0,0"
+                                                Background="{Binding Type2,
+                                                                     Converter={StaticResource PokemonTypeToColorConverter}}"
+                                                Text="{Binding Type2}"
+                                                Visibility="{Binding Type2,
+                                                                     Converter={StaticResource PokemonUnknownTypeToVisibilityConverter}}" />
+                            </StackPanel>
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>

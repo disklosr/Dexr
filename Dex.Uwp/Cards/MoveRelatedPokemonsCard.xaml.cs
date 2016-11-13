@@ -8,5 +8,18 @@ namespace Dex.Uwp.Cards
         {
             this.InitializeComponent();
         }
+
+        public event ItemClickEventHandler ItemClicked
+        {
+            add
+            {
+                UsedByList.ItemClick += value;
+            }
+
+            remove
+            {
+                UsedByList.ItemClick -= value;
+            }
+        }
     }
 }

@@ -1,12 +1,23 @@
-﻿using Dex.Uwp.Infrastructure;
+﻿using Dex.Core.Entities;
+using Dex.Uwp.Infrastructure;
+using Dex.Uwp.ViewModels;
 
 namespace Dex.Uwp.Pages
 {
     public sealed partial class MoveDetailPage : PageBase
     {
+        private MoveDetailViewModel vm;
+
         public MoveDetailPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
+            DataContextChanged += (a, b) => vm = (MoveDetailViewModel)b.NewValue;
+            UsedByCard.ItemClicked += UsedByCard_ItemClicked;
+        }
+
+        private void UsedByCard_ItemClicked(object sender, Windows.UI.Xaml.Controls.ItemClickEventArgs e)
+        {
+            vm.OnPokemonSelected((Pokemon)e.ClickedItem);
         }
     }
 }

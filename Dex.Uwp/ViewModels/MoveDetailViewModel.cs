@@ -1,6 +1,7 @@
 ﻿using Dex.Core.Entities;
 using Dex.Core.Repositories;
 using Dex.Uwp.Infrastructure;
+using Dex.Uwp.Services;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Navigation;
@@ -10,13 +11,15 @@ namespace Dex.Uwp.ViewModels
     public class MoveDetailViewModel : ViewModelBase
     {
         private readonly IMoveRepository moveRepository;
+        private readonly INavigationService navigationService;
         private readonly IPokemonRepository pokemonRepository;
 
         private IEnumerable<Pokemon> relatedPokemons;
         private Move selectedMove;
 
-        public MoveDetailViewModel(IPokemonRepository pokemonRepository, IMoveRepository moveRepository)
+        public MoveDetailViewModel(IPokemonRepository pokemonRepository, IMoveRepository moveRepository, INavigationService navigationService)
         {
+            this.navigationService = navigationService;
             this.moveRepository = moveRepository;
             this.pokemonRepository = pokemonRepository;
         }
@@ -37,6 +40,11 @@ namespace Dex.Uwp.ViewModels
         {
             var moveId = (string)e.Parameter;
             await SetNewMove(moveRepository.GetMoveById(moveId));
+        }
+
+        public void OnPokemonSelected(Pokemon selectedPokemon)
+        {
+            navigationService.NavigateToPokemonDetailsPage(selectedPokemon.DexNumber);
         }
 
         private async Task SetNewMove(Move move)

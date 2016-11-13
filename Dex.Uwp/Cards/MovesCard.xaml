@@ -17,6 +17,7 @@
         <StackPanel>
             <controls:CardHeader Title="Quick Moves" />
             <ListView Name="QuickMovesList"
+                      IsItemClickEnabled="True"
                       ItemContainerStyle="{StaticResource FlatListItemStyle}"
                       ItemTemplateSelector="{StaticResource MovesTemplateSelector}"
                       ItemsSource="{Binding QuickMoves}" />
@@ -24,6 +25,7 @@
             <controls:CardHeader Title="Charge Moves" />
 
             <ListView Name="ChargeMovesList"
+                      IsItemClickEnabled="True"
                       ItemContainerStyle="{StaticResource FlatListItemStyle}"
                       ItemTemplateSelector="{StaticResource MovesTemplateSelector}"
                       ItemsSource="{Binding ChargeMoves}" />

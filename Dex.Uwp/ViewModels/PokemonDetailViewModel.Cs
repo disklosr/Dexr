@@ -1,6 +1,7 @@
 ﻿using Dex.Core.Entities;
 using Dex.Core.Repositories;
 using Dex.Uwp.Infrastructure;
+using Dex.Uwp.Services;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Navigation;
 
@@ -9,6 +10,7 @@ namespace Dex.Uwp.ViewModels
     public class PokemonDetailViewModel : ViewModelBase
     {
         private readonly IMoveRepository moveRepository;
+        private readonly INavigationService navigationService;
         private readonly IPokemonRepository pokemonRepository;
 
         private CombatStatDataViewModel attackStats;
@@ -18,8 +20,9 @@ namespace Dex.Uwp.ViewModels
         private Pokemon selectedPokemon;
         private CombatStatDataViewModel staminaStats;
 
-        public PokemonDetailViewModel(IPokemonRepository pokemonRepository, IMoveRepository moveRepository)
+        public PokemonDetailViewModel(IPokemonRepository pokemonRepository, IMoveRepository moveRepository, INavigationService navigationService)
         {
+            this.navigationService = navigationService;
             this.moveRepository = moveRepository;
             this.pokemonRepository = pokemonRepository;
 
@@ -65,6 +68,11 @@ namespace Dex.Uwp.ViewModels
         {
             get { return staminaStats; }
             private set { Set(ref staminaStats, value); }
+        }
+
+        public void OnMoveSelected(Move move)
+        {
+            navigationService.ResolveFromThenNavigate(move);
         }
 
         public async override Task OnNavigatedTo(NavigationEventArgs e)
