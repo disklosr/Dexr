@@ -335,6 +335,8 @@
       <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IApplicationWindowManager.cs" />
+    <Compile Include="Services\IExceptionSinkService.cs" />
     <Compile Include="Services\IJsonService.cs" />
     <Compile Include="Services\INavigationService.cs" />
     <Compile Include="Services\NavigationServiceException.cs" />

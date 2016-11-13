@@ -4,6 +4,9 @@ using Dex.Uwp.DataAccess;
 using Dex.Uwp.Services;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
+using Serilog;
+using System.IO;
+using Windows.Storage;
 
 namespace Dex.Uwp.IoC
 {
@@ -26,6 +29,7 @@ namespace Dex.Uwp.IoC
         {
             Container = new UnityContainer();
             ServiceLocator.SetLocatorProvider(() => new UnityServiceLocator(Container));
+
             ConfigureRegistries();
         }
 
@@ -39,6 +43,12 @@ namespace Dex.Uwp.IoC
         {
             Container.RegisterType<IJsonService, JsonService>(new ContainerControlledLifetimeManager());
             Container.RegisterType<INavigationService, NavigationService>(new ContainerControlledLifetimeManager());
+
+            ILogger logger = new LoggerConfiguration()
+                .WriteTo.File(Path.Combine(ApplicationData.Current.LocalFolder.Path, "log.txt"))
+                .CreateLogger();
+
+            Container.RegisterInstance(logger);
 
             Container.RegisterType<LocalFileDataSource>(new ContainerControlledLifetimeManager())
                 .RegisterType<IPokemonsDataSource, LocalFileDataSource>()

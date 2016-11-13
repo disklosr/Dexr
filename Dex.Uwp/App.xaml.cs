@@ -2,49 +2,29 @@
 using Dex.Uwp.Pages;
 using Dex.Uwp.Services;
 using Microsoft.Practices.ServiceLocation;
+using Serilog;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.UI;
-using Windows.UI.Popups;
 using Windows.UI.Xaml;
 
 namespace Dex
 {
     sealed partial class App : Application
     {
+        private ILogger log;
+        private INavigationService navigationService;
+        private Shell rootShell;
+
         public App()
         {
             InitializeComponent();
             Suspending += OnSuspending;
-            Application.Current.UnhandledException += Current_UnhandledException;
         }
-
-        private void Current_UnhandledException(object sender, UnhandledExceptionEventArgs e)
-        {
-            e.Handled = true;
-            MessageDialog messageDialog = new MessageDialog("Dex has encountered an application error. I'm sorry for the inconvenience.", "Well, This is embarrassing.");
-#if DEBUG
-            messageDialog.Content = $"The application has encoutered a problem. ({e.Message})";
-#endif
-
-            messageDialog.Commands.Add(new Windows.UI.Popups.UICommand("Ok") { Id = 0 });
-            messageDialog.ShowAsync();
-        }
-
-        private Shell rootShell;
-        private INavigationService navigationService;
 
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-#if DEBUG
-            if (System.Diagnostics.Debugger.IsAttached)
-            {
-                //this.DebugSettings.EnableFrameRateCounter = true;
-            }
-#endif
-
+            new ApplicationWindowManager().InitializeWindow();
             rootShell = Window.Current.Content as Shell;
-            InitAppWindow();
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
@@ -67,21 +47,11 @@ namespace Dex
             }
         }
 
-        private void InitAppWindow()
-        {
-            var titleBar = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().TitleBar;
-            titleBar.BackgroundColor = (Color)Resources["SystemAccentColorDark1"];
-
-            titleBar.InactiveBackgroundColor = (Color)Resources["SystemAccentColor"];
-            titleBar.ButtonBackgroundColor = (Color)Resources["SystemAccentColorDark1"];
-            titleBar.ButtonHoverBackgroundColor = (Color)Resources["SystemAccentColorDark2"];
-            titleBar.ButtonPressedBackgroundColor = (Color)Resources["SystemAccentColorDark3"];
-            titleBar.ButtonInactiveBackgroundColor = (Color)Resources["SystemAccentColor"];
-        }
-
         private void InitializeShell(LaunchActivatedEventArgs e)
         {
             var ioc = new IocBootstrapper();
+            log = ServiceLocator.Current.GetInstance<ILogger>();
+
             rootShell = new Shell();
 
             if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
@@ -90,6 +60,8 @@ namespace Dex
             }
 
             Window.Current.Content = rootShell;
+
+            log.Information("[Startup] Application Shell has been initialized.");
         }
 
         private void LoadPreviousState()
@@ -98,6 +70,7 @@ namespace Dex
 
         private void OnSuspending(object sender, SuspendingEventArgs e)
         {
+            log.Information("[Suspending] Application is being suspended.");
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();

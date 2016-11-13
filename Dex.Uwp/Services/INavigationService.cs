@@ -1,5 +1,7 @@
 ﻿using Dex.Core.Entities;
 using Dex.Uwp.Pages;
+using Serilog;
+using System;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -27,10 +29,12 @@ namespace Dex.Uwp.Services
 
     public class NavigationService : INavigationService
     {
+        private readonly ILogger log;
         private Frame mainFrame;
 
-        public NavigationService()
+        public NavigationService(ILogger log)
         {
+            this.log = log;
             EnsureNavigationFrameIsAvailable();
             InitBackButton();
 
@@ -136,10 +140,12 @@ namespace Dex.Uwp.Services
 
         private void MainFrame_Navigating(object sender, NavigatingCancelEventArgs e)
         {
+            log.Information("Requested navigation to {PageType} with param {@Param}.", e.SourcePageType.Name, e.Parameter);
         }
 
         private void MainFrame_NavigationFailed(object sender, NavigationFailedEventArgs e)
         {
+            log.Error("Navigation to {Page} Failed! (Exception: {Type}, Message: {Message}).", e.SourcePageType, e.Exception.GetType().Name, e.Exception.Message);
         }
     }
 }
