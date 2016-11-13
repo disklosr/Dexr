@@ -26,11 +26,13 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <ContentControl Grid.RowSpan="4"
+            <controls:Badge Grid.RowSpan="4"
                             Grid.Column="1"
                             Width="60"
                             Height="20"
-                            Template="{StaticResource PokemonTypeTemplate}" />
+                            Background="{Binding Type,
+                                                 Converter={StaticResource PokemonTypeToColorConverter}}"
+                            Text="{Binding Type}" />
             <TextBlock Grid.Row="0"
                        Grid.Column="0"
                        VerticalAlignment="Center"

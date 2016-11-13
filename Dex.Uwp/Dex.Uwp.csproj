@@ -90,6 +90,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\Pokemons\000.png" />
     <Content Include="Assets\Pokemons\001.png" />
     <Content Include="Assets\Pokemons\002.png" />
     <Content Include="Assets\Pokemons\003.png" />

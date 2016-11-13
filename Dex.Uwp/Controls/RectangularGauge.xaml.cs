@@ -11,12 +11,13 @@ namespace Dex.Uwp.Controls
         public RectangularGauge()
         {
             this.InitializeComponent();
+            this.Loaded += RectangularGauge_Loaded;
             InitAnimations();
         }
 
         private void InitAnimations()
         {
-            //TODO: This is not working!
+            //TODO: This is not working! Maybe animation are only triggered when you manually change the visual size property.
             var visual = ElementCompositionPreview.GetElementVisual(ValueRectangle);
             var compositor = visual.Compositor;
 
@@ -26,9 +27,14 @@ namespace Dex.Uwp.Controls
             sizeAnimation.Duration = TimeSpan.FromMilliseconds(1500);
 
             var implicitAnimations = compositor.CreateImplicitAnimationCollection();
-            visual.ImplicitAnimations = implicitAnimations;
-
             implicitAnimations["Size"] = sizeAnimation;
+
+            visual.ImplicitAnimations = implicitAnimations;
+        }
+
+        private void RectangularGauge_Loaded(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            InitAnimations();
         }
     }
 }

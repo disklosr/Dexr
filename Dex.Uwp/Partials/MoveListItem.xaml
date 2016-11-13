@@ -24,11 +24,13 @@
                                    Text="{Binding MoveType}" />
                     </StackPanel>
 
-                    <ContentControl Width="60"
+                    <controls:Badge Width="60"
                                     Height="20"
+                                    Background="{Binding Type,
+                                                         Converter={StaticResource PokemonTypeToColorConverter}}"
                                     RelativePanel.AlignRightWithPanel="True"
                                     RelativePanel.AlignVerticalCenterWithPanel="True"
-                                    Template="{StaticResource PokemonTypeTemplate}" />
+                                    Text="{Binding Type}" />
                 </RelativePanel>
             </Border>
         </controls:HoverControl>

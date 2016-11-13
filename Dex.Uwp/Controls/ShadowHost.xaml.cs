@@ -1,4 +1,4 @@
-﻿//using System.Numerics;
+﻿using System.Numerics;
 using Windows.UI;
 using Windows.UI.Composition;
 using Windows.UI.Xaml;
@@ -11,7 +11,7 @@ namespace Dex.Uwp.Controls
     {
         private const float blurRadius = 4.0f;
         private readonly Color shadowColor = Color.FromArgb(96, 0, 0, 0);
-        //private readonly Vector3 shadowOffset = new Vector3(0f, 2f, 2f);
+        private object shadowOffset;
 
         public ShadowHost()
         {
@@ -30,6 +30,9 @@ namespace Dex.Uwp.Controls
 
         private void InitializeDropShadow(UIElement shadowHost)
         {
+            if (shadowOffset == null)
+                shadowOffset = new Vector3(0f, 2f, 2f);
+
             Visual hostVisual = ElementCompositionPreview.GetElementVisual(shadowHost);
             Compositor compositor = hostVisual.Compositor;
 
@@ -38,7 +41,7 @@ namespace Dex.Uwp.Controls
 
             dropShadow.Color = shadowColor;
             dropShadow.BlurRadius = blurRadius;
-            //dropShadow.Offset = shadowOffset;
+            dropShadow.Offset = (Vector3)shadowOffset;
 
             // Create a Visual to hold the shadow
             var shadowVisual = compositor.CreateSpriteVisual();
