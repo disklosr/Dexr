@@ -45,7 +45,7 @@
 
                 <!--#region Title-->
                 <Border Height="48"
-                        Margin="48,0,0,0"
+                        Margin="48,-2,0,0"
                         VerticalAlignment="Top">
                     <TextBlock Name="PageTitle"
                                HorizontalAlignment="Left"
