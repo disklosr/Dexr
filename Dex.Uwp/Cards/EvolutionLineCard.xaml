@@ -30,13 +30,10 @@
                 <TextBlock x:Uid="MessageNoEvolutionFound"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
+                           Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
                            Visibility="{Binding Evolutions,
                                                 Converter={StaticResource NullOrEmptyToVisibilityConverter},
-                                                ConverterParameter='Reverse'}">
-                    <TextBlock.Foreground>
-                        <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                    </TextBlock.Foreground>
-                </TextBlock>
+                                                ConverterParameter='Reverse'}" />
                 <Grid Margin="0,12,0,0" Visibility="{Binding Evolutions, Converter={StaticResource NullOrEmptyToVisibilityConverter}}">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="{Binding NumberOfEvolutions, Converter={StaticResource EvolutionLineToGridLengthConverter}, ConverterParameter='0'}" />

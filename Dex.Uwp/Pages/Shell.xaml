@@ -32,6 +32,8 @@
                 <!--#region Hamburger Menu-->
                 <controls:PointerAppBarButton Width="48"
                                               Height="48"
+                                              FocusVisualPrimaryThickness="0"
+                                              FocusVisualSecondaryThickness="0"
                                               IsChecked="{Binding ElementName=RootSplitView,
                                                                   Path=IsPaneOpen,
                                                                   Mode=TwoWay}">

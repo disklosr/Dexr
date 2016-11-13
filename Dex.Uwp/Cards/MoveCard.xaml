@@ -6,8 +6,6 @@
              xmlns:data="using:Dex.Core.Entities"
              xmlns:local="using:Dex.Uwp.Cards"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             d:DataContext="{d:DesignInstance Type=data:Move,
-                                              IsDesignTimeCreatable=False}"
              d:DesignHeight="500"
              d:DesignWidth="400"
              mc:Ignorable="d">
