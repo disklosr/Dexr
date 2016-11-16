@@ -8,15 +8,14 @@
                 xmlns:local="using:Dex.Uwp.Pages"
                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                 xmlns:vm="using:Dex.Uwp.ViewModels"
+                x:Uid="Page_Movedex"
                 d:DataContext="{d:DesignInstance Type=vm:MovedexViewModel,
                                                  IsDesignTimeCreatable=False}"
                 mc:Ignorable="d">
 
     <infra:PageBase.Commands>
         <infra:CommandsCollection>
-            <AppBarButton Command="{Binding ReverseOrderCommand}"
-                          Icon="Sort"
-                          ToolTipService.ToolTip="Rever sorting order" />
+            <AppBarButton Command="{Binding ReverseOrderCommand}" Icon="Sort" />
             <AppBarButton Icon="Find" />
         </infra:CommandsCollection>
     </infra:PageBase.Commands>

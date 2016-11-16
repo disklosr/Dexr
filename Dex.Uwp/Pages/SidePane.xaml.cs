@@ -9,38 +9,34 @@ namespace Dex.Uwp.Pages
 {
     public sealed partial class SidePane : UserControl
     {
-        private Dictionary<string, Type> MenuItemToPage = new Dictionary<string, Type>()
-        {
-            ["Pokedex"] = typeof(PokedexPage),
-            ["Movedex"] = typeof(MovedexPage)
-        };
-
+        private Dictionary<string, Action> MenuItemToPage;
         private INavigationService navigationService;
-        private string selectedMenuItem;
 
         public SidePane()
         {
-            this.InitializeComponent();
+            InitializeComponent();
+            InitMenuItemToPage();
+
             MyList.ItemsSource = MenuItemToPage.Keys;
-            selectedMenuItem = MenuItemToPage.First().Key;
-            this.Loaded += SidePane_Loaded;
+            MyList.ItemClick += MyList_ItemClick;
+            Loaded += SidePane_Loaded;
         }
 
-        private string SelectedMenuItem
+        private void InitMenuItemToPage()
         {
-            get
+            MenuItemToPage = new Dictionary<string, Action>()
             {
-                return selectedMenuItem;
-            }
+                ["Pokedex"] = () => navigationService.NavigateToPokedexPage(),
+                ["Movedex"] = () => navigationService.NavigateToMovesPage(),
+                ["Settings"] = () => navigationService.NavigateToSettingsPage()
+            };
+        }
 
-            set
-            {
-                if (value != null && value != selectedMenuItem)
-                {
-                    selectedMenuItem = value;
-                    navigationService.Navigate(MenuItemToPage[selectedMenuItem]);
-                }
-            }
+        private void MyList_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var currentPage = navigationService.CurrentPage.Name.Replace("Page", string.Empty);
+            if ((string)e.ClickedItem != currentPage)
+                MenuItemToPage[(string)e.ClickedItem].Invoke();
         }
 
         private void SidePane_Loaded(object sender, Windows.UI.Xaml.RoutedEventArgs e)

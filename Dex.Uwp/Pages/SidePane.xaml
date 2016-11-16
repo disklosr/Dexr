@@ -9,6 +9,6 @@
              mc:Ignorable="d">
 
     <Grid>
-        <ListView Name="MyList" SelectedItem="{x:Bind SelectedMenuItem, Mode=TwoWay}" />
+        <ListView Name="MyList" IsItemClickEnabled="True" />
     </Grid>
 </UserControl>

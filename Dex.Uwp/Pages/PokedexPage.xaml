@@ -9,7 +9,7 @@
                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                 xmlns:model="using:Dex.Core.Entities"
                 xmlns:vm="using:Dex.Uwp.ViewModels"
-                Title="Pokédex"
+                x:Uid="Page_Pokedex"
                 d:DataContext="{d:DesignInstance Type=vm:PokedexViewModel,
                                                  IsDesignTimeCreatable=False}"
                 NavigationCacheMode="Enabled"
@@ -19,8 +19,7 @@
         <infra:CommandsCollection>
             <AppBarButton AccessKey="S"
                           Command="{Binding ReverseOrderCommand}"
-                          Icon="Sort"
-                          ToolTipService.ToolTip="Rever sorting order" />
+                          Icon="Sort" />
             <AppBarButton AccessKey="F"
                           Command="{Binding SearchCommand}"
                           Icon="Find" />

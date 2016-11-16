@@ -34,7 +34,8 @@
             </controls:ShadowHost.Transitions>
 
             <!--  QueryIcon is only set to "activate" its visibility. The actual used icon is hardcoded inside the style  -->
-            <AutoSuggestBox Name="SearchBox"
+            <AutoSuggestBox x:Uid="AutoSuggestBox.Search"
+                            Name="SearchBox"
                             Grid.Row="0"
                             Height="48"
                             MaxWidth="720"
@@ -44,7 +45,6 @@
                             BorderBrush="Red"
                             BorderThickness="0"
                             FontSize="18"
-                            PlaceholderText="Search Pokemons &amp; Moves"
                             QueryIcon="Accept"
                             Text="{Binding SearchQuery,
                                            UpdateSourceTrigger=PropertyChanged,

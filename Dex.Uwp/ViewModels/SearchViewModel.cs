@@ -59,6 +59,12 @@ namespace Dex.Uwp.ViewModels
 
         private void OnNewSearch(string query)
         {
+            if (string.IsNullOrWhiteSpace(query))
+            {
+                SearchResult = null;
+                return;
+            }
+
             query = query.ToLowerInvariant();
             var foundPokes = allPokemonsCache.Where(poke => poke.Name.ToLowerInvariant().Contains(query));
             var foundQuickMoves = allMovesCache.QuickMoves.Where(move => move.Name.ToLowerInvariant().Contains(query));

@@ -12,17 +12,21 @@ namespace Dex.Uwp.Services
 {
     public interface INavigationService
     {
+        Type CurrentPage { get; }
+
         void GoBack();
 
-        void Navigate(Type pageType, string parameter = null, bool serializeParam = true);
-
         void NavigateToMoveDetailsPage(string moveId);
+
+        void NavigateToMovesPage();
 
         void NavigateToPokedexPage();
 
         void NavigateToPokemonDetailsPage(ushort dexNumber);
 
         void NavigateToSearchPage();
+
+        void NavigateToSettingsPage();
 
         void ResolveFromThenNavigate(object paramObject);
     }
@@ -43,31 +47,21 @@ namespace Dex.Uwp.Services
             mainFrame.Navigated += MainFrame_Navigated;
         }
 
+        public Type CurrentPage => mainFrame.Content.GetType();
+
         public void GoBack()
         {
             mainFrame.GoBack();
         }
 
-        public void Navigate(Type pageType, string parameter = null, bool serializeParam = true)
-        {
-            EnsureNavigationFrameIsAvailable();
-
-            if (parameter == null)
-                mainFrame.Navigate(pageType);
-            else
-            {
-                if (serializeParam)
-                {
-                    //TODO: Serialize param
-                }
-
-                mainFrame.Navigate(pageType, parameter);
-            }
-        }
-
         public void NavigateToMoveDetailsPage(string moveId)
         {
             mainFrame.Navigate(typeof(MoveDetailPage), moveId);
+        }
+
+        public void NavigateToMovesPage()
+        {
+            mainFrame.Navigate(typeof(MovedexPage));
         }
 
         public void NavigateToPokedexPage()
@@ -83,6 +77,11 @@ namespace Dex.Uwp.Services
         public void NavigateToSearchPage()
         {
             mainFrame.Navigate(typeof(SearchPage));
+        }
+
+        public void NavigateToSettingsPage()
+        {
+            mainFrame.Navigate(typeof(SettingsPage));
         }
 
         public void ResolveFromThenNavigate(object navigationParam)
@@ -146,6 +145,23 @@ namespace Dex.Uwp.Services
         private void MainFrame_NavigationFailed(object sender, NavigationFailedEventArgs e)
         {
             log.Error("Navigation to {Page} Failed! (Exception: {Type}, Message: {Message}).", e.SourcePageType, e.Exception.GetType().Name, e.Exception.Message);
+        }
+
+        private void Navigate(Type pageType, string parameter = null, bool serializeParam = true)
+        {
+            EnsureNavigationFrameIsAvailable();
+
+            if (parameter == null)
+                mainFrame.Navigate(pageType);
+            else
+            {
+                if (serializeParam)
+                {
+                    //TODO: Serialize param
+                }
+
+                mainFrame.Navigate(pageType, parameter);
+            }
         }
     }
 }

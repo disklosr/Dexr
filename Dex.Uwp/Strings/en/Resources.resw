@@ -117,7 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="MessageNoEvolutionFound.Text" xml:space="preserve">
+  <data name="AutoSuggestBox_Search.PlaceholderText" xml:space="preserve">
+    <value>Search Pokemons &amp; Moves</value>
+  </data>
+  <data name="CardHeader_BaseStats.Title" xml:space="preserve">
+    <value>Base Stats</value>
+  </data>
+  <data name="CardHeader_ChargeMoves.Title" xml:space="preserve">
+    <value>Charge Moves</value>
+  </data>
+  <data name="CardHeader_Evolutions.Title" xml:space="preserve">
+    <value>Evolution Line</value>
+  </data>
+  <data name="CardHeader_QuickMoves.Title" xml:space="preserve">
+    <value>Quick Moves</value>
+  </data>
+  <data name="CardHeader_UsedBy.Title" xml:space="preserve">
+    <value>Used By</value>
+  </data>
+  <data name="Message_NoEvolutionFound.Text" xml:space="preserve">
     <value>This pokemon does not have any evolutions</value>
+  </data>
+  <data name="Page_Movedex.Title" xml:space="preserve">
+    <value>Movedex</value>
+  </data>
+  <data name="Page_Pokedex.Title" xml:space="preserve">
+    <value>Pokédex</value>
+  </data>
+  <data name="Page_Settings.Title" xml:space="preserve">
+    <value>Settings</value>
   </data>
 </root>

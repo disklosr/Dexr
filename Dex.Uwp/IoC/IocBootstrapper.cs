@@ -5,6 +5,7 @@ using Dex.Uwp.Services;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 using Serilog;
+using System;
 using System.IO;
 using Windows.Storage;
 
@@ -21,6 +22,7 @@ namespace Dex.Uwp.IoC
 
         private void ConfigureRegistries()
         {
+            InitLogger();
             RegisterServices();
             RegisterRepositories();
         }
@@ -33,6 +35,15 @@ namespace Dex.Uwp.IoC
             ConfigureRegistries();
         }
 
+        private void InitLogger()
+        {
+            ILogger logger = new LoggerConfiguration()
+               .WriteTo.File(Path.Combine(ApplicationData.Current.LocalFolder.Path, "log.txt"))
+               .CreateLogger();
+
+            Container.RegisterInstance(logger);
+        }
+
         private void RegisterRepositories()
         {
             Container.RegisterType<IPokemonRepository, PokemonRepository>(new ContainerControlledLifetimeManager());
@@ -43,12 +54,7 @@ namespace Dex.Uwp.IoC
         {
             Container.RegisterType<IJsonService, JsonService>(new ContainerControlledLifetimeManager());
             Container.RegisterType<INavigationService, NavigationService>(new ContainerControlledLifetimeManager());
-
-            ILogger logger = new LoggerConfiguration()
-                .WriteTo.File(Path.Combine(ApplicationData.Current.LocalFolder.Path, "log.txt"))
-                .CreateLogger();
-
-            Container.RegisterInstance(logger);
+            Container.RegisterType<IPokePictureLocatorService, PokePictureLocatorService>(new ContainerControlledLifetimeManager());
 
             Container.RegisterType<LocalFileDataSource>(new ContainerControlledLifetimeManager())
                 .RegisterType<IPokemonsDataSource, LocalFileDataSource>()

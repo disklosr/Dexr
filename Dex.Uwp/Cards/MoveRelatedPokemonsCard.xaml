@@ -14,7 +14,7 @@
 
     <controls:Card VerticalAlignment="Top">
         <StackPanel>
-            <controls:CardHeader Title="Used by" />
+            <controls:CardHeader x:Uid="CardHeader_UsedBy" />
             <ListView Name="UsedByList"
                       IsItemClickEnabled="True"
                       ItemContainerStyle="{StaticResource FlatListItemStyle}"

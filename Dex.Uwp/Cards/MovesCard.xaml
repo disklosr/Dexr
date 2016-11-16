@@ -15,14 +15,14 @@
 
     <controls:Card VerticalAlignment="Top">
         <StackPanel>
-            <controls:CardHeader Title="Quick Moves" />
+            <controls:CardHeader x:Uid="CardHeader_QuickMoves" />
             <ListView Name="QuickMovesList"
                       IsItemClickEnabled="True"
                       ItemContainerStyle="{StaticResource FlatListItemStyle}"
                       ItemTemplateSelector="{StaticResource MovesTemplateSelector}"
                       ItemsSource="{Binding QuickMoves}" />
 
-            <controls:CardHeader Title="Charge Moves" />
+            <controls:CardHeader x:Uid="CardHeader_ChargeMoves" />
 
             <ListView Name="ChargeMovesList"
                       IsItemClickEnabled="True"
