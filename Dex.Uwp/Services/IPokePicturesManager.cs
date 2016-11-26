@@ -1,30 +1,28 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Windows.Storage;
 
 namespace Dex.Uwp.Services
 {
     public interface IPokePicturesManager
     {
-        Task<bool> DeleteLocalPictures();
-
-        Task<bool> DownloadAllPictures();
+        Task InitPokemonPictures();
     }
 
     public class PokePicturesManager : IPokePicturesManager
     {
-        public Task<bool> DeleteLocalPictures()
+        public async Task InitPokemonPictures()
         {
-            throw new NotImplementedException();
-        }
+            //find Zip file in appx folder
+            var folder = ApplicationData.Current.LocalFolder;
+            var file = await StorageFile.GetFileFromApplicationUriAsync(new Uri(""));
+            var fileBuffer = await FileIO.ReadBufferAsync(file);
 
-        public async Task<bool> DownloadAllPictures()
-        {
-            throw new NotImplementedException();
-        }
+            //Clean local storage folder
+            //Unzip file in local storage folder
+            //Done
 
-        private async Task downloadSinglePicture(int index)
-        {
-            throw new NotImplementedException();
+            return;
         }
     }
 }

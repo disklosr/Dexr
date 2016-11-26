@@ -347,7 +347,6 @@
     <Compile Include="Services\IExceptionSinkService.cs" />
     <Compile Include="Services\IJsonService.cs" />
     <Compile Include="Services\INavigationService.cs" />
-    <Compile Include="Services\IPokePictureLocatorService.cs" />
     <Compile Include="Services\IPokePicturesManager.cs" />
     <Compile Include="Services\NavigationServiceException.cs" />
     <Compile Include="Theme\MoveDetailTemplateSelector.cs" />

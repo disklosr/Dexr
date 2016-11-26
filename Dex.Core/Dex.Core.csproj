@@ -66,9 +66,17 @@
     <Compile Include="Entities\Pokemon.cs" />
     <Compile Include="Entities\PokemonStat.cs" />
     <Compile Include="Entities\Type.cs" />
+    <Compile Include="Helpers\BufferExtensions.cs" />
+    <Compile Include="Helpers\StringExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\IMoveRespository.cs" />
     <Compile Include="Repositories\IPokemonRepository.cs" />
+    <Compile Include="Services\IEncryptionService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Windows.Foundation.UniversalApiContract">
+      <HintPath>C:\Program Files (x86)\Windows Kits\10\References\Windows.Foundation.UniversalApiContract\3.0.0.0\Windows.Foundation.UniversalApiContract.winmd</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

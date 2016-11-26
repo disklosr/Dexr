@@ -1,11 +1,11 @@
 ﻿using Dex.Core.DataAccess;
 using Dex.Core.Repositories;
+using Dex.Core.Services;
 using Dex.Uwp.DataAccess;
 using Dex.Uwp.Services;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 using Serilog;
-using System;
 using System.IO;
 using Windows.Storage;
 
@@ -54,7 +54,7 @@ namespace Dex.Uwp.IoC
         {
             Container.RegisterType<IJsonService, JsonService>(new ContainerControlledLifetimeManager());
             Container.RegisterType<INavigationService, NavigationService>(new ContainerControlledLifetimeManager());
-            Container.RegisterType<IPokePictureLocatorService, PokePictureLocatorService>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IEncryptionService, SimpleSymmetricEncryptionService>(new ContainerControlledLifetimeManager());
 
             Container.RegisterType<LocalFileDataSource>(new ContainerControlledLifetimeManager())
                 .RegisterType<IPokemonsDataSource, LocalFileDataSource>()
