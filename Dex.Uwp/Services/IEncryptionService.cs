@@ -2,7 +2,7 @@
 using Windows.Security.Cryptography.Core;
 using Windows.Storage.Streams;
 
-namespace Dex.Core.Services
+namespace Dex.Uwp.Services
 {
     public interface IEncryptionService
     {
@@ -20,8 +20,8 @@ namespace Dex.Core.Services
         public SimpleSymmetricEncryptionService()
         {
             //Requires a key of 128 bits. We drive the key from password using MD5
-            AlgorithmName = SymmetricAlgorithmNames.AesCbcPkcs7;    
-            iv = new Buffer(5);
+            AlgorithmName = SymmetricAlgorithmNames.AesCbcPkcs7;
+            iv = new Windows.Storage.Streams.Buffer(5);
             EncryptionAlgorithmProvider = SymmetricKeyAlgorithmProvider.OpenAlgorithm(AlgorithmName);
             HashAlgorithmProvider = HashAlgorithmProvider.OpenAlgorithm(HashAlgorithmNames.Md5);
         }
@@ -40,7 +40,7 @@ namespace Dex.Core.Services
 
         private CryptographicKey GetCryptographicKey(string password)
         {
-            var passwordHash = ComputeMD5(password); 
+            var passwordHash = ComputeMD5(password);
             return EncryptionAlgorithmProvider.CreateSymmetricKey(passwordHash);
         }
 

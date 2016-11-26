@@ -1,21 +1,30 @@
+using Dex.Uwp.DataAccess;
 using Dex.Uwp.Infrastructure;
-using Dex.Uwp.Services;
 using System.Threading.Tasks;
 
 namespace Dex.Uwp.ViewModels
 {
     public class SettingsViewModel : ViewModelBase
     {
-        private readonly IPokePicturesManager picturesManager;
+        private readonly IPokePicturesSourceProvider _picturesSourceProvider;
 
-        public SettingsViewModel(IPokePicturesManager picturesManager)
+        public SettingsViewModel(IPokePicturesSourceProvider picturesSourceProvider)
         {
-            this.picturesManager = picturesManager;
+            _picturesSourceProvider = picturesSourceProvider;
+            AvailableSources = _picturesSourceProvider.AvailableSources;
         }
 
-        private async Task OnDownloadNewImages()
+        private Task OnDownloadNewImages()
         {
-            await picturesManager.InitPokemonPictures();
+            return Task.CompletedTask;
+        }
+
+        public IPokePicturesSource[] AvailableSources { get; }
+
+        public IPokePicturesSource SelectedSource
+        {
+            get { return _picturesSourceProvider.Source; }
+            set { _picturesSourceProvider.Source = value; }
         }
     }
 }

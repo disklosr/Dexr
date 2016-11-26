@@ -21,7 +21,7 @@
     <AppxPackageDir>C:\Users\pirha\Desktop\</AppxPackageDir>
     <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
     <AppxBundle>Always</AppxBundle>
-    <AppxBundlePlatforms>x64</AppxBundlePlatforms>
+    <AppxBundlePlatforms>x86</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -95,6 +95,9 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\DefaultPoke.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Assets\Pokemons\000.png" />
     <Content Include="Assets\Pokemons\001.png" />
     <Content Include="Assets\Pokemons\002.png" />
@@ -253,6 +256,9 @@
     <Content Include="Data\moves.db.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\pks.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="snippets.txt" />
     <None Include="project.json" />
     <PRIResource Include="Strings\en\Resources.resw" />
@@ -270,6 +276,10 @@
     <Compile Include="Controls\Badge.xaml.cs">
       <DependentUpon>Badge.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataAccess\IPokePicturesSource.cs" />
+    <Compile Include="DataAccess\IPokePicturesSourceProvider.cs" />
+    <Compile Include="Helpers\BufferExtensions.cs" />
+    <Compile Include="Helpers\StringExtensions.cs" />
     <Compile Include="Pages\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
@@ -344,10 +354,11 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IApplicationWindowManager.cs" />
+    <Compile Include="Services\IAppLifecycleManager.cs" />
+    <Compile Include="Services\IEncryptionService.cs" />
     <Compile Include="Services\IExceptionSinkService.cs" />
     <Compile Include="Services\IJsonService.cs" />
     <Compile Include="Services\INavigationService.cs" />
-    <Compile Include="Services\IPokePicturesManager.cs" />
     <Compile Include="Services\NavigationServiceException.cs" />
     <Compile Include="Theme\MoveDetailTemplateSelector.cs" />
     <Compile Include="Theme\ListItemTemplateSelector.cs" />

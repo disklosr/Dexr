@@ -1,6 +1,5 @@
 ﻿using Dex.Core.DataAccess;
 using Dex.Core.Repositories;
-using Dex.Core.Services;
 using Dex.Uwp.DataAccess;
 using Dex.Uwp.Services;
 using Microsoft.Practices.ServiceLocation;
@@ -41,6 +40,8 @@ namespace Dex.Uwp.IoC
                .WriteTo.File(Path.Combine(ApplicationData.Current.LocalFolder.Path, "log.txt"))
                .CreateLogger();
 
+            new UwpExceptionSinkService(logger);
+
             Container.RegisterInstance(logger);
         }
 
@@ -55,6 +56,8 @@ namespace Dex.Uwp.IoC
             Container.RegisterType<IJsonService, JsonService>(new ContainerControlledLifetimeManager());
             Container.RegisterType<INavigationService, NavigationService>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IEncryptionService, SimpleSymmetricEncryptionService>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IAppLifecycleManager, AppLifecycleManager>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IPokePicturesSourceProvider, PokePicturesSourceProvider>(new ContainerControlledLifetimeManager());
 
             Container.RegisterType<LocalFileDataSource>(new ContainerControlledLifetimeManager())
                 .RegisterType<IPokemonsDataSource, LocalFileDataSource>()

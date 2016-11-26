@@ -1,7 +1,7 @@
 ﻿using Windows.Security.Cryptography;
 using Windows.Storage.Streams;
 
-namespace Dex.Core.Helpers
+namespace Dex.Uwp.Helpers
 {
     public static class StringExtensions
     {

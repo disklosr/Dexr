@@ -3,6 +3,7 @@ using Dex.Uwp.Pages;
 using Dex.Uwp.Services;
 using Microsoft.Practices.ServiceLocation;
 using Serilog;
+using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
@@ -13,6 +14,7 @@ namespace Dex
     {
         private ILogger log;
         private INavigationService navigationService;
+        private IAppLifecycleManager lifecycleManager;
         private Shell rootShell;
 
         public App()
@@ -21,7 +23,7 @@ namespace Dex
             Suspending += OnSuspending;
         }
 
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
             new ApplicationWindowManager().InitializeWindow();
             rootShell = Window.Current.Content as Shell;
@@ -29,7 +31,7 @@ namespace Dex
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
             if (rootShell == null)
-                InitializeShell(e);
+                await InitializeAppAsync(e);
 
             if (e.PrelaunchActivated == false)
             {
@@ -47,11 +49,22 @@ namespace Dex
             }
         }
 
-        private void InitializeShell(LaunchActivatedEventArgs e)
+        private async Task InitializeAppAsync(LaunchActivatedEventArgs e)
         {
             var ioc = new IocBootstrapper();
             log = ServiceLocator.Current.GetInstance<ILogger>();
+            lifecycleManager = ServiceLocator.Current.GetInstance<IAppLifecycleManager>();
 
+            if (await lifecycleManager.IsFirstRun())
+            {
+                await lifecycleManager.InitializeAppForFirstRun();
+            }
+
+            InitializeShell(e);
+        }
+
+        private void InitializeShell(LaunchActivatedEventArgs e)
+        {
             rootShell = new Shell();
 
             if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
@@ -61,7 +74,7 @@ namespace Dex
 
             Window.Current.Content = rootShell;
 
-            log.Information("[Startup] Application Shell has been initialized.");
+            log.Debug("[Startup] Application Shell has been initialized.");
         }
 
         private void LoadPreviousState()
@@ -70,7 +83,7 @@ namespace Dex
 
         private void OnSuspending(object sender, SuspendingEventArgs e)
         {
-            log.Information("[Suspending] Application is being suspended.");
+            log.Debug("[Suspending] Application is being suspended.");
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
