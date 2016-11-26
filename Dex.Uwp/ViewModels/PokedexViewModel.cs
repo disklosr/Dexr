@@ -20,7 +20,6 @@ namespace Dex.Uwp.ViewModels
         private IEnumerable<Pokemon> allPokemonsByName;
         private IEnumerable<Pokemon> allPokemonsByType;
         private IEnumerable<Pokemon> allPokemonsCache;
-        private Pokemon selectedPokemon;
 
         public PokedexViewModel(IPokemonRepository pokemonsRepository, INavigationService navigationService)
         {
@@ -63,7 +62,7 @@ namespace Dex.Uwp.ViewModels
             var pokes = pokemonsRepository.GetAllPokemons();
             allPokemonsCache = await pokes;
 
-            AllPokemonsByDexNumber = allPokemonsCache;
+            AllPokemonsByDexNumber = allPokemonsCache.OrderBy(poke => poke.DexNumber);
             AllPokemonsByCp = allPokemonsCache.OrderBy(poke => poke.MaxCP);
             AllPokemonsByName = allPokemonsCache.OrderBy(poke => poke.Name);
             AllPokemonsByType = allPokemonsCache.OrderBy(poke => poke.Type1).ThenBy(poke => poke.Type2);

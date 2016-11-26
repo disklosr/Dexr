@@ -49,6 +49,8 @@ namespace Dex.Uwp.IoC
         {
             Container.RegisterType<IPokemonRepository, PokemonRepository>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IMoveRepository, MoveRepository>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IPokePicturesSource, DefaultPokePicturesSource>("defaultSource", new ContainerControlledLifetimeManager());
+            Container.RegisterType<IPokePicturesSource, OfficialPokePicturesSource>("officialSource", new ContainerControlledLifetimeManager());
         }
 
         private void RegisterServices()

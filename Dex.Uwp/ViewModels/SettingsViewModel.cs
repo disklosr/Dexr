@@ -7,6 +7,7 @@ namespace Dex.Uwp.ViewModels
     public class SettingsViewModel : ViewModelBase
     {
         private readonly IPokePicturesSourceProvider _picturesSourceProvider;
+        
 
         public SettingsViewModel(IPokePicturesSourceProvider picturesSourceProvider)
         {
@@ -24,7 +25,25 @@ namespace Dex.Uwp.ViewModels
         public IPokePicturesSource SelectedSource
         {
             get { return _picturesSourceProvider.Source; }
-            set { _picturesSourceProvider.Source = value; }
+            set { OnSourceSelectionChanged(value); }
+        }
+
+        private async Task OnSourceSelectionChanged(IPokePicturesSource picturesSource)
+        {
+            var needInit = picturesSource as INeedInitialisation;
+            if (needInit != null)
+            {
+                
+                if(await needInit.IsInitialized())
+                {
+                    IsBusy = true;
+                    await needInit.Initialize();
+                }     
+            }
+
+            _picturesSourceProvider.Source = picturesSource;
+            OnPropertyChanged(nameof(SelectedSource));
+            IsBusy = false;
         }
     }
 }

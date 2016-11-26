@@ -14,13 +14,17 @@
                                                  IsDesignTimeCreatable=False}"
                 mc:Ignorable="d">
 
-    <StackPanel Padding="24,12,24,0">
-        <StackPanel Margin="0,0,0,24">
-            <TextBlock Text="Picture Sources" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,12" />
-            <ComboBox Header="Use this type of pokemon pictures" ItemsSource="{Binding AvailableSources}" SelectedValuePath="Name" DisplayMemberPath="Name" SelectedItem="{Binding SelectedSource, Mode=TwoWay}"/>
+    <Grid>
+        <ProgressBar IsIndeterminate="{Binding IsBusy}" VerticalAlignment="Top" Background="{x:Null}"/>
+        <StackPanel Padding="24,12,24,0">
+            <StackPanel Margin="0,0,0,24">
+                <TextBlock Text="Picture Sources" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,12" />
+                <ComboBox Header="Use this type of pokemon pictures" ItemsSource="{Binding AvailableSources}" SelectedValuePath="Name" DisplayMemberPath="Name" SelectedItem="{Binding SelectedSource, Mode=TwoWay}"/>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,12">
+                <TextBlock Text="Third party content" Style="{StaticResource TitleTextBlockStyle}" />
+            </StackPanel>
         </StackPanel>
-        <StackPanel Margin="0,0,0,12">
-            <TextBlock Text="Third party content" Style="{StaticResource TitleTextBlockStyle}" />
-        </StackPanel>
-    </StackPanel>
+    </Grid>
+    
 </infra:PageBase>

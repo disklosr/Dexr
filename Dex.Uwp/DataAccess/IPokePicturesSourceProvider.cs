@@ -23,14 +23,9 @@ namespace Dex.Uwp.DataAccess
 
         public event ChangedEventHandler SourceChanged;
 
-        public PokePicturesSourceProvider(INavigationService navigationService)
+        public PokePicturesSourceProvider(INavigationService navigationService, IPokePicturesSource[] availableSources)
         {
-            AvailableSources = GetType().GetTypeInfo().Assembly.GetTypes()
-                .Where(type => typeof(IPokePicturesSource).IsAssignableFrom(type) && type.GetTypeInfo().IsClass)
-                .Select(type => Activator.CreateInstance(type))
-                .Cast<IPokePicturesSource>()
-                .ToArray();
-
+            AvailableSources = availableSources;
             _Source = AvailableSources.Where(item => item is DefaultPokePicturesSource).First();
         }
 
