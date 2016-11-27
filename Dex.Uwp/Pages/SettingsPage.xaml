@@ -21,8 +21,20 @@
                 <TextBlock Text="Picture Sources" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,12" />
                 <ComboBox Header="Use this type of pokemon pictures" ItemsSource="{Binding AvailableSources}" SelectedValuePath="Name" DisplayMemberPath="Name" SelectedItem="{Binding SelectedSource, Mode=TwoWay}"/>
             </StackPanel>
-            <StackPanel Margin="0,0,0,12">
-                <TextBlock Text="Third party content" Style="{StaticResource TitleTextBlockStyle}" />
+            <StackPanel Margin="0,0,0,24">
+                <TextBlock Text="Third party content" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,12" />
+                <RichTextBlock>
+                    <Paragraph Margin="0,0,0,12">
+                        Pokemon icon set from
+                        <Hyperlink NavigateUri="http://theartificial.nl/pokemonicons/">The Articificial</Hyperlink>.
+                        These icons are licenced
+                        <Hyperlink NavigateUri="https://creativecommons.org/licenses/by/3.0/">CC-BY</Hyperlink>
+                    </Paragraph>
+
+                    <Paragraph>
+                        This app is not associated with Nintendo in any way. Pokémon and Pokémon character names are trademarks of Nintendo.
+                    </Paragraph>
+                </RichTextBlock>
             </StackPanel>
         </StackPanel>
     </Grid>
