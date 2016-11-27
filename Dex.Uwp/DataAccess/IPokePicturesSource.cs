@@ -72,11 +72,11 @@ namespace Dex.Uwp.DataAccess
         //TODO: Localize this
         public string Name => "Default";
 
-        private const string filePath = @"ms-appx:///Assets\DefaultPoke.png";
+        private const string pathTemplate = @"ms-appx:///Assets\Flat\{0}.png";
 
         public string GetPath(uint dexNumber)
         {
-            return filePath;
+            return string.Format(pathTemplate, dexNumber.ToString("D3"));
         }
     }
 }
