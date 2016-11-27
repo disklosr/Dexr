@@ -29,6 +29,8 @@ namespace Dex.Uwp.Services
         void NavigateToSettingsPage();
 
         void ResolveFromThenNavigate(object paramObject);
+
+        void NavigateToMoveAboutPage();
     }
 
     public class NavigationService : INavigationService
@@ -52,6 +54,11 @@ namespace Dex.Uwp.Services
         public void GoBack()
         {
             mainFrame.GoBack();
+        }
+
+        public void NavigateToMoveAboutPage()
+        {
+            mainFrame.Navigate(typeof(AboutPage));
         }
 
         public void NavigateToMoveDetailsPage(string moveId)

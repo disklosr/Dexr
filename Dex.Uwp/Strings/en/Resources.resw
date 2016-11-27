@@ -138,6 +138,9 @@
   <data name="Message_NoEvolutionFound.Text" xml:space="preserve">
     <value>This pokemon does not have any evolutions</value>
   </data>
+  <data name="Page_About.Title" xml:space="preserve">
+    <value>About</value>
+  </data>
   <data name="Page_Movedex.Title" xml:space="preserve">
     <value>Movedex</value>
   </data>

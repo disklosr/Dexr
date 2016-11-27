@@ -24,11 +24,13 @@ namespace Dex.Uwp.Pages
 
         private void InitMenuItemToPage()
         {
+            //TODO: Make these automaticly resolved to avoid adding new entries each time
             MenuItemToPage = new Dictionary<string, Action>()
             {
                 ["Pokedex"] = () => navigationService.NavigateToPokedexPage(),
                 ["Movedex"] = () => navigationService.NavigateToMovesPage(),
-                ["Settings"] = () => navigationService.NavigateToSettingsPage()
+                ["Settings"] = () => navigationService.NavigateToSettingsPage(),
+                ["About"] = () => navigationService.NavigateToMoveAboutPage()
             };
         }
 
