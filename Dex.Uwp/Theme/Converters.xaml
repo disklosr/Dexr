@@ -7,4 +7,5 @@
     <vc:PokemonTypeToColorConverter x:Key="PokemonTypeToColorConverter" />
     <vc:PokemonDexNumberToPictureConverter x:Key="PokemonDexNumberToPictureConverter" />
     <vc:PokemonUnknownTypeToVisibilityConverter x:Key="PokemonUnknownTypeToVisibilityConverter" />
+    <vc:NumberToItemsConverter x:Key="NumberToItemsConverter"/>
 </ResourceDictionary>

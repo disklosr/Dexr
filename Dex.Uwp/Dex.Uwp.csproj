@@ -577,6 +577,7 @@
     <Compile Include="Controls\Badge.xaml.cs">
       <DependentUpon>Badge.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\UniformGrid.cs" />
     <Compile Include="DataAccess\IPokePicturesSource.cs" />
     <Compile Include="DataAccess\IPokePicturesSourceProvider.cs" />
     <Compile Include="Helpers\BufferExtensions.cs" />
@@ -668,6 +669,7 @@
     <Compile Include="Theme\ListItemTemplateSelector.cs" />
     <Compile Include="ValueConverters\NullOrEmptyToVisibilityConverter.cs" />
     <Compile Include="ValueConverters\EvolutionLineToGridLengthConverter.cs" />
+    <Compile Include="ValueConverters\NumberToItemsConverter.cs" />
     <Compile Include="ValueConverters\PokemonDexNumberToPictureConverter.cs" />
     <Compile Include="ValueConverters\PokemonPercentToGridLenghtConverter.cs" />
     <Compile Include="ValueConverters\PokemonType2TextFormatter.cs" />
