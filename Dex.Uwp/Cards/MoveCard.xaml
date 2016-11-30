@@ -13,22 +13,6 @@
              mc:Ignorable="d">
 
     <controls:Card VerticalAlignment="Top" Padding="12">
-        <RelativePanel>
-            <TextBlock Name="MoveName"
-                       RelativePanel.AlignHorizontalCenterWithPanel="True"
-                       Style="{StaticResource TitleTextBlockStyle}"
-                       Text="{Binding Name,
-                                      Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
-            <controls:Badge Grid.RowSpan="4"
-                            Grid.Column="1"
-                            Width="80"
-                            Height="20"
-                            Margin="0,12,0,0"
-                            Background="{Binding Type,
-                                                 Converter={StaticResource PokemonTypeToColorConverter}}"
-                            RelativePanel.AlignHorizontalCenterWith="MoveName"
-                            RelativePanel.Below="MoveName"
-                            Text="{Binding Type}" />
-        </RelativePanel>
+        <ContentControl HorizontalContentAlignment="Stretch" Content="{Binding}" ContentTemplateSelector="{StaticResource MovesTemplateSelector}"/>
     </controls:Card>
 </UserControl>
