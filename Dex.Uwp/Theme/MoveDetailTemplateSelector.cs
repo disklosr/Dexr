@@ -21,7 +21,8 @@ namespace Dex.Uwp.Theme
 
         protected override DataTemplate SelectTemplateCore(object item, DependencyObject container)
         {
-            if (TypeToTemplateMapper.ContainsKey(item.GetType()))
+            //When content still isn't bound, this is called with item set to null
+            if (item != null && TypeToTemplateMapper.ContainsKey(item.GetType()))
                 return (DataTemplate)TypeToTemplateMapper[item.GetType()];
 
             return base.SelectTemplateCore(item);

@@ -44,16 +44,17 @@
 
                             <StackPanel Grid.Column="2"
                                         VerticalAlignment="Center"
-                                        Orientation="Vertical">
+                                        Orientation="Horizontal">
                                 <controls:Badge Width="60"
                                                 Height="20"
+                                                
                                                 Background="{Binding Type1,
                                                                      Converter={StaticResource PokemonTypeToColorConverter}}"
                                                 Text="{Binding Type1}" />
 
                                 <controls:Badge Width="60"
                                                 Height="20"
-                                                Margin="0,4,0,0"
+                                                Margin="12,0,0,0"
                                                 Background="{Binding Type2,
                                                                      Converter={StaticResource PokemonTypeToColorConverter}}"
                                                 Text="{Binding Type2}"
