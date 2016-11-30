@@ -147,6 +147,9 @@
   <data name="Page_Pokedex.Title" xml:space="preserve">
     <value>Pokédex</value>
   </data>
+  <data name="Page_Search_SearchBox.PlaceholderText" xml:space="preserve">
+    <value>Search for pokemons and moves</value>
+  </data>
   <data name="Page_Settings.Title" xml:space="preserve">
     <value>Settings</value>
   </data>

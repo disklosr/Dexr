@@ -16,12 +16,13 @@
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>Dex_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>Dex.Uwp_StoreKey.pfx</PackageCertificateKeyFile>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxPackageDir>C:\Users\pirha\Desktop\</AppxPackageDir>
     <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>x86</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>1376293E6F44463A57179702036BA834E241F515</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -551,6 +552,56 @@
     <Content Include="Assets\Flat\151.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\logo-dexr.png" />
+    <Content Include="Assets\logo.svg" />
+    <Content Include="Assets\Uwp\BadgeLogo.scale-100.png" />
+    <Content Include="Assets\Uwp\BadgeLogo.scale-125.png" />
+    <Content Include="Assets\Uwp\BadgeLogo.scale-150.png" />
+    <Content Include="Assets\Uwp\BadgeLogo.scale-200.png" />
+    <Content Include="Assets\Uwp\BadgeLogo.scale-400.png" />
+    <Content Include="Assets\Uwp\LargeTile.scale-100.png" />
+    <Content Include="Assets\Uwp\LargeTile.scale-125.png" />
+    <Content Include="Assets\Uwp\LargeTile.scale-150.png" />
+    <Content Include="Assets\Uwp\LargeTile.scale-200.png" />
+    <Content Include="Assets\Uwp\LargeTile.scale-400.png" />
+    <Content Include="Assets\Uwp\SmallTile.scale-100.png" />
+    <Content Include="Assets\Uwp\SmallTile.scale-125.png" />
+    <Content Include="Assets\Uwp\SmallTile.scale-150.png" />
+    <Content Include="Assets\Uwp\SmallTile.scale-200.png" />
+    <Content Include="Assets\Uwp\SmallTile.scale-400.png" />
+    <Content Include="Assets\Uwp\SplashScreen.scale-100.png" />
+    <Content Include="Assets\Uwp\SplashScreen.scale-125.png" />
+    <Content Include="Assets\Uwp\SplashScreen.scale-150.png" />
+    <Content Include="Assets\Uwp\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Uwp\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Uwp\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Uwp\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Uwp\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Uwp\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Uwp\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Uwp\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Uwp\Square44x44Logo.altform-unplated_targetsize-24.png" />
+    <Content Include="Assets\Uwp\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Uwp\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Uwp\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Uwp\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Uwp\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Uwp\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Uwp\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Uwp\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Uwp\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Uwp\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Uwp\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\Uwp\StoreLogo.scale-100.png" />
+    <Content Include="Assets\Uwp\StoreLogo.scale-125.png" />
+    <Content Include="Assets\Uwp\StoreLogo.scale-150.png" />
+    <Content Include="Assets\Uwp\StoreLogo.scale-200.png" />
+    <Content Include="Assets\Uwp\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Uwp\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Uwp\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Uwp\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Uwp\Wide310x150Logo.scale-200.png" />
+    <Content Include="Assets\Uwp\Wide310x150Logo.scale-400.png" />
     <Content Include="Data\pokemons.db.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -560,6 +611,7 @@
     <Content Include="Assets\pks.pks">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Dex.Uwp_StoreKey.pfx" />
     <None Include="snippets.txt" />
     <None Include="project.json" />
     <PRIResource Include="Strings\en\Resources.resw" />
@@ -694,6 +746,7 @@
     <None Include="Dex_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -835,6 +888,14 @@
       <Project>{e77c2bdf-67fc-4292-aeba-85c866639b09}</Project>
       <Name>Dex.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.Services.Store.Engagement, Version=10.0">
+      <Name>Microsoft Engagement Framework</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.VCLibs, Version=14.0">
+      <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
+    </SDKReference>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

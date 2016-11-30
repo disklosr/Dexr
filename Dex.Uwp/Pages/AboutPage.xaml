@@ -9,27 +9,52 @@
                 d:DataContext="{d:DesignInstance Type=vm:AboutViewModel,
                                                  IsDesignTimeCreatable=False}"
                 mc:Ignorable="d">
+    <infra:PageBase.Commands>
+        <infra:CommandsCollection>
+            <AppBarButton AccessKey="S"
+                          Command="{Binding SendFeedbackCommand}"
+                          Visibility="{Binding CanSendFeedback}">
+                <AppBarButton.Icon>
+                    <FontIcon Glyph="&#xE939;" />
+                </AppBarButton.Icon>
+            </AppBarButton>
+        </infra:CommandsCollection>
+    </infra:PageBase.Commands>
 
     <Grid>
         <StackPanel Padding="24,12,24,0">
             <StackPanel Margin="0,0,0,24">
-                <TextBlock Text="About Dex" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,12" />
-                <TextBlock Margin="0,0,0,12">
-                    <Run Text="Version:"/>
-                    <Run Text="{Binding AppVersion}"/>
+                <TextBlock Margin="0,0,0,12" Style="{StaticResource TitleTextBlockStyle}">
+                    <Underline>About Dexr</Underline>
                 </TextBlock>
-                <TextBlock TextWrapping="Wrap"  Text="Dex is a modern Pokemon Go compagnon app for Windows 10 devices. Dex's aim is to provide a quick and offline experience to help you make the best choices in your Pokemon Go Journey."/>
+                <TextBlock Margin="0,0,0,12" Style="{StaticResource CaptionTextBlockStyle}">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="{ThemeResource SystemChromeDisabledLowColor}" />
+                    </TextBlock.Foreground>
+                    <Run Text="Version:" />
+                    <Run Text="{Binding AppVersion}" />
+                </TextBlock>
+                <TextBlock Text="Dexr is a modern Pokemon Go companion app for Windows 10 devices. Dex's aim is to provide a fast and offline experience to help you make the best choices in your Pokemon Go Journey." TextWrapping="Wrap" />
             </StackPanel>
             <StackPanel Margin="0,0,0,24">
-                <TextBlock Text="Third party content" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,12" />
+                <TextBlock Margin="0,0,0,12" Style="{StaticResource TitleTextBlockStyle}">
+                    <Underline>Third party content</Underline>
+                </TextBlock>
                 <RichTextBlock>
                     <Paragraph Margin="0,0,0,12">
-                        Pokemon icon set from
-                        <Hyperlink NavigateUri="http://theartificial.nl/pokemonicons/">The Articificial</Hyperlink> .
-                        These icons are licenced
-                        <Hyperlink NavigateUri="https://creativecommons.org/licenses/by/3.0/">CC-BY</Hyperlink>
+                        Pokemon pictures used in this app are made by
+                        <Hyperlink NavigateUri="http://theartificial.nl/pokemonicons/">The Articificial</Hyperlink>
+                        and licensed
+                        <Hyperlink NavigateUri="https://creativecommons.org/licenses/by/3.0/">CC-BY-3.0</Hyperlink>
                     </Paragraph>
 
+                    <Paragraph Margin="0,0,0,12">
+                        Application icon made by
+                        <Hyperlink NavigateUri="http://theartificial.nl/pokemonicons/">Maicol Torti</Hyperlink>
+                        and licensed under
+                        <Hyperlink NavigateUri="http://creativecommons.org/licenses/by/2.5/">CC-BY-2.5</Hyperlink>
+                    </Paragraph>
+                    <Paragraph />
                     <Paragraph>
                         This app is not associated with Nintendo in any way. Pokémon and Pokémon character names are trademarks of Nintendo.
                     </Paragraph>
@@ -37,5 +62,4 @@
             </StackPanel>
         </StackPanel>
     </Grid>
-    
 </infra:PageBase>

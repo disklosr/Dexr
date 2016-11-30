@@ -9,6 +9,14 @@
              mc:Ignorable="d">
 
     <Grid>
-        <ListView Name="MyList" IsItemClickEnabled="True" />
+        <ListView Name="MyList" IsItemClickEnabled="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border Height="48">
+                        <TextBlock VerticalAlignment="Center" Text="{Binding}" />
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </UserControl>

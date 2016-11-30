@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="345bcad1-86c6-4bff-a081-c9f50db68569" Publisher="CN=pirha" Version="1.0.2.0" />
+  <Identity Name="31598disklosr.Dexr" Publisher="CN=7AAE6BC9-8408-4059-B60A-25E6BCD1DCF7" Version="1.1.0.0" />
   <mp:PhoneIdentity PhoneProductId="345bcad1-86c6-4bff-a081-c9f50db68569" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Dex</DisplayName>
-    <PublisherDisplayName>pirha</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
+    <DisplayName>Dexr</DisplayName>
+    <PublisherDisplayName>disklosr</PublisherDisplayName>
+    <Logo>Assets\Uwp\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
@@ -15,10 +15,10 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Dex.App">
-      <uap:VisualElements DisplayName="Dex" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Dex" BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png">
+      <uap:VisualElements DisplayName="Dexr" Square150x150Logo="Assets\Uwp\Square150x150Logo.png" Square44x44Logo="Assets\Uwp\Square44x44Logo.png" Description="Dexr is a modern Pokemon Go companion app for Windows 10 devices. Dex's aim is to provide a fast and offline experience to help you make the best choices in your Pokemon Go Journey." BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\Uwp\Wide310x150Logo.png" Square310x310Logo="Assets\Uwp\LargeTile.png" Square71x71Logo="Assets\Uwp\SmallTile.png">
         </uap:DefaultTile>
-        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#E53935" />
+        <uap:SplashScreen Image="Assets\Uwp\SplashScreen.png" BackgroundColor="#E53935" />
       </uap:VisualElements>
     </Application>
   </Applications>

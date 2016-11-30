@@ -34,7 +34,7 @@
             </controls:ShadowHost.Transitions>
 
             <!--  QueryIcon is only set to "activate" its visibility. The actual used icon is hardcoded inside the style  -->
-            <AutoSuggestBox x:Uid="AutoSuggestBox.Search"
+            <AutoSuggestBox x:Uid="Page_Search_SearchBox"
                             Name="SearchBox"
                             Grid.Row="0"
                             Height="48"
