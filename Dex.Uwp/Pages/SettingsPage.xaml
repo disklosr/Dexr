@@ -15,13 +15,22 @@
                 mc:Ignorable="d">
 
     <Grid>
-        <ProgressBar IsIndeterminate="{Binding IsBusy}" VerticalAlignment="Top" Background="{x:Null}"/>
+        <ProgressBar VerticalAlignment="Top"
+                     Background="{x:Null}"
+                     IsIndeterminate="{Binding IsBusy}" />
         <StackPanel Padding="24,12,24,0">
             <StackPanel Margin="0,0,0,24">
-                <TextBlock Text="Picture Sources" Style="{StaticResource TitleTextBlockStyle}" Margin="0,0,0,12" />
-                <ComboBox Header="Use this type of pokemon pictures" ItemsSource="{Binding AvailableSources}" SelectedValuePath="Name" DisplayMemberPath="Name" SelectedItem="{Binding SelectedSource, Mode=TwoWay}"/>
+                <TextBlock Margin="0,0,0,12"
+                           Style="{StaticResource TitleTextBlockStyle}"
+                           Text="Picture Sources" />
+                <ComboBox DisplayMemberPath="Name"
+                          Header="Use this type of pokemon pictures"
+                          IsEnabled="False"
+                          ItemsSource="{Binding AvailableSources}"
+                          SelectedItem="{Binding SelectedSource,
+                                                 Mode=TwoWay}"
+                          SelectedValuePath="Name" />
             </StackPanel>
         </StackPanel>
     </Grid>
-    
 </infra:PageBase>
