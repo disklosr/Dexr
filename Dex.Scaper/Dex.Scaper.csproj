@@ -79,6 +79,15 @@
     <Compile Include="EvolutionsParser.cs" />
     <Compile Include="JsonEvolutionParser.cs" />
     <Compile Include="Parser.cs" />
+    <Compile Include="Parsers\CandiesParser.cs" />
+    <Compile Include="Parsers\CatchRateParser.cs" />
+    <Compile Include="Parsers\DexNumberParser.cs" />
+    <Compile Include="Parsers\EggDistanceParser.cs" />
+    <Compile Include="Parsers\IParser.cs" />
+    <Compile Include="Parsers\MovesParser.cs" />
+    <Compile Include="Parsers\NameParser.cs" />
+    <Compile Include="Parsers\ParserBase.cs" />
+    <Compile Include="Parsers\SinglePokemonParser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
