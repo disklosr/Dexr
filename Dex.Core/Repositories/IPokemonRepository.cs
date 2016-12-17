@@ -155,15 +155,21 @@ namespace Dex.Core.Repositories
 
         private async Task<IEnumerable<Pokemon>> GetEvolutions(Pokemon pokemon)
         {
-            var to = await GetPokemonById(pokemon.EvolvesTo);
             var from = await GetPokemonById(pokemon.EvolvesFrom);
 
-            return new Pokemon[] { to, from }.Where(poke => poke != null);
+            var to = await Task.WhenAll(
+                pokemon.EvolvesTo.ToList()
+                .Select(async pokemonId => await GetPokemonById(pokemonId)));
+
+            var evolutions = new List<Pokemon>(to.ToList());
+            evolutions.Add(from);
+
+            return evolutions.Where(poke => poke != null);
         }
 
         private bool HasEvolutions(Pokemon pokemon)
         {
-            return pokemon.EvolvesFrom != 0 || pokemon.EvolvesTo != 0;
+            return pokemon.EvolvesFrom != 0 || pokemon.EvolvesTo.Count() != 0;
         }
     }
 }
