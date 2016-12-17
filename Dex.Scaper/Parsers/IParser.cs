@@ -1,7 +1,9 @@
-﻿namespace Dex.Scaper.Parsers
+﻿using Dex.Core.Entities;
+
+namespace Dex.Scaper.Parsers
 {
     public interface IParser<T>
     {
-        T Parse(string htmlInput);
+        T Parse(string htmlSingleRowInput);
     }
 }

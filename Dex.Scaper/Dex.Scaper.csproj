@@ -65,6 +65,10 @@
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -75,42 +79,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTO\MoveDTO.cs" />
-    <Compile Include="EvolutionsParser.cs" />
-    <Compile Include="JsonEvolutionParser.cs" />
-    <Compile Include="Parser.cs" />
-    <Compile Include="Parsers\CandiesParser.cs" />
-    <Compile Include="Parsers\CatchRateParser.cs" />
-    <Compile Include="Parsers\DexNumberParser.cs" />
-    <Compile Include="Parsers\EggDistanceParser.cs" />
+    <Compile Include="Factories\PokemonsParserFactory.cs" />
+    <Compile Include="Parsers\Pokemons\IPokemonParsers.cs" />
+    <Compile Include="Parsers\Pokemons\Partials\TypeParser.cs" />
+    <Compile Include="Scraper.cs" />
+    <Compile Include="Sources\IParserSource.cs" />
+    <Compile Include="Sources\PokemonsParserSource.cs" />
+    <Compile Include="Utils\EnvUtils.cs" />
+    <Compile Include="Utils\HtmlUtils.cs" />
+    <Compile Include="Parsers\Pokemons\Partials\CandiesParser.cs" />
+    <Compile Include="Parsers\Pokemons\Partials\PokemonStatsParser.cs" />
+    <Compile Include="Parsers\Pokemons\Partials\DexNumberParser.cs" />
+    <Compile Include="Parsers\Pokemons\Partials\EggDistanceParser.cs" />
     <Compile Include="Parsers\IParser.cs" />
-    <Compile Include="Parsers\MovesParser.cs" />
-    <Compile Include="Parsers\NameParser.cs" />
+    <Compile Include="Parsers\Moves\MovesParser.cs" />
+    <Compile Include="Parsers\Pokemons\Partials\MoveIdsParser.cs" />
+    <Compile Include="Parsers\Pokemons\Partials\NameParser.cs" />
     <Compile Include="Parsers\ParserBase.cs" />
-    <Compile Include="Parsers\SinglePokemonParser.cs" />
+    <Compile Include="Parsers\Pokemons\PokemonsParser.cs" />
+    <Compile Include="Parsers\Pokemons\SinglePokemonParser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\JsonUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <Content Include="Moves.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Include="packages.config" />
-    <Content Include="types.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dex.Core\Dex.Core.csproj">
       <Project>{e77c2bdf-67fc-4292-aeba-85c866639b09}</Project>
       <Name>Dex.Core</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="in.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
