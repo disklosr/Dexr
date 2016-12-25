@@ -1,5 +1,5 @@
 using Dex.Core.Entities;
-using Type = Dex.Core.Entities.Type;
+using PokemonType = Dex.Core.Entities.PokemonType;
 
 namespace Dex.Scaper.Parsers.Pokemons
 {
@@ -15,7 +15,7 @@ namespace Dex.Scaper.Parsers.Pokemons
         IParser<PokemonMovesIds> MovesParser { get; }
         IParser<string> NameParser { get; }
         IParser<ushort> StaminaParser { get; }
-        IParser<Type[]> TypeParser { get; }
+        IParser<PokemonType[]> TypeParser { get; }
     }
 
     public class PokemonParsers : IPokemonParsers
@@ -55,6 +55,6 @@ namespace Dex.Scaper.Parsers.Pokemons
 
         public IParser<ushort> StaminaParser { get; }
 
-        public IParser<Type[]> TypeParser { get; }
+        public IParser<PokemonType[]> TypeParser { get; }
     }
 }

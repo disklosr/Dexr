@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Type = Dex.Core.Entities.Type;
+using PokemonType = Dex.Core.Entities.PokemonType;
 
 namespace Dex.Core.Repositories
 {
@@ -12,7 +12,7 @@ namespace Dex.Core.Repositories
     {
         Task<PokemonMoves> GetAllMoves();
 
-        Task<PokemonMoves> GetAllMovesByType(Type moveType);
+        Task<PokemonMoves> GetAllMovesByType(PokemonType moveType);
 
         Move GetMoveById(string Id);
 
@@ -36,7 +36,7 @@ namespace Dex.Core.Repositories
             return movesCache;
         }
 
-        public async Task<PokemonMoves> GetAllMovesByType(Type moveType)
+        public async Task<PokemonMoves> GetAllMovesByType(PokemonType moveType)
         {
             await EnsureCacheIsValid();
             return new PokemonMoves()

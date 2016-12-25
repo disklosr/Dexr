@@ -4503,7 +4503,9 @@
         "EggDistance": 10,
         "EvolvesFrom": 0,
         "EvolvesTo": [
-            134
+            134,
+			135,
+			136
         ]
     },
     {

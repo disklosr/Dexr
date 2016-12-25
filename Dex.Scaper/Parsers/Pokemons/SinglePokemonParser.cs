@@ -20,7 +20,7 @@ namespace Dex.Scaper.Parsers
 
             var types = _pokemonParsers.TypeParser.Parse(htmlRow);
             pokemon.Type1 = types[0];
-            pokemon.Type2 = types.Length == 2 ? types[1] : Type.Unknown;
+            pokemon.Type2 = types.Length == 2 ? types[1] : PokemonType.Unknown;
 
             pokemon.CandiesToEvolve = _pokemonParsers.CandiesParser.Parse(htmlRow);
             pokemon.EggDistance = _pokemonParsers.EggDistanceParser.Parse(htmlRow);

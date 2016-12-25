@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Windows.UI;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media;
-using Type = Dex.Core.Entities.Type;
+using PokemonType = Dex.Core.Entities.PokemonType;
 
 namespace Dex.Uwp.ValueConverters
 {
@@ -15,31 +15,31 @@ namespace Dex.Uwp.ValueConverters
         {
             TypeToColorMap = new Dictionary<ushort, SolidColorBrush>()
             {
-                {(ushort)Type.Bug,      GetSolidColorBrush("#a8b820") },
-                {(ushort)Type.Grass,    GetSolidColorBrush("#78c850") },
-                {(ushort)Type.Dark,     GetSolidColorBrush("#705848") },
-                {(ushort)Type.Ground,   GetSolidColorBrush("#e0c068") },
-                {(ushort)Type.Dragon,   GetSolidColorBrush("#7038f8") },
-                {(ushort)Type.Ice,      GetSolidColorBrush("#98d8d8") },
-                {(ushort)Type.Electric, GetSolidColorBrush("#f8d030") },
-                {(ushort)Type.Normal,   GetSolidColorBrush("#8a8a59") },
-                {(ushort)Type.Fairy,    GetSolidColorBrush("#e898e8") },
-                {(ushort)Type.Poison,   GetSolidColorBrush("#a040a0") },
-                {(ushort)Type.Fighting, GetSolidColorBrush("#c03028") },
-                {(ushort)Type.Psychic,  GetSolidColorBrush("#f85888") },
-                {(ushort)Type.Fire,     GetSolidColorBrush("#f08030") },
-                {(ushort)Type.Rock,     GetSolidColorBrush("#b8a038") },
-                {(ushort)Type.Flying,   GetSolidColorBrush("#a890f0") },
-                {(ushort)Type.Steel,    GetSolidColorBrush("#b8b8d0") },
-                {(ushort)Type.Ghost,    GetSolidColorBrush("#705898") },
-                {(ushort)Type.Water,    GetSolidColorBrush("#6890f0") },
-                {(ushort)Type.Unknown,  GetSolidColorBrush("#8a8a59")  }
+                {(ushort)PokemonType.Bug,      GetSolidColorBrush("#a8b820") },
+                {(ushort)PokemonType.Grass,    GetSolidColorBrush("#78c850") },
+                {(ushort)PokemonType.Dark,     GetSolidColorBrush("#705848") },
+                {(ushort)PokemonType.Ground,   GetSolidColorBrush("#e0c068") },
+                {(ushort)PokemonType.Dragon,   GetSolidColorBrush("#7038f8") },
+                {(ushort)PokemonType.Ice,      GetSolidColorBrush("#98d8d8") },
+                {(ushort)PokemonType.Electric, GetSolidColorBrush("#f8d030") },
+                {(ushort)PokemonType.Normal,   GetSolidColorBrush("#8a8a59") },
+                {(ushort)PokemonType.Fairy,    GetSolidColorBrush("#e898e8") },
+                {(ushort)PokemonType.Poison,   GetSolidColorBrush("#a040a0") },
+                {(ushort)PokemonType.Fighting, GetSolidColorBrush("#c03028") },
+                {(ushort)PokemonType.Psychic,  GetSolidColorBrush("#f85888") },
+                {(ushort)PokemonType.Fire,     GetSolidColorBrush("#f08030") },
+                {(ushort)PokemonType.Rock,     GetSolidColorBrush("#b8a038") },
+                {(ushort)PokemonType.Flying,   GetSolidColorBrush("#a890f0") },
+                {(ushort)PokemonType.Steel,    GetSolidColorBrush("#b8b8d0") },
+                {(ushort)PokemonType.Ghost,    GetSolidColorBrush("#705898") },
+                {(ushort)PokemonType.Water,    GetSolidColorBrush("#6890f0") },
+                {(ushort)PokemonType.Unknown,  GetSolidColorBrush("#8a8a59")  }
             };
         }
 
         public object Convert(object value, System.Type targetType, object parameter, string language)
         {
-            Type type = (Type)value;
+            PokemonType type = (PokemonType)value;
             return TypeToColorMap[(ushort)type];
         }
 

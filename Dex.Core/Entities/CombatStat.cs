@@ -2,22 +2,9 @@
 
 namespace Dex.Core.Entities
 {
-    public class Attack : CombatStat
-    {
-        public Attack(ushort value)
-        {
-            Value = value;
-        }
-    }
-
-    public abstract class CombatStat : IComparable<CombatStat>
+    public abstract class CombatStat
     {
         public ushort Value { get; protected set; }
-
-        public int CompareTo(CombatStat that)
-        {
-            return this.Value.CompareTo(that.Value);
-        }
     }
 
     public class Defense : CombatStat

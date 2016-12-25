@@ -13,8 +13,8 @@ namespace Dex.Core.Entities
 
         public ushort DexNumber { get; set; }
         public string Name { get; set; }
-        public Type Type1 { get; set; }
-        public Type Type2 { get; set; }
+        public PokemonType Type1 { get; set; }
+        public PokemonType Type2 { get; set; }
 
         #endregion General
 

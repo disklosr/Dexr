@@ -1,6 +1,6 @@
 ﻿namespace Dex.Core.Entities
 {
-    public enum Type
+    public enum PokemonType
     {
         Unknown = 0,
         Normal,

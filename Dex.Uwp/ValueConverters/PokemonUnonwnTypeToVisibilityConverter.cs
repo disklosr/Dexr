@@ -8,7 +8,7 @@ namespace Dex.Uwp.ValueConverters
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            return ((Core.Entities.Type)value) == Core.Entities.Type.Unknown ? Visibility.Collapsed : Visibility.Visible;
+            return ((Core.Entities.PokemonType)value) == Core.Entities.PokemonType.Unknown ? Visibility.Collapsed : Visibility.Visible;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)

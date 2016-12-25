@@ -61,11 +61,15 @@
   <ItemGroup>
     <Compile Include="DataAccess\IMovesDataSource.cs" />
     <Compile Include="DataAccess\IPokemonsDataSource.cs" />
+    <Compile Include="Entities\Attack.cs" />
+    <Compile Include="Entities\ChargeMove.cs" />
+    <Compile Include="Entities\MoveType.cs" />
     <Compile Include="Entities\PokemonMoves.cs" />
     <Compile Include="Entities\Move.cs" />
     <Compile Include="Entities\Pokemon.cs" />
-    <Compile Include="Entities\PokemonStat.cs" />
-    <Compile Include="Entities\Type.cs" />
+    <Compile Include="Entities\CombatStat.cs" />
+    <Compile Include="Entities\QuickMove.cs" />
+    <Compile Include="Entities\PokemonType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\IMoveRespository.cs" />
     <Compile Include="Repositories\IPokemonRepository.cs" />
