@@ -1,25 +1,30 @@
-﻿using System;
+﻿using Dex.Core.Base;
+using System;
 
 namespace Dex.Core.Entities
 {
-    public abstract class CombatStat
+    public class CombatStat : ValueObject<CombatStat>, IComparable<CombatStat>
     {
-        public ushort Value { get; protected set; }
-    }
-
-    public class Defense : CombatStat
-    {
-        public Defense(ushort value)
+        public CombatStat(ushort baseValue, ushort iv = 0)
         {
-            Value = value;
-        }
-    }
+            if (iv > 15)
+                throw new ArgumentOutOfRangeException($"Iv value ({iv}) is invalid");
 
-    public class Stamina : CombatStat
-    {
-        public Stamina(ushort value)
-        {
-            Value = value;
+            Iv = iv;
+            BaseValue = baseValue;
         }
+
+        public ushort BaseValue { get; }
+        public ushort Iv { get; }
+        public ushort Value => (ushort)(BaseValue + Iv);
+
+        public int CompareTo(CombatStat that)
+        {
+            return BaseValue.CompareTo(that.BaseValue);
+        }
+
+        protected override bool EqualsCore(CombatStat other) => BaseValue == other.BaseValue && Iv == other.Iv;
+
+        protected override int GetHashCodeCore() => BaseValue.GetHashCode() ^ Iv.GetHashCode();
     }
 }

@@ -14,13 +14,16 @@ namespace Dex.Core.Test.Repositories
     {
         private Mock<IPokemonsDataSource> mockPokemonsDataSource;
 
+        private ushort[] Nothing = { };
+        private PokemonBuilder PkBuilder => new PokemonBuilder();
+
         [Test]
         public async Task Given1EvolutionsPokemonShouldReturnNothing()
         {
-            var pokemon1 = new Pokemon() { DexNumber = 1, EvolvesFrom = 0, EvolvesTo = new ushort[] { } };
-            var pokemon2 = new Pokemon() { DexNumber = 2, EvolvesFrom = 0, EvolvesTo = new ushort[] { } };
-            var pokemon3 = new Pokemon() { DexNumber = 3, EvolvesFrom = 0, EvolvesTo = new ushort[] { } };
-            var pokemon4 = new Pokemon() { DexNumber = 4, EvolvesFrom = 0, EvolvesTo = new ushort[] { } };
+            Pokemon pokemon1 = PkBuilder.WithDexId(1).EvolvesFrom(0).EvolvesTo(Nothing);
+            Pokemon pokemon2 = PkBuilder.WithDexId(2).EvolvesFrom(0).EvolvesTo(Nothing);
+            Pokemon pokemon3 = PkBuilder.WithDexId(3).EvolvesFrom(0).EvolvesTo(Nothing);
+            Pokemon pokemon4 = PkBuilder.WithDexId(4).EvolvesFrom(0).EvolvesTo(Nothing);
 
             SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2, pokemon3, pokemon4 });
 
@@ -33,10 +36,10 @@ namespace Dex.Core.Test.Repositories
         [Test]
         public async Task Given2EvolutionsPokemonShouldReturn2PokemonsInCorrectOrder()
         {
-            var pokemon1 = new Pokemon() { DexNumber = 1, EvolvesFrom = 0, EvolvesTo = new ushort[] { 1 } };
-            var pokemon2 = new Pokemon() { DexNumber = 2, EvolvesFrom = 1, EvolvesTo = new ushort[] { } };
-            var pokemon3 = new Pokemon() { DexNumber = 3, EvolvesFrom = 0, EvolvesTo = new ushort[] { } };
-            var pokemon4 = new Pokemon() { DexNumber = 4, EvolvesFrom = 0, EvolvesTo = new ushort[] { } };
+            Pokemon pokemon1 = PkBuilder.WithDexId(1).EvolvesFrom(0).EvolvesTo(1);
+            Pokemon pokemon2 = PkBuilder.WithDexId(2).EvolvesFrom(1).EvolvesTo(Nothing);
+            Pokemon pokemon3 = PkBuilder.WithDexId(3).EvolvesFrom(2).EvolvesTo(Nothing);
+            Pokemon pokemon4 = PkBuilder.WithDexId(4).EvolvesFrom(0).EvolvesTo(Nothing);
 
             SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2, pokemon3, pokemon4 });
 
@@ -52,10 +55,10 @@ namespace Dex.Core.Test.Repositories
         [Test]
         public async Task Given3EvolutionsPokemonShouldReturn3PokemonsInCorrectOrder()
         {
-            var pokemon1 = new Pokemon() { DexNumber = 1, EvolvesFrom = 0, EvolvesTo = new ushort[] { 2 } };
-            var pokemon2 = new Pokemon() { DexNumber = 2, EvolvesFrom = 1, EvolvesTo = new ushort[] { 3 } };
-            var pokemon3 = new Pokemon() { DexNumber = 3, EvolvesFrom = 2, EvolvesTo = new ushort[] { } };
-            var pokemon4 = new Pokemon() { DexNumber = 4, EvolvesFrom = 0, EvolvesTo = new ushort[] { } };
+            Pokemon pokemon1 = PkBuilder.WithDexId(1).EvolvesFrom(0).EvolvesTo(2);
+            Pokemon pokemon2 = PkBuilder.WithDexId(2).EvolvesFrom(1).EvolvesTo(3);
+            Pokemon pokemon3 = PkBuilder.WithDexId(3).EvolvesFrom(2).EvolvesTo(Nothing);
+            Pokemon pokemon4 = PkBuilder.WithDexId(4).EvolvesFrom(0).EvolvesTo(Nothing);
 
             SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2, pokemon3, pokemon4 });
 
@@ -81,14 +84,14 @@ namespace Dex.Core.Test.Repositories
             ushort maxAttack = 123;
             ushort lesserAttack = 34;
 
-            var pokemon1 = new Pokemon() { Attack = new Attack(maxAttack) };
-            var pokemon2 = new Pokemon() { Attack = new Attack(lesserAttack) };
+            Pokemon pokemon1 = PkBuilder.WithAttack(maxAttack);
+            Pokemon pokemon2 = PkBuilder.WithAttack(lesserAttack);
 
             SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2 });
 
             PokemonRepository pokemonRepository = new PokemonRepository(mockPokemonsDataSource.Object);
 
-            Assert.AreEqual(maxAttack, await pokemonRepository.GetMaxAttack());
+            Assert.AreEqual(maxAttack, await pokemonRepository.GetMaxBaseAttack());
         }
 
         [Test]
@@ -97,14 +100,14 @@ namespace Dex.Core.Test.Repositories
             ushort maxDefense = 123;
             ushort lesserDefense = 34;
 
-            var pokemon1 = new Pokemon() { Defense = new Defense(maxDefense) };
-            var pokemon2 = new Pokemon() { Defense = new Defense(lesserDefense) };
+            Pokemon pokemon1 = PkBuilder.WithDefense(maxDefense);
+            Pokemon pokemon2 = PkBuilder.WithDefense(lesserDefense);
 
             SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2 });
 
             PokemonRepository pokemonRepository = new PokemonRepository(mockPokemonsDataSource.Object);
 
-            Assert.AreEqual(maxDefense, await pokemonRepository.GetMaxDefense());
+            Assert.AreEqual(maxDefense, await pokemonRepository.GetMaxBaseDefense());
         }
 
         [Test]
@@ -113,14 +116,14 @@ namespace Dex.Core.Test.Repositories
             ushort maxStamina = 123;
             ushort lesserStamina = 34;
 
-            var pokemon1 = new Pokemon() { Stamina = new Stamina(maxStamina) };
-            var pokemon2 = new Pokemon() { Stamina = new Stamina(lesserStamina) };
+            Pokemon pokemon1 = PkBuilder.WithStamina(maxStamina);
+            Pokemon pokemon2 = PkBuilder.WithStamina(lesserStamina);
 
             SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2 });
 
             PokemonRepository pokemonRepository = new PokemonRepository(mockPokemonsDataSource.Object);
 
-            Assert.AreEqual(maxStamina, await pokemonRepository.GetMaxStamina());
+            Assert.AreEqual(maxStamina, await pokemonRepository.GetMaxBaseStamina());
         }
 
         private void SetUpDataSourceMockData(IEnumerable<Pokemon> list)

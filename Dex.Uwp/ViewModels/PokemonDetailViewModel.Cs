@@ -83,9 +83,9 @@ namespace Dex.Uwp.ViewModels
 
         private async Task InitCombatStats()
         {
-            var maxAtk = pokemonRepository.GetMaxAttack();
-            var maxDef = pokemonRepository.GetMaxDefense();
-            var maxStm = pokemonRepository.GetMaxStamina();
+            var maxAtk = pokemonRepository.GetMaxBaseAttack();
+            var maxDef = pokemonRepository.GetMaxBaseDefense();
+            var maxStm = pokemonRepository.GetMaxBaseStamina();
             await Task.WhenAll(new Task[] { maxAtk, maxDef, maxStm });
 
             AttackStats = new CombatStatDataViewModel(SelectedPokemon.Attack.Value, maxAtk.Result);

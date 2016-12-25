@@ -29,9 +29,9 @@ namespace Dex.Scaper.Parsers
 
             pokemon.CatchRate = _pokemonParsers.CatchRateParser.Parse(htmlRow);
             pokemon.FleeRate = _pokemonParsers.FleeRateParser.Parse(htmlRow);
-            pokemon.Attack = new Attack(_pokemonParsers.AttackParser.Parse(htmlRow));
-            pokemon.Defense = new Defense(_pokemonParsers.DefenseParser.Parse(htmlRow));
-            pokemon.Stamina = new Stamina(_pokemonParsers.StaminaParser.Parse(htmlRow));
+            pokemon.Attack = new CombatStat(_pokemonParsers.AttackParser.Parse(htmlRow));
+            pokemon.Defense = new CombatStat(_pokemonParsers.DefenseParser.Parse(htmlRow));
+            pokemon.Stamina = new CombatStat(_pokemonParsers.StaminaParser.Parse(htmlRow));
 
             return pokemon;
         }

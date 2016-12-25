@@ -20,9 +20,9 @@ namespace Dex.Core.Entities
 
         #region CombatStats
 
-        public Attack Attack { get; set; }
-        public Defense Defense { get; set; }
-        public Stamina Stamina { get; set; }
+        public CombatStat Attack { get; set; }
+        public CombatStat Defense { get; set; }
+        public CombatStat Stamina { get; set; }
 
         #endregion CombatStats
 

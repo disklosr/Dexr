@@ -1,6 +1,5 @@
 ﻿using Dex.Core.DataAccess;
 using Dex.Core.Entities;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,11 +12,11 @@ namespace Dex.Core.Repositories
 
         Task<IEnumerable<Pokemon>> GetEvolutionLineFor(Pokemon pokemon);
 
-        Task<ushort> GetMaxAttack();
+        Task<ushort> GetMaxBaseAttack();
 
-        Task<ushort> GetMaxDefense();
+        Task<ushort> GetMaxBaseDefense();
 
-        Task<ushort> GetMaxStamina();
+        Task<ushort> GetMaxBaseStamina();
 
         Task<Pokemon> GetNextPokemon(ushort PokemonId);
 
@@ -38,11 +37,10 @@ namespace Dex.Core.Repositories
 
         private IEnumerable<Pokemon> allPokemonsCache;
 
-        private Attack maxAttack;
-        private Defense maxDefense;
+        private CombatStat maxAttack;
+        private CombatStat maxDefense;
         private ushort maxDexNumber;
-        private Stamina maxStamina;
-
+        private CombatStat maxStamina;
         private ushort minDexNumber = 1;
 
         public PokemonRepository(IPokemonsDataSource dataSource)
@@ -79,21 +77,21 @@ namespace Dex.Core.Repositories
             return evolutions.OrderBy(poke => poke.DexNumber);
         }
 
-        public async Task<ushort> GetMaxAttack()
+        public async Task<ushort> GetMaxBaseAttack()
         {
             await EnsureCacheIsValid();
             maxAttack = maxAttack ?? allPokemonsCache.Max(poke => poke.Attack);
             return maxAttack.Value;
         }
 
-        public async Task<ushort> GetMaxDefense()
+        public async Task<ushort> GetMaxBaseDefense()
         {
             await EnsureCacheIsValid();
             maxDefense = maxDefense ?? allPokemonsCache.Max(poke => poke.Defense);
             return maxDefense.Value;
         }
 
-        public async Task<ushort> GetMaxStamina()
+        public async Task<ushort> GetMaxBaseStamina()
         {
             await EnsureCacheIsValid();
             maxStamina = maxStamina ?? allPokemonsCache.Max(poke => poke.Stamina);
