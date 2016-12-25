@@ -5,26 +5,35 @@ namespace Dex.Core.Entities
 {
     public class CombatStat : ValueObject<CombatStat>, IComparable<CombatStat>
     {
-        public CombatStat(ushort baseValue, ushort iv = 0)
+        public CombatStat(ushort baseValue, IV iv = null)
         {
-            if (iv > 15)
-                throw new ArgumentOutOfRangeException($"Iv value ({iv}) is invalid");
-
-            Iv = iv;
+            Iv = iv ?? IV.Min;
             BaseValue = baseValue;
         }
 
         public ushort BaseValue { get; }
-        public ushort Iv { get; }
-        public ushort Value => (ushort)(BaseValue + Iv);
+
+        public IV Iv { get; }
+
+        public ushort Max => (ushort)(BaseValue + IV.Max.Value);
+
+        public ushort Min => (ushort)(BaseValue + IV.Min.Value);
+
+        public ushort Value => (ushort)(BaseValue + Iv.Value);
 
         public int CompareTo(CombatStat that)
         {
-            return BaseValue.CompareTo(that.BaseValue);
+            return (BaseValue + Iv.Value).CompareTo(that.BaseValue + that.Iv.Value);
         }
 
-        protected override bool EqualsCore(CombatStat other) => BaseValue == other.BaseValue && Iv == other.Iv;
+        protected override bool EqualsCore(CombatStat other)
+        {
+            return BaseValue == other.BaseValue && Iv == other.Iv;
+        }
 
-        protected override int GetHashCodeCore() => BaseValue.GetHashCode() ^ Iv.GetHashCode();
+        protected override int GetHashCodeCore()
+        {
+            return BaseValue.GetHashCode() ^ Iv.GetHashCode();
+        }
     }
 }

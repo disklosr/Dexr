@@ -63,7 +63,7 @@ namespace Dex.Uwp.ViewModels
             allPokemonsCache = await pokes;
 
             AllPokemonsByDexNumber = allPokemonsCache.OrderBy(poke => poke.DexNumber);
-            AllPokemonsByCp = allPokemonsCache.OrderBy(poke => poke.MaxCP);
+            AllPokemonsByCp = allPokemonsCache.OrderBy(poke => poke.Cp.Max);
             AllPokemonsByName = allPokemonsCache.OrderBy(poke => poke.Name);
             AllPokemonsByType = allPokemonsCache.OrderBy(poke => poke.Type1).ThenBy(poke => poke.Type2);
         }
