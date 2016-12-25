@@ -3,6 +3,7 @@ using Dex.Core.Entities;
 using Dex.Core.Repositories;
 using Moq;
 using NUnit.Framework;
+using Shouldly;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -30,7 +31,7 @@ namespace Dex.Core.Test.Repositories
             PokemonRepository pokemonRepository = new PokemonRepository(mockPokemonsDataSource.Object);
             var evolutionLine = await pokemonRepository.GetEvolutionLineFor(pokemon2);
 
-            Assert.IsTrue(!evolutionLine.Any());
+            evolutionLine.ShouldBeEmpty();
         }
 
         [Test]
@@ -44,12 +45,12 @@ namespace Dex.Core.Test.Repositories
             SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2, pokemon3, pokemon4 });
 
             PokemonRepository pokemonRepository = new PokemonRepository(mockPokemonsDataSource.Object);
-            var evolutionLine = await pokemonRepository.GetEvolutionLineFor(pokemon2);
+            var evolutionLine = (await pokemonRepository.GetEvolutionLineFor(pokemon2)).ToList();
 
-            Assert.IsTrue(evolutionLine.Count() == 2);
-            CollectionAssert.AllItemsAreNotNull(evolutionLine);
-            Assert.IsTrue(evolutionLine.ElementAt(0) == pokemon1);
-            Assert.IsTrue(evolutionLine.ElementAt(1) == pokemon2);
+            evolutionLine.Count.ShouldBe(2);
+            evolutionLine.ShouldAllBe(p => p != null);
+            evolutionLine[0].ShouldBe(pokemon1);
+            evolutionLine[1].ShouldBe(pokemon2);
         }
 
         [Test]
@@ -63,13 +64,13 @@ namespace Dex.Core.Test.Repositories
             SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2, pokemon3, pokemon4 });
 
             PokemonRepository pokemonRepository = new PokemonRepository(mockPokemonsDataSource.Object);
-            var evolutionLine = await pokemonRepository.GetEvolutionLineFor(pokemon2);
+            var evolutionLine = (await pokemonRepository.GetEvolutionLineFor(pokemon2)).ToList();
 
-            Assert.IsTrue(evolutionLine.Count() == 3);
-            CollectionAssert.AllItemsAreNotNull(evolutionLine);
-            Assert.IsTrue(evolutionLine.ElementAt(0) == pokemon1);
-            Assert.IsTrue(evolutionLine.ElementAt(1) == pokemon2);
-            Assert.IsTrue(evolutionLine.ElementAt(2) == pokemon3);
+            evolutionLine.Count.ShouldBe(3);
+            evolutionLine.ShouldAllBe(p => p != null);
+            evolutionLine[0].ShouldBe(pokemon1);
+            evolutionLine[1].ShouldBe(pokemon2);
+            evolutionLine[2].ShouldBe(pokemon3);
         }
 
         [SetUp]
@@ -91,7 +92,7 @@ namespace Dex.Core.Test.Repositories
 
             PokemonRepository pokemonRepository = new PokemonRepository(mockPokemonsDataSource.Object);
 
-            Assert.AreEqual(maxAttack, await pokemonRepository.GetMaxBaseAttack());
+            maxAttack.ShouldBe(await pokemonRepository.GetMaxBaseAttack());
         }
 
         [Test]
@@ -107,7 +108,7 @@ namespace Dex.Core.Test.Repositories
 
             PokemonRepository pokemonRepository = new PokemonRepository(mockPokemonsDataSource.Object);
 
-            Assert.AreEqual(maxDefense, await pokemonRepository.GetMaxBaseDefense());
+            maxDefense.ShouldBe(await pokemonRepository.GetMaxBaseDefense());
         }
 
         [Test]
@@ -123,7 +124,7 @@ namespace Dex.Core.Test.Repositories
 
             PokemonRepository pokemonRepository = new PokemonRepository(mockPokemonsDataSource.Object);
 
-            Assert.AreEqual(maxStamina, await pokemonRepository.GetMaxBaseStamina());
+            maxStamina.ShouldBe(await pokemonRepository.GetMaxBaseStamina());
         }
 
         private void SetUpDataSourceMockData(IEnumerable<Pokemon> list)
