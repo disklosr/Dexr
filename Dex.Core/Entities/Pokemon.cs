@@ -1,11 +1,17 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 
 namespace Dex.Core.Entities
 {
     [DebuggerDisplay("{Name}")]
     public class Pokemon
     {
-        private CP _cp;
+        private CpCalculator _cp;
+
+        public Pokemon()
+        {
+            EvolvesTo = Array.Empty<ushort>();
+        }
 
         #region General
 
@@ -23,7 +29,7 @@ namespace Dex.Core.Entities
 
         public CombatStat Attack { get; set; }
 
-        public CP Cp => _cp ?? (_cp = new CP(Attack, Defense, Stamina));
+        public CpCalculator Cp => _cp ?? (_cp = new CpCalculator(Attack, Defense, Stamina));
 
         public CombatStat Defense { get; set; }
 

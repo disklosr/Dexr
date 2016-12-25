@@ -1,54 +1,34 @@
-﻿using Dex.Core.Extensions;
+﻿using Dex.Core.Base;
+using Dex.Core.Extensions;
 using System;
-
-using CpMap = Dex.Core.Entities.CpMultipliersMap;
 
 namespace Dex.Core.Entities
 {
-    public class CP
+    public class CP : ValueObject<CP>
     {
-        private CombatStat _attack;
-        private CombatStat _defense;
-        private CombatStat _stamina;
-
-        public CP(CombatStat attack, CombatStat defense, CombatStat stamina)
+        public CP(double value)
         {
-            if (attack == null)
-                throw new ArgumentNullException(nameof(attack));
-
-            if (defense == null)
-                throw new ArgumentNullException(nameof(defense));
-
-            if (stamina == null)
-                throw new ArgumentNullException(nameof(stamina));
-
-            _attack = attack;
-            _defense = defense;
-            _stamina = stamina;
+            PreciseValue = value;
+            Value = ((ushort)Math.Floor(PreciseValue)).ClipToMin(10);
         }
 
-        public ushort Max => Calculate(_attack.Min, _defense.Min, _stamina.Min, 40.5f);
+        public double PreciseValue { get; }
 
-        public ushort Min => Calculate(_attack.Min, _defense.Min, _stamina.Min, 1.0f);
+        public ushort Value { get; }
 
-        public ushort AtLevel(float level)
+        public override string ToString()
         {
-            return Calculate(_attack.Value, _defense.Value, _stamina.Value, level);
+            return Value.ToString();
         }
 
-        private static ushort Calculate(ushort attack, ushort defense, ushort stamina, float pokemonLevel)
+        protected override bool EqualsCore(CP other)
         {
-            if (!CpMap.LevelToCpm.ContainsKey(pokemonLevel))
-                throw new ArgumentException($"Invalid Pokemon level ({pokemonLevel})");
+            return Value == other.Value;
+        }
 
-            var calculatedCp = (ushort)Math.Floor(
-                  attack
-                * defense.Pow(0.5)
-                * stamina.Pow(0.5)
-                * CpMap.LevelToCpm[pokemonLevel].Pow(2)
-                / 10);
-
-            return calculatedCp.ClipToMin(10);
+        protected override int GetHashCodeCore()
+        {
+            return Value.GetHashCode();
         }
     }
 }

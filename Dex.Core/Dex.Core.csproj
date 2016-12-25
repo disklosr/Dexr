@@ -68,6 +68,7 @@
     <Compile Include="DataAccess\IPokemonsDataSource.cs" />
     <Compile Include="Entities\ChargeMove.cs" />
     <Compile Include="Entities\CP.cs" />
+    <Compile Include="Entities\CpCalculator.cs" />
     <Compile Include="Entities\CpMultipliersMap.cs" />
     <Compile Include="Entities\IV.cs" />
     <Compile Include="Entities\MoveType.cs" />

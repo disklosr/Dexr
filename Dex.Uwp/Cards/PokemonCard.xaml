@@ -120,7 +120,7 @@
                     <!--  CP Stat  -->
                     <StackPanel Grid.Row="0" Grid.Column="4">
                         <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
-                                   Text="{Binding MaxCP}"
+                                   Text="{Binding Cp.Max}"
                                    TextAlignment="Center" />
                         <TextBlock FontSize="11"
                                    Text="Max CP"

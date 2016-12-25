@@ -11,7 +11,7 @@ namespace Dex.Core.Entities
             BaseValue = baseValue;
         }
 
-        public ushort BaseValue { get; }
+        public ushort BaseValue { get; set; }
 
         public IV Iv { get; }
 
