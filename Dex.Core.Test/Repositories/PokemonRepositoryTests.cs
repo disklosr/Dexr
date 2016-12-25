@@ -1,7 +1,7 @@
 using Dex.Core.DataAccess;
 using Dex.Core.Entities;
 using Dex.Core.Repositories;
-using Moq;
+using NSubstitute;
 using NUnit.Framework;
 using Shouldly;
 using System.Collections.Generic;
@@ -13,9 +13,8 @@ namespace Dex.Core.Test.Repositories
     [TestFixture]
     public class PokemonRepositoryTests
     {
-        private Mock<IPokemonsDataSource> mockPokemonsDataSource;
-
         private ushort[] Nothing = { };
+        private IPokemonsDataSource pokemonDataSource;
         private PokemonBuilder PkBuilder => new PokemonBuilder();
 
         [Test]
@@ -28,7 +27,7 @@ namespace Dex.Core.Test.Repositories
 
             SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2, pokemon3, pokemon4 });
 
-            PokemonRepository pokemonRepository = new PokemonRepository(mockPokemonsDataSource.Object);
+            PokemonRepository pokemonRepository = new PokemonRepository(pokemonDataSource);
             var evolutionLine = await pokemonRepository.GetEvolutionLineFor(pokemon2);
 
             evolutionLine.ShouldBeEmpty();
@@ -44,7 +43,7 @@ namespace Dex.Core.Test.Repositories
 
             SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2, pokemon3, pokemon4 });
 
-            PokemonRepository pokemonRepository = new PokemonRepository(mockPokemonsDataSource.Object);
+            PokemonRepository pokemonRepository = new PokemonRepository(pokemonDataSource);
             var evolutionLine = (await pokemonRepository.GetEvolutionLineFor(pokemon2)).ToList();
 
             evolutionLine.Count.ShouldBe(2);
@@ -63,7 +62,7 @@ namespace Dex.Core.Test.Repositories
 
             SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2, pokemon3, pokemon4 });
 
-            PokemonRepository pokemonRepository = new PokemonRepository(mockPokemonsDataSource.Object);
+            PokemonRepository pokemonRepository = new PokemonRepository(pokemonDataSource);
             var evolutionLine = (await pokemonRepository.GetEvolutionLineFor(pokemon2)).ToList();
 
             evolutionLine.Count.ShouldBe(3);
@@ -71,12 +70,6 @@ namespace Dex.Core.Test.Repositories
             evolutionLine[0].ShouldBe(pokemon1);
             evolutionLine[1].ShouldBe(pokemon2);
             evolutionLine[2].ShouldBe(pokemon3);
-        }
-
-        [SetUp]
-        public void SetUp()
-        {
-            mockPokemonsDataSource = new Mock<IPokemonsDataSource>();
         }
 
         [Test]
@@ -90,7 +83,7 @@ namespace Dex.Core.Test.Repositories
 
             SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2 });
 
-            PokemonRepository pokemonRepository = new PokemonRepository(mockPokemonsDataSource.Object);
+            PokemonRepository pokemonRepository = new PokemonRepository(pokemonDataSource);
 
             maxAttack.ShouldBe(await pokemonRepository.GetMaxBaseAttack());
         }
@@ -106,7 +99,7 @@ namespace Dex.Core.Test.Repositories
 
             SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2 });
 
-            PokemonRepository pokemonRepository = new PokemonRepository(mockPokemonsDataSource.Object);
+            PokemonRepository pokemonRepository = new PokemonRepository(pokemonDataSource);
 
             maxDefense.ShouldBe(await pokemonRepository.GetMaxBaseDefense());
         }
@@ -122,16 +115,15 @@ namespace Dex.Core.Test.Repositories
 
             SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2 });
 
-            PokemonRepository pokemonRepository = new PokemonRepository(mockPokemonsDataSource.Object);
+            PokemonRepository pokemonRepository = new PokemonRepository(pokemonDataSource);
 
             maxStamina.ShouldBe(await pokemonRepository.GetMaxBaseStamina());
         }
 
         private void SetUpDataSourceMockData(IEnumerable<Pokemon> list)
         {
-            mockPokemonsDataSource
-                .Setup(x => x.LoadAllPokemonsAsync())
-                .Returns(Task.FromResult(list));
+            pokemonDataSource = Substitute.For<IPokemonsDataSource>();
+            pokemonDataSource.LoadAllPokemonsAsync().Returns(Task.FromResult(list));
         }
     }
 }
