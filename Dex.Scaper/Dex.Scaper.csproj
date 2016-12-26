@@ -80,13 +80,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\EvolutionsParserFactory.cs" />
+    <Compile Include="Factories\MovesParserFactory.cs" />
     <Compile Include="Factories\PokemonsParserFactory.cs" />
     <Compile Include="Parsers\Evolutions\EvolutionsParser.cs" />
     <Compile Include="Parsers\Evolutions\SingleEvolutionLineParser.cs" />
+    <Compile Include="Parsers\Moves\ChargeMoveParser.cs" />
+    <Compile Include="Parsers\Moves\QuickMoveParser.cs" />
     <Compile Include="Parsers\Pokemons\IPokemonParsers.cs" />
     <Compile Include="Parsers\Pokemons\Partials\TypeParser.cs" />
     <Compile Include="Scraper.cs" />
     <Compile Include="Sources\IParserSource.cs" />
+    <Compile Include="Sources\MovesSource.cs" />
     <Compile Include="Sources\ParserSourceBase.cs" />
     <Compile Include="Sources\PokemonsEvolutionsSource.cs" />
     <Compile Include="Sources\PokemonsParserSource.cs" />
