@@ -8,11 +8,6 @@ namespace Dex.Core.Entities
     {
         private CpCalculator _cp;
 
-        public Pokemon()
-        {
-            EvolvesTo = Array.Empty<ushort>();
-        }
-
         #region General
 
         public ushort DexNumber { get; set; }
@@ -56,10 +51,6 @@ namespace Dex.Core.Entities
         public ushort CandiesToEvolve { get; set; }
 
         public ushort EggDistance { get; set; }
-
-        public ushort EvolvesFrom { get; set; }
-
-        public ushort[] EvolvesTo { get; set; }
 
         #endregion Other
     }
