@@ -4,7 +4,7 @@ using System;
 
 namespace Dex.Core.Entities
 {
-    public class CP : ValueObject<CP>
+    public class CP : ValueObject<CP>, IComparable<CP>
     {
         public CP(double value)
         {
@@ -15,6 +15,11 @@ namespace Dex.Core.Entities
         public double PreciseValue { get; }
 
         public ushort Value { get; }
+
+        public int CompareTo(CP other)
+        {
+            return Value.CompareTo(other.Value);
+        }
 
         public override string ToString()
         {

@@ -10,8 +10,6 @@ namespace Dex.Core.Repositories
     {
         Task<IEnumerable<Pokemon>> GetAllPokemons();
 
-        Task<IEnumerable<Pokemon>> GetEvolutionLineFor(Pokemon pokemon);
-
         Task<ushort> GetMaxBaseAttack();
 
         Task<ushort> GetMaxBaseDefense();
@@ -21,6 +19,8 @@ namespace Dex.Core.Repositories
         Task<Pokemon> GetNextPokemon(ushort PokemonId);
 
         Task<Pokemon> GetPokemonById(ushort pokemonId);
+
+        Task<IEnumerable<List<Pokemon>>> GetPokemonsFromEvolutionLine(List<ushort[]> evolutionLines);
 
         Task<IEnumerable<Pokemon>> GetPokemonsWithMove(string moveId);
 
@@ -35,7 +35,7 @@ namespace Dex.Core.Repositories
     {
         private readonly IPokemonsDataSource dataSource;
 
-        private IEnumerable<Pokemon> allPokemonsCache;
+        private List<Pokemon> allPokemonsCache;
 
         private CombatStat maxAttack;
         private CombatStat maxDefense;
@@ -52,29 +52,6 @@ namespace Dex.Core.Repositories
         {
             await EnsureCacheIsValid();
             return allPokemonsCache;
-        }
-
-        public async Task<IEnumerable<Pokemon>> GetEvolutionLineFor(Pokemon pokemon)
-        {
-            if (!HasEvolutions(pokemon))
-                return Enumerable.Empty<Pokemon>();
-
-            HashSet<Pokemon> evolutions = new HashSet<Pokemon>();
-
-            var level1Search = await GetEvolutions(pokemon);
-
-            foreach (var poke in level1Search)
-            {
-                evolutions.Add(poke);
-                var level2Search = await GetEvolutions(poke);
-                foreach (var p in level2Search)
-                {
-                    evolutions.Add(p);
-                }
-            }
-
-            evolutions.Add(pokemon);
-            return evolutions.OrderBy(poke => poke.DexNumber);
         }
 
         public async Task<ushort> GetMaxBaseAttack()
@@ -101,7 +78,9 @@ namespace Dex.Core.Repositories
         public async Task<Pokemon> GetNextPokemon(ushort PokemonId)
         {
             await EnsureCacheIsValid();
-            return await GetPokemonById((ushort)(PokemonId + 1));
+            var currentPokemon = await GetPokemonById((PokemonId));
+            var currentPokemonIndex = allPokemonsCache.IndexOf(currentPokemon);
+            return allPokemonsCache[currentPokemonIndex + 1];
         }
 
         public async Task<Pokemon> GetPokemonById(ushort pokemonId)
@@ -120,6 +99,19 @@ namespace Dex.Core.Repositories
                 .FirstOrDefault();
         }
 
+        public async Task<IEnumerable<List<Pokemon>>> GetPokemonsFromEvolutionLine(List<ushort[]> evolutionLines)
+        {
+            List<List<Pokemon>> returnList = new List<List<Pokemon>>();
+
+            foreach (var line in evolutionLines)
+            {
+                var array = await Task.WhenAll(line.Select(dexId => GetPokemonById(dexId)));
+                returnList.Add(array.ToList());
+            }
+
+            return returnList;
+        }
+
         public async Task<IEnumerable<Pokemon>> GetPokemonsWithMove(string moveId)
         {
             await EnsureCacheIsValid();
@@ -129,7 +121,9 @@ namespace Dex.Core.Repositories
         public async Task<Pokemon> GetPreviousPokemon(ushort PokemonId)
         {
             await EnsureCacheIsValid();
-            return await GetPokemonById((ushort)(PokemonId - 1));
+            var currentPokemon = await GetPokemonById((PokemonId));
+            var currentPokemonIndex = allPokemonsCache.IndexOf(currentPokemon);
+            return allPokemonsCache[currentPokemonIndex - 1];
         }
 
         public bool HasNextPokemon(ushort PokemonId)
@@ -146,28 +140,9 @@ namespace Dex.Core.Repositories
         {
             if (allPokemonsCache == null)
             {
-                allPokemonsCache = await dataSource.LoadAllPokemonsAsync();
+                allPokemonsCache = (await dataSource.LoadAllPokemonsAsync()).ToList();
                 maxDexNumber = allPokemonsCache.Max(poke => poke.DexNumber);
             }
-        }
-
-        private async Task<IEnumerable<Pokemon>> GetEvolutions(Pokemon pokemon)
-        {
-            var from = await GetPokemonById(pokemon.EvolvesFrom);
-
-            var to = await Task.WhenAll(
-                pokemon.EvolvesTo.ToList()
-                .Select(async pokemonId => await GetPokemonById(pokemonId)));
-
-            var evolutions = new List<Pokemon>(to.ToList());
-            evolutions.Add(from);
-
-            return evolutions.Where(poke => poke != null);
-        }
-
-        private bool HasEvolutions(Pokemon pokemon)
-        {
-            return pokemon.EvolvesFrom != 0 || pokemon.EvolvesTo.Count() != 0;
         }
     }
 }

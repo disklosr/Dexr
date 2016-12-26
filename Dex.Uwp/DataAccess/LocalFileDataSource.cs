@@ -8,9 +8,10 @@ using Windows.Storage;
 
 namespace Dex.Uwp.DataAccess
 {
-    public class LocalFileDataSource : IPokemonsDataSource, IMovesDataSource
+    public class LocalFileDataSource : IPokemonsDataSource, IMovesDataSource, IEvolutionsDataSource
     {
         private const string contentPrefix = "ms-appx:///";
+        private const string evolutionsDbFilePath = "Data/evolutions.db.json";
         private const string movesDbFilePath = "Data/moves.db.json";
         private const string pokemonsDbFilePath = "Data/Pokemons.db.json";
         private readonly IJsonService jsonService;
@@ -18,6 +19,12 @@ namespace Dex.Uwp.DataAccess
         public LocalFileDataSource(IJsonService jsonService)
         {
             this.jsonService = jsonService;
+        }
+
+        public async Task<List<ushort[]>> LoadAllEvolutionsAsync()
+        {
+            var json = await ReadFileAsTextAsync(evolutionsDbFilePath);
+            return jsonService.Deserialize<List<ushort[]>>(json);
         }
 
         public async Task<PokemonMoves> LoadAllMovesAsync()

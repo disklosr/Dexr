@@ -1,6 +1,7 @@
 ﻿using Dex.Core.Entities;
 using Dex.Scaper.Factories;
 using Dex.Scaper.Parsers;
+using Dex.Scaper.Parsers.Evolutions;
 using Dex.Scaper.Sources;
 using Dex.Scaper.Utils;
 using System;
@@ -11,16 +12,24 @@ namespace Dex.Scaper
 {
     public class Scraper
     {
+        private EvolutionsParser _evolutionsParser;
+        private List<ushort[]> _parsedEvolutions;
         private List<Pokemon> _parsedPokemons;
         private PokemonsParser _pokemonsParser;
 
         public void Scrape()
         {
-            ParsePokemons();
-            //ParseMoves();
+            //ParsePokemons();
+            ParseEvolutionLines();
+        }
 
-            var json = JsonUtils.ToJson(_parsedPokemons);
-            WriteJsonToFile(json);
+        private void ParseEvolutionLines()
+        {
+            var evolutionsSource = new PokemonsEvolutionsSource();
+            _evolutionsParser = EvolutionsParserFactory.CreateEvolutionsParser();
+            _parsedEvolutions = _evolutionsParser.Parse(evolutionsSource.GetStringAsync().Result);
+            var json = JsonUtils.ToJson(_parsedEvolutions);
+            WriteJsonToFile(json, "Evolutions");
         }
 
         private void ParseMoves()
@@ -33,11 +42,13 @@ namespace Dex.Scaper
             var pokemonsSource = new PokemonsParserSource();
             _pokemonsParser = PokemonsParserFactory.CreatePokemonsParser();
             _parsedPokemons = _pokemonsParser.Parse(pokemonsSource.GetStringAsync().Result);
+            var json = JsonUtils.ToJson(_parsedPokemons);
+            WriteJsonToFile(json, "Pokemons");
         }
 
-        private void WriteJsonToFile(string json)
+        private void WriteJsonToFile(string json, string name)
         {
-            var fileName = "Pokemons" + DateTime.Now.ToString("hhmmss") + ".json";
+            var fileName = name + DateTime.Now.ToString("hhmmss") + ".json";
             var path = Path.Combine(Directory.GetCurrentDirectory(), fileName);
             File.WriteAllText(path, json);
 

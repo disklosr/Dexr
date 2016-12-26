@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using System.Web;
 
 namespace Dex.Scaper.Utils
 {
@@ -23,6 +24,11 @@ namespace Dex.Scaper.Utils
             var document = new HtmlDocument();
             document.LoadHtml(html);
             return document.DocumentNode.SelectSingleNode(xpath);
+        }
+
+        public static string HtmlDecode(string htmlEncoded)
+        {
+            return HttpUtility.HtmlDecode(htmlEncoded);
         }
     }
 }

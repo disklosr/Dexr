@@ -5,7 +5,6 @@ using NSubstitute;
 using NUnit.Framework;
 using Shouldly;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Dex.Core.Test.Repositories
@@ -16,61 +15,6 @@ namespace Dex.Core.Test.Repositories
         private ushort[] Nothing = { };
         private IPokemonsDataSource pokemonDataSource;
         private PokemonBuilder PkBuilder => new PokemonBuilder();
-
-        [Test]
-        public async Task Given1EvolutionsPokemonShouldReturnNothing()
-        {
-            Pokemon pokemon1 = PkBuilder.WithDexId(1).EvolvesFrom(0).EvolvesTo(Nothing);
-            Pokemon pokemon2 = PkBuilder.WithDexId(2).EvolvesFrom(0).EvolvesTo(Nothing);
-            Pokemon pokemon3 = PkBuilder.WithDexId(3).EvolvesFrom(0).EvolvesTo(Nothing);
-            Pokemon pokemon4 = PkBuilder.WithDexId(4).EvolvesFrom(0).EvolvesTo(Nothing);
-
-            SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2, pokemon3, pokemon4 });
-
-            PokemonRepository pokemonRepository = new PokemonRepository(pokemonDataSource);
-            var evolutionLine = await pokemonRepository.GetEvolutionLineFor(pokemon2);
-
-            evolutionLine.ShouldBeEmpty();
-        }
-
-        [Test]
-        public async Task Given2EvolutionsPokemonShouldReturn2PokemonsInCorrectOrder()
-        {
-            Pokemon pokemon1 = PkBuilder.WithDexId(1).EvolvesFrom(0).EvolvesTo(1);
-            Pokemon pokemon2 = PkBuilder.WithDexId(2).EvolvesFrom(1).EvolvesTo(Nothing);
-            Pokemon pokemon3 = PkBuilder.WithDexId(3).EvolvesFrom(2).EvolvesTo(Nothing);
-            Pokemon pokemon4 = PkBuilder.WithDexId(4).EvolvesFrom(0).EvolvesTo(Nothing);
-
-            SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2, pokemon3, pokemon4 });
-
-            PokemonRepository pokemonRepository = new PokemonRepository(pokemonDataSource);
-            var evolutionLine = (await pokemonRepository.GetEvolutionLineFor(pokemon2)).ToList();
-
-            evolutionLine.Count.ShouldBe(2);
-            evolutionLine.ShouldAllBe(p => p != null);
-            evolutionLine[0].ShouldBe(pokemon1);
-            evolutionLine[1].ShouldBe(pokemon2);
-        }
-
-        [Test]
-        public async Task Given3EvolutionsPokemonShouldReturn3PokemonsInCorrectOrder()
-        {
-            Pokemon pokemon1 = PkBuilder.WithDexId(1).EvolvesFrom(0).EvolvesTo(2);
-            Pokemon pokemon2 = PkBuilder.WithDexId(2).EvolvesFrom(1).EvolvesTo(3);
-            Pokemon pokemon3 = PkBuilder.WithDexId(3).EvolvesFrom(2).EvolvesTo(Nothing);
-            Pokemon pokemon4 = PkBuilder.WithDexId(4).EvolvesFrom(0).EvolvesTo(Nothing);
-
-            SetUpDataSourceMockData(new Pokemon[] { pokemon1, pokemon2, pokemon3, pokemon4 });
-
-            PokemonRepository pokemonRepository = new PokemonRepository(pokemonDataSource);
-            var evolutionLine = (await pokemonRepository.GetEvolutionLineFor(pokemon2)).ToList();
-
-            evolutionLine.Count.ShouldBe(3);
-            evolutionLine.ShouldAllBe(p => p != null);
-            evolutionLine[0].ShouldBe(pokemon1);
-            evolutionLine[1].ShouldBe(pokemon2);
-            evolutionLine[2].ShouldBe(pokemon3);
-        }
 
         [Test]
         public async Task ShouldGetMaxAttackFromPokemonsList()

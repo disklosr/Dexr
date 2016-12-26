@@ -2,6 +2,8 @@
 using Dex.Core.Repositories;
 using Dex.Uwp.Infrastructure;
 using Dex.Uwp.Services;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Navigation;
 
@@ -9,9 +11,10 @@ namespace Dex.Uwp.ViewModels
 {
     public class PokemonDetailViewModel : ViewModelBase
     {
-        private readonly IMoveRepository moveRepository;
-        private readonly INavigationService navigationService;
-        private readonly IPokemonRepository pokemonRepository;
+        private readonly IEvolutionsRepository _evolutionRepository;
+        private readonly IMoveRepository _moveRepository;
+        private readonly INavigationService _navigationService;
+        private readonly IPokemonRepository _pokemonRepository;
 
         private CombatStatDataViewModel attackStats;
         private CombatStatDataViewModel defenseStats;
@@ -20,11 +23,16 @@ namespace Dex.Uwp.ViewModels
         private Pokemon selectedPokemon;
         private CombatStatDataViewModel staminaStats;
 
-        public PokemonDetailViewModel(IPokemonRepository pokemonRepository, IMoveRepository moveRepository, INavigationService navigationService)
+        public PokemonDetailViewModel(
+            IPokemonRepository pokemonRepository,
+            IMoveRepository moveRepository,
+            IEvolutionsRepository evolutionRepository,
+            INavigationService navigationService)
         {
-            this.navigationService = navigationService;
-            this.moveRepository = moveRepository;
-            this.pokemonRepository = pokemonRepository;
+            _evolutionRepository = evolutionRepository;
+            _navigationService = navigationService;
+            _moveRepository = moveRepository;
+            _pokemonRepository = pokemonRepository;
 
             PreviousCommand = new RelayCommand(async () => await SetNewPokemon(await pokemonRepository.GetPreviousPokemon(SelectedPokemon.DexNumber)), () => pokemonRepository.HasPreviousPokemon(SelectedPokemon.DexNumber));
             NextCommand = new RelayCommand(async () => await SetNewPokemon(await pokemonRepository.GetNextPokemon(SelectedPokemon.DexNumber)), () => pokemonRepository.HasNextPokemon(SelectedPokemon.DexNumber));
@@ -72,20 +80,20 @@ namespace Dex.Uwp.ViewModels
 
         public void OnMoveSelected(Move move)
         {
-            navigationService.ResolveFromThenNavigate(move);
+            _navigationService.ResolveFromThenNavigate(move);
         }
 
         public async override Task OnNavigatedTo(NavigationEventArgs e)
         {
             var dexId = (ushort)e.Parameter;
-            await SetNewPokemon(await pokemonRepository.GetPokemonById(dexId));
+            await SetNewPokemon(await _pokemonRepository.GetPokemonById(dexId));
         }
 
         private async Task InitCombatStats()
         {
-            var maxAtk = pokemonRepository.GetMaxBaseAttack();
-            var maxDef = pokemonRepository.GetMaxBaseDefense();
-            var maxStm = pokemonRepository.GetMaxBaseStamina();
+            var maxAtk = _pokemonRepository.GetMaxBaseAttack();
+            var maxDef = _pokemonRepository.GetMaxBaseDefense();
+            var maxStm = _pokemonRepository.GetMaxBaseStamina();
             await Task.WhenAll(new Task[] { maxAtk, maxDef, maxStm });
 
             AttackStats = new CombatStatDataViewModel(SelectedPokemon.Attack.Value, maxAtk.Result);
@@ -96,8 +104,17 @@ namespace Dex.Uwp.ViewModels
         private async Task SetNewPokemon(Pokemon newPokemon)
         {
             SelectedPokemon = newPokemon;
-            Moves = await moveRepository.GetMovesById(SelectedPokemon.Moves.QuickMovesIds, SelectedPokemon.Moves.ChargeMovesIds);
-            EvolutionLine = new EvolutionLineDataViewModel(await pokemonRepository.GetEvolutionLineFor(selectedPokemon));
+            Moves = await _moveRepository.GetMovesById(SelectedPokemon.Moves.QuickMovesIds, SelectedPokemon.Moves.ChargeMovesIds);
+
+            IEnumerable<Pokemon> evolutionLinesWithPokemons = Enumerable.Empty<Pokemon>();
+
+            if (await _evolutionRepository.HasEvolutions(selectedPokemon.DexNumber))
+            {
+                var evolutionLinesWithIds = await _evolutionRepository.GetEvolutionLines(selectedPokemon.DexNumber);
+                evolutionLinesWithPokemons = (await _pokemonRepository.GetPokemonsFromEvolutionLine(evolutionLinesWithIds)).First();
+            }
+
+            EvolutionLine = new EvolutionLineDataViewModel(evolutionLinesWithPokemons);
             await InitCombatStats();
             NextCommand.RaiseCanExecuteChanged();
             PreviousCommand.RaiseCanExecuteChanged();
