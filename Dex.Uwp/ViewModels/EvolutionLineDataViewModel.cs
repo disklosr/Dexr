@@ -15,4 +15,14 @@ namespace Dex.Uwp.ViewModels
         public IEnumerable<Pokemon> Evolutions { get; }
         public int NumberOfEvolutions { get; }
     }
+
+    public class EvolutionLinesViewModel
+    {
+        public EvolutionLinesViewModel(IEnumerable<EvolutionLineDataViewModel> evolutionLines)
+        {
+            EvolutionLines = evolutionLines;
+        }
+
+        public IEnumerable<EvolutionLineDataViewModel> EvolutionLines { get; }
+    }
 }

@@ -48,7 +48,7 @@
                 <controls:PokemonCard DataContext="{Binding SelectedPokemon}" />
                 <controls:StatsCard DataContext="{Binding}" />
                 <controls:MovesCard x:Name="MovesCard" DataContext="{Binding Moves}" />
-                <controls:EvolutionLineCard DataContext="{Binding EvolutionLine}" />
+                <controls:EvolutionLineCard DataContext="{Binding EvolutionLines}" />
             </ListView.Items>
         </ListView>
     </Grid>

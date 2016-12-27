@@ -18,7 +18,7 @@ namespace Dex.Uwp.ViewModels
 
         private CombatStatDataViewModel attackStats;
         private CombatStatDataViewModel defenseStats;
-        private EvolutionLineDataViewModel evolutionLine;
+        private EvolutionLinesViewModel evolutionLines;
         private PokemonMoves moves;
         private Pokemon selectedPokemon;
         private CombatStatDataViewModel staminaStats;
@@ -50,10 +50,10 @@ namespace Dex.Uwp.ViewModels
             private set { Set(ref defenseStats, value); }
         }
 
-        public EvolutionLineDataViewModel EvolutionLine
+        public EvolutionLinesViewModel EvolutionLines
         {
-            get { return evolutionLine; }
-            private set { Set(ref evolutionLine, value); }
+            get { return evolutionLines; }
+            private set { Set(ref evolutionLines, value); }
         }
 
         public PokemonMoves Moves
@@ -106,15 +106,16 @@ namespace Dex.Uwp.ViewModels
             SelectedPokemon = newPokemon;
             Moves = await _moveRepository.GetMovesById(SelectedPokemon.Moves.QuickMovesIds, SelectedPokemon.Moves.ChargeMovesIds);
 
-            IEnumerable<Pokemon> evolutionLinesWithPokemons = Enumerable.Empty<Pokemon>();
+            IEnumerable<EvolutionLineDataViewModel> foundEvolutionLines = Enumerable.Empty<EvolutionLineDataViewModel>();
 
             if (await _evolutionRepository.HasEvolutions(selectedPokemon.DexNumber))
             {
                 var evolutionLinesWithIds = await _evolutionRepository.GetEvolutionLines(selectedPokemon.DexNumber);
-                evolutionLinesWithPokemons = (await _pokemonRepository.GetPokemonsFromEvolutionLine(evolutionLinesWithIds)).First();
+                foundEvolutionLines = (await _pokemonRepository.GetPokemonsFromEvolutionLine(evolutionLinesWithIds))
+                    .Select(line => new EvolutionLineDataViewModel(line));
             }
 
-            EvolutionLine = new EvolutionLineDataViewModel(evolutionLinesWithPokemons);
+            EvolutionLines = new EvolutionLinesViewModel(foundEvolutionLines);
             await InitCombatStats();
             NextCommand.RaiseCanExecuteChanged();
             PreviousCommand.RaiseCanExecuteChanged();
