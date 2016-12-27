@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "DexNumber": 1,
     "Name": "bulbasaur",
@@ -27,8 +27,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 2,
-    "EvolvesFrom": 0
+    "EggDistance": 2
   },
   {
     "DexNumber": 2,
@@ -58,8 +57,7 @@
       ]
     },
     "CandiesToEvolve": 100,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 3,
@@ -89,8 +87,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 4,
@@ -120,8 +117,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 2,
-    "EvolvesFrom": 0
+    "EggDistance": 2
   },
   {
     "DexNumber": 5,
@@ -151,8 +147,7 @@
       ]
     },
     "CandiesToEvolve": 100,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 6,
@@ -182,8 +177,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 7,
@@ -213,8 +207,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 2,
-    "EvolvesFrom": 0
+    "EggDistance": 2
   },
   {
     "DexNumber": 8,
@@ -244,8 +237,7 @@
       ]
     },
     "CandiesToEvolve": 100,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 9,
@@ -275,8 +267,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 10,
@@ -304,8 +295,7 @@
       ]
     },
     "CandiesToEvolve": 12,
-    "EggDistance": 2,
-    "EvolvesFrom": 0
+    "EggDistance": 2
   },
   {
     "DexNumber": 11,
@@ -333,8 +323,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 12,
@@ -364,8 +353,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 13,
@@ -393,8 +381,7 @@
       ]
     },
     "CandiesToEvolve": 12,
-    "EggDistance": 2,
-    "EvolvesFrom": 0
+    "EggDistance": 2
   },
   {
     "DexNumber": 14,
@@ -422,8 +409,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 15,
@@ -453,8 +439,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 16,
@@ -484,8 +469,7 @@
       ]
     },
     "CandiesToEvolve": 12,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 17,
@@ -515,8 +499,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 18,
@@ -546,8 +529,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 19,
@@ -577,8 +559,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 20,
@@ -608,8 +589,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 21,
@@ -639,8 +619,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 2,
-    "EvolvesFrom": 0
+    "EggDistance": 2
   },
   {
     "DexNumber": 22,
@@ -670,8 +649,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 23,
@@ -701,8 +679,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 24,
@@ -732,8 +709,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 25,
@@ -763,8 +739,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 2,
-    "EvolvesFrom": 0
+    "EggDistance": 2
   },
   {
     "DexNumber": 26,
@@ -794,8 +769,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 27,
@@ -825,8 +799,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 28,
@@ -856,12 +829,11 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 29,
-    "Name": "nidoran&#9792;",
+    "Name": "nidoran♀",
     "Type1": "poison",
     "Type2": "unknown",
     "Attack": {
@@ -887,8 +859,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 30,
@@ -918,8 +889,7 @@
       ]
     },
     "CandiesToEvolve": 100,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 31,
@@ -949,12 +919,11 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 32,
-    "Name": "nidoran&#9794;",
+    "Name": "nidoran♂",
     "Type1": "poison",
     "Type2": "unknown",
     "Attack": {
@@ -980,8 +949,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 33,
@@ -1011,8 +979,7 @@
       ]
     },
     "CandiesToEvolve": 100,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 34,
@@ -1042,8 +1009,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 35,
@@ -1073,8 +1039,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 2,
-    "EvolvesFrom": 0
+    "EggDistance": 2
   },
   {
     "DexNumber": 36,
@@ -1104,8 +1069,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 37,
@@ -1135,8 +1099,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 38,
@@ -1166,8 +1129,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 39,
@@ -1197,8 +1159,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 2,
-    "EvolvesFrom": 0
+    "EggDistance": 2
   },
   {
     "DexNumber": 40,
@@ -1228,8 +1189,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 41,
@@ -1259,8 +1219,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 2,
-    "EvolvesFrom": 0
+    "EggDistance": 2
   },
   {
     "DexNumber": 42,
@@ -1290,8 +1249,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 43,
@@ -1321,8 +1279,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 44,
@@ -1352,8 +1309,7 @@
       ]
     },
     "CandiesToEvolve": 100,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 45,
@@ -1383,8 +1339,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 46,
@@ -1414,8 +1369,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 47,
@@ -1445,8 +1399,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 48,
@@ -1476,8 +1429,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 49,
@@ -1507,8 +1459,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 50,
@@ -1538,8 +1489,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 51,
@@ -1569,8 +1519,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 52,
@@ -1600,8 +1549,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 53,
@@ -1631,8 +1579,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 54,
@@ -1662,8 +1609,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 55,
@@ -1693,8 +1639,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 56,
@@ -1724,8 +1669,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 57,
@@ -1755,8 +1699,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 58,
@@ -1786,8 +1729,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 59,
@@ -1817,8 +1759,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 60,
@@ -1848,8 +1789,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 61,
@@ -1879,8 +1819,7 @@
       ]
     },
     "CandiesToEvolve": 100,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 62,
@@ -1910,8 +1849,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 63,
@@ -1940,8 +1878,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 64,
@@ -1971,8 +1908,7 @@
       ]
     },
     "CandiesToEvolve": 100,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 65,
@@ -2002,8 +1938,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 66,
@@ -2033,8 +1968,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 67,
@@ -2064,8 +1998,7 @@
       ]
     },
     "CandiesToEvolve": 100,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 68,
@@ -2095,8 +2028,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 69,
@@ -2126,8 +2058,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 70,
@@ -2157,8 +2088,7 @@
       ]
     },
     "CandiesToEvolve": 100,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 71,
@@ -2188,8 +2118,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 72,
@@ -2219,8 +2148,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 73,
@@ -2250,8 +2178,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 74,
@@ -2281,8 +2208,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 2,
-    "EvolvesFrom": 0
+    "EggDistance": 2
   },
   {
     "DexNumber": 75,
@@ -2312,8 +2238,7 @@
       ]
     },
     "CandiesToEvolve": 100,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 76,
@@ -2343,8 +2268,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 77,
@@ -2374,8 +2298,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 78,
@@ -2405,8 +2328,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 79,
@@ -2436,8 +2358,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 80,
@@ -2467,8 +2388,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 81,
@@ -2498,8 +2418,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 82,
@@ -2529,8 +2448,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 83,
@@ -2560,8 +2478,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 84,
@@ -2591,8 +2508,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 85,
@@ -2622,8 +2538,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 86,
@@ -2653,8 +2568,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 87,
@@ -2684,8 +2598,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 88,
@@ -2715,8 +2628,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 89,
@@ -2746,8 +2658,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 90,
@@ -2777,8 +2688,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 91,
@@ -2808,8 +2718,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 92,
@@ -2839,8 +2748,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 93,
@@ -2870,8 +2778,7 @@
       ]
     },
     "CandiesToEvolve": 100,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 94,
@@ -2901,8 +2808,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 95,
@@ -2932,8 +2838,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 10,
-    "EvolvesFrom": 0
+    "EggDistance": 10
   },
   {
     "DexNumber": 96,
@@ -2963,8 +2868,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 97,
@@ -2994,8 +2898,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 98,
@@ -3025,8 +2928,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 99,
@@ -3056,8 +2958,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 100,
@@ -3087,8 +2988,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 101,
@@ -3118,8 +3018,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 102,
@@ -3148,8 +3047,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 103,
@@ -3179,8 +3077,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 104,
@@ -3210,8 +3107,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 105,
@@ -3241,8 +3137,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 106,
@@ -3272,8 +3167,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 10,
-    "EvolvesFrom": 0
+    "EggDistance": 10
   },
   {
     "DexNumber": 107,
@@ -3304,8 +3198,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 10,
-    "EvolvesFrom": 0
+    "EggDistance": 10
   },
   {
     "DexNumber": 108,
@@ -3335,8 +3228,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 109,
@@ -3365,8 +3257,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 110,
@@ -3395,8 +3286,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 111,
@@ -3426,8 +3316,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 112,
@@ -3457,8 +3346,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 113,
@@ -3488,8 +3376,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 10,
-    "EvolvesFrom": 0
+    "EggDistance": 10
   },
   {
     "DexNumber": 114,
@@ -3518,8 +3405,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 115,
@@ -3549,8 +3435,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 116,
@@ -3580,8 +3465,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 117,
@@ -3611,8 +3495,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 118,
@@ -3642,8 +3525,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 119,
@@ -3673,8 +3555,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 120,
@@ -3704,8 +3585,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 121,
@@ -3735,8 +3615,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 122,
@@ -3766,8 +3645,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 10,
-    "EvolvesFrom": 0
+    "EggDistance": 10
   },
   {
     "DexNumber": 123,
@@ -3797,8 +3675,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 10,
-    "EvolvesFrom": 0
+    "EggDistance": 10
   },
   {
     "DexNumber": 124,
@@ -3828,8 +3705,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 10,
-    "EvolvesFrom": 0
+    "EggDistance": 10
   },
   {
     "DexNumber": 125,
@@ -3859,8 +3735,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 10,
-    "EvolvesFrom": 0
+    "EggDistance": 10
   },
   {
     "DexNumber": 126,
@@ -3890,8 +3765,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 10,
-    "EvolvesFrom": 0
+    "EggDistance": 10
   },
   {
     "DexNumber": 127,
@@ -3921,8 +3795,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 10,
-    "EvolvesFrom": 0
+    "EggDistance": 10
   },
   {
     "DexNumber": 128,
@@ -3952,8 +3825,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 129,
@@ -3980,8 +3852,7 @@
       ]
     },
     "CandiesToEvolve": 400,
-    "EggDistance": 2,
-    "EvolvesFrom": 0
+    "EggDistance": 2
   },
   {
     "DexNumber": 130,
@@ -4010,8 +3881,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 131,
@@ -4041,8 +3911,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 10,
-    "EvolvesFrom": 0
+    "EggDistance": 10
   },
   {
     "DexNumber": 132,
@@ -4069,8 +3938,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 133,
@@ -4100,8 +3968,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 134,
@@ -4130,8 +3997,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 135,
@@ -4160,8 +4026,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 136,
@@ -4190,8 +4055,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 137,
@@ -4221,8 +4085,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 138,
@@ -4252,8 +4115,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 10,
-    "EvolvesFrom": 0
+    "EggDistance": 10
   },
   {
     "DexNumber": 139,
@@ -4283,8 +4145,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 140,
@@ -4314,8 +4175,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 10,
-    "EvolvesFrom": 0
+    "EggDistance": 10
   },
   {
     "DexNumber": 141,
@@ -4345,8 +4205,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 142,
@@ -4376,8 +4235,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 10,
-    "EvolvesFrom": 0
+    "EggDistance": 10
   },
   {
     "DexNumber": 143,
@@ -4407,8 +4265,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 10,
-    "EvolvesFrom": 0
+    "EggDistance": 10
   },
   {
     "DexNumber": 144,
@@ -4437,8 +4294,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 145,
@@ -4467,8 +4323,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 146,
@@ -4497,8 +4352,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 147,
@@ -4527,8 +4381,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 10,
-    "EvolvesFrom": 0
+    "EggDistance": 10
   },
   {
     "DexNumber": 148,
@@ -4557,8 +4410,7 @@
       ]
     },
     "CandiesToEvolve": 100,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 149,
@@ -4588,8 +4440,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 150,
@@ -4619,8 +4470,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 151,
@@ -4654,8 +4504,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 172,
@@ -4685,8 +4534,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 173,
@@ -4715,8 +4563,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 2,
-    "EvolvesFrom": 0
+    "EggDistance": 2
   },
   {
     "DexNumber": 174,
@@ -4746,8 +4593,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 2,
-    "EvolvesFrom": 0
+    "EggDistance": 2
   },
   {
     "DexNumber": 175,
@@ -4777,8 +4623,7 @@
       ]
     },
     "CandiesToEvolve": 50,
-    "EggDistance": 5,
-    "EvolvesFrom": 0
+    "EggDistance": 5
   },
   {
     "DexNumber": 176,
@@ -4808,8 +4653,7 @@
       ]
     },
     "CandiesToEvolve": 0,
-    "EggDistance": 0,
-    "EvolvesFrom": 0
+    "EggDistance": 0
   },
   {
     "DexNumber": 238,
@@ -4839,8 +4683,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 10,
-    "EvolvesFrom": 0
+    "EggDistance": 10
   },
   {
     "DexNumber": 239,
@@ -4870,8 +4713,7 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 10,
-    "EvolvesFrom": 0
+    "EggDistance": 10
   },
   {
     "DexNumber": 240,
@@ -4901,7 +4743,6 @@
       ]
     },
     "CandiesToEvolve": 25,
-    "EggDistance": 10,
-    "EvolvesFrom": 0
+    "EggDistance": 10
   }
 ]

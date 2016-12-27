@@ -7,7 +7,7 @@ namespace Dex.Scaper.Parsers
         public string Parse(string htmlSingleRowInput)
         {
             var nameColumn = HtmlUtils.GetSingleHtmlNode(htmlSingleRowInput, "./tr/td[3]");
-            return nameColumn.SelectSingleNode(".//a").InnerText.ToLower();
+            return HtmlUtils.HtmlDecode(nameColumn.SelectSingleNode(".//a").InnerText.ToLower());
         }
     }
 }
