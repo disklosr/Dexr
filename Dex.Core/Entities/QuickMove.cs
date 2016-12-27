@@ -7,6 +7,6 @@ namespace Dex.Core.Entities
             MoveType = MoveType.Quick;
         }
 
-        public ushort Energy { get; set; }
+        public ushort EnergyGenerated { get; set; }
     }
 }

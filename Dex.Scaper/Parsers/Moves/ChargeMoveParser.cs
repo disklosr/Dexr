@@ -29,7 +29,7 @@ namespace Dex.Scaper.Parsers
             chargeMove.Type = (PokemonType)Enum.Parse(typeof(PokemonType), typeAsText, true);
 
             //Damage
-            chargeMove.Attack = ushort.Parse(DamageNode.InnerText);
+            chargeMove.Damage = ushort.Parse(DamageNode.InnerText);
 
             //CriticalHit
             chargeMove.Critical = ushort.Parse(CriticalHitNode.InnerText.Replace("%", string.Empty));
@@ -39,7 +39,7 @@ namespace Dex.Scaper.Parsers
 
             //EnergyBars
             var src = EnergyBarsNode.GetAttributeValue("src", string.Empty);
-            chargeMove.Charges = ushort.Parse(src.Replace("energy.png", string.Empty));
+            chargeMove.EnergyBars = ushort.Parse(src.Replace("energy.png", string.Empty));
 
             return chargeMove;
         }

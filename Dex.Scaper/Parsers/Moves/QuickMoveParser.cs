@@ -28,7 +28,7 @@ namespace Dex.Scaper.Parsers
             quickMove.Type = (PokemonType)Enum.Parse(typeof(PokemonType), typeAsText, true);
 
             //Damage
-            quickMove.Attack = ushort.Parse(DamageNode.InnerText);
+            quickMove.Damage = ushort.Parse(DamageNode.InnerText);
 
             //CoolDown
             quickMove.CoolDown = float.Parse(CoolDownNode.InnerText.Replace(" seconds", string.Empty));

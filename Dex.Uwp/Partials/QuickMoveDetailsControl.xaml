@@ -38,7 +38,7 @@
         <TextBlock Grid.Row="1"
                    Grid.Column="0"
                    Style="{StaticResource CaptionTextBlockStyle}">
-            <Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Attack}" />
+            <Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Damage}" />
             <Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Type}" />
             <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="damage" />
         </TextBlock>
@@ -46,7 +46,7 @@
                    Grid.Column="0"
                    Style="{StaticResource CaptionTextBlockStyle}">
             <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="Energy" />
-            <Run Text="{Binding Energy}" />
+            <Run Text="{Binding EnergyGenerated}" />
         </TextBlock>
         <TextBlock Grid.Row="3"
                    Grid.Column="0"

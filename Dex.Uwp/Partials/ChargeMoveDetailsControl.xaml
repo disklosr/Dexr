@@ -14,7 +14,7 @@
 
     <Border Padding="12">
 
-        <Grid VerticalAlignment="Center" >
+        <Grid VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
@@ -28,47 +28,57 @@
             </Grid.RowDefinitions>
 
             <controls:Badge Grid.RowSpan="5"
-                Grid.Column="1"
-                Width="60"
-                Height="20"
-                Background="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}"
-                Text="{Binding Type}" />
+                            Grid.Column="1"
+                            Width="60"
+                            Height="20"
+                            Background="{Binding Type,
+                                                 Converter={StaticResource PokemonTypeToColorConverter}}"
+                            Text="{Binding Type}" />
 
             <TextBlock Grid.Row="0"
-                Grid.Column="0"
-                VerticalAlignment="Center"
-                FontSize="18"
-                Text="{Binding Name}" Margin="0,0,0,4" />
+                       Grid.Column="0"
+                       Margin="0,0,0,4"
+                       VerticalAlignment="Center"
+                       FontSize="18"
+                       Text="{Binding Name}" />
 
-            <ItemsControl x:Name="ChargeBar" Grid.Row="1" ItemsSource="{Binding Charges, Converter={StaticResource NumberToItemsConverter}}" Grid.Column="0" Height="8" Width="140" HorizontalAlignment="Left" Margin="0,0,0,4">
+            <ItemsControl x:Name="ChargeBar"
+                          Grid.Row="1"
+                          Grid.Column="0"
+                          Width="140"
+                          Height="8"
+                          Margin="0,0,0,4"
+                          HorizontalAlignment="Left"
+                          ItemsSource="{Binding EnergyBars,
+                                                Converter={StaticResource NumberToItemsConverter}}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <controls:UniformGrid Rows="1"/>
+                        <controls:UniformGrid Rows="1" />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Rectangle Fill="{Binding ElementName=ChargeBar, Path=DataContext.Type, Converter={StaticResource PokemonTypeToColorConverter}}" Margin="0,0,8,0"/>
+                        <Rectangle Margin="0,0,8,0" Fill="{Binding ElementName=ChargeBar, Path=DataContext.Type, Converter={StaticResource PokemonTypeToColorConverter}}" />
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
 
             <TextBlock Grid.Row="2"
-                Grid.Column="0"
-                Style="{StaticResource CaptionTextBlockStyle}">
-                <Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Attack}" />
+                       Grid.Column="0"
+                       Style="{StaticResource CaptionTextBlockStyle}">
+                <Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Damage}" />
                 <Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Type}" />
                 <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="damage" />
             </TextBlock>
             <TextBlock Grid.Row="3"
-                Grid.Column="0"
-                Style="{StaticResource CaptionTextBlockStyle}">
+                       Grid.Column="0"
+                       Style="{StaticResource CaptionTextBlockStyle}">
                 <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="Dodge" />
                 <Run Text="{Binding Dodge}" />
             </TextBlock>
             <TextBlock Grid.Row="4"
-                Grid.Column="0"
-                Style="{StaticResource CaptionTextBlockStyle}">
+                       Grid.Column="0"
+                       Style="{StaticResource CaptionTextBlockStyle}">
                 <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="Cooldown" />
                 <Run Text="{Binding CoolDown}" />
             </TextBlock>
