@@ -13,7 +13,9 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border Height="48">
-                        <TextBlock VerticalAlignment="Center" Text="{Binding}" />
+                        <TextBlock HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Text="{Binding}" />
                     </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>

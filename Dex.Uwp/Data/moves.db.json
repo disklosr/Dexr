@@ -916,7 +916,7 @@
   ],
   "QuickMoves": [
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 1.05,
       "Damage": 10,
       "MoveId": "acid",
@@ -925,7 +925,7 @@
       "Type": "poison"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 0.5,
       "Damage": 6,
       "MoveId": "bite",
@@ -934,7 +934,7 @@
       "Type": "dark"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 15,
       "CoolDown": 2.3,
       "Damage": 25,
       "MoveId": "bubble",
@@ -943,7 +943,7 @@
       "Type": "water"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 0.45,
       "Damage": 5,
       "MoveId": "bug-bite",
@@ -952,7 +952,7 @@
       "Type": "bug"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 1.2,
       "Damage": 10,
       "MoveId": "bullet-punch",
@@ -961,7 +961,7 @@
       "Type": "steel"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 1.51,
       "Damage": 15,
       "MoveId": "confusion",
@@ -970,7 +970,7 @@
       "Type": "psychic"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 1.13,
       "Damage": 12,
       "MoveId": "cut",
@@ -979,7 +979,7 @@
       "Type": "normal"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 0.5,
       "Damage": 6,
       "MoveId": "dragon-breath",
@@ -988,7 +988,7 @@
       "Type": "dragon"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 1.05,
       "Damage": 10,
       "MoveId": "ember",
@@ -997,7 +997,7 @@
       "Type": "fire"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 1.04,
       "Damage": 12,
       "MoveId": "feint-attack",
@@ -1006,7 +1006,7 @@
       "Type": "dark"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 4,
       "CoolDown": 0.84,
       "Damage": 10,
       "MoveId": "fire-fang",
@@ -1015,7 +1015,7 @@
       "Type": "fire"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 0.81,
       "Damage": 9,
       "MoveId": "frost-breath",
@@ -1024,7 +1024,7 @@
       "Type": "ice"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 12,
       "CoolDown": 0.4,
       "Damage": 3,
       "MoveId": "fury-cutter",
@@ -1033,7 +1033,7 @@
       "Type": "bug"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 1.4,
       "Damage": 15,
       "MoveId": "ice-shard",
@@ -1042,7 +1042,7 @@
       "Type": "ice"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 0.8,
       "Damage": 6,
       "MoveId": "karate-chop",
@@ -1051,7 +1051,7 @@
       "Type": "fighting"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 0.5,
       "Damage": 5,
       "MoveId": "lick",
@@ -1060,7 +1060,7 @@
       "Type": "ghost"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 0.6,
       "Damage": 5,
       "MoveId": "low-kick",
@@ -1069,7 +1069,7 @@
       "Type": "fighting"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 0.63,
       "Damage": 12,
       "MoveId": "metal-claw",
@@ -1078,7 +1078,7 @@
       "Type": "steel"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 0.55,
       "Damage": 12,
       "MoveId": "mud-shot",
@@ -1087,7 +1087,7 @@
       "Type": "ground"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 9,
       "CoolDown": 1.35,
       "Damage": 15,
       "MoveId": "mud-slap",
@@ -1096,7 +1096,7 @@
       "Type": "ground"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 10,
       "CoolDown": 1.15,
       "Damage": 10,
       "MoveId": "peck",
@@ -1105,7 +1105,7 @@
       "Type": "flying"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 1.05,
       "Damage": 15,
       "MoveId": "poison-jab",
@@ -1114,7 +1114,7 @@
       "Type": "poison"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 4,
       "CoolDown": 0.575,
       "Damage": 6,
       "MoveId": "poison-sting",
@@ -1123,7 +1123,7 @@
       "Type": "poison"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 0.54,
       "Damage": 7,
       "MoveId": "pound",
@@ -1132,7 +1132,7 @@
       "Type": "normal"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 0.57,
       "Damage": 8,
       "MoveId": "psycho-cut",
@@ -1141,7 +1141,7 @@
       "Type": "psychic"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 1.33,
       "Damage": 10,
       "MoveId": "quick-attack",
@@ -1150,7 +1150,7 @@
       "Type": "normal"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 1.45,
       "Damage": 15,
       "MoveId": "razor-leaf",
@@ -1159,7 +1159,7 @@
       "Type": "grass"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 1.41,
       "Damage": 15,
       "MoveId": "rock-smash",
@@ -1168,7 +1168,7 @@
       "Type": "fighting"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 1.36,
       "Damage": 12,
       "MoveId": "rock-throw",
@@ -1177,7 +1177,7 @@
       "Type": "rock"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 0.5,
       "Damage": 6,
       "MoveId": "scratch",
@@ -1186,7 +1186,7 @@
       "Type": "normal"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 0.95,
       "Damage": 11,
       "MoveId": "shadow-claw",
@@ -1195,7 +1195,7 @@
       "Type": "ghost"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 4,
       "CoolDown": 0.7,
       "Damage": 7,
       "MoveId": "spark",
@@ -1204,7 +1204,7 @@
       "Type": "electric"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 1.23,
       "Damage": 0,
       "MoveId": "splash",
@@ -1213,7 +1213,7 @@
       "Type": "water"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 4,
       "CoolDown": 1.33,
       "Damage": 15,
       "MoveId": "steel-wing",
@@ -1222,7 +1222,7 @@
       "Type": "steel"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 4,
       "CoolDown": 0.7,
       "Damage": 7,
       "MoveId": "sucker-punch",
@@ -1231,7 +1231,7 @@
       "Type": "dark"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 1.1,
       "Damage": 12,
       "MoveId": "tackle",
@@ -1240,7 +1240,7 @@
       "Type": "normal"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 0.6,
       "Damage": 5,
       "MoveId": "thunder-shock",
@@ -1258,7 +1258,7 @@
       "Type": "normal"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 0.65,
       "Damage": 7,
       "MoveId": "vine-whip",
@@ -1267,7 +1267,7 @@
       "Type": "grass"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 0.5,
       "Damage": 6,
       "MoveId": "water-gun",
@@ -1276,7 +1276,7 @@
       "Type": "water"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 7,
       "CoolDown": 0.75,
       "Damage": 9,
       "MoveId": "wing-attack",
@@ -1285,7 +1285,7 @@
       "Type": "flying"
     },
     {
-      "EnergyGenerated": 0,
+      "EnergyGenerated": 4,
       "CoolDown": 1.05,
       "Damage": 12,
       "MoveId": "zen-headbutt",

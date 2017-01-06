@@ -22,9 +22,9 @@ namespace Dex.Scaper
 
         public void Scrape()
         {
-            ParsePokemons();
+            //ParsePokemons();
             //ParseEvolutionLines();
-            //ParseMoves();
+            ParseMoves();
         }
 
         private void ParseEvolutionLines()

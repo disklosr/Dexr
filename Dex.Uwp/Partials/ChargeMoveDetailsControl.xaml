@@ -73,14 +73,14 @@
             <TextBlock Grid.Row="3"
                        Grid.Column="0"
                        Style="{StaticResource CaptionTextBlockStyle}">
-                <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="Dodge" />
-                <Run Text="{Binding Dodge}" />
+                <Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Critical}" /><Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="%" />
+                <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="critical hit chance" />
             </TextBlock>
             <TextBlock Grid.Row="4"
                        Grid.Column="0"
                        Style="{StaticResource CaptionTextBlockStyle}">
-                <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="Cooldown" />
-                <Run Text="{Binding CoolDown}" />
+                <Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding CoolDown}" /><Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="s" />
+                <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="cooldown" />
             </TextBlock>
         </Grid>
     </Border>

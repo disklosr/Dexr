@@ -638,6 +638,9 @@
     <Content Include="Data\evolutions.db.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Compile Include="Data\types.db.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <None Include="Dex.Uwp_StoreKey.pfx" />
     <None Include="snippets.txt" />
     <None Include="project.json" />
@@ -743,6 +746,7 @@
     <Compile Include="Services\IExceptionSinkService.cs" />
     <Compile Include="Services\IJsonService.cs" />
     <Compile Include="Services\INavigationService.cs" />
+    <Compile Include="Services\IStoreService.cs" />
     <Compile Include="Services\NavigationServiceException.cs" />
     <Compile Include="Theme\MoveDetailTemplateSelector.cs" />
     <Compile Include="Theme\ListItemTemplateSelector.cs" />

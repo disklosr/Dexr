@@ -30,6 +30,9 @@ namespace Dex.Scaper.Parsers
             //Damage
             quickMove.Damage = ushort.Parse(DamageNode.InnerText);
 
+            //EnergyIncreased
+            quickMove.EnergyGenerated = ushort.Parse(EnergyIncreaseNode.InnerText);
+
             //CoolDown
             quickMove.CoolDown = float.Parse(CoolDownNode.InnerText.Replace(" seconds", string.Empty));
 

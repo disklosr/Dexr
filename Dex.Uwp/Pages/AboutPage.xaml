@@ -13,9 +13,17 @@
         <infra:CommandsCollection>
             <AppBarButton AccessKey="S"
                           Command="{Binding SendFeedbackCommand}"
+                          ToolTipService.ToolTip="Feedback"
                           Visibility="{Binding CanSendFeedback}">
                 <AppBarButton.Icon>
                     <FontIcon Glyph="&#xE939;" />
+                </AppBarButton.Icon>
+            </AppBarButton>
+            <AppBarButton AccessKey="R"
+                          Command="{Binding RateThisAppCommand}"
+                          ToolTipService.ToolTip="Rate">
+                <AppBarButton.Icon>
+                    <FontIcon Glyph="&#xE00A;" />
                 </AppBarButton.Icon>
             </AppBarButton>
         </infra:CommandsCollection>
@@ -34,7 +42,15 @@
                     <Run Text="Version:" />
                     <Run Text="{Binding AppVersion}" />
                 </TextBlock>
-                <TextBlock Text="Dexr is a modern Pokemon Go companion app for Windows 10 devices. Dex's aim is to provide a fast and offline experience to help you make the best choices in your Pokemon Go Journey." TextWrapping="Wrap" />
+                <TextBlock Margin="0,0,0,12"
+                           Text="Dexr is a modern Pokemon Go companion app for Windows 10 devices. Dex's aim is to provide a fast and offline experience to help you make the best choices in your Pokemon Go Journey."
+                           TextWrapping="Wrap" />
+                <TextBlock Margin="0,0,0,12"
+                           Text="Like this app? Please consider rating it, sending a feedback, or just drop me a small message on twitter, don't be shy!"
+                           TextWrapping="Wrap" />
+                <HyperlinkButton Command="{Binding RateThisAppCommand}">Rate this app</HyperlinkButton>
+                <HyperlinkButton Command="{Binding SendFeedbackCommand}" Visibility="{Binding CanSendFeedback}">Send a feedback / message</HyperlinkButton>
+                <HyperlinkButton Command="{Binding SendTweetCommand}">Tweet me @disklosr</HyperlinkButton>
             </StackPanel>
             <StackPanel Margin="0,0,0,24">
                 <TextBlock Margin="0,0,0,12" Style="{StaticResource TitleTextBlockStyle}">
