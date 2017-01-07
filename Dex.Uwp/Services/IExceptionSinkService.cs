@@ -12,13 +12,17 @@ namespace Dex.Uwp.Services
 
     public class UwpExceptionSinkService : IExceptionSinkService
     {
-        private readonly ILogger log;
+        private readonly ILogger _log;
 
-        public UwpExceptionSinkService(ILogger log)
+        private UwpExceptionSinkService(ILogger log)
         {
-            this.log = log;
-            Application.Current.UnhandledException += OnUnhandledException;
-            TaskScheduler.UnobservedTaskException += OnUnobservedTaskException;
+            _log = log;
+        }
+
+        public static void CreateExceptionSink(ILogger log)
+        {
+            var exceptionSink = new UwpExceptionSinkService(log);
+            exceptionSink.Initialize();
         }
 
         private void DisplayMessageDialog()
@@ -37,9 +41,15 @@ namespace Dex.Uwp.Services
             DisplayMessageDialog();
         }
 
+        private void Initialize()
+        {
+            Application.Current.UnhandledException += OnUnhandledException;
+            TaskScheduler.UnobservedTaskException += OnUnobservedTaskException;
+        }
+
         private void LogException(string exceptionType, string message)
         {
-            log.Fatal("[Unhandled] (Exception: {Type}, Message: {Message}).", exceptionType, message);
+            _log.Fatal("[Unhandled] (Exception: {Type}, Message: {Message}).", exceptionType, message);
         }
 
         private void OnUnhandledException(object sender, UnhandledExceptionEventArgs e)

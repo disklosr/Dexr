@@ -40,7 +40,7 @@ namespace Dex.Uwp.IoC
                .WriteTo.File(Path.Combine(ApplicationData.Current.LocalFolder.Path, "log.txt"))
                .CreateLogger();
 
-            new UwpExceptionSinkService(logger);
+            UwpExceptionSinkService.CreateExceptionSink(logger);
 
             Container.RegisterInstance(logger);
         }
@@ -66,6 +66,7 @@ namespace Dex.Uwp.IoC
             Container.RegisterType<LocalFileDataSource>(new ContainerControlledLifetimeManager())
                 .RegisterType<IPokemonsDataSource, LocalFileDataSource>()
                 .RegisterType<IMovesDataSource, LocalFileDataSource>()
+                .RegisterType<ITypeEffectivenessDataSource, LocalFileDataSource>()
                 .RegisterType<IEvolutionsDataSource, LocalFileDataSource>();
         }
     }

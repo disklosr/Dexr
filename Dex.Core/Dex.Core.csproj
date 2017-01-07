@@ -67,6 +67,7 @@
     <Compile Include="DataAccess\IEvolutionsDataSource.cs" />
     <Compile Include="DataAccess\IMovesDataSource.cs" />
     <Compile Include="DataAccess\IPokemonsDataSource.cs" />
+    <Compile Include="DataAccess\ITypeEffectivenessDataSource.cs" />
     <Compile Include="Entities\ChargeMove.cs" />
     <Compile Include="Entities\CP.cs" />
     <Compile Include="Entities\CpCalculator.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Entities\Move.cs" />
     <Compile Include="Entities\Pokemon.cs" />
     <Compile Include="Entities\CombatStat.cs" />
+    <Compile Include="Entities\TypeEffectiveness.cs" />
     <Compile Include="Entities\QuickMove.cs" />
     <Compile Include="Entities\PokemonType.cs" />
     <Compile Include="Extensions\DoubleExtensions.cs" />
@@ -85,7 +87,7 @@
     <Compile Include="Repositories\IEvolutionsRepository.cs" />
     <Compile Include="Repositories\IMoveRespository.cs" />
     <Compile Include="Repositories\IPokemonRepository.cs" />
-    <Compile Include="Repositories\ITypesRepository.cs" />
+    <Compile Include="Services\ITypesService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

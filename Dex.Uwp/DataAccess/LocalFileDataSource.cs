@@ -8,40 +8,49 @@ using Windows.Storage;
 
 namespace Dex.Uwp.DataAccess
 {
-    public class LocalFileDataSource : IPokemonsDataSource, IMovesDataSource, IEvolutionsDataSource
+    public class LocalFileDataSource : IPokemonsDataSource, IMovesDataSource, IEvolutionsDataSource, ITypeEffectivenessDataSource
     {
-        private const string contentPrefix = "ms-appx:///";
-        private const string evolutionsDbFilePath = "Data/evolutions.db.json";
-        private const string movesDbFilePath = "Data/moves.db.json";
-        private const string pokemonsDbFilePath = "Data/Pokemons.db.json";
-        private readonly IJsonService jsonService;
+        private const string ContentPrefix = "ms-appx:///";
+
+        private const string EvolutionsDbFilePath = "Data/evolutions.db.json";
+        private const string MovesDbFilePath = "Data/moves.db.json";
+        private const string PokemonsDbFilePath = "Data/Pokemons.db.json";
+        private const string TypesDbFilePath = "Data/types.db.json";
+
+        private readonly IJsonService _jsonService;
 
         public LocalFileDataSource(IJsonService jsonService)
         {
-            this.jsonService = jsonService;
+            _jsonService = jsonService;
         }
 
         public async Task<List<ushort[]>> LoadAllEvolutionsAsync()
         {
-            var json = await ReadFileAsTextAsync(evolutionsDbFilePath);
-            return jsonService.Deserialize<List<ushort[]>>(json);
+            var json = await ReadFileAsTextAsync(EvolutionsDbFilePath);
+            return _jsonService.Deserialize<List<ushort[]>>(json);
         }
 
         public async Task<PokemonMoves> LoadAllMovesAsync()
         {
-            var json = await ReadFileAsTextAsync(movesDbFilePath);
-            return jsonService.Deserialize<PokemonMoves>(json);
+            var json = await ReadFileAsTextAsync(MovesDbFilePath);
+            return _jsonService.Deserialize<PokemonMoves>(json);
         }
 
         public async Task<IEnumerable<Pokemon>> LoadAllPokemonsAsync()
         {
-            var json = await ReadFileAsTextAsync(pokemonsDbFilePath);
-            return jsonService.Deserialize<List<Pokemon>>(json);
+            var json = await ReadFileAsTextAsync(PokemonsDbFilePath);
+            return _jsonService.Deserialize<List<Pokemon>>(json);
         }
 
-        public async Task<string> ReadFileAsTextAsync(string rootUri)
+        public async Task<Dictionary<PokemonType, TypeEffectiveness>> LoadTypeEffectivenessTable()
         {
-            var uri = new Uri(contentPrefix + rootUri);
+            var json = await ReadFileAsTextAsync(TypesDbFilePath);
+            return _jsonService.Deserialize<Dictionary<PokemonType, TypeEffectiveness>>(json);
+        }
+
+        private async Task<string> ReadFileAsTextAsync(string rootUri)
+        {
+            var uri = new Uri(ContentPrefix + rootUri);
             var file = await StorageFile.GetFileFromApplicationUriAsync(uri);
             return await FileIO.ReadTextAsync(file);
         }
