@@ -4,7 +4,7 @@
              xmlns:controls="using:Dex.Uwp.Controls"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vc="using:Dex.Uwp.ValueConverters"
+             xmlns:model="using:Dex.Core.Entities"
              xmlns:vm="using:Dex.Uwp.ViewModels"
              d:DataContext="{d:DesignInstance Type=vm:MoveDetailViewModel,
                                               IsDesignTimeCreatable=False}"
@@ -42,25 +42,22 @@
                                        Text="{Binding Name,
                                                       Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
 
-                            <StackPanel Grid.Column="2"
-                                        VerticalAlignment="Center"
-                                        Orientation="Horizontal">
-                                <controls:Badge Width="60"
-                                                Height="20"
-                                                
-                                                Background="{Binding Type1,
-                                                                     Converter={StaticResource PokemonTypeToColorConverter}}"
-                                                Text="{Binding Type1}" />
-
-                                <controls:Badge Width="60"
-                                                Height="20"
-                                                Margin="12,0,0,0"
-                                                Background="{Binding Type2,
-                                                                     Converter={StaticResource PokemonTypeToColorConverter}}"
-                                                Text="{Binding Type2}"
-                                                Visibility="{Binding Type2,
-                                                                     Converter={StaticResource PokemonUnknownTypeToVisibilityConverter}}" />
-                            </StackPanel>
+                            <ItemsControl Grid.Column="2" Margin="0,0,-12,0" ItemsSource="{Binding Types}">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <StackPanel Orientation="Horizontal" />
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <controls:Badge Width="60"
+                                                        Height="20"
+                                                        Margin="0,0,12,0"
+                                                        Background="{Binding Converter={StaticResource PokemonTypeToColorConverter}}"
+                                                        Text="{Binding}" />
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>

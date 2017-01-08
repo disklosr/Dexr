@@ -3,10 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:controls="using:Dex.Uwp.Controls"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="using:Dex.Uwp.Cards"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:model="using:Dex.Core.Entities"
-             xmlns:vc="using:Dex.Uwp.ValueConverters"
              d:DataContext="{d:DesignInstance Type=model:Pokemon,
                                               IsDesignTimeCreatable=False}"
              d:DesignHeight="84"
@@ -15,7 +13,7 @@
 
     <controls:Card Height="84">
         <controls:HoverControl Background="{StaticResource AppGreyBrushLighter3}">
-            <Border BorderBrush="{Binding Type1, Converter={StaticResource PokemonTypeToColorConverter}}" BorderThickness="0,0,0,2">
+            <Border BorderBrush="{Binding Types[0], Converter={StaticResource PokemonTypeToColorConverter}}" BorderThickness="0,0,0,2">
                 <RelativePanel Padding="12,4">
 
                     <Image Name="PokemonPicture"
@@ -28,35 +26,24 @@
                                 Orientation="Vertical"
                                 RelativePanel.AlignVerticalCenterWithPanel="True"
                                 RelativePanel.RightOf="PokemonPicture">
-                        <TextBlock x:Name="PokemonName"
-                                   VerticalAlignment="Top"
-                                   Text="{Binding Name,
-                                                  Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock x:Name="Type1Name"
-                                       VerticalAlignment="Bottom"
-                                       Foreground="{Binding Type1,
-                                                            Converter={StaticResource PokemonTypeToColorConverter}}"
-                                       RelativePanel.AlignLeftWith="PokemonName"
-                                       RelativePanel.Below="PokemonName"
-                                       Style="{StaticResource CaptionTextBlockStyle}"
-                                       Text="{Binding Type1}" />
-
-                            <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
-                                       Style="{StaticResource CaptionTextBlockStyle}"
-                                       Visibility="{Binding Type2,
-                                                            Converter={StaticResource PokemonUnknownTypeToVisibilityConverter}}">
-                                <Run Text=" -" />
-                                <Run Foreground="{Binding Type2, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Type2}" />
-                            </TextBlock>
-                        </StackPanel>
+                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Style="{StaticResource CaptionTextBlockStyle}" Text="{Binding DexNumber}" />
+                        <TextBlock x:Name="PokemonName" VerticalAlignment="Top" Text="{Binding Name, Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
                     </StackPanel>
 
-                    <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
-                               RelativePanel.AlignRightWithPanel="True"
-                               RelativePanel.AlignVerticalCenterWithPanel="True"
-                               Style="{StaticResource CaptionTextBlockStyle}"
-                               Text="{Binding DexNumber}" />
+                    <ItemsControl Margin="0,0,0,-12"
+                                  ItemsSource="{Binding Types}"
+                                  RelativePanel.AlignRightWithPanel="True"
+                                  RelativePanel.AlignVerticalCenterWithPanel="True">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <controls:Badge Width="60"
+                                                Height="20"
+                                                Margin="0,0,0,12"
+                                                Background="{Binding Converter={StaticResource PokemonTypeToColorConverter}}"
+                                                Text="{Binding}" />
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </RelativePanel>
             </Border>
         </controls:HoverControl>

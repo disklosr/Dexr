@@ -40,27 +40,27 @@
                                       Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
 
             <!--  Pokemon Types  -->
-            <StackPanel Name="PokemonTypes"
-                        Margin="0,12,0,0"
-                        Orientation="Horizontal"
-                        RelativePanel.AlignHorizontalCenterWithPanel="True"
-                        RelativePanel.Below="PokemonName">
-
-                <controls:Badge Width="100"
-                                Height="24"
-                                Background="{Binding Type1,
-                                                     Converter={StaticResource PokemonTypeToColorConverter}}"
-                                Text="{Binding Type1}" />
-
-                <controls:Badge Width="100"
-                                Height="24"
-                                Margin="12,0,0,0"
-                                Background="{Binding Type2,
-                                                     Converter={StaticResource PokemonTypeToColorConverter}}"
-                                Text="{Binding Type2}"
-                                Visibility="{Binding Type2,
-                                                     Converter={StaticResource PokemonUnknownTypeToVisibilityConverter}}" />
-            </StackPanel>
+            <ItemsControl Name="PokemonTypes"
+                          Margin="0,12,-12,0"
+                          HorizontalAlignment="Center"
+                          ItemsSource="{Binding Types}"
+                          RelativePanel.AlignHorizontalCenterWithPanel="True"
+                          RelativePanel.Below="PokemonName">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <controls:Badge Width="100"
+                                        Height="24"
+                                        Margin="0,0,12,0"
+                                        Background="{Binding Converter={StaticResource PokemonTypeToColorConverter}}"
+                                        Text="{Binding}" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
 
             <!--  Pokemon Stats  -->
             <controls:HoverControl Margin="-12,24,-12,-12"
@@ -86,14 +86,8 @@
 
                     <!--  Flee Stat  -->
                     <StackPanel Grid.Row="0" Grid.Column="0">
-                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
-                                   Text="{Binding FleeRate,
-                                                  Converter={StaticResource StringAppenderFormatter},
-                                                  ConverterParameter='%'}"
-                                   TextAlignment="Center" />
-                        <TextBlock FontSize="11"
-                                   Text="Flee"
-                                   TextAlignment="Center" />
+                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="{Binding FleeRate, Converter={StaticResource StringAppenderFormatter}, ConverterParameter='%'}" TextAlignment="Center" />
+                        <TextBlock FontSize="11" Text="Flee" TextAlignment="Center" />
                     </StackPanel>
 
                     <Border Grid.Row="0"
@@ -104,12 +98,8 @@
 
                     <!--  Candies Stat  -->
                     <StackPanel Grid.Row="0" Grid.Column="2">
-                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
-                                   Text="{Binding CandiesToEvolve}"
-                                   TextAlignment="Center" />
-                        <TextBlock FontSize="11"
-                                   Text="Evolve"
-                                   TextAlignment="Center" />
+                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="{Binding CandiesToEvolve}" TextAlignment="Center" />
+                        <TextBlock FontSize="11" Text="Evolve" TextAlignment="Center" />
                     </StackPanel>
                     <Border Grid.Row="0"
                             Grid.Column="3"
@@ -119,22 +109,14 @@
 
                     <!--  CP Stat  -->
                     <StackPanel Grid.Row="0" Grid.Column="4">
-                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
-                                   Text="{Binding Cp.Max}"
-                                   TextAlignment="Center" />
-                        <TextBlock FontSize="11"
-                                   Text="Max CP"
-                                   TextAlignment="Center" />
+                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="{Binding Cp.Max}" TextAlignment="Center" />
+                        <TextBlock FontSize="11" Text="Max CP" TextAlignment="Center" />
                     </StackPanel>
 
                     <!--  Attack Stat  -->
                     <StackPanel Grid.Row="2" Grid.Column="0">
-                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
-                                   Text="{Binding Attack.Value}"
-                                   TextAlignment="Center" />
-                        <TextBlock FontSize="11"
-                                   Text="ATK"
-                                   TextAlignment="Center" />
+                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="{Binding Attack.Value}" TextAlignment="Center" />
+                        <TextBlock FontSize="11" Text="ATK" TextAlignment="Center" />
                     </StackPanel>
 
                     <Border Grid.Row="2"
@@ -145,12 +127,8 @@
 
                     <!--  Defense Stat  -->
                     <StackPanel Grid.Row="2" Grid.Column="2">
-                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
-                                   Text="{Binding Defense.Value}"
-                                   TextAlignment="Center" />
-                        <TextBlock FontSize="11"
-                                   Text="DEF"
-                                   TextAlignment="Center" />
+                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="{Binding Defense.Value}" TextAlignment="Center" />
+                        <TextBlock FontSize="11" Text="DEF" TextAlignment="Center" />
                     </StackPanel>
                     <Border Grid.Row="2"
                             Grid.Column="3"
@@ -160,12 +138,8 @@
 
                     <!--  Stamina Stat  -->
                     <StackPanel Grid.Row="2" Grid.Column="4">
-                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}"
-                                   Text="{Binding Stamina.Value}"
-                                   TextAlignment="Center" />
-                        <TextBlock FontSize="11"
-                                   Text="STM"
-                                   TextAlignment="Center" />
+                        <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="{Binding Stamina.Value}" TextAlignment="Center" />
+                        <TextBlock FontSize="11" Text="STM" TextAlignment="Center" />
                     </StackPanel>
                 </Grid>
             </controls:HoverControl>
