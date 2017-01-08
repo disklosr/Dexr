@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace Dex.Core.Entities
 {
-    [DebuggerDisplay("{Name}")]
+    [DebuggerDisplay("{" + nameof(Name) + "}")]
     public class Pokemon
     {
         private CpCalculator _cp;
@@ -14,9 +14,7 @@ namespace Dex.Core.Entities
 
         public string Name { get; set; }
 
-        public PokemonType Type1 { get; set; }
-
-        public PokemonType Type2 { get; set; }
+        public PokemonType[] Types { get; set; }
 
         #endregion General
 

@@ -12,65 +12,65 @@ namespace Dex.Uwp.ViewModels
 {
     public class PokedexViewModel : ViewModelBase
     {
-        private readonly INavigationService navigationService;
-        private readonly IPokemonRepository pokemonsRepository;
+        private readonly INavigationService _navigationService;
+        private readonly IPokemonRepository _pokemonsRepository;
 
-        private IEnumerable<Pokemon> allPokemonsByCp;
-        private IEnumerable<Pokemon> allPokemonsByDexNumber;
-        private IEnumerable<Pokemon> allPokemonsByName;
-        private IEnumerable<Pokemon> allPokemonsByType;
-        private IEnumerable<Pokemon> allPokemonsCache;
+        private IEnumerable<Pokemon> _allPokemonsByCp;
+        private IEnumerable<Pokemon> _allPokemonsByDexNumber;
+        private IEnumerable<Pokemon> _allPokemonsByName;
+        private IEnumerable<Pokemon> _allPokemonsByType;
+        private IEnumerable<Pokemon> _allPokemonsCache;
 
         public PokedexViewModel(IPokemonRepository pokemonsRepository, INavigationService navigationService)
         {
-            this.navigationService = navigationService;
-            this.pokemonsRepository = pokemonsRepository;
+            this._navigationService = navigationService;
+            this._pokemonsRepository = pokemonsRepository;
 
-            ReverseOrderCommand = new RelayCommand(() => OnReverseOrder());
-            SearchCommand = new RelayCommand(() => navigationService.NavigateToSearchPage());
+            ReverseOrderCommand = new RelayCommand(OnReverseOrder);
+            SearchCommand = new RelayCommand(navigationService.NavigateToSearchPage);
         }
 
         public IEnumerable<Pokemon> AllPokemonsByCp
         {
-            get { return allPokemonsByCp; }
-            private set { Set(ref allPokemonsByCp, value); }
+            get { return _allPokemonsByCp; }
+            private set { Set(ref _allPokemonsByCp, value); }
         }
 
         public IEnumerable<Pokemon> AllPokemonsByDexNumber
         {
-            get { return allPokemonsByDexNumber; }
-            private set { Set(ref allPokemonsByDexNumber, value); }
+            get { return _allPokemonsByDexNumber; }
+            private set { Set(ref _allPokemonsByDexNumber, value); }
         }
 
         public IEnumerable<Pokemon> AllPokemonsByName
         {
-            get { return allPokemonsByName; }
-            private set { Set(ref allPokemonsByName, value); }
+            get { return _allPokemonsByName; }
+            private set { Set(ref _allPokemonsByName, value); }
         }
 
         public IEnumerable<Pokemon> AllPokemonsByType
         {
-            get { return allPokemonsByType; }
-            private set { Set(ref allPokemonsByType, value); }
+            get { return _allPokemonsByType; }
+            private set { Set(ref _allPokemonsByType, value); }
         }
 
         public ICommand ReverseOrderCommand { get; }
         public ICommand SearchCommand { get; }
 
-        public async override Task OnNavigatedTo(NavigationEventArgs e)
+        public override async Task OnNavigatedTo(NavigationEventArgs e)
         {
-            var pokes = pokemonsRepository.GetAllPokemons();
-            allPokemonsCache = await pokes;
+            var pokes = _pokemonsRepository.GetAllPokemons();
+            _allPokemonsCache = (await pokes).ToList();
 
-            AllPokemonsByDexNumber = allPokemonsCache.OrderBy(poke => poke.DexNumber);
-            AllPokemonsByCp = allPokemonsCache.OrderBy(poke => poke.Cp.Max);
-            AllPokemonsByName = allPokemonsCache.OrderBy(poke => poke.Name);
-            AllPokemonsByType = allPokemonsCache.OrderBy(poke => poke.Type1).ThenBy(poke => poke.Type2);
+            AllPokemonsByDexNumber = _allPokemonsCache.OrderBy(poke => poke.DexNumber);
+            AllPokemonsByCp = _allPokemonsCache.OrderBy(poke => poke.Cp.Max);
+            AllPokemonsByName = _allPokemonsCache.OrderBy(poke => poke.Name);
+            AllPokemonsByType = _allPokemonsCache.OrderBy(poke => poke.Types[0]);
         }
 
         public void OnSelectNewItem(Pokemon selectedPoke)
         {
-            navigationService.NavigateToPokemonDetailsPage(selectedPoke.DexNumber);
+            _navigationService.NavigateToPokemonDetailsPage(selectedPoke.DexNumber);
         }
 
         private void OnReverseOrder()

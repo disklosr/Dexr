@@ -19,7 +19,7 @@ namespace Dex.Core.Test.Entities
             PokemonType defendingPokemonType2,
             float expectedMultiplier)
         {
-            var defendingPokemon = new Pokemon() { Type1 = defendingPokemonType1, Type2 = defendingPokemonType2 };
+            var defendingPokemon = new Pokemon() { Types = new[] { defendingPokemonType1, defendingPokemonType2 } };
             var attackingMove = new QuickMove() { Type = moveType };
 
             var effectivenessSource = CreateEffectivenessSource();

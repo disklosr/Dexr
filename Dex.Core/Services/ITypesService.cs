@@ -30,10 +30,10 @@ namespace Dex.Core.Services
 
             var damageMultiplier = NeutralMultiplier;
 
-            damageMultiplier *= await GetEffectiveness(attackingMove.Type, defendingPokemon.Type1);
-
-            if (defendingPokemon.Type2 != PokemonType.Unknown)
-                damageMultiplier *= await GetEffectiveness(attackingMove.Type, defendingPokemon.Type2);
+            foreach (var defendingType in defendingPokemon.Types)
+            {
+                damageMultiplier *= await GetEffectiveness(attackingMove.Type, defendingType);
+            }
 
             return damageMultiplier;
         }
