@@ -14,6 +14,7 @@
             <Setter.Value>
                 <TransitionCollection>
                     <EntranceThemeTransition />
+                    <ContentThemeTransition />
                 </TransitionCollection>
             </Setter.Value>
         </Setter>

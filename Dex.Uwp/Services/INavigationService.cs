@@ -65,7 +65,7 @@ namespace Dex.Uwp.Services
 
         public void NavigateToMoveDetailsPage(string moveId)
         {
-            mainFrame.Navigate(typeof(MoveDetailPage), moveId, new DrillInNavigationTransitionInfo());
+            mainFrame.Navigate(typeof(MoveDetailPage), moveId, new ContinuumNavigationTransitionInfo());
         }
 
         public void NavigateToMovesPage()
@@ -80,7 +80,7 @@ namespace Dex.Uwp.Services
 
         public void NavigateToPokemonDetailsPage(ushort dexNumber)
         {
-            mainFrame.Navigate(typeof(PokemonDetailPage), dexNumber, new DrillInNavigationTransitionInfo());
+            mainFrame.Navigate(typeof(PokemonDetailPage), dexNumber, new ContinuumNavigationTransitionInfo());
         }
 
         public void NavigateToSearchPage()
