@@ -29,6 +29,7 @@ namespace Dex.Uwp.Pages
             {
                 ["Pokedex"] = () => navigationService.NavigateToPokedexPage(),
                 ["Movedex"] = () => navigationService.NavigateToMovesPage(),
+                ["Types"] = () => navigationService.NavigateToTypesPage(),
                 ["Settings"] = () => navigationService.NavigateToSettingsPage(),
                 ["About"] = () => navigationService.NavigateToMoveAboutPage()
             };

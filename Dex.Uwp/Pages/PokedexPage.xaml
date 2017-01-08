@@ -17,12 +17,8 @@
 
     <infra:PageBase.Commands>
         <infra:CommandsCollection>
-            <AppBarButton AccessKey="S"
-                          Command="{Binding ReverseOrderCommand}"
-                          Icon="Sort" />
-            <AppBarButton AccessKey="F"
-                          Command="{Binding SearchCommand}"
-                          Icon="Find" />
+            <AppBarButton AccessKey="S" Command="{Binding ReverseOrderCommand}" Icon="Sort" />
+            <AppBarButton AccessKey="F" Command="{Binding SearchCommand}" Icon="Find" />
         </infra:CommandsCollection>
     </infra:PageBase.Commands>
     <!--<Page.Transitions>
@@ -34,22 +30,11 @@
     <Grid>
         <Pivot Style="{StaticResource TabsStylePivotStyle}">
             <Pivot.Resources>
-                <StaticResource x:Key="PivotHeaderItemBackgroundUnselected" ResourceKey="SystemControlTransparentBrush" />
-                <StaticResource x:Key="PivotHeaderItemBackgroundUnselectedPointerOver" ResourceKey="SystemControlHighlightTransparentBrush" />
-                <StaticResource x:Key="PivotHeaderItemBackgroundUnselectedPressed" ResourceKey="SystemControlHighlightTransparentBrush" />
-                <StaticResource x:Key="PivotHeaderItemBackgroundSelected" ResourceKey="SystemControlHighlightTransparentBrush" />
-                <StaticResource x:Key="PivotHeaderItemBackgroundSelectedPointerOver" ResourceKey="SystemControlHighlightTransparentBrush" />
-                <StaticResource x:Key="PivotHeaderItemBackgroundSelectedPressed" ResourceKey="SystemControlHighlightTransparentBrush" />
-                <StaticResource x:Key="PivotHeaderItemBackgroundDisabled" ResourceKey="SystemControlTransparentBrush" />
-
-                <SolidColorBrush x:Key="PivotHeaderItemForegroundSelected" Color="Black" />
-                <SolidColorBrush x:Key="PivotHeaderItemForegroundUnselected" Color="{ThemeResource SystemChromeDisabledLowColor}" />
-                <SolidColorBrush x:Key="PivotHeaderItemForegroundUnselectedPointerOver" Color="Black" />
-                <StaticResource x:Key="PivotHeaderItemForegroundUnselectedPressed" ResourceKey="SystemControlHighlightAltBaseMediumHighBrush" />
-                <SolidColorBrush x:Key="PivotHeaderItemForegroundSelectedPointerOver" Color="{StaticResource SystemAccentColor}" />
-                <StaticResource x:Key="PivotHeaderItemForegroundSelectedPressed" ResourceKey="SystemControlHighlightAltBaseMediumHighBrush" />
-                <StaticResource x:Key="PivotHeaderItemForegroundDisabled" ResourceKey="SystemControlDisabledBaseMediumLowBrush" />
-                <StaticResource x:Key="PivotHeaderItemFocusPipeFill" ResourceKey="SystemControlHighlightAltAccentBrush" />
+                <ResourceDictionary>
+                    <ResourceDictionary.MergedDictionaries>
+                        <ResourceDictionary Source="/Theme/CustomPivotResources.xaml" />
+                    </ResourceDictionary.MergedDictionaries>
+                </ResourceDictionary>
             </Pivot.Resources>
             <Pivot.Transitions>
                 <TransitionCollection>

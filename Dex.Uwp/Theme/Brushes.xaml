@@ -25,6 +25,9 @@
     <Brush x:Key="AppDefenseBrush">#47b8e0</Brush>
     <Brush x:Key="AppStaminaBrush">#ff7473</Brush>
 
+    <Brush x:Key="SuperEffectiveBrush">#81C784</Brush>
+    <Brush x:Key="NotVeryEffectiveBrush">#FF8A65</Brush>
+
     <Color x:Key="SecondaryTextColor">#77000000</Color>
     <Color x:Key="SubtleBorderDividerColor">#90000000</Color>
 

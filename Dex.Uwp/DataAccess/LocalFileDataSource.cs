@@ -3,6 +3,7 @@ using Dex.Core.Entities;
 using Dex.Uwp.Services;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Windows.Storage;
 
@@ -42,10 +43,12 @@ namespace Dex.Uwp.DataAccess
             return _jsonService.Deserialize<List<Pokemon>>(json);
         }
 
-        public async Task<Dictionary<PokemonType, TypeEffectiveness>> LoadTypeEffectivenessTable()
+        public async Task<IEnumerable<TypeEffectiveness>> LoadTypeEffectivenessTable()
         {
             var json = await ReadFileAsTextAsync(TypesDbFilePath);
-            return _jsonService.Deserialize<Dictionary<PokemonType, TypeEffectiveness>>(json);
+            var result = _jsonService.Deserialize<Dictionary<PokemonType, TypeEffectiveness>>(json);
+            return result.ToList()
+                .Select(kvp => new TypeEffectiveness(kvp.Value.StrongAgainst, kvp.Value.WeakAgainst, kvp.Key));
         }
 
         private async Task<string> ReadFileAsTextAsync(string rootUri)

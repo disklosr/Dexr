@@ -1,10 +1,10 @@
 ﻿using Dex.Core.Entities;
 using Dex.Uwp.Pages;
 using Serilog;
-using System;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using Type = System.Type;
 
@@ -15,6 +15,8 @@ namespace Dex.Uwp.Services
         Type CurrentPage { get; }
 
         void GoBack();
+
+        void NavigateToMoveAboutPage();
 
         void NavigateToMoveDetailsPage(string moveId);
 
@@ -28,9 +30,9 @@ namespace Dex.Uwp.Services
 
         void NavigateToSettingsPage();
 
-        void ResolveFromThenNavigate(object paramObject);
+        void NavigateToTypesPage();
 
-        void NavigateToMoveAboutPage();
+        void ResolveFromThenNavigate(object paramObject);
     }
 
     public class NavigationService : INavigationService
@@ -63,7 +65,7 @@ namespace Dex.Uwp.Services
 
         public void NavigateToMoveDetailsPage(string moveId)
         {
-            mainFrame.Navigate(typeof(MoveDetailPage), moveId);
+            mainFrame.Navigate(typeof(MoveDetailPage), moveId, new DrillInNavigationTransitionInfo());
         }
 
         public void NavigateToMovesPage()
@@ -78,7 +80,7 @@ namespace Dex.Uwp.Services
 
         public void NavigateToPokemonDetailsPage(ushort dexNumber)
         {
-            mainFrame.Navigate(typeof(PokemonDetailPage), dexNumber);
+            mainFrame.Navigate(typeof(PokemonDetailPage), dexNumber, new DrillInNavigationTransitionInfo());
         }
 
         public void NavigateToSearchPage()
@@ -89,6 +91,11 @@ namespace Dex.Uwp.Services
         public void NavigateToSettingsPage()
         {
             mainFrame.Navigate(typeof(SettingsPage));
+        }
+
+        public void NavigateToTypesPage()
+        {
+            mainFrame.Navigate(typeof(TypeEffectivenessPage));
         }
 
         public void ResolveFromThenNavigate(object navigationParam)

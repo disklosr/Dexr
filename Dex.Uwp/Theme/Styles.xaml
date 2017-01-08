@@ -13,7 +13,7 @@
         <Setter Property="ItemContainerTransitions">
             <Setter.Value>
                 <TransitionCollection>
-                    <ContentThemeTransition />
+                    <EntranceThemeTransition />
                 </TransitionCollection>
             </Setter.Value>
         </Setter>
@@ -114,9 +114,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="PivotHeaderItem">
-                    <Grid x:Name="Grid"
-                          Background="{TemplateBinding Background}"
-                          Padding="{TemplateBinding Padding}">
+                    <Grid x:Name="Grid" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
                         <Grid.Resources>
                             <Style x:Key="BaseContentPresenterStyle" TargetType="ContentPresenter">
                                 <Setter Property="FontFamily" Value="XamlAutoFontFamily" />
@@ -127,9 +125,7 @@
                                 <Setter Property="TextLineBounds" Value="Full" />
                                 <Setter Property="OpticalMarginAlignment" Value="TrimSideBearings" />
                             </Style>
-                            <Style x:Key="BodyContentPresenterStyle"
-                                   BasedOn="{StaticResource BaseContentPresenterStyle}"
-                                   TargetType="ContentPresenter">
+                            <Style x:Key="BodyContentPresenterStyle" BasedOn="{StaticResource BaseContentPresenterStyle}" TargetType="ContentPresenter">
                                 <Setter Property="FontFamily" Value="{ThemeResource PivotHeaderItemFontFamily}" />
                                 <Setter Property="FontWeight" Value="{ThemeResource PivotHeaderItemThemeFontWeight}" />
                                 <Setter Property="FontSize" Value="{ThemeResource PivotHeaderItemFontSize}" />
@@ -138,12 +134,8 @@
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="SelectionStates">
                                 <VisualStateGroup.Transitions>
-                                    <VisualTransition From="Unselected"
-                                                      GeneratedDuration="0:0:0.33"
-                                                      To="UnselectedLocked" />
-                                    <VisualTransition From="UnselectedLocked"
-                                                      GeneratedDuration="0:0:0.33"
-                                                      To="Unselected" />
+                                    <VisualTransition From="Unselected" GeneratedDuration="0:0:0.33" To="UnselectedLocked" />
+                                    <VisualTransition From="UnselectedLocked" GeneratedDuration="0:0:0.33" To="Unselected" />
                                 </VisualStateGroup.Transitions>
                                 <VisualState x:Name="Disabled">
                                     <Storyboard>
@@ -292,9 +284,7 @@
                                 </Setter>
                             </Style>
 
-                            <Style x:Key="TitleContentControlStyle"
-                                   BasedOn="{StaticResource BaseContentControlStyle}"
-                                   TargetType="ContentControl">
+                            <Style x:Key="TitleContentControlStyle" BasedOn="{StaticResource BaseContentControlStyle}" TargetType="ContentControl">
                                 <Setter Property="FontWeight" Value="SemiLight" />
                                 <Setter Property="FontSize" Value="24" />
                             </Style>
@@ -501,9 +491,7 @@
                                             <controls:ShadowHost.Background>
                                                 <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
                                             </controls:ShadowHost.Background>
-                                            <ContentControl x:Name="HeaderClipper"
-                                                            HorizontalContentAlignment="Center"
-                                                            UseSystemFocusVisuals="True">
+                                            <ContentControl x:Name="HeaderClipper" HorizontalContentAlignment="Center" UseSystemFocusVisuals="True">
 
                                                 <ContentControl.Clip>
                                                     <RectangleGeometry x:Name="HeaderClipperGeometry" />
@@ -521,9 +509,7 @@
                                                 </Grid>
                                             </ContentControl>
                                         </controls:ShadowHost>
-                                        <ItemsPresenter x:Name="PivotItemPresenter"
-                                                        Grid.Row="1"
-                                                        Grid.ColumnSpan="3">
+                                        <ItemsPresenter x:Name="PivotItemPresenter" Grid.Row="1" Grid.ColumnSpan="3">
 
                                             <ItemsPresenter.RenderTransform>
                                                 <TransformGroup>

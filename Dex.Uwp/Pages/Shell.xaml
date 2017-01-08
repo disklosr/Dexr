@@ -15,9 +15,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Border Name="MainCommandBar"
-                Grid.Row="0"
-                Canvas.ZIndex="10">
+        <Border Name="MainCommandBar" Grid.Row="0" Canvas.ZIndex="10">
             <Border.Resources>
                 <Style TargetType="AppBarButton">
                     <Setter Property="Width" Value="68" />
@@ -44,9 +42,7 @@
                 <!--#endregion Hamburger Menu-->
 
                 <!--#region Title-->
-                <Border Height="48"
-                        Margin="60,-2,0,0"
-                        VerticalAlignment="Top">
+                <Border Height="48" Margin="60,-2,0,0" VerticalAlignment="Top">
                     <TextBlock Name="PageTitle"
                                HorizontalAlignment="Left"
                                VerticalAlignment="Center"
@@ -59,9 +55,7 @@
                 <!--#endregion Title-->
 
                 <!--#region Commands Bar-->
-                <ItemsControl Name="commandsBar"
-                              HorizontalAlignment="Right"
-                              DataContext="{Binding Content}">
+                <ItemsControl Name="commandsBar" HorizontalAlignment="Right" DataContext="{Binding Content}">
                     <ItemsControl.ItemContainerTransitions>
                         <TransitionCollection>
                             <ContentThemeTransition />
@@ -84,10 +78,13 @@
                 </Grid>
             </SplitView.Pane>
             <SplitView.Content>
-                <Frame x:Name="MainFrame"
-                       Grid.Row="1"
-                       DataContext="{Binding Content,
-                                             ElementName=MainFrame}" />
+                <Frame x:Name="MainFrame" Grid.Row="1" DataContext="{Binding Content, ElementName=MainFrame}">
+                    <Frame.ContentTransitions>
+                        <TransitionCollection>
+                            <NavigationThemeTransition />
+                        </TransitionCollection>
+                    </Frame.ContentTransitions>
+                </Frame>
             </SplitView.Content>
         </SplitView>
     </Grid>

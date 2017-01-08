@@ -4,7 +4,6 @@ using Dex.Core.Services;
 using NSubstitute;
 using NUnit.Framework;
 using Shouldly;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Dex.Core.Test.Entities
@@ -28,18 +27,24 @@ namespace Dex.Core.Test.Entities
             typeService.GetTypeAdvantageMultiplier(attackingMove, defendingPokemon).Result.ShouldBe(expectedMultiplier);
         }
 
+        [Test]
+        public void WhenGettingAllTypes_ShouldReturnEighteenType()
+        {
+            var allTypes = new TypesService(null).GetAllTypes().ToList();
+            allTypes.ShouldNotContain(PokemonType.Unknown);
+            allTypes.Count().ShouldBe(18);
+        }
+
         private ITypeEffectivenessDataSource CreateEffectivenessSource()
         {
-            var effectivenessExample = new Dictionary<PokemonType, TypeEffectiveness>()
-            {
-                [PokemonType.Electric] = new TypeEffectiveness(
-                    new[] { PokemonType.Flying, PokemonType.Water },
-                    Enumerable.Empty<PokemonType>()
-                )
-            };
+            var effectivenessExample = new TypeEffectiveness(
+                new[] { PokemonType.Flying, PokemonType.Water },
+                Enumerable.Empty<PokemonType>(),
+                PokemonType.Electric
+            );
 
             var dataSource = Substitute.For<ITypeEffectivenessDataSource>();
-            dataSource.LoadTypeEffectivenessTable().Returns(effectivenessExample);
+            dataSource.LoadTypeEffectivenessTable().Returns(new[] { effectivenessExample });
 
             return dataSource;
         }

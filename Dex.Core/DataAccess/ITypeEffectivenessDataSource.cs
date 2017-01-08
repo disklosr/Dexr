@@ -6,6 +6,6 @@ namespace Dex.Core.DataAccess
 {
     public interface ITypeEffectivenessDataSource
     {
-        Task<Dictionary<PokemonType, TypeEffectiveness>> LoadTypeEffectivenessTable();
+        Task<IEnumerable<TypeEffectiveness>> LoadTypeEffectivenessTable();
     }
 }

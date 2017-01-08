@@ -7,6 +7,7 @@ using Microsoft.Practices.Unity;
 using Serilog;
 using System.IO;
 using Windows.Storage;
+using Dex.Core.Services;
 
 namespace Dex.Uwp.IoC
 {
@@ -58,6 +59,7 @@ namespace Dex.Uwp.IoC
         {
             Container.RegisterType<IJsonService, JsonService>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IStoreService, StoreService>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<ITypesService, TypesService>(new ContainerControlledLifetimeManager());
             Container.RegisterType<INavigationService, NavigationService>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IEncryptionService, SimpleSymmetricEncryptionService>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IAppLifecycleManager, AppLifecycleManager>(new ContainerControlledLifetimeManager());

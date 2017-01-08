@@ -1,4 +1,5 @@
-﻿using Dex.Core.DataAccess;
+﻿using System;
+using Dex.Core.DataAccess;
 using Dex.Core.Entities;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,11 @@ namespace Dex.Core.Services
 {
     public interface ITypesService
     {
+        Task<IEnumerable<TypeEffectiveness>> GetAllEffectivnessData();
+
+        IEnumerable<PokemonType> GetAllTypes();
+
+        Task<float> GetTypeAdvantageMultiplier(Move attackingMove, Pokemon defendingPokemon);
     }
 
     public class TypesService : ITypesService
@@ -17,11 +23,22 @@ namespace Dex.Core.Services
         private const float WeakMultiplier = 0.8f;
 
         private readonly ITypeEffectivenessDataSource _typesDataSource;
-        private Dictionary<PokemonType, TypeEffectiveness> _typesEffectivenessMap;
+        private IEnumerable<TypeEffectiveness> _typesEffectivenessMap;
 
         public TypesService(ITypeEffectivenessDataSource typesDataSource)
         {
             _typesDataSource = typesDataSource;
+        }
+
+        public async Task<IEnumerable<TypeEffectiveness>> GetAllEffectivnessData()
+        {
+            await EnsureDataWasInitialized();
+            return _typesEffectivenessMap;
+        }
+
+        public IEnumerable<PokemonType> GetAllTypes()
+        {
+            return Enum.GetValues(typeof(PokemonType)).Cast<PokemonType>().Except(new[] { PokemonType.Unknown });
         }
 
         public async Task<float> GetTypeAdvantageMultiplier(Move attackingMove, Pokemon defendingPokemon)
@@ -32,7 +49,7 @@ namespace Dex.Core.Services
 
             foreach (var defendingType in defendingPokemon.Types)
             {
-                damageMultiplier *= await GetEffectiveness(attackingMove.Type, defendingType);
+                damageMultiplier *= await GetEffectivenessDamage(attackingMove.Type, defendingType);
             }
 
             return damageMultiplier;
@@ -44,14 +61,19 @@ namespace Dex.Core.Services
                 _typesEffectivenessMap = await _typesDataSource.LoadTypeEffectivenessTable();
         }
 
-        private async Task<float> GetEffectiveness(PokemonType attacker, PokemonType defender)
+        private TypeEffectiveness GetEffectivenessByType(PokemonType type)
+        {
+            return _typesEffectivenessMap.First(effectiveness => effectiveness.ConcernedType == type);
+        }
+
+        private async Task<float> GetEffectivenessDamage(PokemonType attacker, PokemonType defender)
         {
             await EnsureDataWasInitialized();
 
-            if (_typesEffectivenessMap[attacker].StrongAgainst.Contains(defender))
+            if (GetEffectivenessByType(attacker).StrongAgainst.Contains(defender))
                 return StrongMultiplier;
 
-            if (_typesEffectivenessMap[attacker].WeakAgainst.Contains(defender))
+            if (GetEffectivenessByType(attacker).WeakAgainst.Contains(defender))
                 return WeakMultiplier;
 
             return NeutralMultiplier;
