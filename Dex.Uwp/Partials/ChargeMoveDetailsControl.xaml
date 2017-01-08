@@ -63,23 +63,17 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
 
-            <TextBlock Grid.Row="2"
-                       Grid.Column="0"
-                       Style="{StaticResource CaptionTextBlockStyle}">
-                <Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Damage}" />
-                <Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Type}" />
+            <TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource CaptionTextBlockStyle}">
+                <Run FontWeight="Bold" Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Damage}" />
+                <Run FontWeight="Bold" Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Type}" />
                 <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="damage" />
             </TextBlock>
-            <TextBlock Grid.Row="3"
-                       Grid.Column="0"
-                       Style="{StaticResource CaptionTextBlockStyle}">
-                <Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Critical}" /><Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="%" />
+            <TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource CaptionTextBlockStyle}">
+                <Run FontWeight="Bold" Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding Critical}" /><Run FontWeight="Bold" Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="%" />
                 <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="critical hit chance" />
             </TextBlock>
-            <TextBlock Grid.Row="4"
-                       Grid.Column="0"
-                       Style="{StaticResource CaptionTextBlockStyle}">
-                <Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding CoolDown}" /><Run Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="s" />
+            <TextBlock Grid.Row="4" Grid.Column="0" Style="{StaticResource CaptionTextBlockStyle}">
+                <Run FontWeight="Bold" Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="{Binding CoolDown}" /><Run FontWeight="Bold" Foreground="{Binding Type, Converter={StaticResource PokemonTypeToColorConverter}}" Text="s" />
                 <Run Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Text="cooldown" />
             </TextBlock>
         </Grid>
