@@ -638,9 +638,9 @@
     <Content Include="Data\evolutions.db.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Compile Include="Data\types.db.json">
+    <Content Include="Data\types.db.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
+    </Content>
     <None Include="Dex.Uwp_StoreKey.pfx" />
     <None Include="snippets.txt" />
     <None Include="project.json" />
