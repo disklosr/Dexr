@@ -766,6 +766,7 @@
     <Compile Include="ValueConverters\PokemonUnonwnTypeToVisibilityConverter.cs" />
     <Compile Include="ValueConverters\StringAppenderFormatter.cs" />
     <Compile Include="ValueConverters\StringCapitalizeFirstLetterConverter.cs" />
+    <Compile Include="ValueConverters\VerticalTextConverter.cs" />
     <Compile Include="ViewModels\CombatStatDataViewModel.cs" />
     <Compile Include="ViewModels\EvolutionLineDataViewModel.cs" />
     <Compile Include="ViewModels\MovedexViewModel.cs" />
