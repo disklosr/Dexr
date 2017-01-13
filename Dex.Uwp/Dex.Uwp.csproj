@@ -638,6 +638,7 @@
     <Content Include="Data\types.db.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="releaseNotes.txt" />
     <None Include="Dex.Uwp_StoreKey.pfx" />
     <None Include="snippets.txt" />
     <None Include="project.json" />
