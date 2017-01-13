@@ -40,13 +40,13 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </PivotItem>
-            <PivotItem>
+            <!--<PivotItem >
                 <PivotItem.Header>
                     <Border Width="96" Height="48">
                         <controls:TabHeader Label="SIMULATOR" />
                     </Border>
                 </PivotItem.Header>
-            </PivotItem>
+            </PivotItem>-->
         </Pivot>
     </Grid>
 </infra:PageBase>
