@@ -664,6 +664,7 @@
     <Compile Include="DataAccess\IPokePicturesSource.cs" />
     <Compile Include="DataAccess\IPokePicturesSourceProvider.cs" />
     <Compile Include="Helpers\BufferExtensions.cs" />
+    <Compile Include="Helpers\ColorUtils.cs" />
     <Compile Include="Helpers\StringExtensions.cs" />
     <Compile Include="Pages\TypeEffectivenessPage.xaml.cs">
       <DependentUpon>TypeEffectivenessPage.xaml</DependentUpon>
@@ -750,6 +751,7 @@
     <Compile Include="Services\IExceptionSinkService.cs" />
     <Compile Include="Services\IJsonService.cs" />
     <Compile Include="Services\INavigationService.cs" />
+    <Compile Include="Services\ISettingsService.cs" />
     <Compile Include="Services\IStoreService.cs" />
     <Compile Include="Services\NavigationServiceException.cs" />
     <Compile Include="Theme\MoveDetailTemplateSelector.cs" />

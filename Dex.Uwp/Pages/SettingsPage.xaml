@@ -15,21 +15,50 @@
                 mc:Ignorable="d">
 
     <Grid>
-        <ProgressBar VerticalAlignment="Top"
-                     Background="{x:Null}"
-                     IsIndeterminate="{Binding IsBusy}" />
+        <ProgressBar VerticalAlignment="Top" Background="{x:Null}" IsIndeterminate="{Binding IsBusy}" />
         <StackPanel Padding="24,12,24,0">
             <StackPanel Margin="0,0,0,24">
-                <TextBlock Margin="0,0,0,12"
-                           Style="{StaticResource TitleTextBlockStyle}"
-                           Text="Picture Sources" />
-                <ComboBox DisplayMemberPath="Name"
+                <TextBlock Margin="0,0,0,12" Style="{StaticResource TitleTextBlockStyle}" Text="Picture Sources" />
+                <ComboBox Margin="0,0,0,12"
+                          DisplayMemberPath="Name"
                           Header="Use this type of pokemon pictures"
                           IsEnabled="False"
                           ItemsSource="{Binding AvailableSources}"
                           SelectedItem="{Binding SelectedSource,
                                                  Mode=TwoWay}"
                           SelectedValuePath="Name" />
+                <ComboBox Height="68"
+                          Margin="0,0,0,12"
+                          HorizontalContentAlignment="Stretch"
+                          VerticalContentAlignment="Stretch"
+                          Header="Color theme (restart required)"
+                          ItemsSource="{Binding AvailableColors}"
+                          SelectedItem="{Binding SelectedColor,
+                                                 Mode=TwoWay}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <Rectangle Margin="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <Rectangle.Fill>
+                                    <SolidColorBrush Color="{Binding}" />
+                                </Rectangle.Fill>
+                            </Rectangle>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                    <ComboBox.Resources>
+                        <Style TargetType="ComboBoxItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                            <Setter Property="VerticalContentAlignment" Value="Stretch" />
+                            <Setter Property="Padding" Value="0" />
+                            <Setter Property="Height" Value="32" />
+                        </Style>
+                        <!--<Style TargetType="ContentControl">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                            <Setter Property="VerticalContentAlignment" Value="Stretch" />
+                            <Setter Property="VerticalAlignment" Value="Stretch" />
+                            <Setter Property="HorizontalAlignment" Value="Stretch" />
+                        </Style>-->
+                    </ComboBox.Resources>
+                </ComboBox>
             </StackPanel>
         </StackPanel>
     </Grid>

@@ -26,8 +26,12 @@
                                 Orientation="Vertical"
                                 RelativePanel.AlignVerticalCenterWithPanel="True"
                                 RelativePanel.RightOf="PokemonPicture">
+                        <TextBlock x:Name="PokemonName"
+                                   VerticalAlignment="Top"
+                                   Style="{StaticResource BodyTextBlockStyle}"
+                                   Text="{Binding Name,
+                                                  Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
                         <TextBlock Foreground="{StaticResource SystemChromeDisabledLowColorBrush}" Style="{StaticResource CaptionTextBlockStyle}" Text="{Binding DexNumber}" />
-                        <TextBlock x:Name="PokemonName" VerticalAlignment="Top" Text="{Binding Name, Converter={StaticResource StringCapitalizeFirstLetterConverter}}" />
                     </StackPanel>
 
                     <ItemsControl Margin="0,0,0,-12"

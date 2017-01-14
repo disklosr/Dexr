@@ -23,7 +23,7 @@
                 </Style>
             </Border.Resources>
             <Border.Background>
-                <SolidColorBrush Color="{ThemeResource SystemAccentColor}" />
+                <SolidColorBrush Color="{StaticResource SystemAccentColor}" />
             </Border.Background>
             <Grid>
 

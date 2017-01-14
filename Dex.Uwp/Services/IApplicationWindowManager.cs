@@ -1,5 +1,6 @@
 ﻿using Windows.UI;
 using Windows.UI.Xaml;
+using Dex.Uwp.Helpers;
 
 namespace Dex.Uwp.Services
 {
@@ -13,6 +14,15 @@ namespace Dex.Uwp.Services
         public void InitializeWindow()
         {
             InitAppWindowColors();
+        }
+
+        public void SetAccentColor(Color accentColor)
+        {
+            var resources = Application.Current.Resources;
+            resources["SystemAccentColor"] = accentColor;
+            resources["SystemAccentColorDark1"] = accentColor.Darken(0.07f);
+            resources["SystemAccentColorDark2"] = accentColor.Darken(0.14f);
+            resources["SystemAccentColorDark3"] = accentColor.Darken(0.22f);
         }
 
         private void InitAppWindowColors()

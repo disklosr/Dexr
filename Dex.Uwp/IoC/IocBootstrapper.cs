@@ -58,6 +58,7 @@ namespace Dex.Uwp.IoC
         private void RegisterServices()
         {
             Container.RegisterType<IJsonService, JsonService>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<ISettingsService, SettingsService>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IStoreService, StoreService>(new ContainerControlledLifetimeManager());
             Container.RegisterType<ITypesService, TypesService>(new ContainerControlledLifetimeManager());
             Container.RegisterType<INavigationService, NavigationService>(new ContainerControlledLifetimeManager());
