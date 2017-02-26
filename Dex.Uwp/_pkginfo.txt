@@ -1,1 +1,1 @@
-D:\Dev\MainRepo\Dex\out\Dex.Uwp_1.2.0.0\Dex.Uwp_1.2.0.0_x86_x64_arm.appxbundle
+D:\Dev\MainRepo\Dex\out\Dex.Uwp_1.2.1.0\Dex.Uwp_1.2.1.0_x86_x64_arm.appxbundle

@@ -1,8 +1,8 @@
 ﻿Version 1.2.1.0
-  - New section to view effectiveness for all pokemon types
+  - New section to view effectiveness for all Pokemon types
   - Reduced size of package
   - Added setting to change color theme of app
-  - Added rate link to applicatio sidebar
+  - Added rate link to application sidebar
 
 You're welcome to contribute to Dexr by providing any feedback or feature requests. Reach me on Twitter via @disklosr.
 
