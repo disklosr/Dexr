@@ -1,19 +1,25 @@
-﻿Version 1.2.1.0
+﻿Version 1.2.2.0
+  - Add second generation Pokemons
+
+You're welcome to contribute to Dexr by providing any feedback or feature requests.
+Reach me on Twitter via @disklosr.
+
+Thank you for using Dexr.
+_______
+
+Version 1.2.1.0
   - New section to view effectiveness for all Pokemon types
   - Reduced size of package
   - Added setting to change color theme of app
   - Added rate link to application sidebar
 
-You're welcome to contribute to Dexr by providing any feedback or feature requests. Reach me on Twitter via @disklosr.
-
-Thank you for using Dexr.
-_______
 
 Version 1.2.0.0:
   - Updated Pokémon combat stats data to the latest ones
   - Fixed evolution logic (especially for eevee)
   - Add new button to rate app in About page
   - Add new link to send me a tweet in About page
+
 
 Version 1.1.5.0:
   - Browse pokemons and their corresponding stats and moves
