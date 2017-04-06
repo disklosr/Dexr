@@ -13,18 +13,9 @@ namespace Dex.Core.Entities
 
         public CpCalculator(CombatStat attack, CombatStat defense, CombatStat stamina)
         {
-            if (attack == null)
-                throw new ArgumentNullException(nameof(attack));
-
-            if (defense == null)
-                throw new ArgumentNullException(nameof(defense));
-
-            if (stamina == null)
-                throw new ArgumentNullException(nameof(stamina));
-
-            _attack = attack;
-            _defense = defense;
-            _stamina = stamina;
+            _attack = attack ?? throw new ArgumentNullException(nameof(attack));
+            _defense = defense ?? throw new ArgumentNullException(nameof(defense));
+            _stamina = stamina ?? throw new ArgumentNullException(nameof(stamina));
         }
 
         public CP Max => MaxAtLevel(40f);
